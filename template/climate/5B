@@ -1,0 +1,88 @@
+Site:Location,
+    Denver-Aurora-Buckley.AFB_CO_USA WMO=724695,      !- Site:Location Name
+    39.72,      !- Latitude {N+ S-}
+    -104.75,      !- Longitude {W- E+}
+    -7.00,      !- Time Zone Relative to GMT {GMT+/-}
+    1726.00;      !- Elevation {m}
+
+SizingPeriod:DesignDay,
+    Denver-Aurora-Buckley.AFB_CO_USA Ann Htg 99.6% Condns DB,      !- Name
+    12,    !- Month
+    21,    !- Day of Month
+    WinterDesignDay,!- Day Type
+    -17.9,    !- Maximum Dry-Bulb Temperature {C}
+    0.0,    !- Daily Dry-Bulb Temperature Range {C}
+    DefaultMultipliers, !- Dry-Bulb Temperature Range Modifier Type
+    ,    !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,    !- Humidity Condition Type
+    -17.9,    !- Wetbulb at Maximum Dry-Bulb {C}
+    ,    !- Humidity Indicating Day Schedule Name
+    ,    !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,    !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,    !- Daily WetBulb Temperature Range {deltaC}
+    82237.,    !- Barometric Pressure {Pa}
+    2.5,    !- Wind Speed {m/s} design conditions vs. traditional 6.71 m/s (15 mph)
+    180,    !- Wind Direction {Degrees; N=0, S=180}
+    No,    !- Rain {Yes/No}
+    No,    !- Snow on ground {Yes/No}
+    No,    !- Daylight Savings Time Indicator
+    ASHRAEClearSky, !- Solar Model Indicator
+    ,    !- Beam Solar Day Schedule Name
+    ,    !- Diffuse Solar Day Schedule Name
+    ,    !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub)
+    ,    !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud)
+    0.00;    !- Clearness {0.0 to 1.1}
+
+SizingPeriod:DesignDay,
+   Denver-Aurora-Buckley.AFB_CO_USA Ann Clg .4% Condns DB=>MWB,      !- Name
+   7,    !- Month
+   21,    !- Day of Month
+   SummerDesignDay,!- Day Type
+   33.9,    !- Maximum Dry-Bulb Temperature {C}
+   14.8,    !- Daily Dry-Bulb Temperature Range {C}
+   DefaultMultipliers, !- Dry-Bulb Temperature Range Modifier Type
+   ,    !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+   Wetbulb,    !- Humidity Condition Type
+   15,    !- Wetbulb at Maximum Dry-Bulb {C}
+   ,    !- Humidity Indicating Day Schedule Name
+   ,    !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+   ,    !- Enthalpy at Maximum Dry-Bulb {J/kg}
+   ,    !- Daily WetBulb Temperature Range {deltaC}
+   82237.,    !- Barometric Pressure {Pa}
+   3.6,    !- Wind Speed {m/s} design conditions vs. traditional 3.35 m/s (7mph)
+   30,    !- Wind Direction {Degrees; N=0, S=180}
+   No,    !- Rain {Yes/No}
+   No,    !- Snow on ground {Yes/No}
+   No,    !- Daylight Savings Time Indicator
+   ASHRAETau, !- Solar Model Indicator
+   ,    !- Beam Solar Day Schedule Name
+   ,    !- Diffuse Solar Day Schedule Name
+   0.423,    !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub)
+   2.020;    !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud)
+
+
+!-    ===========   ALL OBJECTS IN CLASS: WATER MAINS TEMPERATURES ===========
+
+
+Site:WaterMainsTemperature,
+   Correlation,      !- Calculation Method
+   ,          !- Temperature Schedule Name
+   9.95,            !- Annual average outdoor air temperature {C}
+   23.7;            !- Maximum difference in monthly average outdoor air temperatures {C}
+
+
+!-    ===========   ALL OBJECTS IN CLASS: Site:GroundTemperature:FCfactorMethod ===========
+
+Site:GroundTemperature:FCfactorMethod,
+   7.1,         !- January Ground Temperature {C}
+   3.0,         !- February Ground Temperature {C}
+   -1.0,         !- March Ground Temperature {C}
+   0.8,         !- April Ground Temperature {C}
+   -0.2,         !- May Ground Temperature {C}
+   4.8,         !- June Ground Temperature {C}
+   6.1,         !- July Ground Temperature {C}
+   13.7,         !- August Ground Temperature {C}
+   22.2,         !- September Ground Temperature {C}
+   22.7,         !- October Ground Temperature {C}
+   21.7,         !- November Ground Temperature {C}
+   18.5;         !- December Ground Temperature {C}

@@ -1,0 +1,88 @@
+Site:Location,
+  Seattle Seattle Tacoma Intl A_WA_USA Design_Conditions,     !- Site:Location Name
+  47.47,     !- Latitude {N+ S-}
+  -122.32,     !- Longitude {W- E+}
+  -8.00,     !- Time Zone Relative to GMT {GMT+/-}
+  122.00;     !- Elevation {m}
+
+SizingPeriod:DesignDay,
+  Seattle Seattle Tacoma Intl A Ann Htg 99.6% Condns DB,     !- Name
+  12,      !- Month
+  21,      !- Day of Month
+  WinterDesignDay,!- Day Type
+  -4.2,      !- Maximum Dry-Bulb Temperature {C}
+  0.0,      !- Daily Dry-Bulb Temperature Range {C}
+  DefaultMultipliers, !- Dry-Bulb Temperature Range Modifier Type
+  ,      !- Dry-Bulb Temperature Range Modifier Schedule Name
+  Wetbulb,      !- Humidity Condition Type
+  -4.2,      !- Wetbulb at Maximum Dry-Bulb {C}
+  ,      !- Humidity Indicating Day Schedule Name
+  ,      !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,      !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  ,      !- Daily WetBulb Temperature Range {deltaC}
+  99868.,      !- Barometric Pressure {Pa}
+  4.3,      !- Wind Speed {m/s} design conditions vs. traditional 6.71 m/s (15 mph)
+  20,      !- Wind Direction {Degrees; N=0, S=180}
+  No,      !- Rain {Yes/No}
+  No,      !- Snow on ground {Yes/No}
+  No,      !- Daylight Savings Time Indicator
+  ASHRAEClearSky, !- Solar Model Indicator
+  ,      !- Beam Solar Day Schedule Name
+  ,      !- Diffuse Solar Day Schedule Name
+  ,      !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub)
+  ,      !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud)
+  0.00;      !- Clearness {0.0 to 1.1}
+
+SizingPeriod:DesignDay,
+  Seattle Seattle Tacoma Intl A Ann Clg .4% Condns DB=>MWB,     !- Name
+  8,      !- Month
+  21,      !- Day of Month
+  SummerDesignDay,!- Day Type
+  29.4,      !- Maximum Dry-Bulb Temperature {C}
+  10.4,      !- Daily Dry-Bulb Temperature Range {C}
+  DefaultMultipliers, !- Dry-Bulb Temperature Range Modifier Type
+  ,      !- Dry-Bulb Temperature Range Modifier Schedule Name
+  Wetbulb,      !- Humidity Condition Type
+  18.3,      !- Wetbulb at Maximum Dry-Bulb {C}
+  ,      !- Humidity Indicating Day Schedule Name
+  ,      !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+  ,      !- Enthalpy at Maximum Dry-Bulb {J/kg}
+  ,      !- Daily WetBulb Temperature Range {deltaC}
+  99868.,      !- Barometric Pressure {Pa}
+  4.2,      !- Wind Speed {m/s} design conditions vs. traditional 3.35 m/s (7mph)
+  350,      !- Wind Direction {Degrees; N=0, S=180}
+  No,      !- Rain {Yes/No}
+  No,      !- Snow on ground {Yes/No}
+  No,      !- Daylight Savings Time Indicator
+  ASHRAETau, !- Solar Model Indicator
+  ,      !- Beam Solar Day Schedule Name
+  ,      !- Diffuse Solar Day Schedule Name
+  0.352,      !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub)
+  2.561;      !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud)
+
+
+!-   ===========  ALL OBJECTS IN CLASS: WATER MAINS TEMPERATURES ===========
+
+
+Site:WaterMainsTemperature,
+  Correlation,             !- Calculation Method
+  ,                        !- Temperature Schedule Name
+  11.2166666666667,                               !- Annual average outdoor air temperature {C}
+  14.3;                               !- Maximum difference in monthly average outdoor air temperatures {C}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: Site:GroundTemperature:FCfactorMethod ===========
+
+Site:GroundTemperature:FCfactorMethod,
+  11.4,                   !- January Ground Temperature {C}
+  8.1,                   !- February Ground Temperature {C}
+  5.4,                   !- March Ground Temperature {C}
+  4.5,                   !- April Ground Temperature {C}
+  5.8,                   !- May Ground Temperature {C}
+  8.3,                   !- June Ground Temperature {C}
+  10.9,                   !- July Ground Temperature {C}
+  13.0,                   !- August Ground Temperature {C}
+  15.6,                   !- September Ground Temperature {C}
+  17.7,                   !- October Ground Temperature {C}
+  18.8,                   !- November Ground Temperature {C}
+  15.1;                   !- December Ground Temperature {C}

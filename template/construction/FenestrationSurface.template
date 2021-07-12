@@ -1,0 +1,1318 @@
+{%- if Windows == "Medium" %} 
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_1_wall_south,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    1.390,0.0000,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    1.390,0.0000,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    3.220,0.0000,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    3.220,0.0000,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_2,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_1_wall_south,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    6.010,0.0000,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    6.010,0.0000,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    7.840,0.0000,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    7.840,0.0000,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_3,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_1_wall_south,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    10.620,0.0000,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    10.620,0.0000,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    12.450,0.0000,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    12.450,0.0000,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_4,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_1_wall_south,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    15.240,0.0000,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    15.240,0.0000,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    17.070,0.0000,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    17.070,0.0000,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_5,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_1_wall_south,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    19.850,0.0000,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    19.850,0.0000,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    21.680,0.0000,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    21.680,0.0000,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_6,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_1_wall_south,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    24.470,0.0000,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    24.470,0.0000,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    26.300,0.0000,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    26.300,0.0000,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_door,  !- Name
+    GlassDoor,               !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_1_wall_south,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    12.930,0.0000,2.1340,  !- X,Y,Z ==> Vertex 1 {m}
+    12.930,0.0000,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    14.760,0.0000,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    14.760,0.0000,2.1340;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_4,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_2_wall_east,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    27.690,15.2400,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    27.690,15.2400,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    27.690,17.0700,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    27.690,17.0700,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_3,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_2_wall_east,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    27.690,10.6200,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    27.690,10.6200,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    27.690,12.4500,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    27.690,12.4500,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_2,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_2_wall_east,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    27.690,6.0100,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    27.690,6.0100,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    27.690,7.8400,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    27.690,7.8400,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_2_wall_east,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    27.690,1.3900,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    27.690,1.3900,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    27.690,3.2200,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    27.690,3.2200,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    26.300,18.4600,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    26.300,18.4600,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    24.470,18.4600,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    24.470,18.4600,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_2,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    21.680,18.4600,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    21.680,18.4600,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    19.850,18.4600,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    19.850,18.4600,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_3,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    17.070,18.4600,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    17.070,18.4600,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    15.240,18.4600,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    15.240,18.4600,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_4,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    12.450,18.4600,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    12.450,18.4600,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    10.620,18.4600,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    10.620,18.4600,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_5,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    7.840,18.4600,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    7.840,18.4600,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    6.010,18.4600,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    6.010,18.4600,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_6,  !- Name
+    Window,                  !- Surface Type
+    Window,            !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    3.220,18.4600,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    3.220,18.4600,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    1.390,18.4600,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    1.390,18.4600,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_4,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_4_wall_west,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,3.2200,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000,3.2200,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000,1.3900,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000,1.3900,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_3,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_4_wall_west,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,7.8400,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000,7.8400,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000,6.0100,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000,6.0100,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_2,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_4_wall_west,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,12.4500,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000,12.4500,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000,10.6200,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000,10.6200,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,             !- Construction Name
+    Perimeter_ZN_4_wall_west,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,17.0700,2.4240,  !- X,Y,Z ==> Vertex 1 {m}
+    0.000,17.0700,0.9000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.000,15.2400,0.9000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.000,15.2400,2.4240;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Door1,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    14.911800279714,18.460000000000,2.133600000000,  !- X,Y,Z ==> Vertex 1 {m}
+    14.911800279714,18.460000000000,0.000000000000,  !- X,Y,Z ==> Vertex 2 {m}
+    13.997400279714,18.460000000000,0.000000000000,  !- X,Y,Z ==> Vertex 3 {m}
+    13.997400279714,18.460000000000,2.133600000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Door2,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Perimeter_ZN_3_wall_north,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    19.131920148775,18.460000000000,2.133600000000,  !- X,Y,Z ==> Vertex 1 {m}
+    19.131920148775,18.460000000000,0.000000000000,  !- X,Y,Z ==> Vertex 2 {m}
+    18.217520148775,18.460000000000,0.000000000000,  !- X,Y,Z ==> Vertex 3 {m}
+    18.217520148775,18.460000000000,2.133600000000;  !- X,Y,Z ==> Vertex 4 {m}
+
+{% elif Windows == "Low" %} 
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    1.65799729521431,
+    0,
+    2.20081536726415,
+    1.65799729521431,
+    0,
+    1.12318463273585,
+    2.95200270478569,
+    0,
+    1.12318463273585,
+    2.95200270478569,
+    0,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    6.27799729521431,
+    0,
+    2.20081536726415,
+    6.27799729521431,
+    0,
+    1.12318463273585,
+    7.57200270478569,
+    0,
+    1.12318463273585,
+    7.57200270478569,
+    0,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    10.8879972952143,
+    0,
+    2.20081536726415,
+    10.8879972952143,
+    0,
+    1.12318463273585,
+    12.1820027047857,
+    0,
+    1.12318463273585,
+    12.1820027047857,
+    0,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    15.5079972952143,
+    0,
+    2.20081536726415,
+    15.5079972952143,
+    0,
+    1.12318463273585,
+    16.8020027047857,
+    0,
+    1.12318463273585,
+    16.8020027047857,
+    0,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_5,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    20.1179972952143,
+    0,
+    2.20081536726415,
+    20.1179972952143,
+    0,
+    1.12318463273585,
+    21.4120027047857,
+    0,
+    1.12318463273585,
+    21.4120027047857,
+    0,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_6,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    24.7379972952143,
+    0,
+    2.20081536726415,
+    24.7379972952143,
+    0,
+    1.12318463273585,
+    26.0320027047857,
+    0,
+    1.12318463273585,
+    26.0320027047857,
+    0,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_door,
+    GlassDoor,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    13.1979972952143,
+    0,
+    1.82148293552605,
+    13.1979972952143,
+    0,
+    0.312517064473954,
+    14.4920027047857,
+    0,
+    0.312517064473954,
+    14.4920027047857,
+    0,
+    1.82148293552605;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    15.5079972952143,
+    2.20081536726415,
+    27.69,
+    15.5079972952143,
+    1.12318463273585,
+    27.69,
+    16.8020027047857,
+    1.12318463273585,
+    27.69,
+    16.8020027047857,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    10.8879972952143,
+    2.20081536726415,
+    27.69,
+    10.8879972952143,
+    1.12318463273585,
+    27.69,
+    12.1820027047857,
+    1.12318463273585,
+    27.69,
+    12.1820027047857,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    6.27799729521431,
+    2.20081536726415,
+    27.69,
+    6.27799729521431,
+    1.12318463273585,
+    27.69,
+    7.57200270478569,
+    1.12318463273585,
+    27.69,
+    7.57200270478569,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    1.65799729521431,
+    2.20081536726415,
+    27.69,
+    1.65799729521431,
+    1.12318463273585,
+    27.69,
+    2.95200270478569,
+    1.12318463273585,
+    27.69,
+    2.95200270478569,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    26.0320027047857,
+    18.46,
+    2.20081536726415,
+    26.0320027047857,
+    18.46,
+    1.12318463273585,
+    24.7379972952143,
+    18.46,
+    1.12318463273585,
+    24.7379972952143,
+    18.46,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    21.4120027047857,
+    18.46,
+    2.20081536726415,
+    21.4120027047857,
+    18.46,
+    1.12318463273585,
+    20.1179972952143,
+    18.46,
+    1.12318463273585,
+    20.1179972952143,
+    18.46,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    16.8020027047857,
+    18.46,
+    2.20081536726415,
+    16.8020027047857,
+    18.46,
+    1.12318463273585,
+    15.5079972952143,
+    18.46,
+    1.12318463273585,
+    15.5079972952143,
+    18.46,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    12.1820027047857,
+    18.46,
+    2.20081536726415,
+    12.1820027047857,
+    18.46,
+    1.12318463273585,
+    10.8879972952143,
+    18.46,
+    1.12318463273585,
+    10.8879972952143,
+    18.46,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_5,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    7.57200270478569,
+    18.46,
+    2.20081536726415,
+    7.57200270478569,
+    18.46,
+    1.12318463273585,
+    6.27799729521431,
+    18.46,
+    1.12318463273585,
+    6.27799729521431,
+    18.46,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_6,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    2.95200270478569,
+    18.46,
+    2.20081536726415,
+    2.95200270478569,
+    18.46,
+    1.12318463273585,
+    1.65799729521431,
+    18.46,
+    1.12318463273585,
+    1.65799729521431,
+    18.46,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    2.95200270478569,
+    2.20081536726415,
+    0,
+    2.95200270478569,
+    1.12318463273585,
+    0,
+    1.65799729521431,
+    1.12318463273585,
+    0,
+    1.65799729521431,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    7.57200270478569,
+    2.20081536726415,
+    0,
+    7.57200270478569,
+    1.12318463273585,
+    0,
+    6.27799729521431,
+    1.12318463273585,
+    0,
+    6.27799729521431,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    12.1820027047857,
+    2.20081536726415,
+    0,
+    12.1820027047857,
+    1.12318463273585,
+    0,
+    10.8879972952143,
+    1.12318463273585,
+    0,
+    10.8879972952143,
+    2.20081536726415;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    16.8020027047857,
+    2.20081536726415,
+    0,
+    16.8020027047857,
+    1.12318463273585,
+    0,
+    15.5079972952143,
+    1.12318463273585,
+    0,
+    15.5079972952143,
+    2.20081536726415;
+
+{% elif Windows == "High" %} 
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    1.01099419,
+    0,
+    2.739631068,
+    1.01099419,
+    0,
+    0.584368932,
+    3.59900581,
+    0,
+    0.584368932,
+    3.59900581,
+    0,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    5.63099419,
+    0,
+    2.739631068,
+    5.63099419,
+    0,
+    0.584368932,
+    8.21900581,
+    0,
+    0.584368932,
+    8.21900581,
+    0,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    10.24099419,
+    0,
+    2.739631068,
+    10.24099419,
+    0,
+    0.584368932,
+    12.82900581,
+    0,
+    0.584368932,
+    12.82900581,
+    0,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    14.86099419,
+    0,
+    2.739631068,
+    14.86099419,
+    0,
+    0.584368932,
+    17.44900581,
+    0,
+    0.584368932,
+    17.44900581,
+    0,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_5,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    19.47099419,
+    0,
+    2.739631068,
+    19.47099419,
+    0,
+    0.584368932,
+    22.05900581,
+    0,
+    0.584368932,
+    22.05900581,
+    0,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_Window_6,
+    Window,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    24.09099419,
+    0,
+    2.739631068,
+    24.09099419,
+    0,
+    0.584368932,
+    26.67900581,
+    0,
+    0.584368932,
+    26.67900581,
+    0,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_1_wall_south_door,
+    GlassDoor,
+    Window,
+    Perimeter_ZN_1_wall_south,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    12.55099419,
+    0,
+    2.575966338,
+    12.55099419,
+    0,
+    -0.441966338,
+    15.13900581,
+    0,
+    -0.441966338,
+    15.13900581,
+    0,
+    2.134;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    14.86099419,
+    2.739631068,
+    27.69,
+    14.86099419,
+    0.584368932,
+    27.69,
+    17.44900581,
+    0.584368932,
+    27.69,
+    17.44900581,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    10.24099419,
+    2.739631068,
+    27.69,
+    10.24099419,
+    0.584368932,
+    27.69,
+    12.82900581,
+    0.584368932,
+    27.69,
+    12.82900581,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    5.63099419,
+    2.739631068,
+    27.69,
+    5.63099419,
+    0.584368932,
+    27.69,
+    8.21900581,
+    0.584368932,
+    27.69,
+    8.21900581,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_2_wall_east_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_2_wall_east,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    27.69,
+    1.01099419,
+    2.739631068,
+    27.69,
+    1.01099419,
+    0.584368932,
+    27.69,
+    3.59900581,
+    0.584368932,
+    27.69,
+    3.59900581,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    26.67900581,
+    18.46,
+    2.739631068,
+    26.67900581,
+    18.46,
+    0.584368932,
+    24.09099419,
+    18.46,
+    0.584368932,
+    24.09099419,
+    18.46,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    22.05900581,
+    18.46,
+    2.739631068,
+    22.05900581,
+    18.46,
+    0.584368932,
+    19.47099419,
+    18.46,
+    0.584368932,
+    19.47099419,
+    18.46,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    17.44900581,
+    18.46,
+    2.739631068,
+    17.44900581,
+    18.46,
+    0.584368932,
+    14.86099419,
+    18.46,
+    0.584368932,
+    14.86099419,
+    18.46,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    12.82900581,
+    18.46,
+    2.739631068,
+    12.82900581,
+    18.46,
+    0.584368932,
+    10.24099419,
+    18.46,
+    0.584368932,
+    10.24099419,
+    18.46,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_5,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    8.21900581,
+    18.46,
+    2.739631068,
+    8.21900581,
+    18.46,
+    0.584368932,
+    5.63099419,
+    18.46,
+    0.584368932,
+    5.63099419,
+    18.46,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_3_wall_north_Window_6,
+    Window,
+    Window,
+    Perimeter_ZN_3_wall_north,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    3.59900581,
+    18.46,
+    2.739631068,
+    3.59900581,
+    18.46,
+    0.584368932,
+    1.01099419,
+    18.46,
+    0.584368932,
+    1.01099419,
+    18.46,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_4,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    3.59900581,
+    2.739631068,
+    0,
+    3.59900581,
+    0.584368932,
+    0,
+    1.01099419,
+    0.584368932,
+    0,
+    1.01099419,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_3,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    8.21900581,
+    2.739631068,
+    0,
+    8.21900581,
+    0.584368932,
+    0,
+    5.63099419,
+    0.584368932,
+    0,
+    5.63099419,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_2,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    12.82900581,
+    2.739631068,
+    0,
+    12.82900581,
+    0.584368932,
+    0,
+    10.24099419,
+    0.584368932,
+    0,
+    10.24099419,
+    2.424;
+
+FenestrationSurface:Detailed,
+    Perimeter_ZN_4_wall_west_Window_1,
+    Window,
+    Window,
+    Perimeter_ZN_4_wall_west,
+    ,
+    AutoCalculate,
+    ,
+    1,
+    4,
+    0,
+    17.44900581,
+    2.739631068,
+    0,
+    17.44900581,
+    0.584368932,
+    0,
+    14.86099419,
+    0.584368932,
+    0,
+    14.86099419,
+    2.424;
+{%- endif %}

@@ -1,4 +1,4 @@
-IMG_NAME=eplus
+IMG_NAME=eplus_rtucc
 
 COMMAND_RUN=docker run \
 	  --name ${IMG_NAME} \
@@ -6,8 +6,7 @@ COMMAND_RUN=docker run \
 	  --rm \
 	  -i \
 	  -t \
-	  --net mynet \
-	  -p 127.0.0.1:5500:5500 \
+	  -p 127.0.0.1:5000:5000 \
 	  ${IMG_NAME} bash
 
 build:

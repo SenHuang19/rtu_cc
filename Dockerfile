@@ -3,12 +3,12 @@ FROM senhuang/pyfmi
 MAINTAINER Sen
 
 # Installing EnergyPlus 
-ENV ENERGYPLUS_VERSION 9.4.0
-ENV ENERGYPLUS_TAG v9.4.0
-ENV ENERGYPLUS_SHA 998c4b761e
-ENV ENERGYPLUS_INSTALL_VERSION 9-4-0
+ENV ENERGYPLUS_VERSION 9.0.1
+ENV ENERGYPLUS_TAG v9.0.1
+ENV ENERGYPLUS_SHA bb7ca4f0da
+ENV ENERGYPLUS_INSTALL_VERSION 9-0-1
 ENV ENERGYPLUS_DOWNLOAD_BASE_URL https://github.com/NREL/EnergyPlus/releases/download/$ENERGYPLUS_TAG
-ENV ENERGYPLUS_DOWNLOAD_FILENAME EnergyPlus-$ENERGYPLUS_VERSION-$ENERGYPLUS_SHA-Linux-Ubuntu18.04-x86_64.sh
+ENV ENERGYPLUS_DOWNLOAD_FILENAME EnergyPlus-$ENERGYPLUS_VERSION-$ENERGYPLUS_SHA-Linux-x86_64.sh
 ENV ENERGYPLUS_DOWNLOAD_URL $ENERGYPLUS_DOWNLOAD_BASE_URL/$ENERGYPLUS_DOWNLOAD_FILENAME
 
 RUN apt-get update && apt-get install -y ca-certificates curl \
@@ -31,4 +31,12 @@ RUN mkdir /home/developer
 
 RUN mkdir /home/developer/idf
 
-WORKDIR /home/developer/idf
+RUN mkdir /home/developer/idf/output
+
+COPY web.py /home/developer/idf/
+
+COPY wrapper.py /home/developer/idf/
+
+COPY template /home/developer/idf/template
+
+COPY wea /home/developer/idf/wea

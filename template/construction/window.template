@@ -1,0 +1,29 @@
+!-   ===========  ALL OBJECTS IN CLASS: WINDOWMATERIAL:SIMPLEGLAZINGSYSTEM ===========
+{%- if (climate == "4B"  or climate == "6A" or climate == "5A" or climate == "5B" or climate == "6B" or climate == "4A" or climate == "4C" or climate == "5C" ) %} 
+WindowMaterial:SimpleGlazingSystem,
+    Glazing Layer,           !- Name
+    3.2366082,              !- U-Factor {W/m2-K}
+    0.39,                     !- Solar Heat Gain Coefficient
+    0.39;                     !- Visible Transmittance
+{% elif (climate == "3A"  or climate == "3B" or climate == "1A" or climate == "3C" or climate == "2A" or climate == "2B" ) %} 
+WindowMaterial:SimpleGlazingSystem,
+    Glazing Layer,           !- Name
+    6.9274772,              !- U-Factor {W/m2-K}
+    0.25,                     !- Solar Heat Gain Coefficient
+    0.25;                     !- Visible Transmittance
+{% elif climate == "8"  %}
+WindowMaterial:SimpleGlazingSystem,
+    Glazing Layer,           !- Name
+    2.6119996,              !- U-Factor {W/m2-K}
+    0.45,                     !- Solar Heat Gain Coefficient
+    0.45;                     !- Visible Transmittance
+{% elif climate == "7"  %}
+WindowMaterial:SimpleGlazingSystem,
+    Glazing Layer,           !- Name
+    3.2366082,              !- U-Factor {W/m2-K}
+    0.49,                     !- Solar Heat Gain Coefficient
+    0.49;                     !- Visible Transmittance
+{%- endif %}
+Construction,
+    Window,  !- Name
+    Glazing Layer;           !- Outside Layer
