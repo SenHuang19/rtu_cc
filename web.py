@@ -49,7 +49,19 @@ class run(Resource):
         for i in range(len(inputs['output'])):
              result[inputs['output'][i]] = simulation_result[inputs['output'][i]].tolist()
         os.chdir('/home/developer/idf') 
-        print(result)     
+        load_template('./template/devices','cooling_coil_upgrade.template','output','cooling_coil',data)
+        load_template('./template/devices','heating_coil_upgrade.template','output','heating_coil',data)
+        load_template('./template/controller','outdoor_air_control_upgrade.template','output','outdoor_air_control',data)
+        load_template('./template/ems','ems_pr_upgrade.template','output','ems_pr',data)
+        load_template('./template/curve','FanPowerCurve_upgrade.template','output','FanPowerCurve',data)
+        load_template('./template/curve','HPACCOOLEIRFT_upgrade.template','output','HPACCOOLEIRFT',data)
+        load_template(['template/global','output'],'output.template','output','output.idf',data)  
+        simulation = subprocess.Popen(cmdStr, shell=True)
+        simulation.wait()
+       
+        simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
+        for i in range(len(inputs['output'])):
+             result[inputs['output'][i]+'_upgrade'] = simulation_result[inputs['output'][i]].tolist()        
         return result   
         
 

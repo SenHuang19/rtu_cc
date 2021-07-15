@@ -8,18 +8,20 @@ Controller:OutdoorAir,
     Outside Air Inlet Node 1,!- Actuator Node Name
     autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
     autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
-{%- if BaselineEconomizer == "No Economizer"  %} 
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and Orientation == "South"))) or (UpgradedEconomizer == "No Economizer" and Orientation == "South")  %} 
     NoEconomizer,            !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialDryBulb"%}
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and Orientation == "South"))) or (UpgradedEconomizer == "DifferentialDryBulb" and Orientation == "South") %}
     DifferentialDryBulb,     !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialEnthalpy"%}
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and Orientation == "South"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and Orientation == "South") %}
     DifferentialEnthalpy,     !- Economizer Control Type
 {% else %}
     FixedDryBulb,     !- Economizer Control Type
 {%- endif %}
     ModulateFlow,            !- Economizer Control Action Type
-{%- if BaselineEconomizer == "FixedDryBulb"  %} 
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and Orientation == "South")) %} 
     {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and Orientation == "South")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
 {% else %}
     ,
 {%- endif %}
@@ -56,18 +58,20 @@ Controller:OutdoorAir,
     Outside Air Inlet Node 2,!- Actuator Node Name
     autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
     autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
-{%- if BaselineEconomizer == "No Economizer"  %} 
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and Orientation == "East"))) or (UpgradedEconomizer == "No Economizer" and Orientation == "East")  %} 
     NoEconomizer,            !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialDryBulb"%}
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and Orientation == "East"))) or (UpgradedEconomizer == "DifferentialDryBulb" and Orientation == "East") %}
     DifferentialDryBulb,     !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialEnthalpy"%}
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and Orientation == "East"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and Orientation == "East") %}
     DifferentialEnthalpy,     !- Economizer Control Type
 {% else %}
     FixedDryBulb,     !- Economizer Control Type
 {%- endif %}
     ModulateFlow,            !- Economizer Control Action Type
-{%- if BaselineEconomizer == "FixedDryBulb"  %} 
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and Orientation == "East")) %} 
     {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and Orientation == "East")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
 {% else %}
     ,
 {%- endif %}
@@ -102,18 +106,20 @@ Controller:OutdoorAir,
     Outside Air Inlet Node 3,!- Actuator Node Name
     autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
     autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
-{%- if BaselineEconomizer == "No Economizer"  %} 
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and Orientation == "North"))) or (UpgradedEconomizer == "No Economizer" and Orientation == "North")  %} 
     NoEconomizer,            !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialDryBulb"%}
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and Orientation == "North"))) or (UpgradedEconomizer == "DifferentialDryBulb" and Orientation == "North") %}
     DifferentialDryBulb,     !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialEnthalpy"%}
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and Orientation == "North"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and Orientation == "North") %}
     DifferentialEnthalpy,     !- Economizer Control Type
 {% else %}
     FixedDryBulb,     !- Economizer Control Type
 {%- endif %}
     ModulateFlow,            !- Economizer Control Action Type
-{%- if BaselineEconomizer == "FixedDryBulb"  %} 
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and Orientation == "North")) %} 
     {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and Orientation == "North")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
 {% else %}
     ,
 {%- endif %}
@@ -149,18 +155,20 @@ Controller:OutdoorAir,
     Outside Air Inlet Node 4,!- Actuator Node Name
     autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
     autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
-{%- if BaselineEconomizer == "No Economizer"  %} 
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and Orientation == "West"))) or (UpgradedEconomizer == "No Economizer" and Orientation == "West")  %} 
     NoEconomizer,            !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialDryBulb"%}
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and Orientation == "West"))) or (UpgradedEconomizer == "DifferentialDryBulb" and Orientation == "West") %}
     DifferentialDryBulb,     !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialEnthalpy"%}
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and Orientation == "West"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and Orientation == "West") %}
     DifferentialEnthalpy,     !- Economizer Control Type
 {% else %}
     FixedDryBulb,     !- Economizer Control Type
 {%- endif %}
     ModulateFlow,            !- Economizer Control Action Type
-{%- if BaselineEconomizer == "FixedDryBulb"  %} 
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and Orientation == "West")) %} 
     {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and Orientation == "West")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
 {% else %}
     ,
 {%- endif %}
@@ -196,18 +204,20 @@ Controller:OutdoorAir,
     Outside Air Inlet Node 5,!- Actuator Node Name
     autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
     autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
-{%- if BaselineEconomizer == "No Economizer"  %} 
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and Orientation == "Core"))) or (UpgradedEconomizer == "No Economizer" and Orientation == "Core")  %} 
     NoEconomizer,            !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialDryBulb"%}
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and Orientation == "Core"))) or (UpgradedEconomizer == "DifferentialDryBulb" and Orientation == "Core") %}
     DifferentialDryBulb,     !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialEnthalpy"%}
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and Orientation == "Core"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and Orientation == "Core") %}
     DifferentialEnthalpy,     !- Economizer Control Type
 {% else %}
     FixedDryBulb,     !- Economizer Control Type
 {%- endif %}
     ModulateFlow,            !- Economizer Control Action Type
-{%- if BaselineEconomizer == "FixedDryBulb"  %} 
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and Orientation == "Core")) %} 
     {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and Orientation == "Core")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
 {% else %}
     ,
 {%- endif %}

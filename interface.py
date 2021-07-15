@@ -2,6 +2,7 @@
 
 import json, time, datetime
 
+import pandas as pd
 
 import requests
 
@@ -23,12 +24,12 @@ def work(url):
     
               
 	result = requests.post('{0}/run'.format(url),headers={"Content-type":"application/json"}, data=json_object).json()
+        
+	result = pd.DataFrame.from_dict(result)
     
-	outData = result 
-    
-	print outData
+	result.to_csv('result.csv')
     
     
-	return outData
+	return result
 
 work('http://127.0.0.1:5000')

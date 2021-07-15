@@ -1,0 +1,100 @@
+
+Curve:Cubic,
+    FanPowerCurve1,           !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "South"))) or (UpgradedFanType == "Constant Speed" and Orientation == "South")  %} 
+    1,
+    0,
+    0,
+    0,
+{% else %}
+    0.0408,                  !- Coefficient1 Constant
+    0.088,                   !- Coefficient2 x
+    -.0729,                  !- Coefficient3 x**2
+    0.9437,                  !- Coefficient4 x**3
+{%- endif %}
+    0,                       !- Minimum Value of x
+    1,                       !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Dimensionless,           !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+    
+Curve:Cubic,
+    FanPowerCurve2,           !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "East"))) or (UpgradedFanType == "Constant Speed" and Orientation == "East")  %} 
+    1,
+    0,
+    0,
+    0,
+{% else %}
+    0.0408,                  !- Coefficient1 Constant
+    0.088,                   !- Coefficient2 x
+    -.0729,                  !- Coefficient3 x**2
+    0.9437,                  !- Coefficient4 x**3
+{%- endif %}
+    0,                       !- Minimum Value of x
+    1,                       !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Dimensionless,           !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+    
+Curve:Cubic,
+    FanPowerCurve3,           !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "North"))) or (UpgradedFanType == "Constant Speed" and Orientation == "North")  %} 
+    1,
+    0,
+    0,
+    0,
+{% else %}
+    0.0408,                  !- Coefficient1 Constant
+    0.088,                   !- Coefficient2 x
+    -.0729,                  !- Coefficient3 x**2
+    0.9437,                  !- Coefficient4 x**3
+{%- endif %}
+    0,                       !- Minimum Value of x
+    1,                       !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Dimensionless,           !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+    
+Curve:Cubic,
+    FanPowerCurve4,           !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "West"))) or (UpgradedFanType == "Constant Speed" and Orientation == "West")  %}
+    1,
+    0,
+    0,
+    0,
+{% else %}
+    0.0408,                  !- Coefficient1 Constant
+    0.088,                   !- Coefficient2 x
+    -.0729,                  !- Coefficient3 x**2
+    0.9437,                  !- Coefficient4 x**3
+{%- endif %}
+    0,                       !- Minimum Value of x
+    1,                       !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Dimensionless,           !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+    
+Curve:Cubic,
+    FanPowerCurve5,           !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "Core"))) or (UpgradedFanType == "Constant Speed" and Orientation == "Core")  %}
+    1,
+    0,
+    0,
+    0,
+{% else %}
+    0.0408,                  !- Coefficient1 Constant
+    0.088,                   !- Coefficient2 x
+    -.0729,                  !- Coefficient3 x**2
+    0.9437,                  !- Coefficient4 x**3
+{%- endif %}
+    0,                       !- Minimum Value of x
+    1,                       !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Dimensionless,           !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
