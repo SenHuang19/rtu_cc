@@ -21,6 +21,7 @@ class run(Resource):
     def post(self):   
         inputs = request.get_json(force=True)       
         data = inputs['input']
+        os.chdir('/home/developer/idf')  
         src = './template/climate/{}'.format(data['climate'])
         dst = 'output/climates'
         copyfile(src, dst)
@@ -45,10 +46,16 @@ class run(Resource):
         simulation.wait()
        
         simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
+        
+        f=open('/home/developer/idf/output/eplustbl.csv')
+        tab1=f.readlines()
+        f.close()
+        
         result={}
+        result['tab1'] = tab1
         for i in range(len(inputs['output'])):
              result[inputs['output'][i]] = simulation_result[inputs['output'][i]].tolist()
-        os.chdir('/home/developer/idf') 
+        os.chdir('/home/developer/idf')  
         load_template('./template/devices','cooling_coil_upgrade.template','output','cooling_coil',data)
         load_template('./template/devices','heating_coil_upgrade.template','output','heating_coil',data)
         load_template('./template/controller','outdoor_air_control_upgrade.template','output','outdoor_air_control',data)
@@ -56,13 +63,19 @@ class run(Resource):
         load_template('./template/curve','FanPowerCurve_upgrade.template','output','FanPowerCurve',data)
         load_template('./template/curve','HPACCOOLEIRFT_upgrade.template','output','HPACCOOLEIRFT',data)
         load_template(['template/global','output'],'output.template','output','output.idf',data)  
+        os.chdir('/home/developer/idf/output')
         simulation = subprocess.Popen(cmdStr, shell=True)
         simulation.wait()
        
         simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
         for i in range(len(inputs['output'])):
-             result[inputs['output'][i]+'_upgrade'] = simulation_result[inputs['output'][i]].tolist()        
-        return result   
+             result[inputs['output'][i]+'_upgrade'] = simulation_result[inputs['output'][i]].tolist()       
+
+        f=open('/home/developer/idf/output/eplustbl.csv')
+        tab2=f.readlines()
+        f.close()
+        result['tab2'] = tab2   
+        return result 
         
 
 api.add_resource(run, '/run')
