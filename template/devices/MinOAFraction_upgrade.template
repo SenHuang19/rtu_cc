@@ -3,28 +3,28 @@
 Schedule:Constant,
     minOAFrac1,               !- Name
     Fraction,                !- Schedule Type Limits Name
-    {{MinOAFraction_Baseline}};
+    {{MinOAFraction_Upgraded}};
 
 
 Schedule:Constant,
     minOAFrac2,               !- Name
     Fraction,                !- Schedule Type Limits Name
-    {{MinOAFraction_Baseline}};
+    {{MinOAFraction_Upgraded}};
 
 Schedule:Constant,
     minOAFrac3,               !- Name
     Fraction,                !- Schedule Type Limits Name
-    {{MinOAFraction_Baseline}};
+    {{MinOAFraction_Upgraded}};
 
 Schedule:Constant,
     minOAFrac4,               !- Name
     Fraction,                !- Schedule Type Limits Name
-    {{MinOAFraction_Baseline}};
+    {{MinOAFraction_Upgraded}};
 
 Schedule:Constant,
     minOAFrac5,               !- Name
     Fraction,                !- Schedule Type Limits Name
-    {{MinOAFraction_Baseline}};
+    {{MinOAFraction_Upgraded}};
 
 Schedule:Constant,
     Fan2Max,                 !- Name

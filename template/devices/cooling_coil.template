@@ -87,6 +87,7 @@
     Supp Gas Heating Coil 1, !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
+	None;
 	{% endif  %} 
     
     Branch,
@@ -96,7 +97,7 @@
     OA Sys 1,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 1,  !- Component 1 Inlet Node Name
     Mixed Air Node 1,        !- Component 1 Outlet Node Name
-	{%- if HeatingType == "HeatPump" %}
+	{%- if HeatingType == "HeatPump" %}	
         AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
     {% else  %} 
         AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
@@ -113,8 +114,9 @@
     EnergyManagementSystem:Sensor,
     CC1,                     !- Name
     Typical Terminal Reheat 1,  !- Output:Variable or Output:Meter Index Key Name
-    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name
-    
+    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name    
+
+
 
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 2,    !- Name
@@ -200,6 +202,7 @@
     Supp Gas Heating Coil 2, !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
+	None;
     {% endif  %}
     
     Branch,
@@ -209,10 +212,10 @@
     OA Sys 2,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 2,  !- Component 1 Inlet Node Name
     Mixed Air Node 2,        !- Component 1 Outlet Node Name
-	{%- if HeatingType == "HeatPump" %}
-    AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
+	{%- if HeatingType == "HeatPump" %}	
+        AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
     {% else  %} 
-    AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
+        AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
     {%- endif  %} 	
     DXAC Heat Pump 2,        !- Component 2 Name
     Mixed Air Node 2,        !- Component 2 Inlet Node Name
@@ -226,8 +229,7 @@
     EnergyManagementSystem:Sensor,
     CC2,                     !- Name
     Typical Terminal Reheat 2,  !- Output:Variable or Output:Meter Index Key Name
-    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name
-    
+    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name    
     
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 3,    !- Name
@@ -314,8 +316,9 @@
     Supp Gas Heating Coil 3, !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 3,    !- Cooling Coil Name
+	None;
     {% endif  %} 
-    
+
     Branch,
     Air Loop Main Branch 3,  !- Name
     ,                        !- Pressure Drop Curve Name
@@ -323,11 +326,11 @@
     OA Sys 3,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 3,  !- Component 1 Inlet Node Name
     Mixed Air Node 3,        !- Component 1 Outlet Node Name
-	{% if HeatingType == "HeatPump" %}
-    AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
+	{%- if HeatingType == "HeatPump" %}	
+        AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 3 Object Type
     {% else  %} 
-    AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
-    {% endif  %} 		
+        AirLoopHVAC:UnitaryHeatCool,  !- Component 3 Object Type
+    {%- endif  %} 
     DXAC Heat Pump 3,        !- Component 3 Name
     Mixed Air Node 3,        !- Component 3 Inlet Node Name
     Air Loop Outlet Node 3;  !- Component 3 Outlet Node Name
@@ -340,7 +343,7 @@
     EnergyManagementSystem:Sensor,
     CC3,                     !- Name
     Typical Terminal Reheat 3,  !- Output:Variable or Output:Meter Index Key Name
-    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name
+    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name    
   
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 4,    !- Name
@@ -426,8 +429,9 @@
     Supp Gas Heating Coil 4, !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
+	None;
     {% endif %}
-    
+
     Branch,
     Air Loop Main Branch 4,  !- Name
     ,                        !- Pressure Drop Curve Name
@@ -435,11 +439,11 @@
     OA Sys 4,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 4,  !- Component 1 Inlet Node Name
     Mixed Air Node 4,        !- Component 1 Outlet Node Name
-	{%- if HeatingType == "HeatPump" %}
-    AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
+	{%- if HeatingType == "HeatPump" %}	
+        AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 4 Object Type
     {% else  %} 
-    AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
-    {%- endif  %} 		
+        AirLoopHVAC:UnitaryHeatCool,  !- Component 4 Object Type
+    {%- endif  %} 
     DXAC Heat Pump 4,        !- Component 4 Name
     Mixed Air Node 4,        !- Component 4 Inlet Node Name
     Air Loop Outlet Node 4;  !- Component 4 Outlet Node Name
@@ -452,7 +456,7 @@
     EnergyManagementSystem:Sensor,
     CC4,                     !- Name
     Typical Terminal Reheat 4,  !- Output:Variable or Output:Meter Index Key Name
-    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name
+    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name    
         
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 5,    !- Name
@@ -537,8 +541,9 @@
     Supp Gas Heating Coil 5, !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 5,    !- Cooling Coil Name
+	None;
     {% endif %}
-    
+	
     Branch,
     Air Loop Main Branch 5,  !- Name
     ,                        !- Pressure Drop Curve Name
@@ -546,11 +551,11 @@
     OA Sys 5,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 5,  !- Component 1 Inlet Node Name
     Mixed Air Node 5,        !- Component 1 Outlet Node Name
-	{% if HeatingType == "HeatPump" %}
-    AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
-    {% else  %} 
-    AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
-    {% endif  %} 
+	{%- if HeatingType == "HeatPump" %}	
+        AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 5 Object Type
+    {% else  %}
+        AirLoopHVAC:UnitaryHeatCool,  !- Component 5 Object Type
+    {%- endif  %} 
     DXAC Heat Pump 5,        !- Component 5 Name
     Mixed Air Node 5,        !- Component 5 Inlet Node Name
     Air Loop Outlet Node 5;  !- Component 5 Outlet Node Name
@@ -563,13 +568,13 @@
     EnergyManagementSystem:Sensor,
     CC5,                     !- Name
     Typical Terminal Reheat 5,  !- Output:Variable or Output:Meter Index Key Name
-    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name
-
+    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name	
+    
 {%- endif  %} 
 
 
 
-{%- if BaselineCompressor == "Multispeed"  %} 
+{%- if BaselineCompressor == "MultiSpeed"  %} 
 {% set NumberOfSpeeds = NumberofSpeeds_Baseline %}
     
     Coil:Cooling:DX:MultiSpeed,
@@ -656,7 +661,7 @@
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}	
     autosize,                !- Speed 4 Gross Rated Total Cooling Capacity {W}
     0.75,                    !- Speed 4 Gross Rated Sensible Heat Ratio
-    [EER/3.412] , [","]
+    {{ EER/3.412 }},
     autosize,                !- Speed 4 Rated Air Flow Rate {m3/s}
     673.3,                   !- Speed 4 Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
     HPACCoolCapFT Speed 4,   !- Speed 4 Total Cooling Capacity Function of Temperature Curve Name
@@ -714,6 +719,7 @@
     {% else %}
         1,
     {% endif %}	
+    {{ NumberOfSpeeds }},
     autosize,                !- Heating Speed 1 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 3 Supply Air Flow Rate {m3/s}
@@ -722,6 +728,18 @@
     autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
     autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
+
+    Branch,
+    Air Loop Main Branch 1,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
+    OA Sys 1,                !- Component 1 Name
+    Outdoor Air Mixer Inlet Node 1,  !- Component 1 Inlet Node Name
+    Mixed Air Node 1,        !- Component 1 Outlet Node Name
+    AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,  !- Component 2 Object Type	
+    DXAC Heat Pump 1,        !- Component 2 Name
+    Mixed Air Node 1,        !- Component 2 Inlet Node Name
+    Air Loop Outlet Node 1;  !- Component 2 Outlet Node Name
     
     EnergyManagementSystem:Sensor,
     HC1,                     !- Name
@@ -875,6 +893,7 @@ Coil:Cooling:DX:MultiSpeed,
     {% else %}
         1,
     {% endif %}
+	{{ NumberOfSpeeds }},
     autosize,                !- Heating Speed 1 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 3 Supply Air Flow Rate {m3/s}
@@ -883,6 +902,18 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
     autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
+
+    Branch,
+    Air Loop Main Branch 2,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
+    OA Sys 2,                !- Component 1 Name
+    Outdoor Air Mixer Inlet Node 2,  !- Component 1 Inlet Node Name
+    Mixed Air Node 2,        !- Component 1 Outlet Node Name
+    AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,  !- Component 2 Object Type	
+    DXAC Heat Pump 2,        !- Component 2 Name
+    Mixed Air Node 2,        !- Component 2 Inlet Node Name
+    Air Loop Outlet Node 2;  !- Component 2 Outlet Node Name
     
     EnergyManagementSystem:Sensor,
     HC2,                     !- Name
@@ -1036,6 +1067,7 @@ Coil:Cooling:DX:MultiSpeed,
     {% else %}
         1,
     {% endif %}
+    {{ NumberOfSpeeds }},
     autosize,                !- Heating Speed 1 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 3 Supply Air Flow Rate {m3/s}
@@ -1044,6 +1076,18 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
     autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
+
+    Branch,
+    Air Loop Main Branch 3,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
+    OA Sys 3,                !- Component 1 Name
+    Outdoor Air Mixer Inlet Node 3,  !- Component 1 Inlet Node Name
+    Mixed Air Node 3,        !- Component 1 Outlet Node Name
+    AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,  !- Component 2 Object Type	
+    DXAC Heat Pump 3,        !- Component 2 Name
+    Mixed Air Node 3,        !- Component 2 Inlet Node Name
+    Air Loop Outlet Node 3;  !- Component 2 Outlet Node Name
     
     EnergyManagementSystem:Sensor,
     HC3,                     !- Name
@@ -1169,9 +1213,6 @@ Coil:Cooling:DX:MultiSpeed,
     Supply Fan 4,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-    Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-    Heat Pump DX Heating Coil 4,  !- Heating Coil Name
-    -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
 	{% if HeatingType == "HeatPump" %}
         Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
     {% elif HeatingType == "Electric" %}
@@ -1179,6 +1220,9 @@ Coil:Cooling:DX:MultiSpeed,
     {% else  %} 
         Coil:Heating:Gas:Multistage,
     {% endif  %} 
+    Heat Pump DX Heating Coil 4,  !- Heating Coil Name
+    -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
+    Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
     Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 4, !- Supplemental Heating Coil Name
@@ -1196,6 +1240,7 @@ Coil:Cooling:DX:MultiSpeed,
     {% else %}
         1,
     {% endif %}
+    {{ NumberOfSpeeds }},
     autosize,                !- Heating Speed 1 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 3 Supply Air Flow Rate {m3/s}
@@ -1204,6 +1249,19 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
     autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
+
+
+    Branch,
+    Air Loop Main Branch 4,  !- Name
+    ,                        !- Pressure Drop Curve Name
+    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
+    OA Sys 4,                !- Component 1 Name
+    Outdoor Air Mixer Inlet Node 4,  !- Component 1 Inlet Node Name
+    Mixed Air Node 4,        !- Component 1 Outlet Node Name
+    AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,  !- Component 2 Object Type	
+    DXAC Heat Pump 4,        !- Component 2 Name
+    Mixed Air Node 4,        !- Component 2 Inlet Node Name
+    Air Loop Outlet Node 4;  !- Component 2 Outlet Node Name
     
     EnergyManagementSystem:Sensor,
     HC4,                     !- Name
@@ -1357,6 +1415,7 @@ Coil:Cooling:DX:MultiSpeed,
     {% else %}
         1,
     {% endif %}
+    {{ NumberOfSpeeds }},
     autosize,                !- Heating Speed 1 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Speed 3 Supply Air Flow Rate {m3/s}
@@ -1365,7 +1424,19 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
     autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
-    
+ 
+    Branch,
+    Air Loop Main Branch 5  !- Name
+    ,                        !- Pressure Drop Curve Name
+    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
+    OA Sys 5,                !- Component 1 Name
+    Outdoor Air Mixer Inlet Node 5,  !- Component 1 Inlet Node Name
+    Mixed Air Node 5,        !- Component 1 Outlet Node Name
+    AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,  !- Component 2 Object Type	
+    DXAC Heat Pump 5,        !- Component 2 Name
+    Mixed Air Node 5,        !- Component 2 Inlet Node Name
+    Air Loop Outlet Node 5;  !- Component 2 Outlet Node Name
+ 
     EnergyManagementSystem:Sensor,
     HC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
@@ -1377,3 +1448,6 @@ Coil:Cooling:DX:MultiSpeed,
     Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
     
 {%- endif  %}
+
+
+    

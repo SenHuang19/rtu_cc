@@ -11,7 +11,7 @@ ENV ENERGYPLUS_DOWNLOAD_BASE_URL https://github.com/NREL/EnergyPlus/releases/dow
 ENV ENERGYPLUS_DOWNLOAD_FILENAME EnergyPlus-$ENERGYPLUS_VERSION-$ENERGYPLUS_SHA-Linux-x86_64.sh
 ENV ENERGYPLUS_DOWNLOAD_URL $ENERGYPLUS_DOWNLOAD_BASE_URL/$ENERGYPLUS_DOWNLOAD_FILENAME
 
-RUN apt-get update && apt-get install -y ca-certificates curl \
+RUN apt-get update --allow-releaseinfo-change && apt-get install -y ca-certificates curl \
     && rm -rf /var/lib/apt/lists/* \
     && curl -SLO $ENERGYPLUS_DOWNLOAD_URL \
     && chmod +x $ENERGYPLUS_DOWNLOAD_FILENAME \

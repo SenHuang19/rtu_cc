@@ -6,7 +6,7 @@ COMMAND_RUN=docker run \
 	  --rm \
 	  -i \
 	  -t \
-	  -p 127.0.0.1:5000:5000 \
+	  -p 127.0.0.1:5100:5000 \
 	  ${IMG_NAME} bash
 
 build:

@@ -1,18 +1,20 @@
 !-   ======== ALL OBJECTS IN CLASS: COIL:HEATING:DX:SINGLESPEED ========
 
-{%- if ((BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "South")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "South"))  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "South"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "South")  %} 
 
-{%- if ((UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "South"))  %} 
+{% if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "South")  %} 
 {% set COP_1 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_1 = HeatingCOP_Baseline %}
-{%- endif %}
+{% endif %}
+
+
 
 Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 1,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
-    {{COP_1}},
+    {{COP_1}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
     Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
@@ -38,6 +40,32 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
+
+
+
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "South"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "South")  %} 
+
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 1, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name
+
+{%- elif (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "South"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "South")  %} 
+
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 1, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name
+
+{% else %} 
+
 Coil:Heating:Fuel,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -47,33 +75,11 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
 {%- endif %}
-
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "South")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "South"))  %} 
-    Coil:Heating:Electric,
-    Supp Gas Heating Coil 1, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    1,                       !- Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name   
 {%- endif %}
 
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "South")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "South"))  %} 
-    Coil:Heating:Fuel,
-    Supp Gas Heating Coil 1, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name
-{%- endif %}
-
-
-{%- if ((BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "East")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "East"))  %} 
-{%- if ((UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "East"))  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "East"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "East")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "East")  %} 
 {% set COP_2 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_2 = HeatingCOP_Baseline %}
@@ -84,7 +90,7 @@ Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 2,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
-    {{ COP_2 }},
+    {{COP_2}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
@@ -110,6 +116,28 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
+
+{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "East"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "East")  %} 
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 2, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
+	
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "East"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "East")  %} 
+ 
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 2, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
+{% else %} 
+
 Coil:Heating:Fuel,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -119,32 +147,13 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
 {%- endif %}
-
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "East")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "East"))  %} 
-    Coil:Heating:Electric,
-    Supp Gas Heating Coil 2, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    1,                       !- Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
 {%- endif %}
 
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "East")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "East"))  %} 
-    Coil:Heating:Fuel,
-    Supp Gas Heating Coil 2, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "North")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "North"))  %} 
-{%- if ((UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "North"))  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "North"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "North")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "North")  %} 
 {% set COP_3 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_3 = HeatingCOP_Baseline %}
@@ -153,7 +162,7 @@ Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 3,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
-    {{ COP_3 }},
+	{{COP_3}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
     Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
@@ -179,6 +188,29 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
+
+
+
+{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "North"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "North")  %} 
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 3, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 3;  !- Air Outlet Node Name
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "North"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "North")  %} 
+
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 3, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 3;  !- Air Outlet Node Name
+{% else %} 
+
 Coil:Heating:Fuel,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -188,31 +220,11 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name
 {%- endif %}
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "North")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "North"))  %} 
-    Coil:Heating:Electric,
-    Supp Gas Heating Coil 3, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    1,                       !- Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 3;  !- Air Outlet Node Name
-{%- endif %}
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "North")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "North"))  %} 
-    Coil:Heating:Fuel,
-    Supp Gas Heating Coil 3, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 3;  !- Air Outlet Node Name
 {%- endif %}
 
 
-{%- if ((BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "West")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "West"))  %} 
-{%- if ((UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "West"))  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "West"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "West")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "West")  %} 
 {% set COP_4 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_4 = HeatingCOP_Baseline %}
@@ -221,7 +233,7 @@ Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 4,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
-    {{ COP_4 }},
+    {{COP_4}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
     Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
@@ -247,6 +259,26 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
+
+{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "West"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "West")  %} 
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 4, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 4;  !- Air Outlet Node Name
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "West"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "West")  %} 
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 4, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 4;  !- Air Outlet Node Name
+{% else %} 
+
 Coil:Heating:Fuel,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -257,28 +289,10 @@ Coil:Heating:Fuel,
     Air Loop Outlet Node 4;  !- Air Outlet Node Name
 {%- endif %}
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "West")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "West"))  %} 
-    Coil:Heating:Electric,
-    Supp Gas Heating Coil 4, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    1,                       !- Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 4;  !- Air Outlet Node Name
 {%- endif %}
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "West")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "West"))  %} 
-    Coil:Heating:Fuel,
-    Supp Gas Heating Coil 4, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 4;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "Core")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "Core"))  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "Core"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "Core")  %} 
 {%- if ((UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "Core"))  %} 
 {% set COP_5 = HeatingCOP_Upgraded %}
 {% else %}
@@ -288,7 +302,7 @@ Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 5,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
-    {{ COP_5 }},
+    {{COP_5}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
     Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
@@ -314,6 +328,31 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
+
+
+
+
+{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "Core"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "Core")  %} 
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 5, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 5;  !- Air Outlet Node Name
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "Core"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "Core")  %} 
+
+
+   Coil:Heating:Fuel,
+    Supp Gas Heating Coil 5, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 5;  !- Air Outlet Node Name
+{% else %} 
+
 Coil:Heating:Fuel,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -323,31 +362,10 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
 {%- endif %}
-
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "Core")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and Orientation == "Core"))  %} 
-    Coil:Heating:Electric,
-    Supp Gas Heating Coil 5, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    1,                       !- Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 5;  !- Air Outlet Node Name
 {%- endif %}
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "Core")) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and Orientation == "Core"))  %} 
-    Coil:Heating:Fuel,
-    Supp Gas Heating Coil 5, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
-    AIR LOOP OUTLET NODE 5;  !- Air Outlet Node Name
-{%- endif %}
-
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "Multispeed" and Orientation == "South")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "South")  %} 
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "South"))  %} 
+{%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "South")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "South")  %} 
+{% if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "South"))  %} 
 		{% set COP_1 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_1 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_1 = UpgradedHeatingType %}	
@@ -355,7 +373,7 @@ Coil:Heating:Fuel,
 		{% set COP_1 = HeatingCOP_Baseline %}
 		{% set NumberOfSpeeds_1 = NumberofSpeeds_Baseline %}
 		{% set HeatingType_1 = BaselineHeatingType %}		
-{%- endif %}
+{% endif %}
 
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 1,  !- Name
@@ -375,7 +393,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds_1 }},  !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP_1 }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -411,8 +429,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
-    
     {%- if NumberOfSpeeds_1 =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -431,17 +447,9 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 1, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
-    Air Loop Outlet Node 1;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "Multispeed" and Orientation == "South"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "South"))  %}    
+
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "South"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "South"))  %}    
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -460,9 +468,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "Multispeed" and Orientation == "South"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "South")) %}      
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "South"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "South")) %}      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -474,6 +481,7 @@ Coil:Heating:Fuel,
     1,                       !- Number of Stages
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
+
     
 Coil:Heating:Fuel,
     Supp Gas Heating Coil 1, !- Name
@@ -483,8 +491,22 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
+
+{% else %}	
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 1, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
+    Air Loop Outlet Node 1;  !- Air Outlet Node Name
+	
 {%- endif %}
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "Multispeed" and Orientation == "East")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "East")  %} 
+{%- endif %}
+
+{%- if (BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "East"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "East")  %} 
 {%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "East"))  %} 
 		{% set COP_2 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_2 = NumberofSpeeds_Upgraded %}
@@ -512,7 +534,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds_2 }},  !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP_2 }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -548,7 +570,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {%- if NumberOfSpeeds_2 =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -567,17 +588,10 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 2, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
-    Air Loop Outlet Node 2;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "Multispeed" and Orientation == "East"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "East"))  %}      
+
+
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "East"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "East"))  %}      
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -596,9 +610,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "Multispeed" and Orientation == "East")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "East")) %}            
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "East")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "East")) %}            
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -619,10 +632,22 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
+
+{% else %}
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 2, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
+    Air Loop Outlet Node 2;  !- Air Outlet Node Name	
+	
+{%- endif %}
 {%- endif %}
 
 
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "Multispeed" and Orientation == "North")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "North")  %} 
+{%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "North")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "North")  %} 
 {%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "North"))  %} 
 		{% set COP_3 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_3 = NumberofSpeeds_Upgraded %}
@@ -632,6 +657,8 @@ Coil:Heating:Fuel,
 		{% set NumberOfSpeeds_3 = NumberofSpeeds_Baseline %}
 		{% set HeatingType_3 = BaselineHeatingType %}		
 {%- endif %}  
+
+
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 3,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -650,7 +677,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds_3 }},  !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP_3 }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -686,7 +713,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {%- if NumberOfSpeeds_3 =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -705,17 +731,10 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 3, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    Air Loop Outlet Node 3;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "Multispeed" and Orientation == "North"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "North"))  %}       
+
+
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "North"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "North"))  %}       
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 3,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -734,9 +753,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "Multispeed" and Orientation == "North")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "North")) %}                  
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "North")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "North")) %}                  
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 3,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -757,10 +775,21 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name
+
+{% else %}
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 3, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
+    Air Loop Outlet Node 3;  !- Air Outlet Node Name	
+	
+{%- endif %}
 {%- endif %}
 
-
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "Multispeed" and Orientation == "West")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "West")  %} 
+{%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "West")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "West")  %} 
 {%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "West"))  %} 
 		{% set COP_4 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_4 = NumberofSpeeds_Upgraded %}
@@ -788,7 +817,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds_4 }},  !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP_4 }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -824,7 +853,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {%- if NumberOfSpeeds_4 =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -843,17 +871,10 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 4, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
-    Air Loop Outlet Node 4;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "Multispeed" and Orientation == "West"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "West"))  %}             
+
+
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "West"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "West"))  %}             
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 4,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -871,10 +892,9 @@ Coil:Heating:Fuel,
     0.8,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
-    Air Loop Outlet Node 4;  !- Air Outlet Node Name
-{%- endif %}
+    Air Loop Outlet Node 4;  !- Air Outlet Node Name}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "Multispeed" and Orientation == "West")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "West")) %}                      
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "West")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "West")) %}                      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 4,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -895,9 +915,21 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Air Loop Outlet Node 4;  !- Air Outlet Node Name
+
+{% else %}
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 4, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
+    Air Loop Outlet Node 4;  !- Air Outlet Node Name	
+	
 {%- endif %}
 
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "Multispeed" and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "Core")  %} 
+{%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "Core")  %} 
 {%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "Core"))  %} 
 		{% set COP_5 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_5 = NumberofSpeeds_Upgraded %}
@@ -925,7 +957,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds_5 }},  !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP_5 }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -961,7 +993,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {%- if NumberOfSpeeds_5 =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -980,17 +1011,10 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 5, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
-    Air Loop Outlet Node 5;  !- Air Outlet Node Name
+
 {%- endif %}
 
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "Multispeed" and Orientation == "Core"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "Core"))  %}                  
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "Core"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "Core"))  %}                  
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 5,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -1009,9 +1033,7 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
-{%- endif %}
-
-{%- if ((BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "Multispeed" and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "Core")) %}                         
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "Core")) %}                         
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 5,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -1032,4 +1054,17 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
+	
+{% else %}
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 5, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
+    Air Loop Outlet Node 5;  !- Air Outlet Node Name
+	
+{%- endif %}
 {%- endif %}

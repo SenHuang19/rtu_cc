@@ -33,15 +33,7 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 1, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
-    Air Loop Outlet Node 1;  !- Air Outlet Node Name
-{%- endif %}
+
 
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric")  %} 
@@ -52,9 +44,7 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name   
-{%- endif %}
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -63,6 +53,18 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name
+
+{% else %}	
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 1, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
+    Air Loop Outlet Node 1;  !- Air Outlet Node Name
+	
+{%- endif %}
 {%- endif %}
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="HeatPump")  %}     
@@ -96,15 +98,8 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 2, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
-    Air Loop Outlet Node 2;  !- Air Outlet Node Name
-{%- endif %}
+
+
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric")  %} 
     Coil:Heating:Electric,
@@ -114,9 +109,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -125,8 +119,21 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
-{%- endif %}
 
+{% else %}	
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 2, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
+    Air Loop Outlet Node 2;  !- Air Outlet Node Name
+	
+	
+{%- endif %}
+{%- endif %}
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="HeatPump")  %} 
 Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 3,  !- Name
@@ -158,15 +165,8 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 3, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    Air Loop Outlet Node 3;  !- Air Outlet Node Name
-{%- endif %}
+
+
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric")  %} 
     Coil:Heating:Electric,
@@ -176,9 +176,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 3;  !- Air Outlet Node Name
-{%- endif %}
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
+	
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -187,8 +186,19 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 3;  !- Air Outlet Node Name
-{%- endif %}
 
+{% else %}	
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 3, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
+    Air Loop Outlet Node 3;  !- Air Outlet Node Name
+	
+{%- endif %}
+{%- endif %}
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="HeatPump")  %} 
 Coil:Heating:DX:SingleSpeed,
@@ -221,15 +231,7 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 4, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
-    Air Loop Outlet Node 4;  !- Air Outlet Node Name
-{%- endif %}
+
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric")  %} 
     Coil:Heating:Electric,
@@ -239,9 +241,7 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 4;  !- Air Outlet Node Name
-{%- endif %}
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -250,6 +250,19 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 4;  !- Air Outlet Node Name
+
+{% else %}
+
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 4, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
+    Air Loop Outlet Node 4;  !- Air Outlet Node Name	
+	
+{%- endif %}
 {%- endif %}
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="HeatPump")  %} 
@@ -283,15 +296,8 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 5, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
-    Air Loop Outlet Node 5;  !- Air Outlet Node Name
-{%- endif %}
+
+
 
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric")  %} 
@@ -302,9 +308,7 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 5;  !- Air Outlet Node Name
-{%- endif %}
-
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas")  %} 
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -313,12 +317,25 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 5;  !- Air Outlet Node Name
+	
+{% else %}
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 5, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
+    Air Loop Outlet Node 5;  !- Air Outlet Node Name
+	
+{%- endif %}
 {%- endif %}
 
 {% set COP = HeatingCOP_Baseline %}
 {% set NumberOfSpeeds = NumberofSpeeds_Baseline %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="HeatPump")  %}
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="HeatPump")  %}
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 1,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -337,7 +354,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds }},                       !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -373,8 +390,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
-    
     {%- if NumberOfSpeeds =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -393,17 +408,9 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 1, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
-    Air Loop Outlet Node 1;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric")  %}    
+
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric")  %}    
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -422,9 +429,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
-{%- endif %}
-
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas")  %}      
+	
+{%- elif (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas")  %}      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -445,9 +451,22 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
+
+{% else %}	
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 1, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
+    Air Loop Outlet Node 1;  !- Air Outlet Node Name
+	
+{%- endif %}	
 {%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="HeatPump")  %} 
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="HeatPump")  %} 
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 2,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -466,7 +485,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds }},                       !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -502,7 +521,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {%- if NumberOfSpeeds =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -521,17 +539,9 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 2, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
-    Air Loop Outlet Node 2;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric")  %}     
+
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric")  %}     
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -550,9 +560,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas")  %}       
+{%- elif (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas")  %}       
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -573,11 +582,24 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
+
+{% else %}
+	
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 2, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
+    Air Loop Outlet Node 1;  !- Air Outlet Node Name	
+	
+{%- endif %}
+
 {%- endif %}
 
 
-
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="HeatPump")  %}     
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="HeatPump")  %}     
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 3,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -596,7 +618,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds }},                       !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -632,7 +654,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {%- if NumberOfSpeeds =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -651,17 +672,8 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 3, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    Air Loop Outlet Node 3;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric")  %}     
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric")  %}     
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 3,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -680,9 +692,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas")  %}       
+{%- elif (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas")  %}       
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 3,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -703,10 +714,22 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name
+
+{% else %}	
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 3, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
+    Air Loop Outlet Node 3;  !- Air Outlet Node Name
+	
+{%- endif %}
 {%- endif %}
 
-
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="HeatPump")  %}   
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="HeatPump")  %}   
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 4,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -725,7 +748,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds }},                       !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -761,8 +784,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
-    {%- if NumberOfSpeeds =="3"  %}
+   {%- if NumberOfSpeeds =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -780,17 +802,8 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 4, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
-    Air Loop Outlet Node 4;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric")  %}        
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric")  %}        
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 4,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -809,9 +822,9 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Air Loop Outlet Node 4;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas")  %}      
+
+{%- elif (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas")  %}      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 4,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -832,9 +845,21 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Air Loop Outlet Node 4;  !- Air Outlet Node Name
+
+{% else %}	
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 4, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
+    Air Loop Outlet Node 4;  !- Air Outlet Node Name
+	
+{%- endif %}
 {%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="HeatPump")  %}      
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="HeatPump")  %}      
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 5,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -853,7 +878,7 @@ Coil:Heating:DX:MultiSpeed,
     No,                      !- Apply Part Load Fraction to Speeds Greater than 1
     Electricity,             !- Fuel Type
     4,                       !- Region number for Calculating HSPF
-    4,                       !- Number of Speeds
+    {{ NumberOfSpeeds }},                       !- Number of Speeds
     autosize,                !- Speed 1 Gross Rated Heating Capacity {W}
     {{ COP }},
     autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
@@ -889,7 +914,6 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {%- if NumberOfSpeeds =="3"  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
@@ -908,17 +932,8 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-Coil:Heating:Fuel,
-    Supp Gas Heating Coil 5, !- Name
-    ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
-    autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
-    Air Loop Outlet Node 5;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Electric")  %}      
+{%- if (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric")  %}      
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 5,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -937,9 +952,8 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
-{%- endif %}
 
-{%- if (BaselineCompressor =="Multispeed" and BaselineHeatingType =="Gas")  %}      
+{%- elif (BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas")  %}      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 5,  !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -960,4 +974,17 @@ Coil:Heating:Fuel,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
+	
+{% else %}
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 5, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
+    Air Loop Outlet Node 5;  !- Air Outlet Node Name
+	
+{%- endif %}
 {%- endif %}

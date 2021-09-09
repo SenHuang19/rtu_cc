@@ -14,7 +14,7 @@ def work(url):
 
 	u={}
     
-	with open('./input') as f: 
+	with open('./input20') as f: 
          data = f.read() 
 
 	u = json.loads(data)    
@@ -42,4 +42,4 @@ def work(url):
     
 	return result
 
-work('http://127.0.0.1:5000')
+work('http://127.0.0.1:5100')
