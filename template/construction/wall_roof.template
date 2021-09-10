@@ -1,7 +1,7 @@
   Material:NoMass,
     Nonres_Exterior_Wall_Insulation,  !- Name
     MediumSmooth,            !- Roughness
-{%- if Climate == "8" %} 
+{%- if climate == "8" %} 
     3.06941962105791,
 {% else %}
     1.59504478476111,  !- Thermal Resistance {m2-K/W}
@@ -14,7 +14,7 @@
   Material:NoMass,
     Nonres_Roof_Insulation,  !- Name
     MediumSmooth,            !- Roughness
-{%- if (Climate == "8"  or Climate == "6B" or Climate == "7" or Climate == "6A" ) %} 
+{%- if (climate == "8"  or Climate == "6B" or Climate == "7" or Climate == "6A" ) %} 
     6.23478687961654,  !- Thermal Resistance {m2-K/W}
 {% else %}
     4.89189868807721, !- Thermal Resistance {m2-K/W}
