@@ -5206,30 +5206,7 @@ EnergyManagementSystem:ProgramCallingManager,
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
     SETFanSpeed5;            !- Program Name 1
 
-EnergyManagementSystem:ProgramCallingManager,
-    NightSetback1CM,         !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    NightSetback1;           !- Program Name 1
 
-EnergyManagementSystem:ProgramCallingManager,
-    NightSetback2CM,         !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    NightSetback2;           !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
-    NightSetback3CM,         !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    NightSetback3;           !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
-    NightSetback4CM,         !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    NightSetback4;           !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
-    NightSetback5CM,         !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    NightSetback5;           !- Program Name 1
 
 
 !-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:PROGRAM ===========
@@ -5354,45 +5331,6 @@ EnergyManagementSystem:Program,
 !    ENDIF;                   !- A4
 
 
-EnergyManagementSystem:Program,
-    NightSetback1,           !- Name
-    If CurrentEnvironment>2 && TZ1<TH1 || TZ1>TC1,  !- Program Line 1
-    SET HVACSch1=1,          !- Program Line 2
-    ELSE,                    !- A4
-    SET HVACSch1=HVACSch,    !- A5
-    ENDIF;                   !- A6
-
-EnergyManagementSystem:Program,
-    NightSetback2,           !- Name
-    If CurrentEnvironment>2 && TZ2<TH2 || TZ2>TC2,  !- Program Line 1
-    SET HVACSch2=1,          !- Program Line 2
-    ELSE,                    !- A4
-    SET HVACSch2=HVACSch,    !- A5
-    ENDIF;                   !- A6
-
-EnergyManagementSystem:Program,
-    NightSetback3,           !- Name
-    If CurrentEnvironment>3 && TZ3<TH3 || TZ3>TC3,  !- Program Line 1
-    SET HVACSch3=1,          !- Program Line 2
-    ELSE,                    !- A4
-    SET HVACSch3=HVACSch,    !- A5
-    ENDIF;                   !- A6
-
-EnergyManagementSystem:Program,
-    NightSetback4,           !- Name
-    If CurrentEnvironment>2 && TZ4<TH4 || TZ4>TC4,  !- Program Line 1
-    SET HVACSch4=1,          !- Program Line 2
-    ELSE,                    !- A4
-    SET HVACSch4=HVACSch,    !- A5
-    ENDIF;                   !- A6
-
-EnergyManagementSystem:Program,
-    NightSetback5,           !- Name
-    If CurrentEnvironment>2 && TZ5<TH5 || TZ5>TC5,  !- Program Line 1
-    SET HVACSch5=1,          !- Program Line 2
-    ELSE,                    !- A4
-    SET HVACSch5=HVACSch,    !- A5
-    ENDIF;                   !- A6
 
 
 !-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:GLOBALVARIABLE ===========
