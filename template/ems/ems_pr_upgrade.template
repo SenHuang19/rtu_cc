@@ -1,7 +1,9 @@
 {%- if (BaselineFanType == "Full Variable" and not (UpgradedFanType != "Full Variable" and orientation == "South")) or (UpgradedFanType == "Full Variable" and orientation == "South") %} 
 EnergyManagementSystem:Program,
     SETFanSpeed1,            !- Name
-    If TZ1<=TC1-0.5 && TZ1>=TH1+0.5 && Fan1MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
+    IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
+    SET Fan1Speed=0,         !- Program Line 2
+    ELSEIf TZ1<=TC1-0.5 && TZ1>=TH1+0.5 && Fan1MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan1Speed=Fan1MaxGlobal*0.4,  !- Program Line 2
     ELSEIF TZ1>TC1-0.5 && Fan1MaxGlobal>0  && CurrentEnvironment>2,  !- A4
     SET Multiplier= 0.6*(TZ1-(TC1-0.5))+0.4,  !- A5
@@ -15,7 +17,9 @@ EnergyManagementSystem:Program,
 {% else  %} 
 EnergyManagementSystem:Program,
     SETFanSpeed1,            !- Name
-    If CC1==0 && HC1==0 && Fan1MaxGlobal>0,  !- Program Line 1
+    IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
+    SET Fan1Speed=0,         !- Program Line 2
+    ELSEIf CC1==0 && HC1==0 && Fan1MaxGlobal>0,  !- Program Line 1
 	{%- if (BaselineFanType == "Variable Retrofit Controller" and (not (UpgradedFanType != "Variable Retrofit Controller" and orientation == "South"))) or (UpgradedFanType == "Variable Retrofit Controller" and orientation == "South")  %} 
     SET Fan1Speed=Fan1MaxGlobal*0.4,  !- Program Line 2
     ELSEIF HC1>0 && Fan1MaxGlobal>0,  !- A4
@@ -37,7 +41,9 @@ EnergyManagementSystem:Program,
 {%- if (BaselineFanType == "Full Variable" and not (UpgradedFanType != "Full Variable" and orientation == "East")) or (UpgradedFanType == "Full Variable" and orientation == "East") %} 	
 EnergyManagementSystem:Program,
     SETFanSpeed2,            !- Name
-    If TZ2<=TC2-0.5 && TZ2>=TH2+0.5 && Fan2MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
+    IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
+    SET Fan2Speed=0,         !- Program Line 2
+    ELSEIf TZ2<=TC2-0.5 && TZ2>=TH2+0.5 && Fan2MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan2Speed=Fan2MaxGlobal*0.4,  !- Program Line 2
     ELSEIF TZ2>TC2-0.5 && Fan2MaxGlobal>0  && CurrentEnvironment>2,  !- A4
     SET Multiplier= 0.6*(TZ2-(TC2-0.5))+0.4,  !- A5
@@ -53,7 +59,9 @@ EnergyManagementSystem:Program,
 
 EnergyManagementSystem:Program,
     SETFanSpeed2,            !- Name
-    If CC2==0 && HC2==0 && Fan2MaxGlobal>0,  !- Program Line 1
+    IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
+    SET Fan2Speed=0,         !- Program Line 2
+    ELSEIf CC2==0 && HC2==0 && Fan2MaxGlobal>0,  !- Program Line 1
 	{%- if (BaselineFanType == "Variable Retrofit Controller" and (not (UpgradedFanType != "Variable Retrofit Controller" and orientation == "East"))) or (UpgradedFanType == "Variable Retrofit Controller" and orientation == "East")  %} 
     SET Fan2Speed=Fan2MaxGlobal*0.4,  !- Program Line 2
     ELSEIF HC2>0 && Fan2MaxGlobal>0,  !- A4
@@ -76,7 +84,9 @@ EnergyManagementSystem:Program,
 {%- if (BaselineFanType == "Full Variable" and not (UpgradedFanType != "Full Variable" and orientation == "North")) or (UpgradedFanType == "Full Variable" and orientation == "North") %} 	
 EnergyManagementSystem:Program,
     SETFanSpeed3,            !- Name
-    If TZ3<=TC3-0.5 && TZ3>=TH3+0.5 && Fan3MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
+    IF HVACSch==0 && TZ3>TH3 && TZ3< TC3,  !- Program Line 1
+    SET Fan3Speed=0,         !- Program Line 2
+    ELSEIf TZ3<=TC3-0.5 && TZ3>=TH3+0.5 && Fan3MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan3Speed=Fan3MaxGlobal*0.4,  !- Program Line 2
     ELSEIF TZ3>TC3-0.5 && Fan3MaxGlobal>0  && CurrentEnvironment>2,  !- A4
     SET Multiplier= 0.6*(TZ3-(TC3-0.5))+0.4,  !- A5
@@ -92,7 +102,9 @@ EnergyManagementSystem:Program,
 
 EnergyManagementSystem:Program,
     SETFanSpeed3,            !- Name
-    If CC3==0 && HC3==0 && Fan3MaxGlobal>0,  !- Program Line 1
+    IF HVACSch==0 && TZ3>TH3 && TZ3< TC3,  !- Program Line 1
+    SET Fan3Speed=0,         !- Program Line 2
+    ELSEIf CC3==0 && HC3==0 && Fan3MaxGlobal>0,  !- Program Line 1
 	{%- if (BaselineFanType == "Variable Retrofit Controller" and (not (UpgradedFanType != "Variable Retrofit Controller" and orientation == "North"))) or (UpgradedFanType == "Variable Retrofit Controller" and orientation == "North")  %} 
     SET Fan3Speed=Fan3MaxGlobal*0.4,  !- Program Line 2
     ELSEIF HC3>0 && Fan3MaxGlobal>0,  !- A4
@@ -115,7 +127,9 @@ EnergyManagementSystem:Program,
 {%- if (BaselineFanType == "Full Variable" and not (UpgradedFanType != "Full Variable" and orientation == "West")) or (UpgradedFanType == "Full Variable" and orientation == "West") %} 	
 EnergyManagementSystem:Program,
     SETFanSpeed4,            !- Name
-    If TZ4<=TC4-0.5 && TZ4>=TH4+0.5 && Fan4MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
+    IF HVACSch==0 && TZ4>TH4 && TZ4< TC4,  !- Program Line 1
+    SET Fan4Speed=0,         !- Program Line 2
+    ELSEIf TZ4<=TC4-0.5 && TZ4>=TH4+0.5 && Fan4MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan4Speed=Fan4MaxGlobal*0.4,  !- Program Line 2
     ELSEIF TZ4>TC4-0.5 && Fan4MaxGlobal>0  && CurrentEnvironment>2,  !- A4
     SET Multiplier= 0.6*(TZ4-(TC4-0.5))+0.4,  !- A5
@@ -129,7 +143,9 @@ EnergyManagementSystem:Program,
 {% else %}	
 EnergyManagementSystem:Program,
     SETFanSpeed4,            !- Name
-    If CC4==0 && HC4==0 && Fan4MaxGlobal>0,  !- Program Line 1
+    IF HVACSch==0 && TZ4>TH4 && TZ4< TC4,  !- Program Line 1
+    SET Fan4Speed=0,         !- Program Line 2
+    ELSEIf CC4==0 && HC4==0 && Fan4MaxGlobal>0,  !- Program Line 1
 	{%- if (BaselineFanType == "Variable Retrofit Controller" and (not (UpgradedFanType != "Variable Retrofit Controller" and orientation == "West"))) or (UpgradedFanType == "Variable Retrofit Controller" and orientation == "West")  %} 
     SET Fan4Speed=Fan4MaxGlobal*0.4,  !- Program Line 2
     ELSEIF HC4>0 && Fan4MaxGlobal>0,  !- A4
@@ -151,7 +167,9 @@ EnergyManagementSystem:Program,
 {%- if (BaselineFanType == "Full Variable" and not (UpgradedFanType != "Full Variable" and orientation == "Core")) or (UpgradedFanType == "Full Variable" and orientation == "Core") %} 	
 EnergyManagementSystem:Program,
     SETFanSpeed5,            !- Name
-    If TZ5<=TC5-0.5 && TZ5>=TH5+0.5 && Fan5MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
+    IF HVACSch==0 && TZ5>TH5 && TZ5< TC5,  !- Program Line 1
+    SET Fan5Speed=0,         !- Program Line 2
+    ELSEIf TZ5<=TC5-0.5 && TZ5>=TH5+0.5 && Fan5MaxGlobal>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan5Speed=Fan5MaxGlobal*0.4,  !- Program Line 2
     ELSEIF TZ5>TC5-0.5 && Fan5MaxGlobal>0  && CurrentEnvironment>2,  !- A4
     SET Multiplier= 0.6*(TZ5-(TC5-0.5))+0.4,  !- A5
@@ -165,7 +183,9 @@ EnergyManagementSystem:Program,
 {% else %}
 EnergyManagementSystem:Program,
     SETFanSpeed5,            !- Name
-    If CC5==0 && HC5==0 && Fan5MaxGlobal>0,  !- Program Line 1
+    IF HVACSch==0 && TZ5>TH5 && TZ5< TC5,  !- Program Line 1
+    SET Fan5Speed=0,         !- Program Line 2
+    ELSEIf CC5==0 && HC5==0 && Fan5MaxGlobal>0,  !- Program Line 1
 	{%- if (BaselineFanType == "Variable Retrofit Controller" and (not (UpgradedFanType != "Variable Retrofit Controller" and orientation == "Core"))) or (UpgradedFanType == "Variable Retrofit Controller" and orientation == "Core")  %} 
     SET Fan5Speed=Fan5MaxGlobal*0.4,  !- Program Line 2
     ELSEIF HC5>0 && Fan5MaxGlobal>0,  !- A4
