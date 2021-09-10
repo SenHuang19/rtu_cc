@@ -40,7 +40,7 @@
     ,                        !- Sensible Heat Ratio Function of Flow Fraction Curve Name
     No;                      !- Report ASHRAE Standard 127 Performance Ratings
 
-	{% if HeatingType == "HeatPump"  %} 
+	{% if BaselineHeatingType == "HeatPump"  %} 
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 1,        !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -79,7 +79,7 @@
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 1,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
-	{%- if HeatingType == "Electric" %}
+	{%- if BaselineHeatingType == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
     {% else  %} 
             Coil:Heating:Fuel,   !- Heating Coil Object Type
@@ -97,7 +97,7 @@
     OA Sys 1,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 1,  !- Component 1 Inlet Node Name
     Mixed Air Node 1,        !- Component 1 Outlet Node Name
-	{%- if HeatingType == "HeatPump" %}	
+	{%- if BaselineHeatingType == "HeatPump" %}	
         AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
     {% else  %} 
         AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
@@ -155,7 +155,7 @@
     No;                      !- Report ASHRAE Standard 127 Performance Ratings
 
     
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 2,        !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -194,7 +194,7 @@
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 2,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
-	{%- if HeatingType == "Electric" %}
+	{%- if BaselineHeatingType == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
     {% else  %} 
             Coil:Heating:Fuel,   !- Heating Coil Object Type
@@ -212,7 +212,7 @@
     OA Sys 2,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 2,  !- Component 1 Inlet Node Name
     Mixed Air Node 2,        !- Component 1 Outlet Node Name
-	{%- if HeatingType == "HeatPump" %}	
+	{%- if BaselineHeatingType == "HeatPump" %}	
         AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 2 Object Type
     {% else  %} 
         AirLoopHVAC:UnitaryHeatCool,  !- Component 2 Object Type
@@ -269,7 +269,7 @@
     
     
     
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 3,        !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -308,7 +308,7 @@
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 3,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
-	{%- if HeatingType == "Electric" %}
+	{%- if BaselineHeatingType == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
     {% else  %} 
             Coil:Heating:Fuel,   !- Heating Coil Object Type
@@ -326,7 +326,7 @@
     OA Sys 3,                !- Component 1 Name
     Outdoor Air Mixer Inlet Node 3,  !- Component 1 Inlet Node Name
     Mixed Air Node 3,        !- Component 1 Outlet Node Name
-	{%- if HeatingType == "HeatPump" %}	
+	{%- if BaselineHeatingType == "HeatPump" %}	
         AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 3 Object Type
     {% else  %} 
         AirLoopHVAC:UnitaryHeatCool,  !- Component 3 Object Type
@@ -382,7 +382,7 @@
     No;                      !- Report ASHRAE Standard 127 Performance Ratings
 
     
-    {% if HeatingType == "HeatPump" %}
+    {% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 4,        !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -421,7 +421,7 @@
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 4,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
-	{%- if HeatingType == "Electric" %}
+	{%- if BaselineHeatingType == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
     {% else  %} 
             Coil:Heating:Fuel,   !- Heating Coil Object Type
@@ -494,7 +494,7 @@
     ,                        !- Sensible Heat Ratio Function of Flow Fraction Curve Name
     No;                      !- Report ASHRAE Standard 127 Performance Ratings
     
-    {% if HeatingType == "HeatPump" %}
+    {% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 5,        !- Name
     HVACOperationSchd,     !- Availability Schedule Name
@@ -533,7 +533,7 @@
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 5,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
-	{%- if HeatingType == "Electric" %}
+	{%- if BaselineHeatingType == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
     {% else  %} 
             Coil:Heating:Fuel,   !- Heating Coil Object Type
@@ -692,9 +692,9 @@
     Supply Fan 1,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-    {% elif HeatingType == "Electric" %}
+    {% elif BaselineHeatingType == "Electric" %}
 	    Coil:Heating:Electric:Multistage,
     {% else  %} 
         Coil:Heating:Gas:Multistage,
@@ -714,7 +714,7 @@
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
     0.2,                     !- No Load Supply Air Flow Rate {m3/s}
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
         1,
@@ -866,9 +866,9 @@ Coil:Cooling:DX:MultiSpeed,
     Supply Fan 2,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-    {% elif HeatingType == "Electric" %}
+    {% elif BaselineHeatingType == "Electric" %}
 	    Coil:Heating:Electric:Multistage,
     {% else  %} 
         Coil:Heating:Gas:Multistage,
@@ -888,7 +888,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
     0.2,                     !- No Load Supply Air Flow Rate {m3/s}
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
         1,
@@ -1040,9 +1040,9 @@ Coil:Cooling:DX:MultiSpeed,
     Supply Fan 3,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-    {% elif HeatingType == "Electric" %}
+    {% elif BaselineHeatingType == "Electric" %}
 	    Coil:Heating:Electric:Multistage,
     {% else  %} 
         Coil:Heating:Gas:Multistage,
@@ -1062,7 +1062,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
     0.2,                     !- No Load Supply Air Flow Rate {m3/s}
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
         1,
@@ -1213,9 +1213,9 @@ Coil:Cooling:DX:MultiSpeed,
     Supply Fan 4,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-    {% elif HeatingType == "Electric" %}
+    {% elif BaselineHeatingType == "Electric" %}
 	    Coil:Heating:Electric:Multistage,
     {% else  %} 
         Coil:Heating:Gas:Multistage,
@@ -1235,7 +1235,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
     0.2,                     !- No Load Supply Air Flow Rate {m3/s}
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
         1,
@@ -1388,9 +1388,9 @@ Coil:Cooling:DX:MultiSpeed,
     Supply Fan 5,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-    {% elif HeatingType == "Electric" %}
+    {% elif BaselineHeatingType == "Electric" %}
 	    Coil:Heating:Electric:Multistage,
     {% else  %} 
         Coil:Heating:Gas:Multistage,
@@ -1410,7 +1410,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
     0.2,                     !- No Load Supply Air Flow Rate {m3/s}
-	{% if HeatingType == "HeatPump" %}
+	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
         1,
