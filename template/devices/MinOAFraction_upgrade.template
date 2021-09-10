@@ -3,28 +3,47 @@
 Schedule:Constant,
     minOAFrac1,               !- Name
     Fraction,                !- Schedule Type Limits Name
+  {% if (Orientation == "South")  %} 
     {{MinOAFraction_Upgraded}};
-
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
 
 Schedule:Constant,
     minOAFrac2,               !- Name
     Fraction,                !- Schedule Type Limits Name
+  {% if (Orientation == "East")  %} 
     {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
 
 Schedule:Constant,
     minOAFrac3,               !- Name
     Fraction,                !- Schedule Type Limits Name
+  {% if (Orientation == "North")  %} 
     {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
 
 Schedule:Constant,
     minOAFrac4,               !- Name
     Fraction,                !- Schedule Type Limits Name
+  {% if (Orientation == "West")  %} 
     {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
 
 Schedule:Constant,
     minOAFrac5,               !- Name
     Fraction,                !- Schedule Type Limits Name
+  {% if (Orientation == "Core")  %} 
     {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
 
 Schedule:Constant,
     Fan2Max,                 !- Name
