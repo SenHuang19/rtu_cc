@@ -32,11 +32,11 @@
   "Orientation":"South",  
   "UpgradedCompressor":"SingleSpeed",
   "NumberofSpeeds_Upgraded":"2",
-  "UpgradedHFanType": "Full Variable",
+  "UpgradedFanType": "Full Variable",
   "EER_Upgraded": 9, 
   "UpgradedHeatingType":"HeatPump",
   "HeatingCOP_Upgraded":2,
-  "MinOAFraction_Upgraded":0.5,
+  "MinOAFraction_Upgraded":0.3,
   "UpgradedEconomizer": "NoEconomizer",
   "MaximumLimitDryBulb_Upgraded":70
 },
