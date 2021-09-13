@@ -12,7 +12,7 @@
 
 Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 1,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
     {{COP_1}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
@@ -88,7 +88,7 @@ Coil:Heating:Fuel,
     
 Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 2,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
     {{COP_2}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
@@ -160,7 +160,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 3,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
 	{{COP_3}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
@@ -231,7 +231,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 4,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
     {{COP_4}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
@@ -300,7 +300,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 Coil:Heating:DX:SingleSpeed,
     Heat Pump DX Heating Coil 5,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Heating Capacity {W}
     {{COP_5}},	
     autosize,                !- Rated Air Flow Rate {m3/s}
@@ -377,7 +377,7 @@ Coil:Heating:Fuel,
 
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 1,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 1,  !- Air Outlet Node Name
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
@@ -452,7 +452,7 @@ Coil:Heating:DX:MultiSpeed,
 {%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "South"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "South"))  %}    
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 1,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -472,7 +472,7 @@ Coil:Heating:Fuel,
 {%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "South"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "South")) %}      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 1,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -518,7 +518,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 2,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 2,  !- Air Outlet Node Name
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
@@ -594,7 +594,7 @@ Coil:Heating:DX:MultiSpeed,
 {%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "East"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "East"))  %}      
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 2,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -614,7 +614,7 @@ Coil:Heating:Fuel,
 {%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "East")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "East")) %}            
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 2,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -661,7 +661,7 @@ Coil:Heating:Fuel,
 
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 3,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 3,  !- Air Outlet Node Name
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
@@ -737,7 +737,7 @@ Coil:Heating:DX:MultiSpeed,
 {%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "North"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "North"))  %}       
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 3,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 3,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -757,7 +757,7 @@ Coil:Heating:Fuel,
 {%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "North")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "North")) %}                  
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 3,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 3,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -801,7 +801,7 @@ Coil:Heating:Fuel,
 {%- endif %}  
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 4,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 4,  !- Air Outlet Node Name
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
@@ -877,7 +877,7 @@ Coil:Heating:DX:MultiSpeed,
 {%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "West"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "West"))  %}             
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 4,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 4,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -897,7 +897,7 @@ Coil:Heating:Fuel,
 {%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "West")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "West")) %}                      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 4,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 4,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -941,7 +941,7 @@ Coil:Heating:Fuel,
 {%- endif %}    
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 5,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 5,  !- Air Outlet Node Name
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
@@ -1017,7 +1017,7 @@ Coil:Heating:DX:MultiSpeed,
 {%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "Core"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and Orientation == "Core"))  %}                  
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 5,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 5,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
@@ -1036,7 +1036,7 @@ Coil:Heating:DX:MultiSpeed,
 {%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not (UpgradedCompressor != "MultiSpeed" and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "Core")) %}                         
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 5,  !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Heating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     SuppHeating Coil Air Inlet Node 5,  !- Air Outlet Node Name
     ,                        !- Temperature Setpoint Node Name
