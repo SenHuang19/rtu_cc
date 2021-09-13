@@ -11,7 +11,7 @@
 
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 1,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER_1/3.412 }} ,
@@ -385,7 +385,7 @@
 	
 	Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 4,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER_3/3.412 }} ,
@@ -1302,7 +1302,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 4,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Air Outlet Node Name
     Perimeter_ZN_4,          !- Controlling Zone or Thermostat Location
