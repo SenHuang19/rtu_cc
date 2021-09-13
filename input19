@@ -32,7 +32,7 @@
   "Orientation":"South",  
   "UpgradedCompressor":"SingleSpeed",
   "NumberofSpeeds_Upgraded":"2",
-  "UpgradedHFanType": "Constant Speed",
+  "UpgradedFanType": "Constant Speed",
   "EER_Upgraded": 9, 
   "UpgradedHeatingType":"HeatPump",
   "HeatingCOP_Upgraded":2,
