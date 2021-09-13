@@ -2,7 +2,7 @@
 
 {%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "South"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "South")  %} 
 
-{% if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "South")  %} 
+{% if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "South")  %} 
 {% set COP_1 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_1 = HeatingCOP_Baseline %}
@@ -79,7 +79,7 @@ Coil:Heating:Fuel,
 
 
 {%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "East"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "East")  %} 
-{%- if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "East")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "East")  %} 
 {% set COP_2 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_2 = HeatingCOP_Baseline %}
@@ -153,7 +153,7 @@ Coil:Heating:Fuel,
 
 
 {%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "North"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "North")  %} 
-{%- if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "North")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "North")  %} 
 {% set COP_3 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_3 = HeatingCOP_Baseline %}
@@ -224,7 +224,7 @@ Coil:Heating:Fuel,
 
 
 {%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "West"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "West")  %} 
-{%- if (UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and Orientation == "West")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "West")  %} 
 {% set COP_4 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_4 = HeatingCOP_Baseline %}
@@ -293,7 +293,7 @@ Coil:Heating:Fuel,
 
 
 {%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "SingleSpeed" and Orientation == "Core"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "Core")  %} 
-{%- if ((UpgradedCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "Core"))  %} 
+{%- if ((UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump") and (Orientation == "Core"))  %} 
 {% set COP_5 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_5 = HeatingCOP_Baseline %}
@@ -365,7 +365,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 
 {%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "South")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "South")  %} 
-{% if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "South"))  %} 
+{% if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (Orientation == "South"))  %} 
 		{% set COP_1 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_1 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_1 = UpgradedHeatingType %}	
@@ -507,7 +507,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 
 {%- if (BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump" and (not (UpgradedCompressor != "MultiSpeed" and Orientation == "East"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "East")  %} 
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "East"))  %} 
+{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (Orientation == "East"))  %} 
 		{% set COP_2 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_2 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_2 = UpgradedHeatingType %}	
@@ -648,7 +648,7 @@ Coil:Heating:Fuel,
 
 
 {%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "North")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "North")  %} 
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "North"))  %} 
+{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (Orientation == "North"))  %} 
 		{% set COP_3 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_3 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_3 = UpgradedHeatingType %}	
@@ -790,7 +790,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 
 {%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "West")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "West")  %} 
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "West"))  %} 
+{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (Orientation == "West"))  %} 
 		{% set COP_4 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_4 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_4 = UpgradedHeatingType %}	
@@ -930,7 +930,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 
 {%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not(UpgradedCompressor != "MultiSpeed" and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and Orientation == "Core")  %} 
-{%- if ((UpgradedCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and (Orientation == "Core"))  %} 
+{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (Orientation == "Core"))  %} 
 		{% set COP_5 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_5 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_5 = UpgradedHeatingType %}	
