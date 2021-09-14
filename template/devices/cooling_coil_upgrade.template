@@ -388,7 +388,7 @@
     ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
-    {{ EER_3/3.412 }} ,
+    {{ EER_4/3.412 }} ,
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
     DX Cooling Coil Air Inlet Node 4,  !- Air Inlet Node Name
@@ -512,7 +512,7 @@
     ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
-    {{ EER_3/3.412 }} ,
+    {{ EER_5/3.412 }} ,
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
     DX Cooling Coil Air Inlet Node 5,  !- Air Inlet Node Name
