@@ -591,8 +591,8 @@ Coil:Heating:Fuel,
     NaturalGas,              !- Fuel Type
     0.8,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
-    SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
-    Air Loop Outlet Node 1;  !- Air Outlet Node Name	
+    SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
+    Air Loop Outlet Node 2;  !- Air Outlet Node Name	
 	
 {%- endif %}
 
