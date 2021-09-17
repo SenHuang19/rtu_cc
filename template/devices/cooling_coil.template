@@ -240,7 +240,7 @@
     autosize,                !- Rated Air Flow Rate {m3/s}
     773.3,                   !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
     DX Cooling Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    Heating Coil Air Inlet Node32,  !- Air Outlet Node Name
+    Heating Coil Air Inlet Node3,  !- Air Outlet Node Name
     HPACCoolCapFT,   !- Total Cooling Capacity Function of Temperature Curve Name
     HPACCoolCapFF,   !- Total Cooling Capacity Function of Flow Fraction Curve Name
     HPACCOOLEIRFT,   !- Energy Input Ratio Function of Temperature Curve Name
