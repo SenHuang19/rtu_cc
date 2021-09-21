@@ -1310,9 +1310,9 @@ Coil:Cooling:DX:MultiSpeed,
     Supply Fan 4,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-		{% if HeatingType_3 == "HeatPump" %}
+		{% if HeatingType_4 == "HeatPump" %}
             Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-		{% elif HeatingType_3 == "Electric" %}
+		{% elif HeatingType_4 == "Electric" %}
 		    Coil:Heating:Electric:Multistage,
         {% else %}
             Coil:Heating:Gas:Multistage,
