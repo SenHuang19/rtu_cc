@@ -1275,11 +1275,11 @@ Coil:Cooling:DX:MultiSpeed,
     
 
 Coil:Cooling:DX:MultiSpeed,
-    Heat Pump ACDXCoil 5,    !- Name
+    Heat Pump ACDXCoil 1,    !- Name
     HVACOperationSchd,     !- Availability Schedule Name
-    DX Cooling Coil Air Inlet Node 5,  !- Air Inlet Node Name
-    Heating Coil Air Inlet Node 5,  !- Air Outlet Node Name
-    Outdoor Condenser Air Node 5,  !- Condenser Air Inlet Node Name
+    DX Cooling Coil Air Inlet Node 1,  !- Air Inlet Node Name
+    Heating Coil Air Inlet Node 1,  !- Air Outlet Node Name
+    Outdoor Condenser Air Node 1,  !- Condenser Air Inlet Node Name
     AirCooled,               !- Condenser Type
     ,                        !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     ,                        !- Supply Water Storage Tank Name
@@ -1292,7 +1292,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Basin Heater Setpoint Temperature {C}
     ,                        !- Basin Heater Operating Schedule Name
     Electricity,             !- Fuel Type
-	{{ NumberOfSpeeds }},
+	{{ NumberOfSpeeds }},	
     autosize,                !- Speed 1 Gross Rated Total Cooling Capacity {W}
     0.75,                    !- Speed 1 Gross Rated Sensible Heat Ratio
 	{{ EER/3.412 }},
@@ -1358,7 +1358,7 @@ Coil:Cooling:DX:MultiSpeed,
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
     autosize,                !- Speed 4 Gross Rated Total Cooling Capacity {W}
     0.75,                    !- Speed 4 Gross Rated Sensible Heat Ratio
-    {{ EER/3.412 }},
+	{{ EER/3.412 }},
     autosize,                !- Speed 4 Rated Air Flow Rate {m3/s}
     673.3,                   !- Speed 4 Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
     HPACCoolCapFT Speed 4,   !- Speed 4 Total Cooling Capacity Function of Temperature Curve Name
@@ -1383,7 +1383,7 @@ Coil:Cooling:DX:MultiSpeed,
     HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Air Outlet Node Name
-    Core_ZN,                 !- Controlling Zone or Thermostat Location
+    Core_Zn,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 5,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -1424,9 +1424,10 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
     autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
- 
+
+
     Branch,
-    Air Loop Main Branch 5  !- Name
+    Air Loop Main Branch 5,  !- Name
     ,                        !- Pressure Drop Curve Name
     AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
     OA Sys 5,                !- Component 1 Name
@@ -1436,14 +1437,14 @@ Coil:Cooling:DX:MultiSpeed,
     DXAC Heat Pump 5,        !- Component 2 Name
     Mixed Air Node 5,        !- Component 2 Inlet Node Name
     Air Loop Outlet Node 5;  !- Component 2 Outlet Node Name
- 
+    
     EnergyManagementSystem:Sensor,
     HC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
     Unitary System Total Heating Rate ;  !- Output:Variable or Output:Meter Name
 
     EnergyManagementSystem:Sensor,
-    CC5,                     !- Name
+    CC4,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
     Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
     
