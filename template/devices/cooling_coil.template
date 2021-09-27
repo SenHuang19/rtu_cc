@@ -1275,11 +1275,11 @@ Coil:Cooling:DX:MultiSpeed,
     
 
 Coil:Cooling:DX:MultiSpeed,
-    Heat Pump ACDXCoil 1,    !- Name
+    Heat Pump ACDXCoil 5,    !- Name
     HVACOperationSchd,     !- Availability Schedule Name
-    DX Cooling Coil Air Inlet Node 1,  !- Air Inlet Node Name
-    Heating Coil Air Inlet Node 1,  !- Air Outlet Node Name
-    Outdoor Condenser Air Node 1,  !- Condenser Air Inlet Node Name
+    DX Cooling Coil Air Inlet Node 5,  !- Air Inlet Node Name
+    Heating Coil Air Inlet Node 5,  !- Air Outlet Node Name
+    Outdoor Condenser Air Node 5,  !- Condenser Air Inlet Node Name
     AirCooled,               !- Condenser Type
     ,                        !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     ,                        !- Supply Water Storage Tank Name
@@ -1444,7 +1444,7 @@ Coil:Cooling:DX:MultiSpeed,
     Unitary System Total Heating Rate ;  !- Output:Variable or Output:Meter Name
 
     EnergyManagementSystem:Sensor,
-    CC4,                     !- Name
+    CC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
     Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
     
