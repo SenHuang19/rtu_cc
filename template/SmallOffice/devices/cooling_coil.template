@@ -6,7 +6,7 @@
 {%- if BaselineCompressor == "SingleSpeed"  %} 
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 1,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }} ,
@@ -43,7 +43,7 @@
 	{% if BaselineHeatingType == "HeatPump"  %} 
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 1,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -67,7 +67,7 @@
 	{% else  %} 
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 1,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -120,7 +120,7 @@
 
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 2,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -158,7 +158,7 @@
 	{% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 2,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -182,7 +182,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 2,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -233,7 +233,7 @@
     
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 3,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -272,7 +272,7 @@
 	{% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 3,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 3,        !- Air Inlet Node Name
     Air Loop Outlet Node 3,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -296,7 +296,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 3,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 3,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 3,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -347,7 +347,7 @@
   
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 4,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -385,7 +385,7 @@
     {% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 4,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -409,7 +409,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 4,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -460,7 +460,7 @@
         
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 5,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -497,7 +497,7 @@
     {% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 5,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -521,7 +521,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 5,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -579,7 +579,7 @@
     
     Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 1,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 1,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 1,  !- Condenser Air Inlet Node Name
@@ -684,7 +684,7 @@
  
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 1,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Air Outlet Node Name
     Perimeter_ZN_1,          !- Controlling Zone or Thermostat Location
@@ -754,7 +754,7 @@
     
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 2,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 2,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 2,  !- Condenser Air Inlet Node Name
@@ -858,7 +858,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 2,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Air Outlet Node Name
     Perimeter_ZN_2,          !- Controlling Zone or Thermostat Location
@@ -928,7 +928,7 @@ Coil:Cooling:DX:MultiSpeed,
     
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 3,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 3,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 3,  !- Condenser Air Inlet Node Name
@@ -1032,7 +1032,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 3,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 3,        !- Air Inlet Node Name
     Air Loop Outlet Node 3,  !- Air Outlet Node Name
     Perimeter_ZN_3,          !- Controlling Zone or Thermostat Location
@@ -1101,7 +1101,7 @@ Coil:Cooling:DX:MultiSpeed,
     
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 4,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 4,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 4,  !- Condenser Air Inlet Node Name
@@ -1205,7 +1205,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 4,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Air Outlet Node Name
     Perimeter_ZN_4,          !- Controlling Zone or Thermostat Location
@@ -1276,7 +1276,7 @@ Coil:Cooling:DX:MultiSpeed,
 
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 5,    !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 5,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 5,  !- Condenser Air Inlet Node Name
@@ -1380,7 +1380,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 5,        !- Name
-    HVACOperationSchd,     !- Availability Schedule Name
+    ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Air Outlet Node Name
     Core_Zn,          !- Controlling Zone or Thermostat Location
