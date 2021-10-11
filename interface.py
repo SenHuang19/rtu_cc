@@ -14,7 +14,7 @@ def work(url):
 
 	u={}
     
-	with open('./input1') as f: 
+	with open('./input13') as f: 
          data = f.read() 
 
 	u = json.loads(data)    

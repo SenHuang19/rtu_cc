@@ -1,0 +1,658 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+FenestrationSurface:Detailed,
+    Point_Of_Sale_Wall_South_Glazing,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Point_Of_Sale_Wall_South,!- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    2,                       !- Vertex 1 X-coordinate {m}
+    0.000000000000,          !- Vertex 1 Y-coordinate {m}
+    0.000000000000,          !- Vertex 1 Z-coordinate {m}
+    0.050000000000,          !- Vertex 2 X-coordinate {m}
+    0.000000000000,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    25.085000000000,         !- Vertex 3 X-coordinate {m}
+    ,                        !- Vertex 3 Y-coordinate {m}
+    ;                        !- Vertex 3 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Core_Retail_Wall_West_2_Door3,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Core_Retail_Wall_West_2, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000000000,          !- Vertex 1 X-coordinate {m}
+    2.538037755411,          !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    0.000000000000,          !- Vertex 2 X-coordinate {m}
+    2.538037755411,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    0.000000000000,          !- Vertex 3 X-coordinate {m}
+    1.623637755411,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    0.000000000000,          !- Vertex 4 X-coordinate {m}
+    1.623637755411,          !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Core_Retail_Wall_West_2_Door2,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Core_Retail_Wall_West_2, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000000000,          !- Vertex 1 X-coordinate {m}
+    13.841575894014,         !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    0.000000000000,          !- Vertex 2 X-coordinate {m}
+    13.841575894014,         !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    0.000000000000,          !- Vertex 3 X-coordinate {m}
+    12.927175894014,         !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    0.000000000000,          !- Vertex 4 X-coordinate {m}
+    12.927175894014,         !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Core_Retail_Wall_West_2_Door1,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Core_Retail_Wall_West_2, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000000000,          !- Vertex 1 X-coordinate {m}
+    25.062342286061,         !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    0.000000000000,          !- Vertex 2 X-coordinate {m}
+    25.062342286061,         !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    0.000000000000,          !- Vertex 3 X-coordinate {m}
+    24.147942286061,         !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    0.000000000000,          !- Vertex 4 X-coordinate {m}
+    24.147942286061,         !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Core_Retail_Wall_East_2_Door1,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Core_Retail_Wall_East_2, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    54.270000000000,         !- Vertex 1 X-coordinate {m}
+    3.438494104366,          !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    54.270000000000,         !- Vertex 2 X-coordinate {m}
+    3.438494104366,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    54.270000000000,         !- Vertex 3 X-coordinate {m}
+    4.352894104366,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    54.270000000000,         !- Vertex 4 X-coordinate {m}
+    4.352894104366,          !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Core_Retail_Wall_East_2_Door2,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Core_Retail_Wall_East_2, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    54.270000000000,         !- Vertex 1 X-coordinate {m}
+    13.809396313442,         !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    54.270000000000,         !- Vertex 2 X-coordinate {m}
+    13.809396313442,         !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    54.270000000000,         !- Vertex 3 X-coordinate {m}
+    14.723796313442,         !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    54.270000000000,         !- Vertex 4 X-coordinate {m}
+    14.723796313442,         !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Core_Retail_Wall_East_2_Door3,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Core_Retail_Wall_East_2, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    54.270000000000,         !- Vertex 1 X-coordinate {m}
+    24.234478195589,         !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    54.270000000000,         !- Vertex 2 X-coordinate {m}
+    24.234478195589,         !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    54.270000000000,         !- Vertex 3 X-coordinate {m}
+    25.148878195589,         !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    54.270000000000,         !- Vertex 4 X-coordinate {m}
+    25.148878195589,         !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Back_Space_Wall_North_Door1,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Back_Space_Wall_North,   !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    44.209918073175,         !- Vertex 1 X-coordinate {m}
+    7.000000000000,          !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    44.209918073175,         !- Vertex 2 X-coordinate {m}
+    7.000000000000,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    43.295518073175,         !- Vertex 3 X-coordinate {m}
+    7.000000000000,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    43.295518073175,         !- Vertex 4 X-coordinate {m}
+    7.000000000000,          !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Back_Space_Wall_North_Door2,  !- Name
+    Door,                    !- Surface Type
+    Swinging Door_con,       !- Construction Name
+    Back_Space_Wall_North,   !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    11.745274671376,         !- Vertex 1 X-coordinate {m}
+    7.000000000000,          !- Vertex 1 Y-coordinate {m}
+    2.133600000000,          !- Vertex 1 Z-coordinate {m}
+    11.745274671376,         !- Vertex 2 X-coordinate {m}
+    7.000000000000,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    10.830874671376,         !- Vertex 3 X-coordinate {m}
+    7.000000000000,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    10.830874671376,         !- Vertex 4 X-coordinate {m}
+    7.000000000000,          !- Vertex 4 Y-coordinate {m}
+    2.133600000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Back_Space_Wall_East_RollDoor,  !- Name
+    Door,                    !- Surface Type
+    Overhead Door_con,       !- Construction Name
+    Back_Space_Wall_East,    !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    54.270000000000,         !- Vertex 1 X-coordinate {m}
+    2.045406130273,          !- Vertex 1 Y-coordinate {m}
+    2.438400000000,          !- Vertex 1 Z-coordinate {m}
+    54.270000000000,         !- Vertex 2 X-coordinate {m}
+    2.045406130273,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    54.270000000000,         !- Vertex 3 X-coordinate {m}
+    5.093406130273,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    54.270000000000,         !- Vertex 4 X-coordinate {m}
+    5.093406130273,          !- Vertex 4 Y-coordinate {m}
+    2.438400000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Back_Space_Wall_North_RollDoor1,  !- Name
+    Door,                    !- Surface Type
+    Overhead Door_con,       !- Construction Name
+    Back_Space_Wall_North,   !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    37.362862950805,         !- Vertex 1 X-coordinate {m}
+    7.000000000000,          !- Vertex 1 Y-coordinate {m}
+    2.438400000000,          !- Vertex 1 Z-coordinate {m}
+    37.362862950805,         !- Vertex 2 X-coordinate {m}
+    7.000000000000,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    34.314862950805,         !- Vertex 3 X-coordinate {m}
+    7.000000000000,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    34.314862950805,         !- Vertex 4 X-coordinate {m}
+    7.000000000000,          !- Vertex 4 Y-coordinate {m}
+    2.438400000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Back_Space_Wall_North_RollDoor2,  !- Name
+    Door,                    !- Surface Type
+    Overhead Door_con,       !- Construction Name
+    Back_Space_Wall_North,   !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    28.980588335320,         !- Vertex 1 X-coordinate {m}
+    7.000000000000,          !- Vertex 1 Y-coordinate {m}
+    2.438400000000,          !- Vertex 1 Z-coordinate {m}
+    28.980588335320,         !- Vertex 2 X-coordinate {m}
+    7.000000000000,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    25.932588335319,         !- Vertex 3 X-coordinate {m}
+    7.000000000000,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    25.932588335319,         !- Vertex 4 X-coordinate {m}
+    7.000000000000,          !- Vertex 4 Y-coordinate {m}
+    2.438400000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Back_Space_Wall_North_RollDoor3,  !- Name
+    Door,                    !- Surface Type
+    Overhead Door_con,       !- Construction Name
+    Back_Space_Wall_North,   !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    20.310400044305,         !- Vertex 1 X-coordinate {m}
+    7.000000000000,          !- Vertex 1 Y-coordinate {m}
+    2.438400000000,          !- Vertex 1 Z-coordinate {m}
+    20.310400044305,         !- Vertex 2 X-coordinate {m}
+    7.000000000000,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    17.262400044305,         !- Vertex 3 X-coordinate {m}
+    7.000000000000,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    17.262400044305,         !- Vertex 4 X-coordinate {m}
+    7.000000000000,          !- Vertex 4 Y-coordinate {m}
+    2.438400000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Back_Space_Wall_West_RollDoor,  !- Name
+    Door,                    !- Surface Type
+    Overhead Door_con,       !- Construction Name
+    Back_Space_Wall_West,    !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000000000,          !- Vertex 1 X-coordinate {m}
+    4.739790129493,          !- Vertex 1 Y-coordinate {m}
+    2.438400000000,          !- Vertex 1 Z-coordinate {m}
+    0.000000000000,          !- Vertex 2 X-coordinate {m}
+    4.739790129493,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    0.000000000000,          !- Vertex 3 X-coordinate {m}
+    1.691790129493,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    0.000000000000,          !- Vertex 4 X-coordinate {m}
+    1.691790129493,          !- Vertex 4 Y-coordinate {m}
+    2.438400000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R2C4,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    16.459200,               !- Vertex 1 X-coordinate {m}
+    22.869200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    15.544800,               !- Vertex 2 X-coordinate {m}
+    22.869200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    15.544800,               !- Vertex 3 X-coordinate {m}
+    21.954800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    16.459200,               !- Vertex 4 X-coordinate {m}
+    21.954800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R2C1,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    2.743200,                !- Vertex 1 X-coordinate {m}
+    22.869200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    1.828800,                !- Vertex 2 X-coordinate {m}
+    22.869200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    1.828800,                !- Vertex 3 X-coordinate {m}
+    21.954800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    2.743200,                !- Vertex 4 X-coordinate {m}
+    21.954800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R2C2,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    7.315200,                !- Vertex 1 X-coordinate {m}
+    22.869200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    6.400800,                !- Vertex 2 X-coordinate {m}
+    22.869200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    6.400800,                !- Vertex 3 X-coordinate {m}
+    21.954800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    7.315200,                !- Vertex 4 X-coordinate {m}
+    21.954800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R2C3,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    11.887200,               !- Vertex 1 X-coordinate {m}
+    22.869200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    10.972800,               !- Vertex 2 X-coordinate {m}
+    22.869200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    10.972800,               !- Vertex 3 X-coordinate {m}
+    21.954800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    11.887200,               !- Vertex 4 X-coordinate {m}
+    21.954800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R1C3,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    11.887200,               !- Vertex 1 X-coordinate {m}
+    27.441200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    10.972800,               !- Vertex 2 X-coordinate {m}
+    27.441200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    10.972800,               !- Vertex 3 X-coordinate {m}
+    26.526800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    11.887200,               !- Vertex 4 X-coordinate {m}
+    26.526800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R1C1,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    2.743200,                !- Vertex 1 X-coordinate {m}
+    27.441200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    1.828800,                !- Vertex 2 X-coordinate {m}
+    27.441200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    1.828800,                !- Vertex 3 X-coordinate {m}
+    26.526800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    2.743200,                !- Vertex 4 X-coordinate {m}
+    26.526800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R1C4,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    16.459200,               !- Vertex 1 X-coordinate {m}
+    27.441200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    15.544800,               !- Vertex 2 X-coordinate {m}
+    27.441200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    15.544800,               !- Vertex 3 X-coordinate {m}
+    26.526800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    16.459200,               !- Vertex 4 X-coordinate {m}
+    26.526800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    skylights_R1C2,          !- Name
+    Window,                  !- Surface Type
+    NonresSkylight_U_1.02_SHGC_0.49,  !- Construction Name
+    Core_Retail_Roof,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame,          !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    7.315200,                !- Vertex 1 X-coordinate {m}
+    27.441200,               !- Vertex 1 Y-coordinate {m}
+    6.096000,                !- Vertex 1 Z-coordinate {m}
+    6.400800,                !- Vertex 2 X-coordinate {m}
+    27.441200,               !- Vertex 2 Y-coordinate {m}
+    6.096000,                !- Vertex 2 Z-coordinate {m}
+    6.400800,                !- Vertex 3 X-coordinate {m}
+    26.526800,               !- Vertex 3 Y-coordinate {m}
+    6.096000,                !- Vertex 3 Z-coordinate {m}
+    7.315200,                !- Vertex 4 X-coordinate {m}
+    26.526800,               !- Vertex 4 Y-coordinate {m}
+    6.096000;                !- Vertex 4 Z-coordinate {m}
+
+{%- if Windows == "Medium" %} 
+
+
+
+
+FenestrationSurface:Detailed,
+    Front_Retail_Wall_South_Glazing,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Front_Retail_Wall_South, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,                   !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.6600,                  !- Vertex 1 Z-coordinate {m}
+    0.050,                   !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    1.1400,                  !- Vertex 2 Z-coordinate {m}
+    25.085,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    1.1400,                  !- Vertex 3 Z-coordinate {m}
+    25.085,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.6600;                  !- Vertex 4 Z-coordinate {m}
+
+ FenestrationSurface:Detailed,
+    Front_Entry_Wall_South_Glazing,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Front_Entry_Wall_South,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.500,                   !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.6600,                  !- Vertex 1 Z-coordinate {m}
+    0.500,                   !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.0500,                  !- Vertex 2 Z-coordinate {m}
+    3.500,                   !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.0500,                  !- Vertex 3 Z-coordinate {m}
+    3.500,                   !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.6600;                  !- Vertex 4 Z-coordinate {m}
+
+{% elif Windows == "Low" %} 
+
+
+FenestrationSurface:Detailed,
+    Front_Retail_Wall_South_Glazing,
+    Window,
+    NonresWindow_U_0.57_SHGC_0.39,
+    Front_Retail_Wall_South,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.28,
+0.05,
+0,
+1.52,
+25.085,
+0,
+1.52,
+25.085,
+0,
+2.28;
+
+FenestrationSurface:Detailed,
+    Front_Entry_Wall_South_Glazing,
+    Window,
+    NonresWindow_U_0.57_SHGC_0.39,
+    Front_Entry_Wall_South,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.5,
+0,
+2.0075,
+0.5,
+0,
+0.7025,
+3.5,
+0,
+0.7025,
+3.5,
+0,
+2.0075;
+
+
+{% elif Windows == "High" %} 
+
+
+FenestrationSurface:Detailed,
+    Front_Retail_Wall_South_Glazing,
+    Window,
+    NonresWindow_U_0.57_SHGC_0.39,
+    Front_Retail_Wall_South,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+3.04,
+0.05,
+0,
+0.76,
+25.085,
+0,
+0.76,
+25.085,
+0,
+3.04;
+
+FenestrationSurface:Detailed,
+    Front_Entry_Wall_South_Glazing,
+    Window,
+    NonresWindow_U_0.57_SHGC_0.39,
+    Front_Entry_Wall_South,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.5,
+0,
+3.3125,
+0.5,
+0,
+-0.6025,
+3.5,
+0,
+-0.6025,
+3.5,
+0,
+3.3125;
+
+
+
+{%- endif %}

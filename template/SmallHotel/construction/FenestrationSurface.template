@@ -1,0 +1,885 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+
+{%- if Windows == "Medium" %} 
+
+
+  FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_0,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontLoungeFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    1.003084424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    3.056684424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    3.056684424,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    1.003084424,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_1,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontLoungeFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    4.965484424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    7.019084424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    7.019084424,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    4.965484424,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_2,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontLoungeFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    8.927884424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    10.981484424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    10.981484424,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    8.927884424,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_3,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontLoungeFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    12.890284424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    14.943884424,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    14.943884424,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    12.890284424,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+  FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_4,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontLoungeFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    16.8526844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    18.9062844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    18.9062844241,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    16.8526844241,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+ 
+
+  FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_0,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_MeetingRoomFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    28.2826844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    29.4218844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    29.4218844241,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    28.2826844241,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+  FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_1,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_MeetingRoomFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    34.0738844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    35.2130844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    35.2130844241,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    34.0738844241,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+  FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_2,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_MeetingRoomFlr1_5_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    31.1782844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    32.3174844241,0.0488452197,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    32.3174844241,0.0488452197,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    31.1782844241,0.0488452197,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    W_EmployeeLoungeFlr1_3_0_0_0_0,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_EmployeeLoungeFlr1_3_0_0,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    43.1378844242,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    41.9986844242,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    41.9986844242,18.3374292198,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    43.1378844242,18.3374292198,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+  FenestrationSurface:Detailed,
+    W_ExerciseCenterFlr1_3_0_0_0_0,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_ExerciseCenterFlr1_3_0_0,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    22.4114844241,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    21.2722844241,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    21.2722844241,18.3374292198,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    22.4114844241,18.3374292198,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+  FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_0,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontOfficeFlr1_3_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    18.4490844241,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    17.3098844241,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    17.3098844241,18.3374292198,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    18.4490844241,18.3374292198,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+  FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_1,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontOfficeFlr1_3_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    14.486684424,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    13.347484424,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    13.347484424,18.3374292198,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    14.486684424,18.3374292198,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+  FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_2,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontOfficeFlr1_3_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    10.524284424,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    9.385084424,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    9.385084424,18.3374292198,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    10.524284424,18.3374292198,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+
+  FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_3,  !- Name
+    Window,                  !- Surface Type
+    window, !- Construction Name
+    W_FrontOfficeFlr1_3_0_0, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    6.561884424,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 1 {m}
+    5.422684424,18.3374292198,0.9544,  !- X,Y,Z ==> Vertex 2 {m}
+    5.422684424,18.3374292198,2.3984,  !- X,Y,Z ==> Vertex 3 {m}
+    6.561884424,18.3374292198,2.3984;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+{% elif Windows == "Low" %} 
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_0,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+1.3038,
+0.0488,
+1.1659,
+2.7559,
+0.0488,
+1.1659,
+2.7559,
+0.0488,
+2.1869,
+1.3038,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_1,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+5.2662,
+0.0488,
+1.1659,
+6.7183,
+0.0488,
+1.1659,
+6.7183,
+0.0488,
+2.1869,
+5.2662,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_2,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+9.2286,
+0.0488,
+1.1659,
+10.6807,
+0.0488,
+1.1659,
+10.6807,
+0.0488,
+2.1869,
+9.2286,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_3,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+13.191,
+0.0488,
+1.1659,
+14.6431,
+0.0488,
+1.1659,
+14.6431,
+0.0488,
+2.1869,
+13.191,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_4,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+17.1534,
+0.0488,
+1.1659,
+18.6055,
+0.0488,
+1.1659,
+18.6055,
+0.0488,
+2.1869,
+17.1534,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_0,
+    Window,
+    window,
+    W_MeetingRoomFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+28.4495,
+0.0488,
+1.1659,
+29.2551,
+0.0488,
+1.1659,
+29.2551,
+0.0488,
+2.1869,
+28.4495,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_1,
+    Window,
+    window,
+    W_MeetingRoomFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+34.2407,
+0.0488,
+1.1659,
+35.0463,
+0.0488,
+1.1659,
+35.0463,
+0.0488,
+2.1869,
+34.2407,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_2,
+    Window,
+    window,
+    W_MeetingRoomFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+31.3451,
+0.0488,
+1.1659,
+32.1507,
+0.0488,
+1.1659,
+32.1507,
+0.0488,
+2.1869,
+31.3451,
+0.0488,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_EmployeeLoungeFlr1_3_0_0_0_0,
+    Window,
+    window,
+    W_EmployeeLoungeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+42.9711,
+18.3374,
+1.1659,
+42.1655,
+18.3374,
+1.1659,
+42.1655,
+18.3374,
+2.1869,
+42.9711,
+18.3374,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_ExerciseCenterFlr1_3_0_0_0_0,
+    Window,
+    window,
+    W_ExerciseCenterFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+22.2447,
+18.3374,
+1.1659,
+21.4391,
+18.3374,
+1.1659,
+21.4391,
+18.3374,
+2.1869,
+22.2447,
+18.3374,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_0,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+18.2823,
+18.3374,
+1.1659,
+17.4767,
+18.3374,
+1.1659,
+17.4767,
+18.3374,
+2.1869,
+18.2823,
+18.3374,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_1,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+14.3199,
+18.3374,
+1.1659,
+13.5143,
+18.3374,
+1.1659,
+13.5143,
+18.3374,
+2.1869,
+14.3199,
+18.3374,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_2,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+10.3575,
+18.3374,
+1.1659,
+9.5519,
+18.3374,
+1.1659,
+9.5519,
+18.3374,
+2.1869,
+10.3575,
+18.3374,
+2.1869;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_3,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+6.3951,
+18.3374,
+1.1659,
+5.5895,
+18.3374,
+1.1659,
+5.5895,
+18.3374,
+2.1869,
+6.3951,
+18.3374,
+2.1869;
+
+
+{% elif Windows == "High" %} 
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_0,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+0.7723,
+0.0488,
+0.7921,
+3.2875,
+0.0488,
+0.7921,
+3.2875,
+0.0488,
+2.5607,
+0.7723,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_1,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+4.7347,
+0.0488,
+0.7921,
+7.2499,
+0.0488,
+0.7921,
+7.2499,
+0.0488,
+2.5607,
+4.7347,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_2,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+8.6971,
+0.0488,
+0.7921,
+11.2123,
+0.0488,
+0.7921,
+11.2123,
+0.0488,
+2.5607,
+8.6971,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_3,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+12.6595,
+0.0488,
+0.7921,
+15.1747,
+0.0488,
+0.7921,
+15.1747,
+0.0488,
+2.5607,
+12.6595,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontLoungeFlr1_5_0_0_0_4,
+    Window,
+    window,
+    W_FrontLoungeFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+16.6219,
+0.0488,
+0.7921,
+19.1371,
+0.0488,
+0.7921,
+19.1371,
+0.0488,
+2.5607,
+16.6219,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_0,
+    Window,
+    window,
+    W_MeetingRoomFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+28.1547,
+0.0488,
+0.7921,
+29.5499,
+0.0488,
+0.7921,
+29.5499,
+0.0488,
+2.5607,
+28.1547,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_1,
+    Window,
+    window,
+    W_MeetingRoomFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+33.9459,
+0.0488,
+0.7921,
+35.3411,
+0.0488,
+0.7921,
+35.3411,
+0.0488,
+2.5607,
+33.9459,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_MeetingRoomFlr1_5_0_0_0_2,
+    Window,
+    window,
+    W_MeetingRoomFlr1_5_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+31.0503,
+0.0488,
+0.7921,
+32.4455,
+0.0488,
+0.7921,
+32.4455,
+0.0488,
+2.5607,
+31.0503,
+0.0488,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_EmployeeLoungeFlr1_3_0_0_0_0,
+    Window,
+    window,
+    W_EmployeeLoungeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+43.2659,
+18.3374,
+0.7921,
+41.8707,
+18.3374,
+0.7921,
+41.8707,
+18.3374,
+2.5607,
+43.2659,
+18.3374,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_ExerciseCenterFlr1_3_0_0_0_0,
+    Window,
+    window,
+    W_ExerciseCenterFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+22.5395,
+18.3374,
+0.7921,
+21.1443,
+18.3374,
+0.7921,
+21.1443,
+18.3374,
+2.5607,
+22.5395,
+18.3374,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_0,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+18.5771,
+18.3374,
+0.7921,
+17.1819,
+18.3374,
+0.7921,
+17.1819,
+18.3374,
+2.5607,
+18.5771,
+18.3374,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_1,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+14.6147,
+18.3374,
+0.7921,
+13.2195,
+18.3374,
+0.7921,
+13.2195,
+18.3374,
+2.5607,
+14.6147,
+18.3374,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_2,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+10.6523,
+18.3374,
+0.7921,
+9.2571,
+18.3374,
+0.7921,
+9.2571,
+18.3374,
+2.5607,
+10.6523,
+18.3374,
+2.5607;
+
+FenestrationSurface:Detailed,
+    W_FrontOfficeFlr1_3_0_0_0_3,
+    Window,
+    window,
+    W_FrontOfficeFlr1_3_0_0,
+    ,
+    autocalculate,
+    ,
+1,
+4,
+6.6899,
+18.3374,
+0.7921,
+5.2947,
+18.3374,
+0.7921,
+5.2947,
+18.3374,
+2.5607,
+6.6899,
+18.3374,
+2.5607;
+
+
+{%- endif %}

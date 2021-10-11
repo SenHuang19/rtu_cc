@@ -1,0 +1,843 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+
+{%- if Windows == "Medium" %} 
+
+
+FenestrationSurface:Detailed,
+MWindow1,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m SWall SEA,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+1.4476,     !- Vertex 1 X-coordinate {m}
+0,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+1.4476,     !- Vertex 2 X-coordinate {m}
+0,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+10.133380019685,     !- Vertex 3 X-coordinate {m}
+0,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+10.133380019685,     !- Vertex 4 X-coordinate {m}
+0,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow11,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m SWall S1A,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+1.4476,     !- Vertex 1 X-coordinate {m}
+0,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+1.4476,     !- Vertex 2 X-coordinate {m}
+0,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+10.133380019685,     !- Vertex 3 X-coordinate {m}
+0,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+10.133380019685,     !- Vertex 4 X-coordinate {m}
+0,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow12,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m SWall S2A,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+1.4476,     !- Vertex 1 X-coordinate {m}
+0,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+1.4476,     !- Vertex 2 X-coordinate {m}
+0,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+10.133380019685,     !- Vertex 3 X-coordinate {m}
+0,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+10.133380019685,     !- Vertex 4 X-coordinate {m}
+0,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow3,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m SWall SWA,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+1.4476,     !- Vertex 1 X-coordinate {m}
+0,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+1.4476,     !- Vertex 2 X-coordinate {m}
+0,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+10.133380019685,     !- Vertex 3 X-coordinate {m}
+0,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+10.133380019685,     !- Vertex 4 X-coordinate {m}
+0,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow2, !- Name
+Window,    !- Surface Type
+window,   !- Construction Name of the Surface
+m WWall SWA,   !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,   !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+0,    !- Vertex 1 X-coordinate {m}
+6.5,    !- Vertex 1 Y-coordinate {m}
+2.1731,    !- Vertex 1 Z-coordinate {m}
+0,    !- Vertex 2 X-coordinate {m}
+6.5,    !- Vertex 2 Y-coordinate {m}
+0.9539,    !- Vertex 2 Z-coordinate {m}
+0,    !- Vertex 3 X-coordinate {m}
+0.785679133858268,    !- Vertex 3 Y-coordinate {m}
+0.9539,    !- Vertex 3 Z-coordinate {m}
+0,    !- Vertex 4 X-coordinate {m}
+0.785679133858268,    !- Vertex 4 Y-coordinate {m}
+2.1731;    !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow6, !- Name
+Window,    !- Surface Type
+window,   !- Construction Name of the Surface
+m WWall NWA,   !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,   !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+0,    !- Vertex 1 X-coordinate {m}
+6.5,    !- Vertex 1 Y-coordinate {m}
+2.1731,    !- Vertex 1 Z-coordinate {m}
+0,    !- Vertex 2 X-coordinate {m}
+6.5,    !- Vertex 2 Y-coordinate {m}
+0.9539,    !- Vertex 2 Z-coordinate {m}
+0,    !- Vertex 3 X-coordinate {m}
+0.785679133858268,    !- Vertex 3 Y-coordinate {m}
+0.9539,    !- Vertex 3 Z-coordinate {m}
+0,    !- Vertex 4 X-coordinate {m}
+0.785679133858268,    !- Vertex 4 Y-coordinate {m}
+2.1731;    !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow5,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m NWall NEA,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+10.5,     !- Vertex 1 X-coordinate {m}
+7.6196,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+10.5,     !- Vertex 2 X-coordinate {m}
+7.6196,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+1.81422244094488,     !- Vertex 3 X-coordinate {m}
+7.6196,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+1.81422244094488,     !- Vertex 4 X-coordinate {m}
+7.6196,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow9,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m NWall N1A,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+10.5,     !- Vertex 1 X-coordinate {m}
+7.6196,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+10.5,     !- Vertex 2 X-coordinate {m}
+7.6196,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+1.81422244094488,     !- Vertex 3 X-coordinate {m}
+7.6196,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+1.81422244094488,     !- Vertex 4 X-coordinate {m}
+7.6196,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow10,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m NWall N2A,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+10.5,     !- Vertex 1 X-coordinate {m}
+7.6196,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+10.5,     !- Vertex 2 X-coordinate {m}
+7.6196,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+1.81422244094488,     !- Vertex 3 X-coordinate {m}
+7.6196,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+1.81422244094488,     !- Vertex 4 X-coordinate {m}
+7.6196,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow4,  !- Name
+Window,     !- Surface Type
+window,    !- Construction Name of the Surface
+m NWall NWA,    !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+10.5,     !- Vertex 1 X-coordinate {m}
+7.6196,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+10.5,     !- Vertex 2 X-coordinate {m}
+7.6196,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+1.81422244094488,     !- Vertex 3 X-coordinate {m}
+7.6196,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+1.81422244094488,     !- Vertex 4 X-coordinate {m}
+7.6196,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow8,  !- Name
+Window,    !- Surface Type
+window,    !- Construction Name of the Surface
+m EWall SEA,   !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+11.5818,     !- Vertex 1 X-coordinate {m}
+1.1,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+11.5818,     !- Vertex 2 X-coordinate {m}
+1.1,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+11.5818,     !- Vertex 3 X-coordinate {m}
+6.81432086614173,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+11.5818,     !- Vertex 4 X-coordinate {m}
+6.81432086614173,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+MWindow7,  !- Name
+Window,    !- Surface Type
+window,    !- Construction Name of the Surface
+m EWall NEA,   !- Building Surface Name
+,     !- Outside Boundary Condition Object
+autocalculate,    !- View Factor to Ground
+,     !- Frame and Divider Name
+1,     !- Multiplier
+4,     !- Number of Vertices
+11.5818,     !- Vertex 1 X-coordinate {m}
+1.1,     !- Vertex 1 Y-coordinate {m}
+2.1731,     !- Vertex 1 Z-coordinate {m}
+11.5818,     !- Vertex 2 X-coordinate {m}
+1.1,     !- Vertex 2 Y-coordinate {m}
+0.9539,     !- Vertex 2 Z-coordinate {m}
+11.5818,     !- Vertex 3 X-coordinate {m}
+6.81432086614173,     !- Vertex 3 Y-coordinate {m}
+0.9539,     !- Vertex 3 Z-coordinate {m}
+11.5818,     !- Vertex 4 X-coordinate {m}
+6.81432086614173,     !- Vertex 4 Y-coordinate {m}
+2.1731;     !- Vertex 4 Z-coordinate {m}
+
+
+ 
+
+{% elif Windows == "Low" %} 
+
+FenestrationSurface:Detailed,
+MWindow1,
+Window,
+window,
+m SWall SEA,
+,
+autocalculate,
+,
+1,
+4,
+2.7196,
+0,
+1.9946,
+2.7196,
+0,
+1.1324,
+8.8614,
+0,
+1.1324,
+8.8614,
+0,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow11,
+Window,
+window,
+m SWall S1A,
+,
+autocalculate,
+,
+1,
+4,
+2.7196,
+0,
+1.9946,
+2.7196,
+0,
+1.1324,
+8.8614,
+0,
+1.1324,
+8.8614,
+0,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow12,
+Window,
+window,
+m SWall S2A,
+,
+autocalculate,
+,
+1,
+4,
+2.7196,
+0,
+1.9946,
+2.7196,
+0,
+1.1324,
+8.8614,
+0,
+1.1324,
+8.8614,
+0,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow3,
+Window,
+window,
+m SWall SWA,
+,
+autocalculate,
+,
+1,
+4,
+2.7196,
+0,
+1.9946,
+2.7196,
+0,
+1.1324,
+8.8614,
+0,
+1.1324,
+8.8614,
+0,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow2,
+Window,
+window,
+m WWall SWA,
+,
+autocalculate,
+,
+1,
+4,
+0,
+5.6632,
+1.9946,
+0,
+5.6632,
+1.1324,
+0,
+1.6225,
+1.1324,
+0,
+1.6225,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow6,
+Window,
+window,
+m WWall NWA,
+,
+autocalculate,
+,
+1,
+4,
+0,
+5.6632,
+1.9946,
+0,
+5.6632,
+1.1324,
+0,
+1.6225,
+1.1324,
+0,
+1.6225,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow5,
+Window,
+window,
+m NWall NEA,
+,
+autocalculate,
+,
+1,
+4,
+9.228,
+7.6196,
+1.9946,
+9.228,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow9,
+Window,
+window,
+m NWall N1A,
+,
+autocalculate,
+,
+1,
+4,
+9.228,
+7.6196,
+1.9946,
+9.228,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow10,
+Window,
+window,
+m NWall N2A,
+,
+autocalculate,
+,
+1,
+4,
+9.228,
+7.6196,
+1.9946,
+9.228,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow4,
+Window,
+window,
+m NWall NWA,
+,
+autocalculate,
+,
+1,
+4,
+9.228,
+7.6196,
+1.9946,
+9.228,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.1324,
+3.0862,
+7.6196,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow8,
+Window,
+window,
+m EWall SEA,
+,
+autocalculate,
+,
+1,
+4,
+11.5818,
+1.9368,
+1.9946,
+11.5818,
+1.9368,
+1.1324,
+11.5818,
+5.9775,
+1.1324,
+11.5818,
+5.9775,
+1.9946;
+
+FenestrationSurface:Detailed,
+MWindow7,
+Window,
+window,
+m EWall NEA,
+,
+autocalculate,
+,
+1,
+4,
+11.5818,
+1.9368,
+1.9946,
+11.5818,
+1.9368,
+1.1324,
+11.5818,
+5.9775,
+1.1324,
+11.5818,
+5.9775,
+1.9946;
+
+
+{% elif Windows == "High" %} 
+
+FenestrationSurface:Detailed,
+MWindow1,
+Window,
+window,
+m SWall SEA,
+,
+autocalculate,
+,
+1,
+4,
+0.4716,
+0,
+2.3101,
+0.4716,
+0,
+0.8169,
+11.1094,
+0,
+0.8169,
+11.1094,
+0,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow11,
+Window,
+window,
+m SWall S1A,
+,
+autocalculate,
+,
+1,
+4,
+0.4716,
+0,
+2.3101,
+0.4716,
+0,
+0.8169,
+11.1094,
+0,
+0.8169,
+11.1094,
+0,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow12,
+Window,
+window,
+m SWall S2A,
+,
+autocalculate,
+,
+1,
+4,
+0.4716,
+0,
+2.3101,
+0.4716,
+0,
+0.8169,
+11.1094,
+0,
+0.8169,
+11.1094,
+0,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow3,
+Window,
+window,
+m SWall SWA,
+,
+autocalculate,
+,
+1,
+4,
+0.4716,
+0,
+2.3101,
+0.4716,
+0,
+0.8169,
+11.1094,
+0,
+0.8169,
+11.1094,
+0,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow2,
+Window,
+window,
+m WWall SWA,
+,
+autocalculate,
+,
+1,
+4,
+0,
+7.1421,
+2.3101,
+0,
+7.1421,
+0.8169,
+0,
+0.1435,
+0.8169,
+0,
+0.1435,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow6,
+Window,
+window,
+m WWall NWA,
+,
+autocalculate,
+,
+1,
+4,
+0,
+7.1421,
+2.3101,
+0,
+7.1421,
+0.8169,
+0,
+0.1435,
+0.8169,
+0,
+0.1435,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow5,
+Window,
+window,
+m NWall NEA,
+,
+autocalculate,
+,
+1,
+4,
+11.476,
+7.6196,
+2.3101,
+11.476,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow9,
+Window,
+window,
+m NWall N1A,
+,
+autocalculate,
+,
+1,
+4,
+11.476,
+7.6196,
+2.3101,
+11.476,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow10,
+Window,
+window,
+m NWall N2A,
+,
+autocalculate,
+,
+1,
+4,
+11.476,
+7.6196,
+2.3101,
+11.476,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow4,
+Window,
+window,
+m NWall NWA,
+,
+autocalculate,
+,
+1,
+4,
+11.476,
+7.6196,
+2.3101,
+11.476,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+0.8169,
+0.8382,
+7.6196,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow8,
+Window,
+window,
+m EWall SEA,
+,
+autocalculate,
+,
+1,
+4,
+11.5818,
+0.4579,
+2.3101,
+11.5818,
+0.4579,
+0.8169,
+11.5818,
+7.4565,
+0.8169,
+11.5818,
+7.4565,
+2.3101;
+
+FenestrationSurface:Detailed,
+MWindow7,
+Window,
+window,
+m EWall NEA,
+,
+autocalculate,
+,
+1,
+4,
+11.5818,
+0.4579,
+2.3101,
+11.5818,
+0.4579,
+0.8169,
+11.5818,
+7.4565,
+0.8169,
+11.5818,
+7.4565,
+2.3101;
+
+{%- endif %}

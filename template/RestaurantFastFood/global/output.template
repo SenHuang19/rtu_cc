@@ -1,0 +1,4326 @@
+Version,9.0;
+!-   ===========  ALL OBJECTS IN CLASS: SIMULATIONCONTROL ===========
+
+  SimulationControl,
+    Yes,                     !- Do Zone Sizing Calculation
+    Yes,                     !- Do System Sizing Calculation
+    Yes,                     !- Do Plant Sizing Calculation
+    No,         !- Run Simulation for Sizing Periods
+    YES;                      !- Run Simulation for Weather File Run Periods
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
+
+  Building,
+    OfficeSmall,            !- Name
+    0.00,
+    City,                    !- Terrain
+    0.0400,                  !- Loads Convergence Tolerance Value
+    0.2000,                  !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    25,                      !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+!-   ===========  ALL OBJECTS IN CLASS: SHADOWCALCULATION ===========
+
+  ShadowCalculation,
+    AverageOverDaysInFrequency,  !- Calculation Method
+    30,                      !- Calculation Frequency
+    15000;                   !- Maximum Figures in Shadow Overlap Calculations
+
+!-   ===========  ALL OBJECTS IN CLASS: SURFACECONVECTIONALGORITHM:INSIDE ===========
+
+  SurfaceConvectionAlgorithm:Inside,TARP;
+
+!-   ===========  ALL OBJECTS IN CLASS: SURFACECONVECTIONALGORITHM:OUTSIDE ===========
+
+  SurfaceConvectionAlgorithm:Outside,TARP;
+
+!-   ===========  ALL OBJECTS IN CLASS: HEATBALANCEALGORITHM ===========
+
+  HeatBalanceAlgorithm,ConductionTransferFunction,200.0000;
+
+!-   ===========  ALL OBJECTS IN CLASS: TIMESTEP ===========
+
+  Timestep,6;
+
+!-   ===========  ALL OBJECTS IN CLASS: CONVERGENCELIMITS ===========
+
+  ConvergenceLimits,
+    1,                       !- Minimum System Timestep {minutes}
+    20;                      !- Maximum HVAC Iterations
+
+!-   ===========  ALL OBJECTS IN CLASS: RUNPERIOD ===========
+
+  RunPeriod,
+    ,                        !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    ,                        !- Begin Year
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    ,                        !- End Year
+    Sunday,                  !- Day of Week for Start Day
+    No,                      !- Use Weather File Holidays and Special Days
+    No,                      !- Use Weather File Daylight Saving Period
+    No,                     !- Apply Weekend Holiday Rule
+    Yes,                     !- Use Weather File Rain Indicators
+    Yes;                     !- Use Weather File Snow Indicators
+
+!-   ===========  ALL OBJECTS IN CLASS: RUNPERIODCONTROL:SPECIALDAYS ===========
+
+  RunPeriodControl:SpecialDays,
+    New Years Day,           !- Name
+    January 1,               !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Veterans Day,            !- Name
+    November 11,             !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Christmas,               !- Name
+    December 25,             !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Independence Day,        !- Name
+    July 4,                  !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    MLK Day,                 !- Name
+    3rd Monday in January,   !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Presidents Day,          !- Name
+    3rd Monday in February,  !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Memorial Day,            !- Name
+    Last Monday in May,      !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Labor Day,               !- Name
+    1st Monday in September, !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Columbus Day,            !- Name
+    2nd Monday in October,   !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Thanksgiving,            !- Name
+    4th Thursday in November,!- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+!-   ===========  ALL OBJECTS IN CLASS: RUNPERIODCONTROL:DAYLIGHTSAVINGTIME ===========
+
+  RunPeriodControl:DaylightSavingTime,
+    2nd Sunday in March,     !- Start Date
+    1st Sunday in November;  !- End Date
+
+!-   ===========  ALL OBJECTS IN CLASS: LOCATION ===========
+
+{% include "climates" %}
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR-R ===========
+
+  Material:NoMass,
+    Opaque Door panel_con,   !- Name
+    MediumRough,             !- Roughness
+    0.251572327,  !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
+
+  Construction,
+    Swinging Door_con,       !- Name
+    Opaque Door panel_con;   !- Outside Layer
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
+
+  ScheduleTypeLimits,
+    Any Number;              !- Name
+
+  ScheduleTypeLimits,
+    Fraction,                !- Name
+    0.0,                     !- Lower Limit Value
+    1.0,                     !- Upper Limit Value
+    CONTINUOUS;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    Temperature,             !- Name
+    -60,                     !- Lower Limit Value
+    200,                     !- Upper Limit Value
+    CONTINUOUS;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    On/Off,                  !- Name
+    0,                       !- Lower Limit Value
+    1,                       !- Upper Limit Value
+    DISCRETE;                !- Numeric Type
+
+  ScheduleTypeLimits,
+    Control Type,            !- Name
+    0,                       !- Lower Limit Value
+    4,                       !- Upper Limit Value
+    DISCRETE;                !- Numeric Type
+
+  ScheduleTypeLimits,
+    Humidity,                !- Name
+    10,                      !- Lower Limit Value
+    90,                      !- Upper Limit Value
+    CONTINUOUS;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    Number;                  !- Name
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
+
+Schedule:Compact,
+    ALWAYS_ON,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0;                     !- Field 
+
+Schedule:Compact,
+    ALWAYS_OFF,              !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    0.0;                     !- Field 4
+
+Schedule:Compact,
+    MinOA_Sched,             !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0;                     !- Field 4
+
+
+Schedule:Compact,
+    FanModeSchedule,         !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 7:00,             !- Field 3
+    0.0,                     !- Field 4
+    Until: 17:00,            !- Field 5
+    1.0,                     !- Field 6
+    Until: 24:00,            !- Field 7
+    0.0;                     !- Field 8
+
+{% include "HVACOperationSchd" %}
+
+{% include "HTGSETP_SCH_NO_OPTIMUM" %}
+
+{% include "CLGSETP_SCH_NO_OPTIMUM" %}
+
+{% include "MinOAFraction" %}
+
+  Schedule:Compact,
+    BLDG_LIGHT_DINING_SCH,   !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday,            !- Field 2
+    Until: 5:00,0.15,        !- Field 3
+        Until: 6:00,0.2,               !- Field 4
+        Until: 8:00,0.4,               !- Field 5
+        Until: 10:00,0.6,               !- Field 6
+        Until: 22:00,0.9,               !- Field 7
+        Until: 23:00,0.5,               !- Field 8
+        Until: 24:00,0.3,               !- Field 9
+        For: Saturday,               !- Field 10
+        Until: 1:00,0.2,               !- Field 11
+        Until: 6:00,0.15,               !- Field 12
+        Until: 8:00,0.3,               !- Field 13
+        Until: 10:00,0.6,               !- Field 14
+        Until: 17:00,0.8,               !- Field 15
+        Until: 22:00,0.9,               !- Field 16
+        Until: 23:00,0.5,               !- Field 17
+        Until: 24:00,0.3,               !- Field 18
+        For: SummerDesignDay,               !- Field 19
+        Until: 24:00,1,               !- Field 20
+        For: WinterDesignDay,               !- Field 21
+        Until: 24:00,0,               !- Field 22
+        For: Sunday Holidays AllOtherDays,               !- Field 23
+        Until: 1:00,0.2,               !- Field 24
+        Until: 6:00,0.15,               !- Field 25
+        Until: 8:00,0.3,               !- Field 26
+        Until: 10:00,0.5,               !- Field 27
+        Until: 16:00,0.7,               !- Field 28
+        Until: 22:00,0.6,               !- Field 29
+        Until: 23:00,0.5,               !- Field 30
+        Until: 24:00,0.3;               !- Field 31
+
+  Schedule:Compact,
+    BLDG_LIGHT_KITCHEN_SCH,  !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday,            !- Field 2
+    Until: 5:00,0.15,        !- Field 3
+        Until: 6:00,0.2,               !- Field 4
+        Until: 8:00,0.4,               !- Field 5
+        Until: 10:00,0.6,               !- Field 6
+        Until: 22:00,0.9,               !- Field 7
+        Until: 23:00,0.5,               !- Field 8
+        Until: 24:00,0.3,               !- Field 9
+        For: Saturday,               !- Field 10
+        Until: 1:00,0.2,               !- Field 11
+        Until: 6:00,0.15,               !- Field 12
+        Until: 8:00,0.3,               !- Field 13
+        Until: 10:00,0.6,               !- Field 14
+        Until: 17:00,0.8,               !- Field 15
+        Until: 22:00,0.9,               !- Field 16
+        Until: 23:00,0.5,               !- Field 17
+        Until: 24:00,0.3,               !- Field 18
+        For: SummerDesignDay,               !- Field 19
+        Until: 24:00,1,               !- Field 20
+        For: WinterDesignDay,               !- Field 21
+        Until: 24:00,0,               !- Field 22
+        For: Sunday Holidays AllOtherDays,               !- Field 23
+        Until: 1:00,0.2,               !- Field 24
+        Until: 6:00,0.15,               !- Field 25
+        Until: 8:00,0.3,               !- Field 26
+        Until: 10:00,0.5,               !- Field 27
+        Until: 16:00,0.7,               !- Field 28
+        Until: 22:00,0.6,               !- Field 29
+        Until: 23:00,0.5,               !- Field 30
+        Until: 24:00,0.3;               !- Field 31
+
+  Schedule:Compact,
+    BLDG_LIGHT_SCH,          !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday,            !- Field 2
+    Until: 5:00,0.15,        !- Field 3
+        Until: 6:00,0.2,               !- Field 4
+        Until: 8:00,0.4,               !- Field 5
+        Until: 10:00,0.6,               !- Field 6
+        Until: 22:00,0.9,               !- Field 7
+        Until: 23:00,0.5,               !- Field 8
+        Until: 24:00,0.3,               !- Field 9
+        For: Saturday,               !- Field 10
+        Until: 1:00,0.2,               !- Field 11
+        Until: 6:00,0.15,               !- Field 12
+        Until: 8:00,0.3,               !- Field 13
+        Until: 10:00,0.6,               !- Field 14
+        Until: 17:00,0.8,               !- Field 15
+        Until: 22:00,0.9,               !- Field 16
+        Until: 23:00,0.5,               !- Field 17
+        Until: 24:00,0.3,               !- Field 18
+        For: SummerDesignDay,               !- Field 19
+        Until: 24:00,1,               !- Field 20
+        For: WinterDesignDay,               !- Field 21
+        Until: 24:00,0,               !- Field 22
+        For: Sunday Holidays AllOtherDays,               !- Field 23
+        Until: 1:00,0.2,               !- Field 24
+        Until: 6:00,0.15,               !- Field 25
+        Until: 8:00,0.3,               !- Field 26
+        Until: 10:00,0.5,               !- Field 27
+        Until: 16:00,0.7,               !- Field 28
+        Until: 22:00,0.6,               !- Field 29
+        Until: 23:00,0.5,               !- Field 30
+        Until: 24:00,0.3;               !- Field 31
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Schedule:Compact,
+    BLDG_EQUIP_SCH,          !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until: 01:00,0.03, !- Field 3
+    Until: 02:00,0.02, !- Field 5
+    Until: 03:00,0.03, !- Field 7
+    Until: 04:00,0.02, !- Field 9
+    Until: 05:00,0.05, !- Field 11
+    Until: 06:00,0.12, !- Field 13
+    Until: 07:00,0.13, !- Field 15
+    Until: 08:00,0.15, !- Field 17
+    Until: 09:00,0.18, !- Field 19
+    Until: 10:00,0.21, !- Field 21
+    Until: 11:00,0.26, !- Field 23
+    Until: 12:00,0.29, !- Field 25
+    Until: 13:00,0.27, !- Field 27
+    Until: 14:00,0.25, !- Field 29
+    Until: 15:00,0.23, !- Field 31
+    Until: 16:00,0.23, !- Field 33
+    Until: 17:00,0.26, !- Field 35
+    Until: 18:00,0.26, !- Field 37
+    Until: 19:00,0.24, !- Field 39
+    Until: 20:00,0.22, !- Field 41
+    Until: 21:00,0.2, !- Field 43
+    Until: 22:00,0.18, !- Field 45
+    Until: 23:00,0.09, !- Field 47
+    Until: 24:00,0.03, !- Field 49
+    For: Saturday,  !- Field 2
+    Until: 01:00,0.03,       !- Field 3
+    Until: 02:00,0.02,       !- Field 5
+    Until: 03:00,0.03,       !- Field 7
+    Until: 04:00,0.02,       !- Field 9
+    Until: 05:00,0.05,       !- Field 11
+    Until: 06:00,0.12,       !- Field 13
+    Until: 07:00,0.13,       !- Field 15
+    Until: 08:00,0.15,       !- Field 17
+    Until: 09:00,0.18,       !- Field 19
+    Until: 10:00,0.21,       !- Field 21
+    Until: 11:00,0.26,       !- Field 23
+    Until: 12:00,0.29,       !- Field 25
+    Until: 13:00,0.27,       !- Field 27
+    Until: 14:00,0.25,       !- Field 29
+    Until: 15:00,0.23,       !- Field 31
+    Until: 16:00,0.23,       !- Field 33
+    Until: 17:00,0.26,       !- Field 35
+    Until: 18:00,0.26,       !- Field 37
+    Until: 19:00,0.24,       !- Field 39
+    Until: 20:00,0.22,       !- Field 41
+    Until: 21:00,0.2,       !- Field 43
+    Until: 22:00,0.18,       !- Field 45
+    Until: 23:00,0.09,       !- Field 47
+    Until: 24:00,0.03,       !- Field 49
+    For: SummerDesignDay,    !- Field 51
+    Until: 24:00,0.29,       !- Field 52
+    For: WinterDesignDay,    !- Field 54
+    Until: 24:00,0.0,        !- Field 55
+    For: Sunday Holidays AllOtherDays, !- Field 57
+    Until: 01:00,0.03,       !- Field 58
+    Until: 02:00,0.02,       !- Field 60
+    Until: 03:00,0.03,       !- Field 62
+    Until: 04:00,0.02,       !- Field 64
+    Until: 05:00,0.05,       !- Field 66
+    Until: 06:00,0.12,       !- Field 68
+    Until: 07:00,0.13,       !- Field 70
+    Until: 08:00,0.15,       !- Field 72
+    Until: 09:00,0.18,       !- Field 74
+    Until: 10:00,0.21,       !- Field 76
+    Until: 11:00,0.26,       !- Field 78
+    Until: 12:00,0.29,       !- Field 80
+    Until: 13:00,0.27,       !- Field 82
+    Until: 14:00,0.25,       !- Field 84
+    Until: 15:00,0.23,       !- Field 86
+    Until: 16:00,0.23,       !- Field 88
+    Until: 17:00,0.26,       !- Field 90
+    Until: 18:00,0.26,       !- Field 92
+    Until: 19:00,0.24,       !- Field 94
+    Until: 20:00,0.22,       !- Field 96
+    Until: 21:00,0.2,       !- Field 98
+    Until: 22:00,0.18,       !- Field 100
+    Until: 23:00,0.09,       !- Field 102
+    Until: 24:00,0.03;       !- Field 104
+
+  Schedule:Compact,
+    FF_GAS_EQUIP_SCH,        !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays Saturday,  !- Field 2
+    Until: 01:00,0.03,       !- Field 3
+    Until: 02:00,0.02,       !- Field 5
+    Until: 03:00,0.03,       !- Field 7
+    Until: 04:00,0.02,       !- Field 9
+    Until: 05:00,0.05,       !- Field 11
+    Until: 06:00,0.12,       !- Field 13
+    Until: 07:00,0.13,       !- Field 15
+    Until: 08:00,0.15,       !- Field 17
+    Until: 09:00,0.18,       !- Field 19
+    Until: 10:00,0.21,       !- Field 21
+    Until: 11:00,0.26,       !- Field 23
+    Until: 12:00,0.29,       !- Field 25
+    Until: 13:00,0.27,       !- Field 27
+    Until: 14:00,0.25,       !- Field 29
+    Until: 15:00,0.23,       !- Field 31
+    Until: 16:00,0.23,       !- Field 33
+    Until: 17:00,0.26,       !- Field 35
+    Until: 18:00,0.26,       !- Field 37
+    Until: 19:00,0.24,       !- Field 39
+    Until: 20:00,0.22,       !- Field 41
+    Until: 21:00,0.20,       !- Field 43
+    Until: 22:00,0.18,       !- Field 45
+    Until: 23:00,0.09,       !- Field 47
+    Until: 24:00,0.03,       !- Field 49
+    For: SummerDesignDay,    !- Field 51
+    Until: 24:00,0.29,       !- Field 52
+    For: WinterDesignDay,    !- Field 54
+    Until: 24:00,0.0,        !- Field 55
+    For: Sunday Holidays AllOtherDays, !- Field 57
+    Until: 01:00,0.03,       !- Field 58
+    Until: 02:00,0.02,       !- Field 60
+    Until: 03:00,0.03,       !- Field 62
+    Until: 04:00,0.02,       !- Field 64
+    Until: 05:00,0.05,       !- Field 66
+    Until: 06:00,0.12,       !- Field 68
+    Until: 07:00,0.13,       !- Field 70
+    Until: 08:00,0.15,       !- Field 72
+    Until: 09:00,0.18,       !- Field 74
+    Until: 10:00,0.21,       !- Field 76
+    Until: 11:00,0.26,       !- Field 78
+    Until: 12:00,0.29,       !- Field 80
+    Until: 13:00,0.27,       !- Field 82
+    Until: 14:00,0.25,       !- Field 84
+    Until: 15:00,0.23,       !- Field 86
+    Until: 16:00,0.23,       !- Field 88
+    Until: 17:00,0.26,       !- Field 90
+    Until: 18:00,0.26,       !- Field 92
+    Until: 19:00,0.24,       !- Field 94
+    Until: 20:00,0.22,       !- Field 96
+    Until: 21:00,0.20,       !- Field 98
+    Until: 22:00,0.18,       !- Field 100
+    Until: 23:00,0.09,       !- Field 102
+    Until: 24:00,0.03;       !- Field 104
+
+
+  Schedule:Compact,
+    BLDG_OCC_SCH,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until: 01:00,0.05,       !- Field 3
+    Until: 05:00,0.0,        !- Field 5
+    Until: 06:00,0.05,       !- Field 7
+    Until: 07:00,0.1,        !- Field 9
+    Until: 10:00,0.4,        !- Field 11
+    Until: 11:00,0.2,        !- Field 13
+    Until: 12:00,0.5,        !- Field 15
+    Until: 13:00,0.8,        !- Field 17
+    Until: 14:00,0.7,        !- Field 19
+    Until: 15:00,0.4,        !- Field 21
+    Until: 16:00,0.2,        !- Field 23
+    Until: 17:00,0.25,       !- Field 25
+    Until: 18:00,0.5,        !- Field 27
+    Until: 21:00,0.8,        !- Field 29
+    Until: 22:00,0.5,        !- Field 31
+    Until: 23:00,0.35,       !- Field 33
+    Until: 24:00,0.2,        !- Field 35
+    For: SummerDesignDay,    !- Field 37
+    Until: 24:00,1.0,        !- Field 38
+    For: WinterDesignDay,    !- Field 40
+    Until: 24:00,0.0,        !- Field 41
+    For: Saturday,           !- Field 43
+    Until: 01:00,0.05,       !- Field 44
+    Until: 06:00,0.0,        !- Field 46
+    Until: 07:00,0.05,       !- Field 48
+    Until: 09:00,0.5,        !- Field 50
+    Until: 10:00,0.4,        !- Field 52
+    Until: 11:00,0.2,        !- Field 54
+    Until: 12:00,0.45,       !- Field 56
+    Until: 14:00,0.5,        !- Field 58
+    Until: 15:00,0.35,       !- Field 60
+    Until: 18:00,0.3,        !- Field 62
+    Until: 19:00,0.7,        !- Field 64
+    Until: 20:00,0.9,        !- Field 66
+    Until: 21:00,0.7,        !- Field 68
+    Until: 22:00,0.65,       !- Field 70
+    Until: 23:00,0.55,       !- Field 72
+    Until: 24:00,0.35,       !- Field 74
+    For: Sunday Holidays AllOtherDays, !- Field 76
+    Until: 01:00,0.05,       !- Field 77
+    Until: 06:00,0.0,        !- Field 79
+    Until: 07:00,0.05,       !- Field 81
+    Until: 09:00,0.5,        !- Field 83
+    Until: 11:00,0.2,        !- Field 85
+    Until: 12:00,0.3,        !- Field 87
+    Until: 14:00,0.5,        !- Field 89
+    Until: 15:00,0.3,        !- Field 91
+    Until: 16:00,0.2,        !- Field 93
+    Until: 17:00,0.25,       !- Field 95
+    Until: 18:00,0.35,       !- Field 97
+    Until: 19:00,0.55,       !- Field 99
+    Until: 20:00,0.65,       !- Field 101
+    Until: 21:00,0.7,        !- Field 103
+    Until: 22:00,0.35,       !- Field 105
+    Until: 24:00,0.2;        !- Field 107
+
+
+  SCHEDULE:COMPACT,
+    INFIL_SCH_PNNL,          !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays SummerDesignDay, !- Field 2
+    Until: 01:00,0.25,       !- Field 3
+    Until: 05:00,1.0,        !- Field 5
+    Until: 24:00,0.25,       !- Field 7
+    For: Saturday WinterDesignDay, !- Field 9
+    Until: 01:00,0.25,       !- Field 10
+    Until: 05:00,1.0,        !- Field 12
+    Until: 24:00,0.25,       !- Field 14
+    For: Sunday Holidays AllOtherDays, !- Field 16
+    Until: 01:00,0.25,       !- Field 17
+    Until: 05:00,1.0,        !- Field 19
+    Until: 24:00,0.25;       !- Field 21
+
+  Schedule:Compact,
+    DOOR_INFIL_SCH,          !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until: 06:00,0.0,        !- Field 3
+    Until: 07:00,0.144,      !- Field 5
+    Until: 10:00,0.462,      !- Field 7
+    Until: 11:00,0.258,      !- Field 9
+    Until: 12:00,0.558,      !- Field 11
+    Until: 13:00,0.829,      !- Field 13
+    Until: 14:00,0.74,       !- Field 15
+    Until: 15:00,0.462,      !- Field 17
+    Until: 16:00,0.258,      !- Field 19
+    Until: 17:00,0.363,      !- Field 21
+    Until: 18:00,0.558,      !- Field 23
+    Until: 21:00,0.829,      !- Field 25
+    Until: 22:00,0.558,      !- Field 27
+    Until: 23:00,0.363,      !- Field 29
+    Until: 24:00,0.258,      !- Field 31
+    For: SummerDesignDay,    !- Field 33
+    Until: 24:00,1.0,        !- Field 34
+    For: WinterDesignDay,    !- Field 36
+    Until: 24:00,0.0,        !- Field 37
+    For: Saturday,           !- Field 39
+    Until: 06:00,0.0,        !- Field 40
+    Until: 07:00,0.144,      !- Field 42
+    Until: 09:00,0.558,      !- Field 44
+    Until: 10:00,0.462,      !- Field 46
+    Until: 11:00,0.258,      !- Field 48
+    Until: 12:00,0.462,      !- Field 50
+    Until: 14:00,0.558,      !- Field 52
+    Until: 15:00,0.462,      !- Field 54
+    Until: 18:00,0.363,      !- Field 56
+    Until: 19:00,0.74,       !- Field 58
+    Until: 20:00,0.915,      !- Field 60
+    Until: 21:00,0.74,       !- Field 62
+    Until: 22:00,0.65,       !- Field 64
+    Until: 23:00,0.558,      !- Field 66
+    Until: 24:00,0.363,      !- Field 68
+    For: Sunday Holidays AllOtherDays, !- Field 70
+    Until: 06:00,0.0,        !- Field 71
+    Until: 07:00,0.144,      !- Field 73
+    Until: 09:00,0.558,      !- Field 75
+    Until: 11:00,0.258,      !- Field 77
+    Until: 12:00,0.363,      !- Field 79
+    Until: 14:00,0.558,      !- Field 81
+    Until: 15:00,0.363,      !- Field 83
+    Until: 16:00,0.258,      !- Field 85
+    Until: 17:00,0.363,      !- Field 87
+    Until: 18:00,0.462,      !- Field 89
+    Until: 19:00,0.558,      !- Field 91
+    Until: 20:00,0.65,       !- Field 93
+    Until: 21:00,0.74,       !- Field 95
+    Until: 22:00,0.462,      !- Field 97
+    Until: 24:00,0.258;      !- Field 99
+
+  Schedule:Compact,
+    VESTIBULE_DOOR_INFIL_SCH,!- Name
+    fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until: 06:00,0.0,        !- Field 3
+    Until: 07:00,0.131,      !- Field 5
+    Until: 10:00,0.445,      !- Field 7
+    Until: 11:00,0.241,      !- Field 9
+    Until: 12:00,0.542,      !- Field 11
+    Until: 13:00,0.821,      !- Field 13
+    Until: 14:00,0.73,       !- Field 15
+    Until: 15:00,0.445,      !- Field 17
+    Until: 16:00,0.241,      !- Field 19
+    Until: 17:00,0.345,      !- Field 21
+    Until: 18:00,0.542,      !- Field 23
+    Until: 21:00,0.821,      !- Field 25
+    Until: 22:00,0.542,      !- Field 27
+    Until: 23:00,0.345,      !- Field 29
+    Until: 24:00,0.241,      !- Field 31
+    For: SummerDesignDay,    !- Field 33
+    Until: 24:00,1.0,        !- Field 34
+    For: WinterDesignDay,    !- Field 36
+    Until: 24:00,0.0,        !- Field 37
+    For: Saturday,           !- Field 39
+    Until: 06:00,0.0,        !- Field 40
+    Until: 07:00,0.131,      !- Field 42
+    Until: 09:00,0.542,      !- Field 44
+    Until: 10:00,0.445,      !- Field 46
+    Until: 11:00,0.241,      !- Field 48
+    Until: 12:00,0.445,      !- Field 50
+    Until: 14:00,0.542,      !- Field 52
+    Until: 15:00,0.445,      !- Field 54
+    Until: 18:00,0.345,      !- Field 56
+    Until: 19:00,0.73,       !- Field 58
+    Until: 20:00,0.911,      !- Field 60
+    Until: 21:00,0.73,       !- Field 62
+    Until: 22:00,0.637,      !- Field 64
+    Until: 23:00,0.542,      !- Field 66
+    Until: 24:00,0.345,      !- Field 68
+    For: Sunday Holidays AllOtherDays, !- Field 70
+    Until: 06:00,0.0,        !- Field 71
+    Until: 07:00,0.131,      !- Field 73
+    Until: 09:00,0.542,      !- Field 75
+    Until: 11:00,0.241,      !- Field 77
+    Until: 12:00,0.345,      !- Field 79
+    Until: 14:00,0.542,      !- Field 81
+    Until: 15:00,0.345,      !- Field 83
+    Until: 16:00,0.241,      !- Field 85
+    Until: 17:00,0.345,      !- Field 87
+    Until: 18:00,0.445,      !- Field 89
+    Until: 19:00,0.542,      !- Field 91
+    Until: 20:00,0.637,      !- Field 93
+    Until: 21:00,0.73,       !- Field 95
+    Until: 22:00,0.445,      !- Field 97
+    Until: 24:00,0.241;      !- Field 99
+
+
+
+  Schedule:Compact,
+    BLDG_SWH_SCH,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until: 01:00,0.00,       !- Field 3
+    Until: 06:00,0.00,       !- Field 5
+    Until: 07:00,0.15,       !- Field 7
+    Until: 08:00,0.15,       !- Field 9
+    Until: 09:00,0.33,       !- Field 11
+    Until: 10:00,0.13,       !- Field 13
+    Until: 11:00,0.10,       !- Field 15
+    Until: 12:00,0.72,       !- Field 17
+    Until: 13:00,0.31,       !- Field 19
+    Until: 14:00,0.98,       !- Field 21
+    Until: 15:00,0.92,       !- Field 23
+    Until: 16:00,0.22,       !- Field 25
+    Until: 17:00,0.31,       !- Field 27
+    Until: 18:00,0.23,       !- Field 29
+    Until: 19:00,0.16,       !- Field 31
+    Until: 20:00,0.10,       !- Field 33
+    Until: 21:00,0.40,       !- Field 35
+    Until: 22:00,0.42,       !- Field 37
+    Until: 23:00,0.43,       !- Field 39
+    Until: 24:00,0.15,       !- Field 41
+    For: SummerDesignDay WinterDesignDay, !- Field 43
+    Until: 01:00,0.00,       !- Field 44
+    Until: 06:00,0.00,       !- Field 46
+    Until: 07:00,0.00,       !- Field 48
+    Until: 08:00,0.15,       !- Field 50
+    Until: 09:00,0.15,       !- Field 52
+    Until: 10:00,0.15,       !- Field 54
+    Until: 11:00,0.10,       !- Field 56
+    Until: 12:00,0.72,       !- Field 58
+    Until: 13:00,0.60,       !- Field 60
+    Until: 14:00,0.98,       !- Field 62
+    Until: 15:00,0.92,       !- Field 64
+    Until: 16:00,0.25,       !- Field 66
+    Until: 17:00,0.25,       !- Field 68
+    Until: 18:00,0.23,       !- Field 70
+    Until: 19:00,0.16,       !- Field 72
+    Until: 20:00,0.10,       !- Field 74
+    Until: 21:00,0.40,       !- Field 76
+    Until: 22:00,0.42,       !- Field 78
+    Until: 23:00,0.43,       !- Field 80
+    Until: 24:00,0.15,       !- Field 82
+    For: Sunday Holidays AllOtherDays, !- Field 84
+    Until: 01:00,0.00,       !- Field 85
+    Until: 06:00,0.00,       !- Field 87
+    Until: 07:00,0.00,       !- Field 89
+    Until: 08:00,0.15,       !- Field 91
+    Until: 09:00,0.15,       !- Field 93
+    Until: 10:00,0.15,       !- Field 95
+    Until: 11:00,0.10,       !- Field 97
+    Until: 12:00,0.72,       !- Field 99
+    Until: 13:00,0.60,       !- Field 101
+    Until: 14:00,0.98,       !- Field 103
+    Until: 15:00,0.92,       !- Field 105
+    Until: 16:00,0.25,       !- Field 107
+    Until: 17:00,0.25,       !- Field 109
+    Until: 18:00,0.23,       !- Field 111
+    Until: 19:00,0.16,       !- Field 113
+    Until: 20:00,0.10,       !- Field 115
+    Until: 21:00,0.40,       !- Field 117
+    Until: 22:00,0.42,       !- Field 119
+    Until: 23:00,0.43,       !- Field 121
+    Until: 24:00,0.00;       !- Field 123
+
+  Schedule:Compact,
+    Hours_of_operation,      !- Name
+    on/off,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday SummerDesignDay, !- Field 2
+    Until: 01:00,1.0,        !- Field 3
+    Until: 05:00,0.0,        !- Field 5
+    Until: 24:00,1.0,        !- Field 7
+    For: Saturday WinterDesignDay, !- Field 9
+    Until: 01:00,1.0,        !- Field 10
+    Until: 05:00,0.0,        !- Field 12
+    Until: 24:00,1.0,        !- Field 14
+    For: Sunday Holidays AllOtherDays, !- Field 16
+    Until: 01:00,1.0,        !- Field 17
+    Until: 05:00,0.0,        !- Field 19
+    Until: 24:00,1.0;        !- Field 21
+
+  Schedule:Compact,
+    PlantOnSched,            !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1.0;        !- Field 3
+
+
+
+  Schedule:Compact,
+    Exterior_Lgt_ALWAYS_ON,  !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1;          !- Field 3
+
+
+  Schedule:Compact,
+    Exterior_Lgt_189_1,      !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through:12/31,           !- Field 1
+    For:Weekdays,            !- Field 2
+    Until:  1:00,1.0,        !- Field 3
+    Until:  9:00,0.5,        !- Field 5
+    Until: 24:00,1.0,        !- Field 7
+    For:Saturday,            !- Field 9
+    Until:  1:00,1.0,        !- Field 10
+    Until:  9:00,0.5,        !- Field 12
+    Until: 24:00,1.0,        !- Field 14
+    For:Sunday Holidays AllOtherDays, !- Field 16
+    Until:  1:00,1.0,        !- Field 17
+    Until:  9:00,0.5,        !- Field 19
+    Until: 24:00,1.0;        !- Field 21
+
+
+  Schedule:Compact,
+    FAN_SCH,                 !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1.0;        !- Field 3
+
+  Schedule:Compact,
+    Kitchen_Exhaust_SCH,     !- Name
+    on/off,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday SummerDesignDay, !- Field 2
+    Until: 06:00,0.0,        !- Field 3
+    Until: 24:00,1.0,        !- Field 5
+    For: Saturday WinterDesignDay, !- Field 7
+    Until: 06:00,0.0,        !- Field 8
+    Until: 24:00,1.0,        !- Field 10
+    For: Sunday Holidays AllOtherDays, !- Field 12
+    Until: 06:00,0.0,        !- Field 13
+    Until: 24:00,1.0;        !- Field 1
+
+
+
+
+  Schedule:Compact,
+    MinOA_MotorizedDamper_Sched,  !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday SummerDesignDay, !- Field 2
+    Until: 01:00,1.0,        !- Field 3
+    Until: 06:00,0.0,        !- Field 5
+    Until: 24:00,1.0,        !- Field 7
+    For: Saturday WinterDesignDay, !- Field 9
+    Until: 01:00,1.0,        !- Field 10
+    Until: 06:00,0.0,        !- Field 12
+    Until: 24:00,1.0,        !- Field 14
+    For: Sunday Holidays AllOtherDays, !- Field 16
+    Until: 01:00,1.0,        !- Field 17
+    Until: 06:00,0.0,        !- Field 19
+    Until: 24:00,1.0;        !- Field 21
+
+
+  Schedule:Compact,
+    MinOA_FFKitch_Sched,     !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays SummerDesignDay, !- Field 2
+    Until: 06:00,0.0,        !- Field 3
+    Until: 24:00,1.0,        !- Field 5
+    For: Saturday,           !- Field 7
+    Until: 06:00,0.0,        !- Field 8
+    Until: 24:00,1.0,        !- Field 10
+    For: WinterDesignDay,    !- Field 12
+    Until: 24:00,1.0,        !- Field 13
+    For: Sunday Holidays AllOtherDays, !- Field 15
+    Until: 06:00,0.0,        !- Field 16
+    Until: 24:00,1.0;        !- Field 18
+
+  Schedule:Compact,
+    Dual Zone Control Type Sched,  !- Name
+    Control Type,            !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,4;          !- Field 3
+
+
+
+  Schedule:Compact,
+    ACTIVITY_SCH,            !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,120.;       !- Field 3
+
+  Schedule:Compact,
+    WORK_EFF_SCH,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.0;        !- Field 3
+
+  Schedule:Compact,
+    AIR_VELO_SCH,            !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.2;        !- Field 3
+
+  Schedule:Compact,
+    CLOTHING_SCH,            !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 04/30,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1.0,        !- Field 3
+    Through: 09/30,          !- Field 5
+    For: AllDays,            !- Field 6
+    Until: 24:00,0.5,        !- Field 7
+    Through: 12/31,          !- Field 9
+    For: AllDays,            !- Field 10
+    Until: 24:00,1.0;        !- Field 11
+
+  Schedule:Compact,
+    SHADING_SCH,             !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.0;        !- Field 3
+
+  Schedule:Compact,
+    Kitchen Water Equipment Latent fract sched,  !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.05;       !- Field 3
+
+  Schedule:Compact,
+    Kitchen Water Equipment Sensible fract sched,  !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.2;        !- Field 3
+
+
+  Schedule:Compact,
+    Kitchen Water Equipment Temp Sched,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,60.0;       !- Field 3
+
+  Schedule:Compact,
+    Kitchen Water Equipment Hot Supply Temp Sched,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,55;         !- Field 3
+
+  Schedule:Compact,
+    Kitchen_Case:1_WALKINFREEZER_CaseDefrost2aDaySched,  !- Name
+    ON/OFF,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For:AllDays,             !- Field 2
+    Interpolate:Average,     !- Field 3
+    Until: 11:00,0,          !- Field 4
+    Until: 11:20,1,          !- Field 6
+    Until: 23:00,0,          !- Field 8
+    Until: 23:20,1,          !- Field 10
+    Until: 24:00,0;          !- Field 12
+
+  Schedule:Compact,
+    Kitchen_Case:1_WALKINFREEZER_CaseDripDown2aDaySched,  !- Name
+    ON/OFF,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For:AllDays,             !- Field 2
+    Interpolate:Average,     !- Field 3
+    Until: 11:00,0,          !- Field 4
+    Until: 11:30,1,          !- Field 6
+    Until: 23:00,0,          !- Field 8
+    Until: 23:30,1,          !- Field 10
+    Until: 24:00,0;          !- Field 12
+
+  Schedule:Compact,
+    Kitchen_Case:1_WALKINFREEZER_WalkInStockingSched,  !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Tuesday Friday,     !- Field 2
+    Until: 4:00,0.0,         !- Field 3
+    Until: 5:00,725.0,       !- Field 5
+    Until: 6:00,417.0,       !- Field 7
+    Until: 7:00,290.0,       !- Field 9
+    Until: 24:00,0.0,        !- Field 11
+    For: AllOtherDays,       !- Field 13
+    Until: 4:00,0.0,         !- Field 14
+    Until: 5:00,125.0,       !- Field 16
+    Until: 6:00,117.0,       !- Field 18
+    Until: 7:00,90.0,        !- Field 20
+    Until: 19:00,0.0,        !- Field 22
+    Until: 20:00,125.0,      !- Field 24
+    Until: 21:00,117.0,      !- Field 26
+    Until: 22:00,90.0,       !- Field 28
+    Until: 24:00,0.0;        !- Field 30
+
+  Schedule:Compact,
+    Kitchen_Case:1_WALKINFREEZER_CaseCreditReduxSched,  !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For:AllDays,             !- Field 2
+    Interpolate:No,          !- Field 3
+    Until: 7:00,0.2,         !- Field 4
+    Until: 21:00,0.4,        !- Field 6
+    Until: 24:00,0.2;        !- Field 8
+
+  Schedule:Compact,
+    Kitchen_Case:2_SELFCONTAINEDDISPLAYCASE_CaseStockingSched,  !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For:AllDays,             !- Field 2
+    Until: 6:00,0.0,         !- Field 3
+    Until: 7:00,50.0,        !- Field 5
+    Until: 9:00,70.0,        !- Field 7
+    Until: 10:00,80.0,       !- Field 9
+    Until: 11:00,70.0,       !- Field 11
+    Until: 13:00,50.0,       !- Field 13
+    Until: 14:00,80.0,       !- Field 15
+    Until: 15:00,90.0,       !- Field 17
+    Until: 16:00,80.0,       !- Field 19
+    Until: 24:00,0.0;        !- Field 21
+
+
+
+  Schedule:Compact,
+    SHWSys1-Loop-Temp-Schedule,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,60;         !- Field 3
+
+  Schedule:Compact,
+    SHWSys1 Water Heater Setpoint Temperature Schedule Name,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,60.0;       !- Field 3
+
+  Schedule:Compact,
+    SHWSys1 Water Heater Ambient Temperature Schedule Name,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,22.0;       !- Field 3
+
+  Schedule:Compact,
+    walkin_occ_lght_SCH,     !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday,            !- Field 2
+    Until: 5:00,0.15,        !- Field 3
+    Until: 6:00,0.104,       !- Field 5
+    Until: 8:00,0.208,       !- Field 7
+    Until: 10:00,0.312,      !- Field 9
+    Until: 22:00,0.468,      !- Field 11
+    Until: 23:00,0.26,       !- Field 13
+    Until: 24:00,0.156,      !- Field 15
+    For: Saturday,           !- Field 17
+    Until: 1:00,0.2,         !- Field 18
+    Until: 6:00,0.15,        !- Field 20
+    Until: 8:00,0.156,       !- Field 22
+    Until: 10:00,0.312,      !- Field 24
+    Until: 17:00,0.416,      !- Field 26
+    Until: 22:00,0.468,      !- Field 28
+    Until: 23:00,0.26,       !- Field 30
+    Until: 24:00,0.156,      !- Field 32
+    For: SummerDesignDay,    !- Field 34
+    Until: 24:00,1,          !- Field 35
+    For: WinterDesignDay,    !- Field 37
+    Until: 24:00,0,          !- Field 38
+    For: Sunday Holidays AllOtherDays, !- Field 40
+    Until: 1:00,0.2,         !- Field 41
+    Until: 6:00,0.15,        !- Field 43
+    Until: 8:00,0.156,       !- Field 45
+    Until: 10:00,0.260,      !- Field 47
+    Until: 16:00,0.364,      !- Field 49
+    Until: 22:00,0.312,      !- Field 51
+    Until: 23:00,0.26,       !- Field 53
+    Until: 24:00,0.156;      !- Field 55
+
+  Schedule:Constant,SZ_system_OA_Max_Frac_SCH,Fraction,
+  0.7;
+
+
+!
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
+ 
+{% include "wall_roof" %} 
+ 
+  Material,
+    Std Wood 6inch,          !- Name
+    MediumSmooth,            !- Roughness
+    0.15,                    !- Thickness {m}
+    0.12,                    !- Conductivity {W/m-K}
+    540.0000,                !- Density {kg/m3}
+    1210,                    !- Specific Heat {J/kg-K}
+    0.9000000,               !- Thermal Absorptance
+    0.7000000,               !- Solar Absorptance
+    0.7000000;               !- Visible Absorptance
+ 
+  Material,
+    AC02 Acoustic Ceiling,   !- Name
+    MediumSmooth,            !- Roughness
+    1.2700000E-02,           !- Thickness {m}
+    5.7000000E-02,           !- Conductivity {W/m-K}
+    288.0000,                !- Density {kg/m3}
+    1339.000,                !- Specific Heat {J/kg-K}
+    0.9000000,               !- Thermal Absorptance
+    0.7000000,               !- Solar Absorptance
+    0.2000000;               !- Visible Absorptance
+ 
+  Material,
+    F07 25mm stucco,         !- Name
+    Smooth,                  !- Roughness
+    0.0254,                  !- Thickness {m}
+    0.72,                    !- Conductivity {W/m-K}
+    1856,                    !- Density {kg/m3}
+    840,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+ 
+  Material,
+    F08 Metal surface,       !- Name
+    Smooth,                  !- Roughness
+    0.0008,                  !- Thickness {m}
+    45.28,                   !- Conductivity {W/m-K}
+    7824,                    !- Density {kg/m3}
+    500;                     !- Specific Heat {J/kg-K}
+
+  Material,
+    F08 Metal roof surface,       !- Name
+    Smooth,                  !- Roughness
+    0.0008,                  !- Thickness {m}
+    45.28,                   !- Conductivity {W/m-K}
+    7824,                    !- Density {kg/m3}
+    500,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Absorptance:Thermal
+    0.7;                     !- Absorptance:Solar
+    
+  Material,
+    F12 Asphalt shingles,    !- Name
+    VeryRough,               !- Roughness
+    0.0032,                  !- Thickness {m}
+    0.04,                    !- Conductivity {W/m-K}
+    1120,                    !- Density {kg/m3}
+    1260,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Absorptance:Thermal
+    0.7;                     !- Absorptance:Solar
+ 
+  Material,
+    F13 Built-up roofing,    !- Name
+    Rough,                   !- Roughness
+    0.0095,                  !- Thickness {m}
+    0.16,                    !- Conductivity {W/m-K}
+    1120,                    !- Density {kg/m3}
+    1460,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Absorptance:Thermal
+    0.7;                     !- Absorptance:Solar
+
+  Material,
+    G01 13mm gypsum board,   !- Name
+    Smooth,                  !- Roughness
+    0.0127,                  !- Thickness {m}
+    0.1600,                  !- Conductivity {W/m-K}
+    800.0000,                !- Density {kg/m3}
+    1090.0000,               !- Specific Heat {J/kg-K}
+    0.9000,                  !- Absorptance:Thermal
+    0.7000,                  !- Absorptance:Solar
+    0.5000;                  !- Absorptance:Visible
+    
+  Material,
+    G01 16mm gypsum board,   !- Name
+    MediumSmooth,            !- Roughness
+    0.0159,                  !- Thickness {m}
+    0.16,                    !- Conductivity {W/m-K}
+    800,                     !- Density {kg/m3}
+    1090;                    !- Specific Heat {J/kg-K}
+ 
+  Material,
+    G02 16mm plywood,        !- Name
+    Smooth,                  !- Roughness
+    0.0159,                  !- Thickness {m}
+    0.12,                    !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1210;                    !- Specific Heat {J/kg-K}
+ 
+  Material,
+    M14 150mm heavyweight concrete roof,  !- Name
+    MediumRough,             !- Roughness
+    0.1524,                  !- Thickness {m}
+    2.31,                    !- Conductivity {W/m-K}
+    2322,       !- Density {kg/m3}
+    832;           !- Specific Heat {J/kg-K}
+
+
+  Material,
+    100mm Normalweight concrete wall,  !- Name  - based on 90.1-2004 Appendix-Table A3-1B
+    MediumRough,             !- Roughness
+    0.1016,                  !- Thickness {m}
+    2.31,                    !- Conductivity {W/m-K}
+    2322,       !- Density {kg/m3}
+    832;           !- Specific Heat {J/kg-K}
+
+
+  Material,
+    200mm Normalweight concrete wall,  !- Name  - based on 90.1-2004 Appendix-Table A3-1B
+    MediumRough,             !- Roughness
+    0.2032,                  !- Thickness {m}
+    2.31,                    !- Conductivity {W/m-K}
+    2322,       !- Density {kg/m3}
+    832;           !- Specific Heat {J/kg-K}
+
+  Material,
+    100mm Normalweight concrete floor,  !- Name  - based on 90.1-2004 Appendix-Table A3-1B
+    MediumRough,             !- Roughness
+    0.1016,                  !- Thickness {m}
+    2.31,                    !- Conductivity {W/m-K}
+    2322,       !- Density {kg/m3}
+    832;           !- Specific Heat {J/kg-K}
+
+  Material,
+    150mm Normalweight concrete floor,  !- Name  - based on 90.1-2004 Appendix-Table A3-1B
+    MediumRough,             !- Roughness
+    0.1524,                  !- Thickness {m}
+    2.31,                    !- Conductivity {W/m-K}
+    2322,       !- Density {kg/m3}
+    832;           !- Specific Heat {J/kg-K}
+
+  Material,
+    200mm Normalweight concrete floor,  !- Name  - based on 90.1-2004 Appendix-Table A3-1B
+    MediumRough,             !- Roughness
+    0.2032,                  !- Thickness {m}
+    2.31,                    !- Conductivity {W/m-K}
+    2322,       !- Density {kg/m3}
+    832;           !- Specific Heat {J/kg-K}
+
+  Material,
+    M10 200mm concrete block wall,  !- Name
+    MediumRough,             !- Roughness
+    0.2032,                  !- Thickness {m}
+    0.72,                    !- Conductivity {W/m-K}
+    800,       !- Density {kg/m3}
+    832;           !- Specific Heat {J/kg-K}
+
+  Material,
+    M10 200mm concrete block basement wall,  !- Name
+    MediumRough,             !- Roughness
+    0.2032,                  !- Thickness {m}
+    1.326,                    !- Conductivity {W/m-K}
+    1842,       !- Density {kg/m3}
+    912;           !- Specific Heat {J/kg-K}
+
+
+  Material:NoMass,
+    CP02 CARPET PAD,         !- Name
+    VeryRough,               !- Roughness
+    0.21648,                 !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.8;                     !- Visible Absorptance
+
+ 
+  Material:NoMass,
+    Air_Wall_Material,       !- Name
+    Rough,                   !- Roughness
+    0.2079491,               !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7;                     !- Solar Absorptance
+
+
+  Material:NoMass,
+    Res_Roof_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+    0.0299387330245182,
+            !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Semiheated_Roof_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+    0.0299387330245182,
+            !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+
+  Material:NoMass,
+    Res_Exterior_Wall_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+    0.0299387330245182,
+            !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Semiheated_Exterior_Wall_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+    0.0299387330245182,
+            !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+
+
+  Material:NoMass,
+    Nonres_Floor_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+
+    0.0299387330245182,
+            !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Res_Floor_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+
+    0.0299387330245182,
+            !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Semiheated_Floor_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+
+    0.0299387330245182,
+            !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Std Opaque Door Panel,  !- Name
+    MediumRough,             !- Roughness
+    0.123456790123457,  !- (corresponds to default RSI-0.12327 or R-0.7) Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+{% include "window" %} 
+
+!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
+
+  Construction,
+    InteriorFurnishings,     !- Name
+    Std Wood 6inch;          !- Outside Layer
+ 
+  Construction,
+    Air_Wall,                !- Name
+    Air_Wall_Material;       !- Outside Layer
+
+  Construction,
+    DropCeiling,             !- Name
+    AC02 Acoustic Ceiling;   !- Outside Layer
+   
+  Construction,
+    OpaqueDoor,   !- Name
+    Std Opaque Door Panel;  !- Outside Layer
+
+  Construction,
+    AtticRoofDeck,           !- Name
+    F12 Asphalt shingles,    !- Outside Layer
+    G02 16mm plywood;        !- Layer 2
+ 
+  Construction,
+    int_wall,                !- Name
+    G01 13mm gypsum board,   !- Outside Layer
+    G01 13mm gypsum board;   !- Layer 2
+ 
+  Construction,
+    ext_slab_8in_with_carpet,!- Name
+    200mm Normalweight concrete floor,  !- Outside Layer
+    CP02 CARPET PAD;         !- Layer 2
+ 
+  Construction,
+    ext_slab_8in,            !- Name
+    200mm Normalweight concrete floor;  !- Outside Layer
+ 
+  Construction,
+    ext_slab_6in_with_carpet,!- Name
+    150mm Normalweight concrete floor,  !- Outside Layer
+    CP02 CARPET PAD;         !- Layer 2
+ 
+  Construction,
+    ext_slab_6in,            !- Name
+    150mm Normalweight concrete floor;  !- Outside Layer
+ 
+  Construction,
+    int_slab_floor,          !- Name
+    100mm Normalweight concrete floor,  !- Outside Layer
+    CP02 CARPET PAD;         !- Layer 2
+ 
+  Construction,
+    int_slab_ceiling,        !- Name
+    CP02 CARPET PAD,         !- Outside Layer
+    100mm Normalweight concrete floor;  !- Layer 2
+ 
+  Construction,
+    basement_wall,           !- Name
+    M10 200mm concrete block basement wall;  !- Outside Layer
+ 
+  Construction,
+    int_wood_floor,          !- Name
+    AC02 Acoustic Ceiling,   !- Outside Layer
+    G02 16mm plywood,        !- Layer 2
+    CP02 CARPET PAD;         !- Layer 3
+ 
+  Construction,
+    ext_soffit_floor,          !- Name
+    G02 16mm plywood;   !- Outside Layer
+ 
+  Construction,
+    nonres_roof,                   !- Name
+        Nonres_Roof_Insulation,   !- Outside Layer
+        G01 16mm gypsum board;  !- Layer #2
+
+
+  Construction,
+    res_roof,                   !- Name
+        Res_Roof_Insulation,   !- Outside Layer
+        G01 16mm gypsum board;  !- Layer #2
+
+
+  Construction,
+    semiheated_roof,                   !- Name
+        Semiheated_Roof_Insulation,   !- Outside Layer
+        G01 16mm gypsum board;  !- Layer #2
+
+
+  Construction,
+    nonres_roof_floor,               !- Name - Other side zone surface definition for nonres_roof
+        G01 16mm gypsum board,  !- Outside Layer
+        Nonres_Roof_Insulation;   !- Layer #2
+
+  Construction,
+    res_roof_floor,               !- Name - Other side zone surface definition for res_roof
+        G01 16mm gypsum board,  !- Outside Layer
+        Res_Roof_Insulation;   !- Layer #2
+
+  Construction,
+    semiheated_roof_floor,               !- Name - Other side zone surface definition for semiheated_roof
+        G01 16mm gypsum board,  !- Outside Layer
+        Semiheated_Roof_Insulation;   !- Layer #2
+
+
+
+  Construction,
+    nonres_ext_wall,               !- Name
+    F07 25mm stucco,               !- Outside Layer
+    G01 16mm gypsum board,         !- Layer #2
+    Nonres_Exterior_Wall_Insulation,      !- Layer #3
+    G01 16mm gypsum board;         !- Layer #4
+
+
+  Construction,
+    res_ext_wall,               !- Name
+    F07 25mm stucco,               !- Outside Layer
+    G01 16mm gypsum board,         !- Layer #1
+    Nonres_Exterior_Wall_Insulation,      !- Layer #2
+    G01 16mm gypsum board;         !- Layer #3
+
+
+  Construction,
+    semiheated_ext_wall,               !- Name
+    F07 25mm stucco,               !- Outside Layer
+    G01 16mm gypsum board,         !- Layer #1
+    Semiheated_Exterior_Wall_Insulation,      !- Layer #2
+    G01 16mm gypsum board;         !- Layer #3
+
+
+  Construction,
+    nonres_floor,                !- Name
+    Nonres_Floor_Insulation,               !- Outside Layer
+    100mm Normalweight concrete floor,         !- Layer #1
+    CP02 CARPET PAD;         !- Layer #2
+
+
+  Construction,
+    res_floor,                !- Name
+    Res_Floor_Insulation,               !- Outside Layer
+    100mm Normalweight concrete floor,         !- Layer #1
+    CP02 CARPET PAD;         !- Layer #2
+
+
+  Construction,
+    semiheated_floor,                !- Name
+    Semiheated_Floor_Insulation,               !- Outside Layer
+    100mm Normalweight concrete floor,         !- Layer #1
+    CP02 CARPET PAD;         !- Layer #2
+
+
+  Construction,
+    nonres_floor_ceiling,                !- Name - reverse ordered layers for nonres_floor
+    CP02 CARPET PAD,               !- Outside Layer
+    100mm Normalweight concrete floor,         !- Layer #1
+    Nonres_Floor_Insulation;         !- Layer #2
+       
+  Construction,
+    res_floor_ceiling,                !- Name - reverse ordered layers for res_floor
+    CP02 CARPET PAD,               !- Outside Layer
+    100mm Normalweight concrete floor,         !- Layer #1
+    Res_Floor_Insulation;         !- Layer #2
+       
+  Construction,
+    semiheated_floor_ceiling,                !- Name - reverse ordered layers for semiheated_floor
+    CP02 CARPET PAD,               !- Outside Layer
+    100mm Normalweight concrete floor,         !- Layer #1
+    Semiheated_Floor_Insulation;         !- Layer #2
+       
+Construction,
+    Window_U_0.36_SHGC_0.36, !- Name
+    Glazing Layer;           !- Outside Layer
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: GLOBALGEOMETRYRULES ===========
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative,                !- Coordinate System
+    Relative;                !- Daylighting Reference Point Coordinate System
+
+    
+
+  Construction:FfactorGroundFloor,
+    Core_ZN_floor_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    149.65740000000005,   !- Area
+    0;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    Perimeter_ZN_1_floor_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    113.45000000000002,   !- Area
+    27.69;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    Perimeter_ZN_2_floor_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    67.29999999999995,   !- Area
+    18.46;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    Perimeter_ZN_3_floor_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    113.44999999999999,   !- Area
+    27.69;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    Perimeter_ZN_4_floor_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    67.30000000000001,   !- Area
+    18.46;   !- PerimeterExposed
+
+
+
+  
+!-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
+ 
+
+  Zone,
+    Dining,                  !- Name
+    0.0000,                  !- Direction of Relative North {deg}
+    0.0000,                  !- X Origin {m}
+    0.0000,                  !- Y Origin {m}
+    0.0000,                  !- Z Origin {m}
+    1,                       !- Type
+    1.0000,                  !- Multiplier
+    3.0488,                  !- Ceiling Height {m}
+    354.1836,                !- Volume {m3}
+    autocalculate,           !- Floor Area {m2}
+    ,                        !- Zone Inside Convection Algorithm
+    ,                        !- Zone Outside Convection Algorithm
+    Yes;                     !- Part of Total Floor Area
+
+  Zone,
+    Kitchen,                 !- Name
+    0.0000,                  !- Direction of Relative North {deg}
+    0.0000,                  !- X Origin {m}
+    0.0000,                  !- Y Origin {m}
+    0.0000,                  !- Z Origin {m}
+    1,                       !- Type
+    1.0000,                  !- Multiplier
+    3.0488,                  !- Ceiling Height {m}
+    354.1836,                !- Volume {m3}
+    autocalculate,           !- Floor Area {m2}
+    ,                        !- Zone Inside Convection Algorithm
+    ,                        !- Zone Outside Convection Algorithm
+    Yes;                     !- Part of Total Floor Area
+
+  Zone,
+    attic,                   !- Name
+    0.0000,                  !- Direction of Relative North {deg}
+    0.0000,                  !- X Origin {m}
+    0.0000,                  !- Y Origin {m}
+    3.0488,                  !- Z Origin {m}
+    1,                       !- Type
+    1.0000,                  !- Multiplier
+    -9999.0000,              !- Ceiling Height {m}
+    262.3406,                !- Volume {m3}
+    autocalculate,           !- Floor Area {m2}
+    ,                        !- Zone Inside Convection Algorithm
+    ,                        !- Zone Outside Convection Algorithm
+    No;                      !- Part of Total Floor Area
+
+  Construction:FfactorGroundFloor,
+    S_RearStairsFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    20.07186272615604,   !- Area
+    10.668584;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_CorridorFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    150.5057728480299,   !- Area
+    9.753600000000002;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_RearStorageFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    20.07328709329994,   !- Area
+    10.669168000099997;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_FrontLoungeFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    163.0564054103927,   !- Area
+    28.0421840002;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_RestroomFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.61128108080749,   !- Area
+    3.962399999999999;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_MeetingRoomFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    80.27392264601582,   !- Area
+    9.753600000000002;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_MechanicalRoomFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.61128108181339,   !- Area
+    3.962400000099997;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_GuestRoom101_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.61128108140184,   !- Area
+    3.9624000000000024;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_GuestRoom102_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.61128108140184,   !- Area
+    3.9623999999999953;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_GuestRoom103_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.61128108080749,   !- Area
+    3.9624000000000024;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_GuestRoom104_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.60896705728214,   !- Area
+    3.9624000000000024;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_GuestRoom105_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.60896704039624,   !- Area
+    3.9623999999999953;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_EmployeeLoungeFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.60896704039624,   !- Area
+    3.9624000000000024;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_LaundryRoomFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    97.82690112160037,   !- Area
+    11.887200000100002;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_ElevatorCoreFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    15.050292480365783,   !- Area
+    1.8287999999999975;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_ExerciseCenterFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    32.6089670568706,   !- Area
+    3.962399999999999;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_FrontOfficeFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    130.4358681619965,   !- Area
+    15.8496000001;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_FrontStairsFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    20.067056639999997,   !- Area
+    10.668000000000001;   !- PerimeterExposed
+
+  Construction:FfactorGroundFloor,
+    S_FrontStorageFlr1_0_0_0_Ffactor,  !- Name
+    1.26363,   !- F-Factor
+    12.541910400304815,   !- Area
+    1.524;   !- PerimeterExposed
+
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDINGSURFACE:DETAILED ===========
+
+  BuildingSurface:Detailed,
+    Dining_Wall_East,        !- Name
+    Wall,                    !- Surface Type
+    nonres_ext_wall,         !- Construction Name
+    Dining,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,0.0000,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,0.0000,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    15.2428,7.6214,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Dining_Wall_South,       !- Name
+    Wall,                    !- Surface Type
+    nonres_ext_wall,         !- Construction Name
+    Dining,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,0.0000,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,0.0000,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    15.2428,0.0000,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    15.2428,0.0000,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Dining_Wall_West,        !- Name
+    Wall,                    !- Surface Type
+    nonres_ext_wall,         !- Construction Name
+    Dining,                  !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,7.6214,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,7.6214,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000,0.0000,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000,0.0000,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Dining_Ceiling,          !- Name
+    Ceiling,                 !- Surface Type
+    nonres_roof,             !- Construction Name
+    Dining,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    attic-floor-dinning,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,7.6214,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,0.0000,3.0488,  !- X,Y,Z ==> Vertex 2 {m}
+    15.2428,0.0000,3.0488,  !- X,Y,Z ==> Vertex 3 {m}
+    15.2428,7.6214,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Dining_Floor,            !- Name
+    Floor,                   !- Surface Type
+    Dining_Floor_Ffactor,      !- Construction Name
+    Dining,                  !- Zone Name
+    GroundFCfactorMethod,    !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,0.0000,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000,0.0000,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000,7.6214,0.0000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Dining_Wall_North,       !- Name
+    Wall,                    !- Surface Type
+    int_wall,                !- Construction Name
+    Dining,                  !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    Dining_Wall_North-PPAutoCreateOther,  !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,7.6214,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000,7.6214,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000,7.6214,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Kitchen_Wall_North,      !- Name
+    Wall,                    !- Surface Type
+    nonres_ext_wall,         !- Construction Name
+    Kitchen,                 !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,15.2428,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,15.2428,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000,15.2428,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000,15.2428,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Kitchen_Wall_East,       !- Name
+    Wall,                    !- Surface Type
+    nonres_ext_wall,         !- Construction Name
+    Kitchen,                 !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,7.6214,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    15.2428,15.2428,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    15.2428,15.2428,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Kitchen_Wall_West,       !- Name
+    Wall,                    !- Surface Type
+    nonres_ext_wall,         !- Construction Name
+    Kitchen,                 !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,15.2428,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,15.2428,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000,7.6214,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000,7.6214,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Kitchen_Ceiling,         !- Name
+    Ceiling,                 !- Surface Type
+    nonres_roof,             !- Construction Name
+    Kitchen,                 !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    attic-floor-kitchen,     !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,15.2428,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,7.6214,3.0488,  !- X,Y,Z ==> Vertex 2 {m}
+    15.2428,7.6214,3.0488,  !- X,Y,Z ==> Vertex 3 {m}
+    15.2428,15.2428,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Kitchen_Floor,           !- Name
+    Floor,                   !- Surface Type
+    Kitchen_Floor_Ffactor,      !- Construction Name
+    Kitchen,                 !- Zone Name
+    GroundFCfactorMethod,    !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,15.2428,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000,7.6214,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000,15.2428,0.0000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Dining_Wall_North-PPAutoCreateOther,  !- Name
+    Wall,                    !- Surface Type
+    int_wall,                !- Construction Name
+    Kitchen,                 !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    Dining_Wall_North,       !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,7.6214,3.0488,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,7.6214,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    15.2428,7.6214,3.0488;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    attic-floor-dinning,     !- Name
+    Floor,                   !- Surface Type
+    nonres_roof_floor,       !- Construction Name
+    attic,                   !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    Dining_Ceiling,          !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,0.0000,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,7.6214,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    15.2428,0.0000,0.0000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    attic-floor-kitchen,     !- Name
+    Floor,                   !- Surface Type
+    nonres_roof_floor,       !- Construction Name
+    attic,                   !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    Kitchen_Ceiling,         !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,15.2428,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,7.6214,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    0.0000,7.6214,0.0000,  !- X,Y,Z ==> Vertex 3 {m}
+    0.0000,15.2428,0.0000;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    west-roof,               !- Name
+    Roof,                    !- Surface Type
+    AtticRoofDeck,           !- Construction Name
+    attic,                   !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    3,                       !- Number of Vertices
+    0.0000,15.2428,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,0.0000,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    2.5405,7.6214,2.5405;  !- X,Y,Z ==> Vertex 3 {m}
+
+  BuildingSurface:Detailed,
+    east-roof,               !- Name
+    Roof,                    !- Surface Type
+    AtticRoofDeck,           !- Construction Name
+    attic,                   !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    3,                       !- Number of Vertices
+    15.2428,0.0000,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,15.2428,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    12.7023,7.6214,2.5405;  !- X,Y,Z ==> Vertex 3 {m}
+
+  BuildingSurface:Detailed,
+    north-roof,              !- Name
+    Roof,                    !- Surface Type
+    AtticRoofDeck,           !- Construction Name
+    attic,                   !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    15.2428,15.2428,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0000,15.2428,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    2.5405,7.6214,2.5405,  !- X,Y,Z ==> Vertex 3 {m}
+    12.7023,7.6214,2.5405;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    south-roof,              !- Name
+    Roof,                    !- Surface Type
+    AtticRoofDeck,           !- Construction Name
+    attic,                   !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    AutoCalculate,           !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0000,0.0000,0.0000,  !- X,Y,Z ==> Vertex 1 {m}
+    15.2428,0.0000,0.0000,  !- X,Y,Z ==> Vertex 2 {m}
+    12.7023,7.6214,2.5405,  !- X,Y,Z ==> Vertex 3 {m}
+    2.5405,7.6214,2.5405;  !- X,Y,Z ==> Vertex 4 {m}
+
+
+{% include "FenestrationSurface" %} 
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SHADING:ZONE:DETAILED ===========
+  InternalMass,
+    Dining_InternalMass_1,   !- Name
+    InteriorFurnishings,     !- Construction Name
+    Dining,                  !- Zone Name
+    232.3430;                !- Surface Area {m2}
+
+  InternalMass,
+    Kitchen_InternalMass_1,  !- Name
+    InteriorFurnishings,     !- Construction Name
+    Kitchen,                 !- Zone Name
+    232.3430;                !- Surface Area {m2}
+
+  People,
+    Dining,                  !- Name
+    Dining,                  !- Zone or ZoneList Name
+    BLDG_OCC_SCH,            !- Number of People Schedule Name
+    Area/Person,             !- Number of People Calculation Method
+    ,                        !- Number of People
+    ,                        !- People per Zone Floor Area {person/m2}
+    1.327,                   !- Zone Floor Area per Person {m2/person}
+    0.3000,                  !- Fraction Radiant
+    AUTOCALCULATE,           !- Sensible Heat Fraction
+    ACTIVITY_SCH,            !- Activity Level Schedule Name
+    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
+    No,                      !- Enable ASHRAE 55 Comfort Warnings
+    ZoneAveraged,            !- Mean Radiant Temperature Calculation Type
+    ,                        !- Surface Name/Angle Factor List Name
+    WORK_EFF_SCH,            !- Work Efficiency Schedule Name
+    ClothingInsulationSchedule,  !- Clothing Insulation Calculation Method
+    ,                        !- Clothing Insulation Calculation Method Schedule Name
+    CLOTHING_SCH,            !- Clothing Insulation Schedule Name
+    AIR_VELO_SCH,            !- Air Velocity Schedule Name
+    FANGER;                  !- Thermal Comfort Model 1 Type
+
+  People,
+    Kitchen,                 !- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    BLDG_OCC_SCH,            !- Number of People Schedule Name
+    People,                  !- Number of People Calculation Method
+    6.2733,                  !- Number of People
+    ,                        !- People per Zone Floor Area {person/m2}
+    ,                        !- Zone Floor Area per Person {m2/person}
+    0.3000,                  !- Fraction Radiant
+    AUTOCALCULATE,           !- Sensible Heat Fraction
+    ACTIVITY_SCH,            !- Activity Level Schedule Name
+    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
+    No,                      !- Enable ASHRAE 55 Comfort Warnings
+    ZoneAveraged,            !- Mean Radiant Temperature Calculation Type
+    ,                        !- Surface Name/Angle Factor List Name
+    WORK_EFF_SCH,            !- Work Efficiency Schedule Name
+    ClothingInsulationSchedule,  !- Clothing Insulation Calculation Method
+    ,                        !- Clothing Insulation Calculation Method Schedule Name
+    CLOTHING_SCH,            !- Clothing Insulation Schedule Name
+    AIR_VELO_SCH,            !- Air Velocity Schedule Name
+    FANGER;                  !- Thermal Comfort Model 1 Type
+
+!-   ===========  ALL OBJECTS IN CLASS: LIGHTS ===========
+
+  Lights,
+    Dining_Lights,           !- Name
+    Dining,                  !- Zone or ZoneList Name
+    BLDG_LIGHT_DINING_SCH,   !- Schedule Name
+    Watts/Area,              !- Design Level Calculation Method
+    ,                        !- Lighting Level {W}
+    22.60421188,  !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.0000,                  !- Return Air Fraction
+    0.7000,                  !- Fraction Radiant
+    0.2000,                  !- Fraction Visible
+    1.0000,                  !- Fraction Replaceable
+    LightsWired,             !- End-Use Subcategory
+    No;                      !- Return Air Fraction Calculated from Plenum Temperature
+
+  Lights,
+    Kitchen_Lights,          !- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    BLDG_LIGHT_KITCHEN_SCH,  !- Schedule Name
+    Watts/Area,              !- Design Level Calculation Method
+    ,                        !- Lighting Level {W}
+    12.9166925, !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.0000,                  !- Return Air Fraction
+    0.7000,                  !- Fraction Radiant
+    0.2000,                  !- Fraction Visible
+    1.0000,                  !- Fraction Replaceable
+    LightsWired,             !- End-Use Subcategory
+    No;                      !- Return Air Fraction Calculated from Plenum Temperature
+
+!-   ===========  ALL OBJECTS IN CLASS: ELECTRICEQUIPMENT ===========
+
+  ElectricEquipment,
+    Dining_MiscElec_Equip,   !- Name
+    Dining,                  !- Zone or ZoneList Name
+    BLDG_EQUIP_SCH,          !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    13567.3111,               !- Design Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.2500,                  !- Fraction Latent
+    0.3000,                  !- Fraction Radiant
+    0.0000,                  !- Fraction Lost
+    Cooking;                 !- End-Use Subcategory
+
+  ElectricEquipment,
+    Kitchen_MiscElec_Equip,  !- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    BLDG_EQUIP_SCH,          !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    31468.723,               !- Design Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.2500,                  !- Fraction Latent
+    0.3000,                  !- Fraction Radiant
+    0.3000,                  !- Fraction Lost
+    Cooking;                 !- End-Use Subcategory
+
+
+  ElectricEquipment,
+    Kitchen_Reach-in-Freezer,!- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    Always_on,               !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    515.9166667,  !- Design Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.0000,                  !- Fraction Latent
+    0.2500,                  !- Fraction Radiant
+    0.0000,                  !- Fraction Lost
+    ReachInFreezer;          !- End-Use Subcategory
+
+  ElectricEquipment,
+    Kitchen_Reach-in-Refrigerator,  !- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    Always_on,               !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    851.6666667,  !- Design Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.0000,                  !- Fraction Latent
+    0.2500,                  !- Fraction Radiant
+    0.0000,                  !- Fraction Lost
+    ReachInRefrigerator;     !- End-Use Subcategory
+
+!-   ===========  ALL OBJECTS IN CLASS: GASEQUIPMENT ===========
+
+  GasEquipment,
+    Kitchen_MiscGas_Equip,   !- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    FF_GAS_EQUIP_SCH,        !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    91932.60058,             !- Design Level {W}
+    ,                        !- Power per Zone Floor Area {W/m2}
+    ,                        !- Power per Person {W/person}
+    0.1000,                  !- Fraction Latent
+    0.2000,                  !- Fraction Radiant
+    0.7000,                  !- Fraction Lost
+    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
+    Cooking;                 !- End-Use Subcategory
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONEINFILTRATION:DESIGNFLOWRATE ===========
+
+  ZoneInfiltration:DesignFlowRate,
+    Dining_Infiltration,     !- Name
+    Dining,                  !- Zone or ZoneList Name
+    INFIL_SCH_PNNL,          !- Schedule Name
+    flow/exteriorarea,       !- Design Flow Rate Calculation Method
+    ,                        !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    0.001024128,       !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    0,                       !- Constant Term Coefficient
+    0.0000,                  !- Temperature Term Coefficient
+    0.2240,                  !- Velocity Term Coefficient
+    0.0000;                  !- Velocity Squared Term Coefficient
+
+  ZoneInfiltration:DesignFlowRate,
+    Dining_Door_Infiltration,!- Name
+    Dining,                  !- Zone or ZoneList Name
+    DOOR_INFIL_SCH,  !- Schedule Name
+    Flow/Zone,               !- Design Flow Rate Calculation Method
+    0.902834611,  !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    1.0,                     !- Constant Term Coefficient
+    0.0,                     !- Temperature Term Coefficient
+    0.0,                     !- Velocity Term Coefficient
+    0.0;                     !- Velocity Squared Term Coefficient
+
+  ZoneInfiltration:DesignFlowRate,
+    Kitchen_Infiltration,    !- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    INFIL_SCH_PNNL,          !- Schedule Name
+    flow/exteriorarea,       !- Design Flow Rate Calculation Method
+    ,                        !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    0.001024128,       !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    0,                       !- Constant Term Coefficient
+    0.0000,                  !- Temperature Term Coefficient
+    0.2240,                  !- Velocity Term Coefficient
+    0.0000;                  !- Velocity Squared Term Coefficient
+
+  ZoneInfiltration:DesignFlowRate,
+    attic_Infiltration,      !- Name
+    attic,                   !- Zone or ZoneList Name
+    ALWAYS_ON,               !- Schedule Name
+    Flow/Zone,               !- Design Flow Rate Calculation Method
+    0.0729,                  !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    1.0000,                  !- Constant Term Coefficient
+    0.0000,                  !- Temperature Term Coefficient
+    0.0000,                  !- Velocity Term Coefficient
+    0.0000;                  !- Velocity Squared Term Coefficient
+
+
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: EXTERIOR:LIGHTS ===========
+
+  Exterior:Lights,
+    Exterior_Lights,         !- Name
+    Exterior_Lgt_ALWAYS_ON,   !- Schedule Name
+    1742.5,  !- Design Level {W}
+    AstronomicalClock,       !- Control Option
+    General;                 !- End-Use Subcategory
+
+
+  Schedule:Compact,
+    Exterior_lighting_schedule_a,  !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through:12/31,           !- Field 1
+    For:AllDays,             !- Field 2
+    Until: 01:00,1,          !- Field 3
+    Until: 06:00,0,          !- Field 5
+    Until: 24:00,1;          !- Field 7
+
+  Schedule:Compact,
+    Exterior_lighting_schedule_b,  !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through:12/31,           !- Field 1
+    For:AllDays,             !- Field 2
+    Until: 01:00,1,          !- Field 3
+    Until: 06:00,0.7,        !- Field 5
+    Until: 24:00,1;          !- Field 7
+
+  Schedule:Compact,
+    Exterior_lighting_schedule_a_IECC2015,  !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through:12/31,           !- Field 1
+    For:Weekdays SummerDesignDay, !- Field 2
+    Until: 01:00,1,          !- Field 3
+    Until: 06:00,0,          !- Field 5
+    Until: 24:00,1,          !- Field 7
+    For:Saturdays,           !- Field 9
+    Until: 01:00,1,          !- Field 10
+    Until: 06:00,0,          !- Field 12
+    Until: 24:00,1,          !- Field 14
+    For:AllOtherDays,        !- Field 16
+    Until: 01:00,1,          !- Field 17
+    Until: 06:00,0,          !- Field 19
+    Until: 24:00,1;          !- Field 21
+
+
+
+  Schedule:Compact,
+    Exterior_lighting_schedule_b_2016,  !- Name
+    fraction,                !- Schedule Type Limits Name
+    Through:12/31,           !- Field 1
+    For:AllDays,             !- Field 2
+    Until: 06:00,0.5,        !- Field 3
+    Until: 24:00,1;          !- Field 5
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: DESIGNSPECIFICATION:OUTDOORAIR ===========
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SIZING:PARAMETERS ===========
+
+Sizing:Parameters,
+    {{OversizeFactor}},
+    {{OversizeFactor}},
+    6;                       !- Timesteps in Averaging Window
+
+
+
+  Sizing:Zone,
+    Dining,                  !- Zone or ZoneList Name
+    SupplyAirTemperature,    !- Zone Cooling Design Supply Air Temperature Input Method
+    12.8,                    !- Zone Cooling Design Supply Air Temperature {C}
+    ,                        !- Zone Cooling Design Supply Air Temperature Difference {deltaC}
+    SupplyAirTemperature,    !- Zone Heating Design Supply Air Temperature Input Method
+    40.0,                    !- Zone Heating Design Supply Air Temperature {C}
+    ,                        !- Zone Heating Design Supply Air Temperature Difference {deltaC}
+    0.0085,  !- Zone Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.008,                   !- Zone Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    SZ DSOA Dining,          !- Design Specification Outdoor Air Object Name
+    ,                        !- Zone Heating Sizing Factor
+    ,                        !- Zone Cooling Sizing Factor
+    DesignDayWithLimit,      !- Cooling Design Air Flow Method
+    0.0,                     !- Cooling Design Air Flow Rate {m3/s}
+    0.007111554,   !- Cooling Minimum Air Flow per Zone Floor Area {m3/s-m2}
+    0.0,                     !- Cooling Minimum Air Flow {m3/s}
+    0.0,                     !- Cooling Minimum Air Flow Fraction
+    DesignDay,               !- Heating Design Air Flow Method
+    0.0,                     !- Heating Design Air Flow Rate {m3/s}
+    ,                        !- Heating Maximum Air Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Heating Maximum Air Flow {m3/s}
+    ;                        !- Heating Maximum Air Flow Fraction
+
+  DesignSpecification:OutdoorAir,
+    SZ DSOA Dining,          !- Name
+    FLOW/AREA,               !- Outdoor Air Method
+    ,                        !- Outdoor Air Flow per Person {m3/s-person}
+    0.007111554,   !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
+    0.0;                     !- Outdoor Air Flow per Zone {m3/s}
+
+
+
+  Sizing:Zone,
+    Kitchen,                 !- Zone or ZoneList Name
+    SupplyAirTemperature,    !- Zone Cooling Design Supply Air Temperature Input Method
+    12.8,                    !- Zone Cooling Design Supply Air Temperature {C}
+    ,                        !- Zone Cooling Design Supply Air Temperature Difference {deltaC}
+    SupplyAirTemperature,    !- Zone Heating Design Supply Air Temperature Input Method
+    40.0,                    !- Zone Heating Design Supply Air Temperature {C}
+    ,                        !- Zone Heating Design Supply Air Temperature Difference {deltaC}
+    0.0085,  !- Zone Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.008,                   !- Zone Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    SZ DSOA Kitchen,         !- Design Specification Outdoor Air Object Name
+    ,                        !- Zone Heating Sizing Factor
+    ,                        !- Zone Cooling Sizing Factor
+    DesignDayWithLimit,      !- Cooling Design Air Flow Method
+    0.0,                     !- Cooling Design Air Flow Rate {m3/s}
+    0.0,                     !- Cooling Minimum Air Flow per Zone Floor Area {m3/s-m2}
+    0.731193677187623,  !- Cooling Minimum Air Flow {m3/s}
+    0.0,                     !- Cooling Minimum Air Flow Fraction
+    DesignDay,               !- Heating Design Air Flow Method
+    0.0,                     !- Heating Design Air Flow Rate {m3/s}
+    ,                        !- Heating Maximum Air Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Heating Maximum Air Flow {m3/s}
+    ;                        !- Heating Maximum Air Flow Fraction
+
+  DesignSpecification:OutdoorAir,
+    SZ DSOA Kitchen,         !- Name
+    Maximum,                 !- Outdoor Air Method
+    ,                        !- Outdoor Air Flow per Person {m3/s-person}
+    0.00036557,  !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
+    0.731193677187623;  !- Outdoor Air Flow per Zone {m3/s}
+
+!-   ===========  ALL OBJECTS IN CLASS: SIZING:SYSTEM ===========
+
+  Sizing:System,
+    PSZ-AC_1:1,              !- AirLoop Name
+    Sensible,                !- Type of Load to Size On
+    AUTOSIZE,                !- Design Outdoor Air Flow Rate {m3/s}
+    1.0000,                  !- Central Heating Maximum System Air Flow Ratio
+    7.0,                     !- Preheat Design Temperature {C}
+    0.008,                   !- Preheat Design Humidity Ratio {kgWater/kgDryAir}
+    12.8000,                 !- Precool Design Temperature {C}
+    0.008,                   !- Precool Design Humidity Ratio {kgWater/kgDryAir}
+    12.8000,                 !- Central Cooling Design Supply Air Temperature {C}
+    40.0,                    !- Central Heating Design Supply Air Temperature {C}
+    Coincident,              !- Type of Zone Sum to Use
+    No,                      !- 100% Outdoor Air in Cooling
+    No,                      !- 100% Outdoor Air in Heating
+    0.0085,  !- Central Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.008,                   !- Central Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    DesignDay,               !- Cooling Supply Air Flow Rate Method
+    0.0,                     !- Cooling Supply Air Flow Rate {m3/s}
+    ,                        !- Cooling Supply Air Flow Rate Per Floor Area {m3/s-m2}
+    ,                        !- Cooling Fraction of Autosized Cooling Supply Air Flow Rate
+    ,                        !- Cooling Supply Air Flow Rate Per Unit Cooling Capacity {m3/s-W}
+    DesignDay,               !- Heating Supply Air Flow Rate Method
+    0.0,                     !- Heating Supply Air Flow Rate {m3/s}
+    ,                        !- Heating Supply Air Flow Rate Per Floor Area {m3/s-m2}
+    ,                        !- Heating Fraction of Autosized Heating Supply Air Flow Rate
+    ,                        !- Heating Fraction of Autosized Cooling Supply Air Flow Rate
+    ,                        !- Heating Supply Air Flow Rate Per Unit Heating Capacity {m3/s-W}
+    ZoneSum,                 !- System Outdoor Air Method
+    1.0,                     !- Zone Maximum Outdoor Air Fraction
+    CoolingDesignCapacity,   !- Cooling Design Capacity Method
+    autosize,                !- Cooling Design Capacity {W}
+    ,                        !- Cooling Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Cooling Design Capacity
+    HeatingDesignCapacity,   !- Heating Design Capacity Method
+    autosize,                !- Heating Design Capacity {W}
+    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Heating Design Capacity
+    OnOff;                   !- Central Cooling Capacity Control Method
+
+  Sizing:System,
+    PSZ-AC_2:2,               !- AirLoop Name
+    Sensible,                !- Type of Load to Size On
+    AUTOSIZE,                !- Design Outdoor Air Flow Rate {m3/s}
+    1.0000,                  !- Central Heating Maximum System Air Flow Ratio
+    7.0,                     !- Preheat Design Temperature {C}
+    0.008,                   !- Preheat Design Humidity Ratio {kgWater/kgDryAir}
+    12.8000,                 !- Precool Design Temperature {C}
+    0.008,                   !- Precool Design Humidity Ratio {kgWater/kgDryAir}
+    12.8000,                 !- Central Cooling Design Supply Air Temperature {C}
+    40,                      !- Central Heating Design Supply Air Temperature {C} 
+    Coincident,               !- Sizing Option
+    No,                      !- 100% Outdoor Air in Cooling
+    No,                      !- 100% Outdoor Air in Heating
+    0.0085,  !- Central Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.008,                   !- Central Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    DesignDay,               !- Cooling Supply Air Flow Rate Method
+    0.0,                     !- Cooling Supply Air Flow Rate {m3/s}
+    ,                        !- Cooling Supply Air Flow Rate Per Floor Area {m3/s-m2}
+    ,                        !- Cooling Fraction of Autosized Cooling Supply Air Flow Rate
+    ,                        !- Cooling Supply Air Flow Rate Per Unit Cooling Capacity {m3/s-W}
+    DesignDay,               !- Heating Supply Air Flow Rate Method
+    0.0,                     !- Heating Supply Air Flow Rate {m3/s}
+    ,                        !- Heating Supply Air Flow Rate Per Floor Area {m3/s-m2}
+    ,                        !- Heating Fraction of Autosized Heating Supply Air Flow Rate
+    ,                        !- Heating Fraction of Autosized Cooling Supply Air Flow Rate
+    ,                        !- Heating Supply Air Flow Rate Per Unit Heating Capacity {m3/s-W}
+    ZoneSum,                 !- System Outdoor Air Method
+    1.0,                     !- Zone Maximum Outdoor Air Fraction
+    CoolingDesignCapacity,   !- Cooling Design Capacity Method
+    autosize,                !- Cooling Design Capacity {W}
+    ,                        !- Cooling Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Cooling Design Capacity
+    HeatingDesignCapacity,   !- Heating Design Capacity Method
+    autosize,                !- Heating Design Capacity {W}
+    ,                        !- Heating Design Capacity Per Floor Area {W/m2}
+    ,                        !- Fraction of Autosized Heating Design Capacity
+    OnOff;                   !- Central Cooling Capacity Control Method
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONECONTROL:THERMOSTAT ===========
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONECONTROL:THERMOSTAT ===========
+
+  ZoneControl:Thermostat,
+    Dining Thermostat,       !- Name
+    Dining,                  !- Zone or ZoneList Name
+    Dual Zone Control Type Sched,  !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+    Dining DualSPSched;      !- Control 1 Name
+
+  ZoneControl:Thermostat,
+    Kitchen Thermostat,      !- Name
+    Kitchen,                 !- Zone or ZoneList Name
+    Dual Zone Control Type Sched,  !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+    Kitchen DualSPSched;     !- Control 1 Name
+
+!-   ===========  ALL OBJECTS IN CLASS: THERMOSTATSETPOINT:DUALSETPOINT ===========
+
+  ThermostatSetpoint:DualSetpoint,
+    Dining DualSPSched,      !- Name
+    HTGSETP_SCH_NO_OPTIMUM,  !- Heating Setpoint Temperature Schedule Name
+    CLGSETP_SCH_NO_OPTIMUM;  !- Cooling Setpoint Temperature Schedule Name
+
+  ThermostatSetpoint:DualSetpoint,
+    Kitchen DualSPSched,     !- Name
+    HTGSETP_SCH_NO_OPTIMUM,  !- Heating Setpoint Temperature Schedule Name
+    CLGSETP_SCH_NO_OPTIMUM;  !- Cooling Setpoint Temperature Schedule Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRTERMINAL:SINGLEDUCT:UNCONTROLLED ===========
+
+ !-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER ===========
+
+
+  AirTerminal:SingleDuct:Uncontrolled,
+    Dining Direct Air,       !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Dining Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
+
+  AirTerminal:SingleDuct:Uncontrolled,
+    Kitchen Direct Air,      !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Kitchen Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
+
+
+
+
+
+
+  ZoneHVAC:EquipmentList,
+    Dining Equipment,        !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+    Fan:ZoneExhaust,         !- Zone Equipment 1 Object Type
+    Dining Exhaust Fan,      !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 2 Object Type
+    Dining Direct Air,       !- Zone Equipment 2 Name
+    2,                       !- Zone Equipment 2 Cooling Sequence
+    2;                       !- Zone Equipment 2 Heating or No-Load Sequence
+
+  ZoneHVAC:EquipmentList,
+    Kitchen Equipment,       !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+    Fan:ZoneExhaust,         !- Zone Equipment 1 Object Type
+    Kitchen Exhaust Fan,     !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 2 Object Type
+    Kitchen Direct Air,      !- Zone Equipment 2 Name
+    2,                       !- Zone Equipment 2 Cooling Sequence
+    2;                       !- Zone Equipment 2 Heating or No-Load Sequence
+
+!-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:EQUIPMENTCONNECTIONS ===========
+
+  ZoneHVAC:EquipmentConnections,
+    Dining,                  !- Zone Name
+    Dining Equipment,        !- Zone Conditioning Equipment List Name
+    Dining Inlet Nodes,      !- Zone Air Inlet Node or NodeList Name
+    Dining Exhaust Nodes,    !- Zone Air Exhaust Node or NodeList Name
+    Dining Air Node,         !- Zone Air Node Name
+    Zone 1 Outlet Node;  !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Kitchen,                  !- Zone Name
+    Kitchen Equipment,        !- Zone Conditioning Equipment List Name
+    Kitchen Inlet Nodes,      !- Zone Air Inlet Node or NodeList Name
+    Kitchen Exhaust Nodes,   !- Zone Air Exhaust Node or NodeList Name
+    Kitchen Air Node,        !- Zone Air Node Name
+    Zone 2 Outlet Node;  !- Zone Return Air Node Name
+
+!-   ===========  ALL OBJECTS IN CLASS: FAN:ONOFF ===========
+
+Fan:OnOff,
+    Supply Fan 1,            !- Name
+    HVACOperationSchd,     !- Availability Schedule Name
+    0.7,                     !- Fan Total Efficiency
+    622.5,                   !- Pressure Rise {Pa}
+    autosize,                !- Maximum Flow Rate {m3/s}
+    0.9,                     !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+    Mixed Air Node 1,        !- Air Inlet Node Name
+    DX Cooling Coil Air Inlet Node 1,  !- Air Outlet Node Name
+    FanPowerCurve1;           !- Fan Power Ratio Function of Speed Ratio Curve Name
+
+Fan:OnOff,
+    Supply Fan 2,            !- Name
+    HVACOperationSchd,     !- Availability Schedule Name
+    0.7,                     !- Fan Total Efficiency
+    622.5,                   !- Pressure Rise {Pa}
+    autosize,                !- Maximum Flow Rate {m3/s}
+    0.9,                     !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+    Mixed Air Node 2,        !- Air Inlet Node Name
+    DX Cooling Coil Air Inlet Node 2,  !- Air Outlet Node Name
+    FanPowerCurve2;           !- Fan Power Ratio Function of Speed Ratio Curve Name
+
+  Fan:ZoneExhaust,
+    Dining Exhaust Fan,       !- Name This is a dummy fan to model transferred air from dining to kitchen. Therefore, TSP is zero and efficiency is one.
+    Hours_of_operation,      !- Availability Schedule Name
+    1,                       !- Fan Total Efficiency
+    0,                       !- Pressure Rise {Pa}
+    0.826232887790101,  !- Maximum Flow Rate {m3/s}
+    Dining Exhaust Fan Node, !- Air Inlet Node Name
+    Dining Exhaust Fan Outlet Node Name,  !- Air Outlet Node Name
+        General;              !- End-Use Subcategory
+
+  Fan:ZoneExhaust,
+    Kitchen Exhaust Fan,     !- Name
+    Hours_of_operation,      !- Availability Schedule Name
+    0.16,                      !- Fan Efficiency Saving of Addendum AJ (Fractional HP Fan Motors) is modelled here.
+    124.5,                   !- Pressure Rise {Pa}
+    1.557427,                  !- Maximum Flow Rate {m3/s} this is the real exhaust fan flow 3300 cfm.
+    Kitchen Exhaust Fan Node,!- Air Inlet Node Name
+    Kitchen Exhaust Fan Outlet Node Name,  !- Air Outlet Node Name
+    General,                 !- End-Use Subcategory
+    ,                        !- Flow Fraction Schedule Name
+    ,                        !- System Availability Manager Coupling Mode
+    ,                        !- Minimum Zone Temperature Limit Schedule Name
+    Kitchen Exhaust Fan Balanced Exhaust Fraction Schedule;  !- Balanced Exhaust Fraction Schedule Name
+
+  Schedule:Compact,
+    Kitchen Exhaust Fan Balanced Exhaust Fraction Schedule,     !- Name the hours are based on Hours_of_operation. The fraction is based on ratio of transfer air cfm over total exhaust
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekday SummerDesignDay, !- Field 2
+    Until: 01:00,0.530511470386799, !- Field 3
+    Until: 05:00,0.0,        !- Field 5
+    Until: 24:00,0.530511470386799, !- Field 7
+    For: Saturday WinterDesignDay, !- Field 9
+    Until: 01:00,0.530511470386799, !- Field 10
+    Until: 05:00,0.0,        !- Field 12
+    Until: 24:00,0.530511470386799, !- Field 14
+    For: Sunday Holidays AllOtherDays, !- Field 16
+    Until: 01:00,0.530511470386799, !- Field 17
+    Until: 05:00,0.0,        !- Field 19
+    Until: 24:00,0.530511470386799; !- Field 21
+
+
+
+{% include "cooling_coil" %}
+
+{% include "heating_coil" %}
+
+{% include "outdoor_air_control" %}
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:CONTROLLERLIST ===========
+
+AirLoopHVAC:ControllerList,
+    OA Sys 1 Controllers,    !- Name
+    Controller:OutdoorAir,   !- Controller 1 Object Type
+    OA Controller 1;         !- Controller 1 Name
+
+AirLoopHVAC:ControllerList,
+    OA Sys 2 Controllers,    !- Name
+    Controller:OutdoorAir,   !- Controller 1 Object Type
+    OA Controller 2;         !- Controller 1 Name
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC ===========
+
+AirLoopHVAC,
+    Typical Terminal Reheat 1,  !- Name
+    ,                        !- Controller List Name
+    Heat Pump 1 Avail List,  !- Availability Manager List Name
+    autosize,                !- Design Supply Air Flow Rate {m3/s}
+    Air Loop Branches 1,     !- Branch List Name
+    ,                        !- Connector List Name
+    Outdoor Air Mixer Inlet Node 1,  !- Supply Side Inlet Node Name
+    Return Air Mixer Outlet 1,  !- Demand Side Outlet Node Name
+    Zone Equipment Inlet Node 1,  !- Demand Side Inlet Node Names
+    Air Loop Outlet Node 1;  !- Supply Side Outlet Node Names
+
+AirLoopHVAC,
+    Typical Terminal Reheat 2,  !- Name
+    ,                        !- Controller List Name
+    Heat Pump 2 Avail List,  !- Availability Manager List Name
+    autosize,                !- Design Supply Air Flow Rate {m3/s}
+    Air Loop Branches 2,     !- Branch List Name
+    ,                        !- Connector List Name
+    Outdoor Air Mixer Inlet Node 2,  !- Supply Side Inlet Node Name
+    Return Air Mixer Outlet 2,  !- Demand Side Outlet Node Name
+    Zone Equipment Inlet Node 2,  !- Demand Side Inlet Node Names
+    Air Loop Outlet Node 2;  !- Supply Side Outlet Node Names
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:OUTDOORAIRSYSTEM:EQUIPMENTLIST ===========
+
+AirLoopHVAC:OutdoorAirSystem:EquipmentList,
+    OA Sys 1 Equipment,      !- Name
+    OutdoorAir:Mixer,        !- Component 1 Object Type
+    OA Mixing Box 1;         !- Component 1 Name
+
+AirLoopHVAC:OutdoorAirSystem:EquipmentList,
+    OA Sys 2 Equipment,      !- Name
+    OutdoorAir:Mixer,        !- Component 1 Object Type
+    OA Mixing Box 2;         !- Component 1 Name
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:OUTDOORAIRSYSTEM ===========
+
+AirLoopHVAC:OutdoorAirSystem,
+    OA Sys 1,                !- Name
+    OA Sys 1 Controllers,    !- Controller List Name
+    OA Sys 1 Equipment,      !- Outdoor Air Equipment List Name
+    Outdoor Air 1 Avail List;!- Availability Manager List Name
+
+AirLoopHVAC:OutdoorAirSystem,
+    OA Sys 2,                !- Name
+    OA Sys 2 Controllers,    !- Controller List Name
+    OA Sys 2 Equipment,      !- Outdoor Air Equipment List Name
+    Outdoor Air 2 Avail List;!- Availability Manager List Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTDOORAIR:MIXER ===========
+
+OutdoorAir:Mixer,
+    OA Mixing Box 1,         !- Name
+    Mixed Air Node 1,        !- Mixed Air Node Name
+    Outside Air Inlet Node 1,!- Outdoor Air Stream Node Name
+    Relief Air Outlet Node 1,!- Relief Air Stream Node Name
+    Outdoor Air Mixer Inlet Node 1;  !- Return Air Stream Node Name
+
+OutdoorAir:Mixer,
+    OA Mixing Box 2,         !- Name
+    Mixed Air Node 2,        !- Mixed Air Node Name
+    Outside Air Inlet Node 2,!- Outdoor Air Stream Node Name
+    Relief Air Outlet Node 2,!- Relief Air Stream Node Name
+    Outdoor Air Mixer Inlet Node 2;  !- Return Air Stream Node Name
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:ZONESPLITTER ===========
+  AirLoopHVAC:ZoneSplitter,
+    PSZ-AC_1:1 Supply Air Splitter,  !- Name
+    PSZ-AC_1:1 Zone Equipment Inlet Node,  !- Inlet Node Name
+    Dining Direct Air Inlet Node Name;  !- Outlet 1 Node Name
+
+  AirLoopHVAC:ZoneSplitter,
+    PSZ-AC_2:2 Supply Air Splitter,  !- Name
+    PSZ-AC_2:2 Zone Equipment Inlet Node,  !- Inlet Node Name
+    Kitchen Direct Air Inlet Node Name;  !- Outlet 1 Node Name
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:SUPPLYPATH ===========
+
+AirLoopHVAC:SupplyPath,
+    HeatPumpSupplyPath 1,    !- Name
+    Zone Equipment Inlet Node 1,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    Zone Supply Air Splitter 1;  !- Component 1 Name
+
+AirLoopHVAC:SupplyPath,
+    HeatPumpSupplyPath 2,    !- Name
+    Zone Equipment Inlet Node 2,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    Zone Supply Air Splitter 2;  !- Component 1 Name
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:ZONEMIXER ===========
+
+AirLoopHVAC:ZoneMixer,
+    Zone Return Air Mixer 1, !- Name
+    Return Air Mixer Outlet 1,  !- Outlet Node Name
+    Zone 1 Outlet Node;      !- Inlet 1 Node Name
+
+AirLoopHVAC:ZoneMixer,
+    Zone Return Air Mixer 2, !- Name
+    Return Air Mixer Outlet 2,  !- Outlet Node Name
+    Zone 2 Outlet Node;      !- Inlet 1 Node Name
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:RETURNPATH ===========
+
+AirLoopHVAC:ReturnPath,
+    HeatPumpReturnPath 1,    !- Name
+    Return Air Mixer Outlet 1,  !- Return Air Path Outlet Node Name
+    AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
+    Zone Return Air Mixer 1; !- Component 1 Name
+
+AirLoopHVAC:ReturnPath,
+    HeatPumpReturnPath 2,    !- Name
+    Return Air Mixer Outlet 2,  !- Return Air Path Outlet Node Name
+    AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
+    Zone Return Air Mixer 2; !- Component 1 Name
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: BRANCH ===========
+
+
+BranchList,
+    Air Loop Branches 1,     !- Name
+    Air Loop Main Branch 1;  !- Branch 1 Name
+
+BranchList,
+    Air Loop Branches 2,     !- Name
+    Air Loop Main Branch 2;  !- Branch 1 Name
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: NODELIST ===========
+
+NodeList,
+    OutsideAirInletNodes 1,  !- Name
+    Outside Air Inlet Node 1;!- Node 1 Name
+
+NodeList,
+    Zone1Inlets,             !- Name
+    Zone 1 Inlet Node;       !- Node 1 Name
+
+NodeList,
+    Perimeter_ZN_1 List,     !- Name
+    Zone 2 Node;             !- Node 1 Name
+
+
+NodeList,
+    OutsideAirInletNodes 2,  !- Name
+    Outside Air Inlet Node 2;!- Node 1 Name
+
+
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTDOORAIR:NODE ===========
+
+OutdoorAir:Node,
+    Outdoor Condenser Air Node 1,  !- Name
+    1.0;                     !- Height Above Ground {m}
+
+OutdoorAir:Node,
+    Outdoor Condenser Air Node 2,  !- Name
+    1.0;                     !- Height Above Ground {m}
+
+
+
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTDOORAIR:NODELIST ===========
+
+!!!!!!! Add Replacement RTU
+OutdoorAir:NodeList,
+    OutsideAirInletNodes 1;  !- Node or NodeList Name 1
+
+OutdoorAir:NodeList,
+    OutsideAirInletNodes 2;  !- Node or NodeList Name 1
+
+
+
+
+
+
+EnergyManagementSystem:Sensor,
+    FanFlow1,                !- Name
+    Supply Fan 1,            !- Output:Variable or Output:Meter Index Key Name
+    Fan Air Mass Flow Rate ; !- Output:Variable or Output:Meter Name
+
+EnergyManagementSystem:Sensor,
+    FanFlow2,                !- Name
+    Supply Fan 2,            !- Output:Variable or Output:Meter Index Key Name
+    Fan Air Mass Flow Rate ; !- Output:Variable or Output:Meter Name
+
+
+
+
+
+
+EnergyManagementSystem:Sensor,
+    HVACSch,                 !- Name
+    HVACOperationSchd,       !- Output:Variable or Output:Meter Index Key Name
+    Schedule Value;          !- Output:Variable or Output:Meter Name
+
+EnergyManagementSystem:Sensor,
+    TZ1,                     !- Name
+    Dining,          !- Output:Variable or Output:Meter Index Key Name
+    Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
+
+EnergyManagementSystem:Sensor,
+    TZ2,                     !- Name
+    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
+
+
+
+
+EnergyManagementSystem:Sensor,
+    TC1,                     !- Name
+    Dining,          !- Output:Variable or Output:Meter Index Key Name
+    Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
+
+EnergyManagementSystem:Sensor,
+    TC2,                     !- Name
+    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
+
+
+
+EnergyManagementSystem:Sensor,
+    TH1,                     !- Name
+    Dining,          !- Output:Variable or Output:Meter Index Key Name
+    Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
+
+EnergyManagementSystem:Sensor,
+    TH2,                     !- Name
+    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:ACTUATOR ===========
+
+
+EnergyManagementSystem:Actuator,
+    Fan2Speed,               !- Name
+    Supply Fan 2,            !- Actuated Component Unique Name
+    Fan,                     !- Actuated Component Type
+    Fan Air Mass Flow Rate;  !- Actuated Component Control Type
+
+EnergyManagementSystem:Actuator,
+    Fan1Speed,               !- Name
+    Supply Fan 1,            !- Actuated Component Unique Name
+    Fan,                     !- Actuated Component Type
+    Fan Air Mass Flow Rate;  !- Actuated Component Control Type
+
+
+
+
+
+
+EnergyManagementSystem:Actuator,
+    HVACSch1,                !- Name
+    HVACOperationSchd,     !- Actuated Component Unique Name
+    Schedule:Compact,        !- Actuated Component Type
+    Schedule Value;          !- Actuated Component Control Type
+
+EnergyManagementSystem:Actuator,
+    HVACSch2,                !- Name
+    HVACOperationSchd,     !- Actuated Component Unique Name
+    Schedule:Compact,        !- Actuated Component Type
+    Schedule Value;          !- Actuated Component Control Type
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:PROGRAMCALLINGMANAGER ===========
+
+
+EnergyManagementSystem:ProgramCallingManager,
+    FanMaxFlow1,             !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanMaxFlow1;          !- Program Name 1
+
+EnergyManagementSystem:ProgramCallingManager,
+    FanMaxFlow2,             !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanMaxFlow2;          !- Program Name 1
+
+
+
+
+
+EnergyManagementSystem:ProgramCallingManager,
+    Initialize1,             !- Name
+    BeginNewEnvironment,     !- EnergyPlus Model Calling Point
+    InitializeFan1MaxGlobal; !- Program Name 1
+
+EnergyManagementSystem:ProgramCallingManager,
+    Initialize2,             !- Name
+    BeginNewEnvironment,     !- EnergyPlus Model Calling Point
+    InitializeFan2MaxGlobal; !- Program Name 1
+
+
+
+
+
+
+
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed1,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed1;            !- Program Name 1
+
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed2,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed2;            !- Program Name 1
+
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:PROGRAM ===========
+
+
+EnergyManagementSystem:Program,
+    SETFanMaxFlow1,          !- Name
+    If FanFlow1>Fan1MaxGlobal,  !- Program Line 1
+    SET Fan1MaxGlobal=FanFlow1,  !- Program Line 2
+    ENDIF;                   !- A4
+
+EnergyManagementSystem:Program,
+    SETFanMaxFlow2,          !- Name
+    If FanFlow2>Fan2MaxGlobal,  !- Program Line 1
+    SET Fan2MaxGlobal=FanFlow2,  !- Program Line 2
+    ENDIF;                   !- A4
+
+
+
+
+
+{% include "ems_pr" %}
+
+EnergyManagementSystem:Program,
+    InitializeFan1MaxGlobal, !- Name
+!    If CurrentEnvironment==1,!- Program Line 1
+    SET FAN1MAXGLOBAL=0;     !- Program Line 2
+!    ENDIF;                   !- A4
+
+EnergyManagementSystem:Program,
+    InitializeFan2MaxGlobal, !- Name
+!    If CurrentEnvironment==1,!- Program Line 1
+    SET FAN2MAXGLOBAL=0;     !- Program Line 2
+!    ENDIF;                   !- A4
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:GLOBALVARIABLE ===========
+
+EnergyManagementSystem:GlobalVariable,
+    Fan1MaxGlobal,           !- Erl Variable 1 Name
+    Fan2MaxGlobal;
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:OUTPUTVARIABLE ===========
+
+
+EnergyManagementSystem:OutputVariable,
+    Fan1MaxGlobal,           !- Name
+    Fan1MaxGlobal,           !- EMS Variable Name
+    Averaged,                !- Type of Data in Variable
+    SystemTimestep,          !- Update Frequency
+    SETFanMaxFlow1;          !- EMS Program or Subroutine Name
+
+EnergyManagementSystem:OutputVariable,
+    Fan2MaxGlobal,           !- Name
+    Fan2MaxGlobal,           !- EMS Variable Name
+    Averaged,                !- Type of Data in Variable
+    SystemTimestep,          !- Update Frequency
+    SETFanMaxFlow2;          !- EMS Program or Subroutine Name
+
+
+
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ENERGYMANAGEMENTSYSTEM:INTERNALVARIABLE ===========
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AVAILABILITYMANAGER:SCHEDULED ===========
+
+AvailabilityManager:Scheduled,
+    Heat Pump 1 Avail,       !- Name
+    ALWAYS_ON;     !- Schedule Name
+
+AvailabilityManager:Scheduled,
+    Outdoor Air 1 Avail,     !- Name
+    OutdoorAirAvailSched;    !- Schedule Name
+
+AvailabilityManager:Scheduled,
+    Heat Pump 2 Avail,       !- Name
+    ALWAYS_ON;     !- Schedule Name
+
+
+
+
+
+AvailabilityManager:Scheduled,
+    Outdoor Air 2 Avail,     !- Name
+    OutdoorAirAvailSched;    !- Schedule Name
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: AVAILABILITYMANAGERASSIGNMENTLIST ===========
+
+AvailabilityManagerAssignmentList,
+    Heat Pump 1 Avail List,  !- Name
+    AvailabilityManager:Scheduled,  !- Availability Manager 1 Object Type
+    Heat Pump 1 Avail;       !- Availability Manager 1 Name
+
+AvailabilityManagerAssignmentList,
+    Outdoor Air 1 Avail List,!- Name
+    AvailabilityManager:Scheduled,  !- Availability Manager 1 Object Type
+    Outdoor Air 1 Avail;     !- Availability Manager 1 Name
+
+AvailabilityManagerAssignmentList,
+    Heat Pump 2 Avail List,  !- Name
+    AvailabilityManager:Scheduled,  !- Availability Manager 1 Object Type
+    Heat Pump 2 Avail;       !- Availability Manager 1 Name
+
+
+
+
+AvailabilityManagerAssignmentList,
+    Outdoor Air 2 Avail List,!- Name
+    AvailabilityManager:Scheduled,  !- Availability Manager 1 Object Type
+    Outdoor Air 2 Avail;     !- Availability Manager 1 Name
+
+
+
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SETPOINTMANAGER:SCHEDULED ===========
+
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CURVE:QUADRATIC ===========
+
+!No PV for this case
+Curve:Quadratic,
+    PSZ-AC:1_CoolCLennoxStandard10Ton_TGA120S2B_CapFF,  !- Name
+    0.77136,                 !- Coefficient1 Constant
+    0.34053,                 !- Coefficient2 x
+    -0.11088,                !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:1_CoolCLennoxStandard10Ton_TGA120S2B_EIRFFF,  !- Name
+    1.20550,                 !- Coefficient1 Constant
+    -0.32953,                !- Coefficient2 x
+    0.12308,                 !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:1_CoolCLennoxStandard10Ton_TGA120S2B_PLR,  !- Name
+    0.77100,                 !- Coefficient1 Constant
+    0.22900,                 !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:3_CoolCLennoxStandard10Ton_TGA120S2B_CapFF,  !- Name
+    0.77136,                 !- Coefficient1 Constant
+    0.34053,                 !- Coefficient2 x
+    -0.11088,                !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:3_CoolCLennoxStandard10Ton_TGA120S2B_EIRFFF,  !- Name
+    1.20550,                 !- Coefficient1 Constant
+    -0.32953,                !- Coefficient2 x
+    0.12308,                 !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:3_CoolCLennoxStandard10Ton_TGA120S2B_PLR,  !- Name
+    0.77100,                 !- Coefficient1 Constant
+    0.22900,                 !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:4_CoolCLennoxStandard10Ton_TGA120S2B_CapFF,  !- Name
+    0.77136,                 !- Coefficient1 Constant
+    0.34053,                 !- Coefficient2 x
+    -0.11088,                !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:4_CoolCLennoxStandard10Ton_TGA120S2B_EIRFFF,  !- Name
+    1.20550,                 !- Coefficient1 Constant
+    -0.32953,                !- Coefficient2 x
+    0.12308,                 !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:4_CoolCLennoxStandard10Ton_TGA120S2B_PLR,  !- Name
+    0.77100,                 !- Coefficient1 Constant
+    0.22900,                 !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:5_CoolCLennoxStandard10Ton_TGA120S2B_CapFF,  !- Name
+    0.77136,                 !- Coefficient1 Constant
+    0.34053,                 !- Coefficient2 x
+    -0.11088,                !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:5_CoolCLennoxStandard10Ton_TGA120S2B_EIRFFF,  !- Name
+    1.20550,                 !- Coefficient1 Constant
+    -0.32953,                !- Coefficient2 x
+    0.12308,                 !- Coefficient3 x**2
+    0.75918,                 !- Minimum Value of x
+    1.13877;                 !- Maximum Value of x
+
+Curve:Quadratic,
+    PSZ-AC:5_CoolCLennoxStandard10Ton_TGA120S2B_PLR,  !- Name
+    0.77100,                 !- Coefficient1 Constant
+    0.22900,                 !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+
+
+Curve:Quadratic,
+    HPACHeatEIRFFF,          !- Name
+    1.3824,                  !- Coefficient1 Constant
+    -0.4336,                 !- Coefficient2 x
+    0.0512,                  !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatEIRFF Speed 1,   !- Name
+    1.3824,                  !- Coefficient1 Constant
+    -0.4336,                 !- Coefficient2 x
+    0.0512,                  !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatEIRFF Speed 2,   !- Name
+    1.3824,                  !- Coefficient1 Constant
+    -0.4336,                 !- Coefficient2 x
+    0.0512,                  !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatEIRFF Speed 3,   !- Name
+    1.3824,                  !- Coefficient1 Constant
+    -0.4336,                 !- Coefficient2 x
+    0.0512,                  !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatEIRFF Speed 4,   !- Name
+    1.3824,                  !- Coefficient1 Constant
+    -0.4336,                 !- Coefficient2 x
+    0.0512,                  !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatPLFFPLR Speed 1, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatPLFFPLR Speed 2, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatPLFFPLR Speed 3, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACHeatPLFFPLR Speed 4, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+    
+Curve:Quadratic,
+    HPACCOOLPLFFPLR, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACCOOLPLFFPLR Speed 1, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACCOOLPLFFPLR Speed 2, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACCOOLPLFFPLR Speed 3, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+Curve:Quadratic,
+    HPACCOOLPLFFPLR Speed 4, !- Name
+    0.85,                    !- Coefficient1 Constant
+    0.15,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CURVE:CUBIC ===========
+
+Curve:Cubic,
+    HPACHeatCapFT,           !- Name
+    0.758746,                !- Coefficient1 Constant
+    0.027626,                !- Coefficient2 x
+    0.000148716,             !- Coefficient3 x**2
+    0.0000034992,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0;                    !- Maximum Value of x
+
+Curve:Cubic,
+    HPACHeatCapFFF,          !- Name
+    0.84,                    !- Coefficient1 Constant
+    0.16,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACHeatEIRFT,           !- Name
+    1.19248,                 !- Coefficient1 Constant
+    -0.0300438,              !- Coefficient2 x
+    0.00103745,              !- Coefficient3 x**2
+    -0.000023328,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0;                    !- Maximum Value of x
+
+Curve:Cubic,
+    HPACHeatCapFT Speed 1,   !- Name
+    0.758746,                !- Coefficient1 Constant
+    0.027626,                !- Coefficient2 x
+    0.000148716,             !- Coefficient3 x**2
+    0.0000034992,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+Curve:Cubic,
+    HPACHeatCapFT Speed 2,   !- Name
+    0.758746,                !- Coefficient1 Constant
+    0.027626,                !- Coefficient2 x
+    0.000148716,             !- Coefficient3 x**2
+    0.0000034992,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+Curve:Cubic,
+    HPACHeatCapFT Speed 3,   !- Name
+    0.758746,                !- Coefficient1 Constant
+    0.027626,                !- Coefficient2 x
+    0.000148716,             !- Coefficient3 x**2
+    0.0000034992,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+Curve:Cubic,
+    HPACHeatCapFT Speed 4,   !- Name
+    0.758746,                !- Coefficient1 Constant
+    0.027626,                !- Coefficient2 x
+    0.000148716,             !- Coefficient3 x**2
+    0.0000034992,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+Curve:Cubic,
+    HPACHeatCapFF Speed 1,   !- Name
+    0.84,                    !- Coefficient1 Constant
+    0.16,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACHeatCapFF Speed 2,   !- Name
+    0.84,                    !- Coefficient1 Constant
+    0.16,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACHeatCapFF Speed 3,   !- Name
+    0.84,                    !- Coefficient1 Constant
+    0.16,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACHeatCapFF Speed 4,   !- Name
+    0.84,                    !- Coefficient1 Constant
+    0.16,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACHeatEIRFT Speed 1,   !- Name
+    1.19248,                 !- Coefficient1 Constant
+    -0.0300438,              !- Coefficient2 x
+    0.00103745,              !- Coefficient3 x**2
+    -0.000023328,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+Curve:Cubic,
+    HPACHeatEIRFT Speed 2,   !- Name
+    1.19248,                 !- Coefficient1 Constant
+    -0.0300438,              !- Coefficient2 x
+    0.00103745,              !- Coefficient3 x**2
+    -0.000023328,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+Curve:Cubic,
+    HPACHeatEIRFT Speed 3,   !- Name
+    1.19248,                 !- Coefficient1 Constant
+    -0.0300438,              !- Coefficient2 x
+    0.00103745,              !- Coefficient3 x**2
+    -0.000023328,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+Curve:Cubic,
+    HPACHeatEIRFT Speed 4,   !- Name
+    1.19248,                 !- Coefficient1 Constant
+    -0.0300438,              !- Coefficient2 x
+    0.00103745,              !- Coefficient3 x**2
+    -0.000023328,            !- Coefficient4 x**3
+    -20.0,                   !- Minimum Value of x
+    20.0,                    !- Maximum Value of x
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Dimensionless;           !- Output Unit Type
+
+! same as Doe-2 SDL-C78
+Curve:Cubic,
+    HPACCoolCapFF Speed 1,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+    
+Curve:Cubic,
+    HPACCoolCapFF,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACCoolCapFF Speed 2,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACCoolCapFF Speed 3,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACCoolCapFF Speed 4,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+! same as Doe-2 SDL-C78
+Curve:Cubic,
+    HPACCOOLEIRFF,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACCOOLEIRFF Speed 1,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACCOOLEIRFF Speed 2,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACCOOLEIRFF Speed 3,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+Curve:Cubic,
+    HPACCOOLEIRFF Speed 4,   !- Name
+    0.47278589,              !- Coefficient1 Constant
+    1.2433415,               !- Coefficient2 x
+    -1.0387055,              !- Coefficient3 x**2
+    0.32257813,              !- Coefficient4 x**3
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+    
+{% include "FanPowerCurve" %}
+
+!-   ===========  ALL OBJECTS IN CLASS: CURVE:BIQUADRATIC ===========
+
+Curve:Biquadratic,
+    PSZ-AC:1_CoolCLennoxStandard10Ton_TGA120S2B_CapFT,  !- Name
+    0.42415,                 !- Coefficient1 Constant
+    0.04426,                 !- Coefficient2 x
+    -0.00042,                !- Coefficient3 x**2
+    0.00333,                 !- Coefficient4 y
+    -0.00008,                !- Coefficient5 y**2
+    -0.00021,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+Curve:Biquadratic,
+    PSZ-AC:1_CoolCLennoxStandard10Ton_TGA120S2B_EIRFT,  !- Name
+    1.23649,                 !- Coefficient1 Constant
+    -0.02431,                !- Coefficient2 x
+    0.00057,                 !- Coefficient3 x**2
+    -0.01434,                !- Coefficient4 y
+    0.00063,                 !- Coefficient5 y**2
+    -0.00038,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+Curve:Biquadratic,
+    PSZ-AC:3_CoolCLennoxStandard10Ton_TGA120S2B_CapFT,  !- Name
+    0.42415,                 !- Coefficient1 Constant
+    0.04426,                 !- Coefficient2 x
+    -0.00042,                !- Coefficient3 x**2
+    0.00333,                 !- Coefficient4 y
+    -0.00008,                !- Coefficient5 y**2
+    -0.00021,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+Curve:Biquadratic,
+    PSZ-AC:3_CoolCLennoxStandard10Ton_TGA120S2B_EIRFT,  !- Name
+    1.23649,                 !- Coefficient1 Constant
+    -0.02431,                !- Coefficient2 x
+    0.00057,                 !- Coefficient3 x**2
+    -0.01434,                !- Coefficient4 y
+    0.00063,                 !- Coefficient5 y**2
+    -0.00038,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+Curve:Biquadratic,
+    PSZ-AC:4_CoolCLennoxStandard10Ton_TGA120S2B_CapFT,  !- Name
+    0.42415,                 !- Coefficient1 Constant
+    0.04426,                 !- Coefficient2 x
+    -0.00042,                !- Coefficient3 x**2
+    0.00333,                 !- Coefficient4 y
+    -0.00008,                !- Coefficient5 y**2
+    -0.00021,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+Curve:Biquadratic,
+    PSZ-AC:4_CoolCLennoxStandard10Ton_TGA120S2B_EIRFT,  !- Name
+    1.23649,                 !- Coefficient1 Constant
+    -0.02431,                !- Coefficient2 x
+    0.00057,                 !- Coefficient3 x**2
+    -0.01434,                !- Coefficient4 y
+    0.00063,                 !- Coefficient5 y**2
+    -0.00038,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+Curve:Biquadratic,
+    PSZ-AC:5_CoolCLennoxStandard10Ton_TGA120S2B_CapFT,  !- Name
+    0.42415,                 !- Coefficient1 Constant
+    0.04426,                 !- Coefficient2 x
+    -0.00042,                !- Coefficient3 x**2
+    0.00333,                 !- Coefficient4 y
+    -0.00008,                !- Coefficient5 y**2
+    -0.00021,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+Curve:Biquadratic,
+    PSZ-AC:5_CoolCLennoxStandard10Ton_TGA120S2B_EIRFT,  !- Name
+    1.23649,                 !- Coefficient1 Constant
+    -0.02431,                !- Coefficient2 x
+    0.00057,                 !- Coefficient3 x**2
+    -0.01434,                !- Coefficient4 y
+    0.00063,                 !- Coefficient5 y**2
+    -0.00038,                !- Coefficient6 x*y
+    17.00000,                !- Minimum Value of x
+    22.00000,                !- Maximum Value of x
+    29.00000,                !- Minimum Value of y
+    46.00000;                !- Maximum Value of y
+
+{% include "HPACCOOLEIRFT" %}
+
+Curve:Biquadratic,
+    HPACCOOLEIRFT,           !- Name
+     0.4152,            !- Coefficient1 Constant
+    0.0093,           !- Coefficient2 x
+    0.0002,            !- Coefficient3 x**2
+    0.0150,            !- Coefficient4 y
+    0.0008,            !- Coefficient5 y**2
+    -0.0018,           !- Coefficient6 x*y
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    21.11111,                !- Minimum Value of y
+    46.11111;                !- Maximum Value of y
+
+! operation condition varies
+Curve:Biquadratic,
+    HPACDefrostCAPFT,        !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCHeatWHFT Speed 1,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCHeatWHFT Speed 2,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCHeatWHFT Speed 3,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCHeatWHFT Speed 4,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! same as Doe-2 SDL-C4
+Curve:Biquadratic,
+    HPACCoolCapFT,   !- Name
+    0.476428E+00,            !- Coefficient1 Constant
+    0.401147E-01,            !- Coefficient2 x
+    0.226411E-03,            !- Coefficient3 x**2
+    -0.827136E-03,           !- Coefficient4 y
+    -0.732240E-05,           !- Coefficient5 y**2
+    -0.446278E-03,           !- Coefficient6 x*y
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+Curve:Biquadratic,
+    HPACCoolCapFT Speed 1,   !- Name
+    0.476428E+00,            !- Coefficient1 Constant
+    0.401147E-01,            !- Coefficient2 x
+    0.226411E-03,            !- Coefficient3 x**2
+    -0.827136E-03,           !- Coefficient4 y
+    -0.732240E-05,           !- Coefficient5 y**2
+    -0.446278E-03,           !- Coefficient6 x*y
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+Curve:Biquadratic,
+    HPACCoolCapFT Speed 2,   !- Name
+    0.476428E+00,            !- Coefficient1 Constant
+    0.401147E-01,            !- Coefficient2 x
+    0.226411E-03,            !- Coefficient3 x**2
+    -0.827136E-03,           !- Coefficient4 y
+    -0.732240E-05,           !- Coefficient5 y**2
+    -0.446278E-03,           !- Coefficient6 x*y
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+Curve:Biquadratic,
+    HPACCoolCapFT Speed 3,   !- Name
+    0.476428E+00,            !- Coefficient1 Constant
+    0.401147E-01,            !- Coefficient2 x
+    0.226411E-03,            !- Coefficient3 x**2
+    -0.827136E-03,           !- Coefficient4 y
+    -0.732240E-05,           !- Coefficient5 y**2
+    -0.446278E-03,           !- Coefficient6 x*y
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+Curve:Biquadratic,
+    HPACCoolCapFT Speed 4,   !- Name
+    0.476428E+00,            !- Coefficient1 Constant
+    0.401147E-01,            !- Coefficient2 x
+    0.226411E-03,            !- Coefficient3 x**2
+    -0.827136E-03,           !- Coefficient4 y
+    -0.732240E-05,           !- Coefficient5 y**2
+    -0.446278E-03,           !- Coefficient6 x*y
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+
+
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCCoolWHFT Speed 1,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCCoolWHFT Speed 2,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCCoolWHFT Speed 3,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+! operation condition varies
+Curve:Biquadratic,
+    HAPCCoolWHFT Speed 4,    !- Name
+    1.0,                     !- Coefficient1 Constant
+    0.0,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Coefficient4 y
+    0.0,                     !- Coefficient5 y**2
+    0.0,                     !- Coefficient6 x*y
+    0,                       !- Minimum Value of x
+    50,                      !- Maximum Value of x
+    0,                       !- Minimum Value of y
+    50,                      !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
+
+Output:VariableDictionary,
+    regular,                 !- Key Field
+    Name;                    !- Sort Option
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:SUMMARYREPORTS ===========
+
+!  Output:Variable,*,Site Outdoor Air Drybulb Temperature,Hourly;
+!  Output:Variable,*,Site Outdoor Air Wetbulb Temperature,Hourly;
+!  Output:Variable,HVACOperationSchd,Schedule Value,Hourly;
+!
+!  ! Outdoor Air Flow
+!
+!  Output:Variable,PSZ-AC:1_OAInlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:2_OAInlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:3_OAInlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:4_OAInlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:5_OAInlet Node,System Node VolFlowRate,Hourly;
+!
+!  ! Return Air Flow
+!
+!  Output:Variable,PSZ-AC:1 Supply Equipment Inlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:2 Supply Equipment Inlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:3 Supply Equipment Inlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:4 Supply Equipment Inlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:5 Supply Equipment Inlet Node,System Node VolFlowRate,Hourly;
+!
+!  ! Return Air Tdb
+!
+!  Output:Variable,PSZ-AC:1 Supply Equipment Inlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:2 Supply Equipment Inlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:3 Supply Equipment Inlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:4 Supply Equipment Inlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:5 Supply Equipment Inlet Node,System Node Temperature,Hourly;
+!
+!  ! Return Air Twb
+!
+!  Output:Variable,PSZ-AC:1 Supply Equipment Inlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:2 Supply Equipment Inlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:3 Supply Equipment Inlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:4 Supply Equipment Inlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:5 Supply Equipment Inlet Node,System Node Wetbulb Temperature,Hourly;
+!
+!  ! supply Air Flow
+!
+!  Output:Variable,PSZ-AC:1 Supply Equipment Outlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:2 Supply Equipment Outlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:3 Supply Equipment Outlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:4 Supply Equipment Outlet Node,System Node VolFlowRate,Hourly;
+!  Output:Variable,PSZ-AC:5 Supply Equipment Outlet Node,System Node VolFlowRate,Hourly;
+!
+!  ! supply Air Tdb
+!
+!  Output:Variable,PSZ-AC:1 Supply Equipment Outlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:2 Supply Equipment Outlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:3 Supply Equipment Outlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:4 Supply Equipment Outlet Node,System Node Temperature,Hourly;
+!  Output:Variable,PSZ-AC:5 Supply Equipment Outlet Node,System Node Temperature,Hourly;
+!
+!  ! supply Air Twb
+!
+!  Output:Variable,PSZ-AC:1 Supply Equipment Outlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:2 Supply Equipment Outlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:3 Supply Equipment Outlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:4 Supply Equipment Outlet Node,System Node Wetbulb Temperature,Hourly;
+!  Output:Variable,PSZ-AC:5 Supply Equipment Outlet Node,System Node Wetbulb Temperature,Hourly;
+!
+!  ! Coil Load
+!
+!  Output:Variable,*,Air System Cooling Coil Total Cooling Energy,Hourly;
+!  Output:Variable,*,Air System Heating Coil Total Heating Energy,Hourly;
+!
+!  ! SHW
+!
+!  Output:Variable,*,Water Heater Heating Rate,Hourly;
+!
+!  ! Fan and Pump
+!
+!  Output:Variable,*,Fan Electric Power,hourly; !- HVAC Average W
+!  Output:Variable,*,Pump Electric Power,hourly; !- HVAC Average W
+!  Output:Variable,*,Humidifier Electric Power,hourly; !- HVAC Average W
+!
+!  ! Utility and Submeter
+!
+!    Output:Meter,Electricity:Facility,Hourly;
+!    Output:Meter,Gas:Facility,Hourly;
+!    Output:Meter,InteriorLights:Electricity,Hourly;
+!    Output:Meter,ExteriorLights:Electricity,Hourly;
+!    Output:Meter,InteriorEquipment:Electricity,Hourly;
+!    Output:Meter,ExteriorEquipment:Electricity,Hourly;
+!    Output:Meter,Fans:Electricity,Hourly;
+!    Output:Meter,Pumps:Electricity,Hourly;
+!    Output:Meter,Heating:Electricity,Hourly;
+!    Output:Meter,Cooling:Electricity,Hourly;
+!    Output:Meter,HeatRejection:Electricity,Hourly;
+!    Output:Meter,Humidifier:Electricity,Hourly;
+!    Output:Meter,HeatRecovery:Electricity,Hourly;
+!    Output:Meter,DHW:Electricity,Hourly;
+!    Output:Meter,Cogeneration:Electricity,Hourly;
+!    Output:Meter,Refrigeration:Electricity,Hourly;
+!    Output:Meter,WaterSystems:Electricity,Hourly;
+!
+!    Output:Meter,InteriorLights:Gas,Hourly;
+!    Output:Meter,ExteriorLights:Gas,Hourly;
+!    Output:Meter,InteriorEquipment:Gas,Hourly;
+!    Output:Meter,ExteriorEquipment:Gas,Hourly;
+!    Output:Meter,Fans:Gas,Hourly;
+!    Output:Meter,Pumps:Gas,Hourly;
+!    Output:Meter,Heating:Gas,Hourly;
+!    Output:Meter,Cooling:Gas,Hourly;
+!    Output:Meter,HeatRejection:Gas,Hourly;
+!    Output:Meter,Humidifier:Gas,Hourly;
+!    Output:Meter,HeatRecovery:Gas,Hourly;
+!    Output:Meter,DHW:Gas,Hourly;
+!    Output:Meter,Cogeneration:Gas,Hourly;
+!    Output:Meter,Refrigeration:Gas,Hourly;
+!    Output:Meter,WaterSystems:Gas,Hourly;
+Output:Table:SummaryReports,
+    AllSummaryAndMonthly;    !- Report 1 Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:MONTHLY ===========
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary TaskPurpose ProgressIndicator,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary CodeName ASHRAE901,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary CodeYear 2019,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary CodeAmendment NoneAmend,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary PrototypeName OfficeSmall,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary TaskScope National,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary State National,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary ClimateZone 4A,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+Output:Table:Monthly,
+    NameHolderMonthlySummary RepresentCity USA_NY_NewYork,  !- Name
+    3,                       !- Digits After Decimal
+    Site Outdoor Air Drybulb,!- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating:Gas,             !- Variable or Meter 2 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 2
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUTCONTROL:TABLE:STYLE ===========
+
+OutputControl:Table:Style,
+    CommaAndHTML;            !- Column Separator
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUTCONTROL:REPORTINGTOLERANCES ===========
+
+OutputControl:ReportingTolerances,
+    0.556,                   !- Tolerance for Time Heating Setpoint Not Met {deltaC}
+    0.556;                   !- Tolerance for Time Cooling Setpoint Not Met {deltaC}
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLE ===========
+
+Output:Variable,
+    *,                       !- Key Value
+    Zone Mean Air Temperature,  !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Cooling Coil Total Cooling Rate ,  !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Heating Coil Heating Rate ,  !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Unitary System DX Coil Speed Level ,  !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Unitary System Compressor Part Load Ratio ,  !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Fan Electric Power ,     !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Fan Air Mass Flow Rate , !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Fan2MaxGlobal,           !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Unitary System Total Heating Rate ,  !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Fan1MaxGlobal,           !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Fan3MaxGlobal,           !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Fan4MaxGlobal,           !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Fan5MaxGlobal,           !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Heating Coil Electric Power ,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Heating Coil Gas Rate,   !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
+
+Output:Meter:MeterFileOnly,
+    Electricity:Facility,    !- Key Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Meter:MeterFileOnly,
+    ElectricityNet:Facility, !- Key Name
+    Hourly;                  !- Reporting Frequency
+
+Output:Meter:MeterFileOnly,
+    Gas:Facility,            !- Key Name
+    Hourly;                  !- Reporting Frequency
+
+
+  NodeList,
+    Dining Inlet Nodes,      !- Name
+    Dining Direct Air Inlet Node Name;  !- Node 1 Name
+
+  NodeList,
+    Dining Exhaust Nodes,    !- Name
+    Dining Exhaust Fan Node; !- Node 1 Name
+
+  NodeList,
+    Kitchen Inlet Nodes,     !- Name
+    Kitchen Direct Air Inlet Node Name;  !- Node 1 Name
+
+  NodeList,
+    Kitchen Exhaust Nodes,   !- Name
+    Kitchen Exhaust Fan Node;!- Node 1 Name
