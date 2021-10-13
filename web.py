@@ -22,7 +22,7 @@ class run(Resource):
         inputs = request.get_json(force=True)       
         data = inputs['input']
         os.chdir('/home/developer/idf')  
-        src = './template/{}/climate/{}'.format(data['BuildingType'],data['climate'])
+        src = './template/climate/{}'.format(data['climate'])
         dst = 'output/climates'
         copyfile(src, dst)
         load_template('./template/{}/construction'.format(data['BuildingType']),'wall_roof.template','output','wall_roof',data)
