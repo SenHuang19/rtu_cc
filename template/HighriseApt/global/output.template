@@ -3415,49 +3415,49 @@ Schedule:Compact,
 AirTerminal:SingleDuct:Uncontrolled,
     M SW Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M SW Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 1 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 AirTerminal:SingleDuct:Uncontrolled,
     M NW Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M NW Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 2 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 AirTerminal:SingleDuct:Uncontrolled,
     M SE Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M SE Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 3 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 AirTerminal:SingleDuct:Uncontrolled,
     M NE Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M NE Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 4 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 AirTerminal:SingleDuct:Uncontrolled,
     M N1 Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M N1 Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 5 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 AirTerminal:SingleDuct:Uncontrolled,
     M N2 Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M N2 Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 6 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 AirTerminal:SingleDuct:Uncontrolled,
     M S1 Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M S1 Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 7 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 AirTerminal:SingleDuct:Uncontrolled,
     M S2 Apartment Direct Air,  !- Name
     All On,                  !- Availability Schedule Name
-    M S2 Apartment Supply Inlet,       !- Zone Supply Air Node Name
+    Zone 8 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 
@@ -3565,65 +3565,65 @@ ZoneHVAC:EquipmentList,
  ZoneHVAC:EquipmentConnections,
     M SW Apartment,          !- Zone Name
     M SW Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M SW Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone1Inlets,             !- Zone Air Inlet Node or NodeList Name
     M SW Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M SW Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 1 Node,             !- Zone Air Node Name
     Zone 1 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     M NW Apartment,          !- Zone Name
     M NW Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M NW Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone2Inlets,             !- Zone Air Inlet Node or NodeList Name
     M NW Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M NW Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 2 Node,             !- Zone Air Node Name
     Zone 2 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     M SE Apartment,          !- Zone Name
     M SE Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M SE Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone3Inlets,             !- Zone Air Inlet Node or NodeList Name
     M SE Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M SE Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 3 Node,             !- Zone Air Node Name
     Zone 3 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     M NE Apartment,          !- Zone Name
     M NE Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M NE Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone4Inlets,             !- Zone Air Inlet Node or NodeList Name
     M NE Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M NE Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 4 Node,             !- Zone Air Node Name
     Zone 4 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     M N1 Apartment,          !- Zone Name
     M N1 Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M N1 Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone5Inlets,             !- Zone Air Inlet Node or NodeList Name
     M N1 Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M N1 Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 5 Node,             !- Zone Air Node Name
     Zone 5 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     M N2 Apartment,          !- Zone Name
     M N2 Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M N2 Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone6Inlets,             !- Zone Air Inlet Node or NodeList Name
     M N2 Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M N2 Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 6 Node,             !- Zone Air Node Name
     Zone 6 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     M S1 Apartment,          !- Zone Name
     M S1 Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M S1 Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone7Inlets,             !- Zone Air Inlet Node or NodeList Name
     M S1 Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M S1 Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 7 Node,             !- Zone Air Node Name
     Zone 7 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     M S2 Apartment,          !- Zone Name
     M S2 Apartment Equipment,!- Zone Conditioning Equipment List Name
-    M S2 Apartment Inlets,   !- Zone Air Inlet Node or NodeList Name
+    Zone8Inlets,             !- Zone Air Inlet Node or NodeList Name
     M S2 Apartment Zone Exhaust Node,  !- Zone Air Exhaust Node or NodeList Name
-    M S2 Apartment Zone Air Node,  !- Zone Air Node Name
+    Zone 8 Node,             !- Zone Air Node Name
     Zone 8 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
 
@@ -4031,42 +4031,42 @@ OutdoorAir:Mixer,
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 1,  !- Name
     Zone Equipment Inlet Node 1,  !- Inlet Node Name
-    M SW Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 1 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 2,  !- Name
     Zone Equipment Inlet Node 2,  !- Inlet Node Name
-    M NW Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 2 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 3,  !- Name
     Zone Equipment Inlet Node 3,  !- Inlet Node Name
-    M SE Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 3 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 4,  !- Name
     Zone Equipment Inlet Node 4,  !- Inlet Node Name
-    M NE Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 4 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 5,  !- Name
     Zone Equipment Inlet Node 5,  !- Inlet Node Name
-    M N1 Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 5 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 6,  !- Name
     Zone Equipment Inlet Node 6,  !- Inlet Node Name
-    M N2 Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 6 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 7,  !- Name
     Zone Equipment Inlet Node 7,  !- Inlet Node Name
-    M S1 Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 7 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 8,  !- Name
     Zone Equipment Inlet Node 8,  !- Inlet Node Name
-    M S2 Apartment Supply Inlet;  !- Outlet 1 Node Name
+    Zone 8 Inlet Node;       !- Outlet 1 Node Name
 
 !-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:SUPPLYPATH ===========
 
@@ -4255,6 +4255,7 @@ NodeList,
 
 NodeList,
     Zone1Inlets,             !- Name
+    M SW Apartment ERV Sup Fan Outlet Node,
     Zone 1 Inlet Node;       !- Node 1 Name
 
 NodeList,
@@ -4267,30 +4268,37 @@ NodeList,
 
 NodeList,
     Zone2Inlets,             !- Name
+    M NW Apartment ERV Sup Fan Outlet Node,
     Zone 2 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Zone3Inlets,             !- Name
+    M SE Apartment ERV Sup Fan Outlet Node,
     Zone 3 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Zone4Inlets,             !- Name
+    M NE Apartment ERV Sup Fan Outlet Node,
     Zone 4 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Zone5Inlets,             !- Name
+    M N1 Apartment ERV Sup Fan Outlet Node,
     Zone 5 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Zone6Inlets,             !- Name
+     M N2 Apartment ERV Sup Fan Outlet Node,
     Zone 6 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Zone7Inlets,             !- Name
+    M S1 Apartment ERV Sup Fan Outlet Node,
     Zone 7 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Zone8Inlets,             !- Name
+    M S2 Apartment ERV Sup Fan Outlet Node,
     Zone 8 Inlet Node;       !- Node 1 Name
 
 NodeList,
@@ -7009,48 +7017,6 @@ Fan:OnOff,
     ,                        !- Fan Efficiency Ratio Function of Speed Ratio Curve Name
     General;                 !- End-Use Subcategory
 !-   ===========  ALL OBJECTS related to CLASS: ZoneHVAC:EnergyRecoveryVentilator
-
-
-
-NodeList,
-    M SW Apartment Inlets,   !- Node List Name
-    M SW Apartment Supply Inlet,  !- Node_ID_1
-    M SW Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
-
-NodeList,
-    M NW Apartment Inlets,   !- Node List Name
-    M NW Apartment Supply Inlet,  !- Node_ID_1
-    M NW Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
-
-NodeList,
-    M SE Apartment Inlets,   !- Node List Name
-    M SE Apartment Supply Inlet,  !- Node_ID_1
-    M SE Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
-
-NodeList,
-    M NE Apartment Inlets,   !- Node List Name
-    M NE Apartment Supply Inlet,  !- Node_ID_1
-    M NE Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
-
-NodeList,
-    M N1 Apartment Inlets,   !- Node List Name
-    M N1 Apartment Supply Inlet,  !- Node_ID_1
-    M N1 Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
-
-NodeList,
-    M N2 Apartment Inlets,   !- Node List Name
-    M N2 Apartment Supply Inlet,  !- Node_ID_1
-    M N2 Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
-
-NodeList,
-    M S1 Apartment Inlets,   !- Node List Name
-    M S1 Apartment Supply Inlet,  !- Node_ID_1
-    M S1 Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
-
-NodeList,
-    M S2 Apartment Inlets,   !- Node List Name
-    M S2 Apartment Supply Inlet,  !- Node_ID_1
-    M S2 Apartment ERV Sup Fan Outlet Node;  !- Node_ID_2
     
     
 !-   ===========  ALL OBJECTS IN CLASS: UTILITYCOST:CHARGE:SIMPLE ===========
