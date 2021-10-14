@@ -5771,6 +5771,54 @@ Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
 
+!-   ===========  ALL OBJECTS IN CLASS: UTILITYCOST:CHARGE:SIMPLE ===========
 
+UtilityCost:Charge:Simple,
+    Electricity Charges,     !- Utility Cost Charge Simple Name
+    Electricity,             !- Tariff Name
+    totalEnergy,             !- Source Variable
+    Annual,                  !- Season
+    EnergyCharges,           !- Category Variable Name
+    {{Blended_Electricity_Rate}};                    !- Cost per Unit Value or Variable Name
+
+UtilityCost:Charge:Simple,
+    NaturalGas Charges,      !- Utility Cost Charge Simple Name
+    NaturalGas,              !- Tariff Name
+    totalEnergy,             !- Source Variable
+    Annual,                  !- Season
+    EnergyCharges,           !- Category Variable Name
+    {{Blended_NaturalGas_Rate}};                    !- Cost per Unit Value or Variable Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:PARAMETERS ===========
+
+LifeCycleCost:Parameters,
+    LCC,                     !- Name
+    EndOfYear,               !- Discounting Convention
+    ConstantDollar,          !- Inflation Approach
+    {{RealDiscountRate}},                    !- Real Discount Rate
+    ,                        !- Nominal Discount Rate
+    ,                        !- Inflation
+    January,                 !- Base Date Month
+    2022,                    !- Base Date Year
+    January,                 !- Service Date Month
+    2022,                    !- Service Date Year
+    {{RTU_Lifetime}},                      !- Length of Study Period in Years
+    ,                        !- Tax rate
+    None;                    !- Depreciation Method
+
+
+!-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:NONRECURRINGCOST ===========
+
+LifeCycleCost:NonrecurringCost,
+    RTU Capital Cost,        !- Name
+    Construction,            !- Category
+    {{CapitalCost}},                   !- Cost
+    ServicePeriod,           !- Start of Costs
+    0,                       !- Years from Start
+    0;                       !- Months from Start
+
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
 
 
