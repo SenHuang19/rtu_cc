@@ -3397,31 +3397,31 @@ ZoneControl:Thermostat,
   AirTerminal:SingleDuct:Uncontrolled,
     Back_Space Direct Air,   !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    Back_Space Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    Zone 1 Inlet Node,       !- Zone Supply Air Node Name
     AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     Core_Retail Direct Air,  !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    Core_Retail Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    Zone 2 Inlet Node,       !- Zone Supply Air Node Name
     AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     Point_Of_Sale Direct Air,!- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    Point_Of_Sale Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    Zone 3 Inlet Node,       !- Zone Supply Air Node Name
     AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     Front_Retail Direct Air, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    Front_Retail Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    Zone 4 Inlet Node,       !- Zone Supply Air Node Name
     AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     Front_Entry Direct Air, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    Front_Entry Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    Zone 5 Inlet Node,       !- Zone Supply Air Node Name
     AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
 
 
@@ -3475,9 +3475,9 @@ ZoneControl:Thermostat,
 ZoneHVAC:EquipmentConnections,
     Back_Space,               !- Zone Name
     Back_Space Equipment,     !- Zone Conditioning Equipment List Name
-    Back_Space Inlet Nodes,  !- Zone Air Inlet Node or NodeList Name
+    Zone1Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    Back_Space Air Node,     !- Zone Air Node Name
+    Zone 1 Node,             !- Zone Air Node Name
     Zone 1 Outlet Node;  !- !- Zone Return Air Node or NodeList Name
 
 
@@ -3485,33 +3485,33 @@ ZoneHVAC:EquipmentConnections,
   ZoneHVAC:EquipmentConnections,
     Core_Retail,              !- Zone Name
     Core_Retail Equipment,    !- Zone Conditioning Equipment List Name
-    Core_Retail Inlet Nodes,  !- Zone Air Inlet Node or NodeList Name
+    Zone2Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    Core_Retail Air Node,    !- Zone Air Node Name
+    Zone 2 Node,             !- Zone Air Node Name
     Zone 2 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     Point_Of_Sale,           !- Zone Name
     Point_Of_Sale Equipment, !- Zone Conditioning Equipment List Name
-    Point_Of_Sale Inlet Nodes,  !- Zone Air Inlet Node or NodeList Name
+    Zone3Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    Point_Of_Sale Air Node,  !- Zone Air Node Name
+    Zone 3 Node,             !- Zone Air Node Name
     Zone 3 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     Front_Retail,            !- Zone Name
     Front_Retail Equipment,  !- Zone Conditioning Equipment List Name
-    Front_Retail Inlet Nodes,!- Zone Air Inlet Node or NodeList Name
+    Zone4Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    Front_Retail Air Node,   !- Zone Air Node Name
+    Zone 4 Node,             !- Zone Air Node Name
     Zone 4 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     Front_Entry,             !- Zone Name
     Front_Entry Equipment,   !- Zone Conditioning Equipment List Name
-    Front_Entry Inlet Nodes, !- Zone Air Inlet Node or NodeList Name
-    ,  !- Zone Air Exhaust Node or NodeList Name
-    Front_Entry Air Node,    !- Zone Air Node Name
+    Zone5Inlets,             !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Zone 5 Node,             !- Zone Air Node Name
     Zone 5 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
 
@@ -3782,28 +3782,47 @@ OutdoorAir:Mixer,
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 1,  !- Name
     Zone Equipment Inlet Node 1,  !- Inlet Node Name
-    Back_Space Inlet Nodes;  !- Outlet 1 Node Name
+    Zone 1 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 2,  !- Name
     Zone Equipment Inlet Node 2,  !- Inlet Node Name
-    Core_Retail Inlet Nodes;  !- Outlet 1 Node Name
+    Zone 2 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 3,  !- Name
     Zone Equipment Inlet Node 3,  !- Inlet Node Name
-    Point_of_sale Inlet Nodes;  !- Outlet 1 Node Name
+    Zone 3 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 4,  !- Name
     Zone Equipment Inlet Node 4,  !- Inlet Node Name
-    Front_Retail Inlet Nodes;  !- Outlet 1 Node Name
+    Zone 4 Inlet Node;       !- Outlet 1 Node Name
 
 AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 5,  !- Name
     Zone Equipment Inlet Node 5,  !- Inlet Node Name
-    Front_Entry Inlet Nodes;  !- Outlet 1 Node Name
+    Zone 5 Inlet Node;       !- Outlet 1 Node Name
 
+NodeList,
+    Zone1Inlets,             !- Name
+    Zone 1 Inlet Node;       !- Node 1 Name
+
+NodeList,
+    Zone2Inlets,             !- Name
+    Zone 2 Inlet Node;       !- Node 1 Name
+
+NodeList,
+    Zone3Inlets,             !- Name
+    Zone 3 Inlet Node;       !- Node 1 Name
+
+NodeList,
+    Zone4Inlets,             !- Name
+    Zone 4 Inlet Node;       !- Node 1 Name
+
+NodeList,
+    Zone5Inlets,             !- Name
+    Zone 5 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Back_Space Inlet Nodes,  !- Name
@@ -4328,10 +4347,6 @@ EnergyManagementSystem:ProgramCallingManager,
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
     SETFanSpeed5;            !- Program Name 1
 
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed6,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed6;            !- Program Name 1
 
 
 
@@ -4369,11 +4384,7 @@ EnergyManagementSystem:Program,
     SET Fan5MaxGlobal=FanFlow5,  !- Program Line 2
     ENDIF;                   !- A4
 
-EnergyManagementSystem:Program,
-    SETFanMaxFlow6,          !- Name
-    If FanFlow6>Fan6MaxGlobal,  !- Program Line 1
-    SET Fan6MaxGlobal=FanFlow6,  !- Program Line 2
-    ENDIF;                   !- A4
+
 
 
 
@@ -5759,5 +5770,7 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
+
+
 
 
