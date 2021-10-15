@@ -4368,13 +4368,4 @@ LifeCycleCost:Parameters,
 
 !-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:NONRECURRINGCOST ===========
 
-LifeCycleCost:NonrecurringCost,
-    RTU Capital Cost,        !- Name
-    Construction,            !- Category
-    {{CapitalCost}},                   !- Cost
-    ServicePeriod,           !- Start of Costs
-    0,                       !- Years from Start
-    0;                       !- Months from Start
 
-
-!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
