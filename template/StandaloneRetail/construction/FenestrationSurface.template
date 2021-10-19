@@ -3,7 +3,7 @@
 FenestrationSurface:Detailed,
     Point_Of_Sale_Wall_South_Glazing,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Point_Of_Sale_Wall_South,!- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -511,7 +511,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Front_Retail_Wall_South_Glazing,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Front_Retail_Wall_South, !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -534,7 +534,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Front_Entry_Wall_South_Glazing,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Front_Entry_Wall_South,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -560,7 +560,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Front_Retail_Wall_South_Glazing,
     Window,
-    NonresWindow_U_0.57_SHGC_0.39,
+    Window,
     Front_Retail_Wall_South,
     ,
     AutoCalculate,
@@ -583,7 +583,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Front_Entry_Wall_South_Glazing,
     Window,
-    NonresWindow_U_0.57_SHGC_0.39,
+    Window,
     Front_Entry_Wall_South,
     ,
     AutoCalculate,
@@ -610,7 +610,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Front_Retail_Wall_South_Glazing,
     Window,
-    NonresWindow_U_0.57_SHGC_0.39,
+    Window,
     Front_Retail_Wall_South,
     ,
     AutoCalculate,
@@ -633,7 +633,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Front_Entry_Wall_South_Glazing,
     Window,
-    NonresWindow_U_0.57_SHGC_0.39,
+    Window,
     Front_Entry_Wall_South,
     ,
     AutoCalculate,
