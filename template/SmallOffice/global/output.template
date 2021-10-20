@@ -5414,7 +5414,7 @@ EnergyManagementSystem:InternalVariable,
 
 AvailabilityManager:Scheduled,
     Heat Pump 1 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Outdoor Air 1 Avail,     !- Name
@@ -5422,19 +5422,19 @@ AvailabilityManager:Scheduled,
 
 AvailabilityManager:Scheduled,
     Heat Pump 2 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 3 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 4 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 5 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Outdoor Air 2 Avail,     !- Name
