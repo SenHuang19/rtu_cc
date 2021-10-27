@@ -33,17 +33,19 @@ class run(Resource):
             dst = 'output/climates'
         else:
             return flask.jsonify({'error': 'missing climate', 'message': None})
+        if not 'id' in data:        
+            return flask.jsonify({'error': 'missing id', 'message': None})
         try:
             copyfile(src, dst)
         except:
             return flask.jsonify({'error': 'no such climate: {}'.format(data['climate']), 'message': None})
-        try:            
-            load_template('./template/{}/construction'.format(data['BuildingType']),'wall_roof.template','output','wall_roof',data)           
-            load_template('./template/{}/construction'.format(data['BuildingType']),'window.template','output','window',data)           
-            load_template('./template/{}/construction'.format(data['BuildingType']),'FenestrationSurface.template','output','FenestrationSurface',data)           
-            load_template('./template/{}/schedule'.format(data['BuildingType']),'HVACOperationSchd.template','output','HVACOperationSchd',data)       
-            load_template('./template/{}/schedule'.format(data['BuildingType']),'CLGSETP_SCH_NO_OPTIMUM.template','output','CLGSETP_SCH_NO_OPTIMUM',data)
-            load_template('./template/{}/schedule'.format(data['BuildingType']),'HTGSETP_SCH_NO_OPTIMUM.template','output','HTGSETP_SCH_NO_OPTIMUM',data)
+        try:     
+            load_template('./template/construction','wall_roof.template','output','wall_roof',data)                     
+            load_template('./template/construction','window.template','output','window',data)           
+            load_template('./template/{}/construction'.format(data['BuildingType']),'FenestrationSurface.template','output','FenestrationSurface',data)         
+            load_template('./template/schedule','HVACOperationSchd.template','output','HVACOperationSchd',data)                   
+            load_template('./template/schedule','CLGSETP_SCH_NO_OPTIMUM.template','output','CLGSETP_SCH_NO_OPTIMUM',data)
+            load_template('./template/schedule','HTGSETP_SCH_NO_OPTIMUM.template','output','HTGSETP_SCH_NO_OPTIMUM',data)
             load_template('./template/{}/devices'.format(data['BuildingType']),'MinOAFraction.template','output','MinOAFraction',data)
             load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil.template','output','cooling_coil',data)
             load_template('./template/{}/devices'.format(data['BuildingType']),'heating_coil.template','output','heating_coil',data)
@@ -160,4 +162,4 @@ api.add_resource(run, '/run')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0',port=81,debug=True)
