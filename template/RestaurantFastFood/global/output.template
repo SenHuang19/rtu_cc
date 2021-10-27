@@ -2517,13 +2517,13 @@ Sizing:Parameters,
   AirTerminal:SingleDuct:Uncontrolled,
     Dining Direct Air,       !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    Dining Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    Zone 1 Inlet Node,       !- Zone Supply Air Node Name
     AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     Kitchen Direct Air,      !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    Kitchen Direct Air Inlet Node Name,  !- Zone Supply Air Node Name
+    Zone 2 Inlet Node,       !- Zone Supply Air Node Name
     AUTOSIZE;                !- Maximum Air Flow Rate {m3/s}
 
 
@@ -2560,17 +2560,17 @@ Sizing:Parameters,
   ZoneHVAC:EquipmentConnections,
     Dining,                  !- Zone Name
     Dining Equipment,        !- Zone Conditioning Equipment List Name
-    Dining Inlet Nodes,      !- Zone Air Inlet Node or NodeList Name
+    Zone1Inlets,             !- Zone Air Inlet Node or NodeList Name
     Dining Exhaust Nodes,    !- Zone Air Exhaust Node or NodeList Name
-    Dining Air Node,         !- Zone Air Node Name
+    Zone 1 Node,             !- Zone Air Node Name
     Zone 1 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     Kitchen,                  !- Zone Name
     Kitchen Equipment,        !- Zone Conditioning Equipment List Name
-    Kitchen Inlet Nodes,      !- Zone Air Inlet Node or NodeList Name
+    Zone2Inlets,             !- Zone Air Inlet Node or NodeList Name
     Kitchen Exhaust Nodes,   !- Zone Air Exhaust Node or NodeList Name
-    Kitchen Air Node,        !- Zone Air Node Name
+    Zone 2 Node,             !- Zone Air Node Name
     Zone 2 Outlet Node;  !- Zone Return Air Node Name
 
 !-   ===========  ALL OBJECTS IN CLASS: FAN:ONOFF ===========
@@ -2740,14 +2740,14 @@ OutdoorAir:Mixer,
 
 !-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:ZONESPLITTER ===========
   AirLoopHVAC:ZoneSplitter,
-    PSZ-AC_1:1 Supply Air Splitter,  !- Name
-    PSZ-AC_1:1 Zone Equipment Inlet Node,  !- Inlet Node Name
-    Dining Direct Air Inlet Node Name;  !- Outlet 1 Node Name
+    Zone Supply Air Splitter 1,  !- Name
+    Zone Equipment Inlet Node 1,  !- Inlet Node Name
+    Zone 1 Inlet Node;       !- Outlet 1 Node Name
 
   AirLoopHVAC:ZoneSplitter,
-    PSZ-AC_2:2 Supply Air Splitter,  !- Name
-    PSZ-AC_2:2 Zone Equipment Inlet Node,  !- Inlet Node Name
-    Kitchen Direct Air Inlet Node Name;  !- Outlet 1 Node Name
+    Zone Supply Air Splitter 2,  !- Name
+    Zone Equipment Inlet Node 2,  !- Inlet Node Name
+    Zone 2 Inlet Node;       !- Outlet 1 Node Name
 
 !-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:SUPPLYPATH ===========
 
@@ -2817,6 +2817,10 @@ NodeList,
 NodeList,
     Zone1Inlets,             !- Name
     Zone 1 Inlet Node;       !- Node 1 Name
+
+NodeList,
+    Zone2Inlets,             !- Name
+    Zone 2 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Perimeter_ZN_1 List,     !- Name
@@ -4324,3 +4328,44 @@ Output:Meter:MeterFileOnly,
   NodeList,
     Kitchen Exhaust Nodes,   !- Name
     Kitchen Exhaust Fan Node;!- Node 1 Name
+    
+    !-   ===========  ALL OBJECTS IN CLASS: UTILITYCOST:CHARGE:SIMPLE ===========
+
+UtilityCost:Charge:Simple,
+    Electricity Charges,     !- Utility Cost Charge Simple Name
+    Electricity,             !- Tariff Name
+    totalEnergy,             !- Source Variable
+    Annual,                  !- Season
+    EnergyCharges,           !- Category Variable Name
+    {{Blended_Electricity_Rate}};                    !- Cost per Unit Value or Variable Name
+
+UtilityCost:Charge:Simple,
+    NaturalGas Charges,      !- Utility Cost Charge Simple Name
+    NaturalGas,              !- Tariff Name
+    totalEnergy,             !- Source Variable
+    Annual,                  !- Season
+    EnergyCharges,           !- Category Variable Name
+    {{Blended_NaturalGas_Rate}};                    !- Cost per Unit Value or Variable Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:PARAMETERS ===========
+
+LifeCycleCost:Parameters,
+    LCC,                     !- Name
+    EndOfYear,               !- Discounting Convention
+    ConstantDollar,          !- Inflation Approach
+    {{RealDiscountRate}},                    !- Real Discount Rate
+    ,                        !- Nominal Discount Rate
+    ,                        !- Inflation
+    January,                 !- Base Date Month
+    2022,                    !- Base Date Year
+    January,                 !- Service Date Month
+    2022,                    !- Service Date Year
+    {{RTU_Lifetime}},                      !- Length of Study Period in Years
+    ,                        !- Tax rate
+    None;                    !- Depreciation Method
+
+
+!-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:NONRECURRINGCOST ===========
+
+

@@ -5414,7 +5414,7 @@ EnergyManagementSystem:InternalVariable,
 
 AvailabilityManager:Scheduled,
     Heat Pump 1 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Outdoor Air 1 Avail,     !- Name
@@ -5422,19 +5422,19 @@ AvailabilityManager:Scheduled,
 
 AvailabilityManager:Scheduled,
     Heat Pump 2 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 3 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 4 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 5 Avail,       !- Name
-    HVACOperationSchd;     !- Schedule Name
+    ALWAYS_ON;     !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Outdoor Air 2 Avail,     !- Name
@@ -6712,3 +6712,44 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
+    
+
+
+!-   ===========  ALL OBJECTS IN CLASS: UTILITYCOST:CHARGE:SIMPLE ===========
+
+UtilityCost:Charge:Simple,
+    Electricity Charges,     !- Utility Cost Charge Simple Name
+    Electricity,             !- Tariff Name
+    totalEnergy,             !- Source Variable
+    Annual,                  !- Season
+    EnergyCharges,           !- Category Variable Name
+    {{Blended_Electricity_Rate}};                    !- Cost per Unit Value or Variable Name
+
+UtilityCost:Charge:Simple,
+    NaturalGas Charges,      !- Utility Cost Charge Simple Name
+    NaturalGas,              !- Tariff Name
+    totalEnergy,             !- Source Variable
+    Annual,                  !- Season
+    EnergyCharges,           !- Category Variable Name
+    {{Blended_NaturalGas_Rate}};                    !- Cost per Unit Value or Variable Name
+
+
+!-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:PARAMETERS ===========
+
+LifeCycleCost:Parameters,
+    LCC,                     !- Name
+    EndOfYear,               !- Discounting Convention
+    ConstantDollar,          !- Inflation Approach
+    {{RealDiscountRate}},                    !- Real Discount Rate
+    ,                        !- Nominal Discount Rate
+    ,                        !- Inflation
+    January,                 !- Base Date Month
+    2022,                    !- Base Date Year
+    January,                 !- Service Date Month
+    2022,                    !- Service Date Year
+    {{RTU_Lifetime}},                      !- Length of Study Period in Years
+    ,                        !- Tax rate
+    None;                    !- Depreciation Method
+
+
+
