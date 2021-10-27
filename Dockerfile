@@ -25,7 +25,7 @@ RUN apt-get update --allow-releaseinfo-change && apt-get install -y ca-certifica
 RUN cd /usr/local/bin \
     && find -L . -type l -delete
 
-RUN pip install --user flask-restful pandas requests
+RUN pip install --user flask-restful pandas requests psutil
 
 RUN mkdir /home/developer
 
@@ -40,3 +40,7 @@ COPY wrapper.py /home/developer/idf/
 COPY template /home/developer/idf/template
 
 COPY wea /home/developer/idf/wea
+
+WORKDIR /home/developer/idf
+
+CMD python web.py
