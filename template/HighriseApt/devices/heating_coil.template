@@ -1399,7 +1399,8 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 7,  !- Air Inlet Node Name
     Air Loop Outlet Node 7;  !- Air Outlet Node Name
 
-
+{%- endif %}
+{%- endif %}
 
 {%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="HeatPump")  %} 
 Coil:Heating:DX:SingleSpeed,
@@ -1598,8 +1599,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 {%- endif %}
 	
-{%- endif %}
-{%- endif %}
+
 
 
 
