@@ -1,24 +1,6 @@
 
 !-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
-FenestrationSurface:Detailed,
-    Point_Of_Sale_Wall_South_Glazing,  !- Name
-    Window,                  !- Surface Type
-    Window,  !- Construction Name
-    Point_Of_Sale_Wall_South,!- Building Surface Name
-    ,                        !- Outside Boundary Condition Object
-    AutoCalculate,           !- View Factor to Ground
-    ,                        !- Frame and Divider Name
-    1.0000,                  !- Multiplier
-    4,                       !- Number of Vertices
-    2,                       !- Vertex 1 X-coordinate {m}
-    0.000000000000,          !- Vertex 1 Y-coordinate {m}
-    0.000000000000,          !- Vertex 1 Z-coordinate {m}
-    0.050000000000,          !- Vertex 2 X-coordinate {m}
-    0.000000000000,          !- Vertex 2 Y-coordinate {m}
-    0.000000000000,          !- Vertex 2 Z-coordinate {m}
-    25.085000000000,         !- Vertex 3 X-coordinate {m}
-    ,                        !- Vertex 3 Y-coordinate {m}
-    ;                        !- Vertex 3 Z-coordinate {m}
+
 
 FenestrationSurface:Detailed,
     Core_Retail_Wall_West_2_Door3,  !- Name
