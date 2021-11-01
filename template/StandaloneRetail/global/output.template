@@ -868,35 +868,6 @@ Schedule:Compact,
     Until: 19:00,21.11,      !- Field 43
     Until: 24:00,15.56;      !- Field 45
 
-  Schedule:Compact,
-    HTGSETP_SCH_NO_OPTIMUM,  !- Name
-    Temperature,             !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: WinterDesignDay,    !- Field 2
-    Until: 06:00,15.56,      !- Field 3
-    Until: 07:00,18.33,      !- Field 5
-    Until: 21:00,21.11,      !- Field 7
-    Until: 24:00,15.56,      !- Field 9
-    For: Weekdays,           !- Field 11
-    Until: 05:00,15.56,      !- Field 12
-    Until: 06:00,21.11,      !- Field 14
-    Until: 07:00,21.11,      !- Field 16
-    Until: 21:00,21.11,      !- Field 18
-    Until: 24:00,15.56,      !- Field 20
-    For SummerDesignDay,     !- Field 22
-    Until: 24:00,15.56,      !- Field 23
-    For: Saturday,           !- Field 25
-    Until: 05:00,15.56,      !- Field 26
-    Until: 06:00,21.11,      !- Field 28
-    Until: 07:00,21.11,      !- Field 30
-    Until: 22:00,21.11,      !- Field 32
-    Until: 24:00,15.56,      !- Field 34
-    For: Sunday Holidays AllOtherDays, !- Field 36
-    Until: 07:00,15.56,      !- Field 37
-    Until: 08:00,21.11,      !- Field 39
-    Until: 09:00,21.11,      !- Field 41
-    Until: 19:00,21.11,      !- Field 43
-    Until: 24:00,15.56;      !- Field 45
 
   Schedule:Compact,
     HTGSETP_SCH_FrontEntry_STD2013,  !- Name
@@ -1020,37 +991,6 @@ Schedule:Compact,
     Until: 09:00,25.6,       !- Field 41
     Until: 19:00,23.89,      !- Field 43
     Until: 24:00,29.44;      !- Field 45
-
-  Schedule:Compact,
-    CLGSETP_SCH_NO_OPTIMUM,  !- Name
-    Temperature,             !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: SummerDesignDay,    !- Field 2
-    Until: 06:00,29.44,      !- Field 3
-    Until: 07:00,26.67,      !- Field 5
-    Until: 21:00,23.89,      !- Field 7
-    Until: 24:00,29.44,      !- Field 9
-    For: Weekdays,           !- Field 11
-    Until: 05:00,29.44,      !- Field 12
-    Until: 06:00,23.89,      !- Field 14
-    Until: 07:00,23.89,      !- Field 16
-    Until: 21:00,23.89,      !- Field 18
-    Until: 24:00,29.44,      !- Field 20
-    For: Saturday,           !- Field 22
-    Until: 05:00,29.44,      !- Field 23
-    Until: 06:00,23.89,      !- Field 25
-    Until: 07:00,23.89,      !- Field 27
-    Until: 22:00,23.89,      !- Field 29
-    Until: 24:00,29.44,      !- Field 31
-    For WinterDesignDay,     !- Field 33
-    Until: 24:00,29.44,      !- Field 34
-    For: Sunday Holidays AllOtherDays, !- Field 36
-    Until: 07:00,29.44,      !- Field 37
-    Until: 08:00,23.89,      !- Field 39
-    Until: 09:00,23.89,      !- Field 41
-    Until: 19:00,23.89,      !- Field 43
-    Until: 24:00,29.44;      !- Field 45
-
 
 
   Schedule:Compact,
@@ -3824,26 +3764,6 @@ AirLoopHVAC:ZoneSplitter,
     Zone Supply Air Splitter 5,  !- Name
     Zone Equipment Inlet Node 5,  !- Inlet Node Name
     Zone 5 Inlet Node;       !- Outlet 1 Node Name
-
-NodeList,
-    Zone1Inlets,             !- Name
-    Zone 1 Inlet Node;       !- Node 1 Name
-
-NodeList,
-    Zone2Inlets,             !- Name
-    Zone 2 Inlet Node;       !- Node 1 Name
-
-NodeList,
-    Zone3Inlets,             !- Name
-    Zone 3 Inlet Node;       !- Node 1 Name
-
-NodeList,
-    Zone4Inlets,             !- Name
-    Zone 4 Inlet Node;       !- Node 1 Name
-
-NodeList,
-    Zone5Inlets,             !- Name
-    Zone 5 Inlet Node;       !- Node 1 Name
 
 NodeList,
     Back_Space Inlet Nodes,  !- Name
