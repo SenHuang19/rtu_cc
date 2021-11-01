@@ -154,6 +154,19 @@ Version,9.0;
   Construction,
     Swinging Door_con,       !- Name
     Opaque Door panel_con;   !- Outside Layer
+    
+    
+Construction:FfactorGroundFloor,
+    Dining_Floor_Ffactor,    !- Name
+    1.26363,                 !- F-Factor {W/m-K}
+    116.17147592,            !- Area {m2}
+    30.4856;                 !- PerimeterExposed {m}
+
+Construction:FfactorGroundFloor,
+    Kitchen_Floor_Ffactor,   !- Name
+    1.26363,                 !- F-Factor {W/m-K}
+    116.17147592,            !- Area {m2}
+    30.4856;                 !- PerimeterExposed {m}
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
 
@@ -274,6 +287,42 @@ Schedule:Compact,
         Until: 22:00,0.6,               !- Field 29
         Until: 23:00,0.5,               !- Field 30
         Until: 24:00,0.3;               !- Field 31
+        
+  Schedule:Compact,
+    Supply-Temp-Schedule,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    12.8;                      !- Field 4
+    
+    
+Schedule:Compact,
+    OutdoorAirAvailSched,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 3/31,           !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0,                     !- Field 4
+    Through: 9/30,           !- Field 5
+    For: WeekDays,           !- Field 6
+    Until: 7:00,             !- Field 7
+    0.0,                     !- Field 8
+    Until: 17:00,            !- Field 9
+    1.0,                     !- Field 10
+    Until: 24:00,            !- Field 11
+    0.0,                     !- Field 12
+    For: SummerDesignDay WinterDesignDay,  !- Field 13
+    Until: 24:00,            !- Field 14
+    0.0,                     !- Field 15
+    For: AllOtherDays,       !- Field 16
+    Until: 24:00,            !- Field 17
+    0.0,                     !- Field 18
+    Through: 12/31,          !- Field 19
+    For: AllDays,            !- Field 20
+    Until: 24:00,            !- Field 21
+    1.0;                     !- Field 22
+
 
   Schedule:Compact,
     BLDG_LIGHT_KITCHEN_SCH,  !- Name
@@ -2400,7 +2449,7 @@ Sizing:Parameters,
 !-   ===========  ALL OBJECTS IN CLASS: SIZING:SYSTEM ===========
 
   Sizing:System,
-    PSZ-AC_1:1,              !- AirLoop Name
+    Typical Terminal Reheat 1,              !- AirLoop Name
     Sensible,                !- Type of Load to Size On
     AUTOSIZE,                !- Design Outdoor Air Flow Rate {m3/s}
     1.0000,                  !- Central Heating Maximum System Air Flow Ratio
@@ -2439,7 +2488,7 @@ Sizing:Parameters,
     OnOff;                   !- Central Cooling Capacity Control Method
 
   Sizing:System,
-    PSZ-AC_2:2,               !- AirLoop Name
+    Typical Terminal Reheat 2,               !- AirLoop Name
     Sensible,                !- Type of Load to Size On
     AUTOSIZE,                !- Design Outdoor Air Flow Rate {m3/s}
     1.0000,                  !- Central Heating Maximum System Air Flow Ratio
@@ -3091,7 +3140,7 @@ AvailabilityManager:Scheduled,
 
 AvailabilityManager:Scheduled,
     Outdoor Air 1 Avail,     !- Name
-    OutdoorAirAvailSched;    !- Schedule Name
+    HVACOperationSchd;    !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 2 Avail,       !- Name
@@ -3103,7 +3152,7 @@ AvailabilityManager:Scheduled,
 
 AvailabilityManager:Scheduled,
     Outdoor Air 2 Avail,     !- Name
-    OutdoorAirAvailSched;    !- Schedule Name
+    HVACOperationSchd;    !- Schedule Name
 
 
 
