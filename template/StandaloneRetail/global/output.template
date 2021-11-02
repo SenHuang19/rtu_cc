@@ -1194,6 +1194,41 @@ Schedule:Compact,
   Schedule:Constant,SZ_system_OA_Max_Frac_SCH,Fraction,
   0.7;
 
+
+Schedule:Compact,
+    Supply-Temp-Schedule,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    12.8;                      !- Field 4
+
+
+Schedule:Compact,
+    OutdoorAirAvailSched,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 3/31,           !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0,                     !- Field 4
+    Through: 9/30,           !- Field 5
+    For: WeekDays,           !- Field 6
+    Until: 7:00,             !- Field 7
+    0.0,                     !- Field 8
+    Until: 17:00,            !- Field 9
+    1.0,                     !- Field 10
+    Until: 24:00,            !- Field 11
+    0.0,                     !- Field 12
+    For: SummerDesignDay WinterDesignDay,  !- Field 13
+    Until: 24:00,            !- Field 14
+    0.0,                     !- Field 15
+    For: AllOtherDays,       !- Field 16
+    Until: 24:00,            !- Field 17
+    0.0,                     !- Field 18
+    Through: 12/31,          !- Field 19
+    For: AllDays,            !- Field 20
+    Until: 24:00,            !- Field 21
+    1.0;                     !- Field 22
 !
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
  
@@ -1632,7 +1667,57 @@ Construction,
     Window_U_0.36_SHGC_0.36, !- Name
     Glazing Layer;           !- Outside Layer
 
+Construction:FfactorGroundFloor,
+    Back_Space_Floor_Ffactor,!- Name
+    1.26363,                 !- F-Factor {W/m-K}
+    379.8899999999999,       !- Area {m2}
+    68.27000000000001;       !- PerimeterExposed {m}
 
+Construction:FfactorGroundFloor,
+    Core_Retail_Floor_Ffactor,  !- Name
+    1.26363,                 !- F-Factor {W/m-K}
+    1600.4829,               !- Area {m2}
+    58.53999999999999;       !- PerimeterExposed {m}
+
+Construction:FfactorGroundFloor,
+    Point_Of_Sale_Floor_Ffactor,  !- Name
+    1.26363,                 !- F-Factor {W/m-K}
+    150.81,                  !- Area {m2}
+    31.135;                  !- PerimeterExposed {m}
+
+Construction:FfactorGroundFloor,
+    Front_Retail_Floor_Ffactor,  !- Name
+    1.26363,                 !- F-Factor {W/m-K}
+    150.81,                  !- Area {m2}
+    31.135;                  !- PerimeterExposed {m}
+
+Construction:FfactorGroundFloor,
+    Front_Entry_Floor_Ffactor,  !- Name
+    1.26363,                 !- F-Factor {W/m-K}
+    12.0,                    !- Area {m2}
+    4.0;                     !- PerimeterExposed {m}
+
+WindowProperty:FrameAndDivider,
+    Skylight_Frame,          !- Name
+    0.059953215290085,       !- Frame Width {m}
+    ,                        !- Frame Outside Projection {m}
+    ,                        !- Frame Inside Projection {m}
+    283.91315,               !- Frame Conductance {W/m2-K}
+    1,                       !- Ratio of Frame-Edge Glass Conductance to Center-Of-Glass Conductance
+    0.7,                     !- Frame Solar Absorptance
+    0.7,                     !- Frame Visible Absorptance
+    0.9,                     !- Frame Thermal Hemispherical Emissivity
+    ,                        !- Divider Type
+    ,                        !- Divider Width {m}
+    ,                        !- Number of Horizontal Dividers
+    ,                        !- Number of Vertical Dividers
+    ,                        !- Divider Outside Projection {m}
+    ,                        !- Divider Inside Projection {m}
+    ,                        !- Divider Conductance {W/m2-K}
+    1,                       !- Ratio of Divider-Edge Glass Conductance to Center-Of-Glass Conductance
+    ,                        !- Divider Solar Absorptance
+    ,                        !- Divider Visible Absorptance
+    0.9;                     !- Divider Thermal Hemispherical Emissivity
 
 
 
@@ -2476,15 +2561,6 @@ WindowMaterial:SimpleGlazingSystem,
 
 !-   ===========  ALL OBJECTS IN CLASS: SHADING:ZONE:DETAILED ===========
 
-  Shading:Zone:Detailed,
-    Entry Canopy,            !- Name
-    W_CorridorFlr1_2_0_0,    !- Base Surface Name
-    ,                        !- Transmittance Schedule Name
-    4,                       !- Number of Vertices
-    0,4.57177703814647,3.35263649464074,  !- X,Y,Z ==> Vertex 1 {m}
-    0,13.7153311144394,3.35263649464074,  !- X,Y,Z ==> Vertex 2 {m}
-    -9.14355407629293,13.7153311144394,3.35263649464074,  !- X,Y,Z ==> Vertex 3 {m}
-    -9.14355407629293,4.57177703814647,3.35263649464074;  !- X,Y,Z ==> Vertex 4 {m}
 
 InternalMass,
     Back_Space_InternalMass_1,  !- Name
@@ -4435,7 +4511,7 @@ AvailabilityManager:Scheduled,
 
 AvailabilityManager:Scheduled,
     Outdoor Air 1 Avail,     !- Name
-    OutdoorAirAvailSched;    !- Schedule Name
+    HVACOperationSchd;    !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Heat Pump 2 Avail,       !- Name
@@ -4458,20 +4534,19 @@ AvailabilityManager:Scheduled,
 
 AvailabilityManager:Scheduled,
     Outdoor Air 2 Avail,     !- Name
-    OutdoorAirAvailSched;    !- Schedule Name
+    HVACOperationSchd;    !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Outdoor Air 3 Avail,     !- Name
-    OutdoorAirAvailSched;    !- Schedule Name
+    HVACOperationSchd;    !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Outdoor Air 4 Avail,     !- Name
-    OutdoorAirAvailSched;    !- Schedule Name
+    HVACOperationSchd;    !- Schedule Name
 
 AvailabilityManager:Scheduled,
     Outdoor Air 5 Avail,     !- Name
-    OutdoorAirAvailSched;    !- Schedule Name
-
+    HVACOperationSchd;    !- Schedule Name
 
 
 
