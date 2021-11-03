@@ -20845,38 +20845,38 @@ Sizing:Zone,
 
   AirTerminal:SingleDuct:Uncontrolled,
     FrontLoungeFlr1 Direct Air,  !- Name
-    COMPACT HVAC-ALWAYS 1,   !- Availability Schedule Name
-    FrontLoungeFlr1 Zone Equip Inlet,  !- Zone Supply Air Node Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Zone 1 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     RestRoomFlr1 Direct Air, !- Name
-    COMPACT HVAC-ALWAYS 1,   !- Availability Schedule Name
-    RestRoomFlr1 Zone Equip Inlet,  !- Zone Supply Air Node Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Zone 2 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     MeetingRoomFlr1 Direct Air,  !- Name
-    COMPACT HVAC-ALWAYS 1,   !- Availability Schedule Name
-    MeetingRoomFlr1 Zone Equip Inlet,  !- Zone Supply Air Node Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Zone 3 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     EmployeeLoungeFlr1 Direct Air,  !- Name
-    COMPACT HVAC-ALWAYS 1,   !- Availability Schedule Name
-    EmployeeLoungeFlr1 Zone Equip Inlet,  !- Zone Supply Air Node Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Zone 4 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     ExerciseCenterFlr1 Direct Air,  !- Name
-    COMPACT HVAC-ALWAYS 1,   !- Availability Schedule Name
-    ExerciseCenterFlr1 Zone Equip Inlet,  !- Zone Supply Air Node Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Zone 5 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
   AirTerminal:SingleDuct:Uncontrolled,
     FrontOfficeFlr1 Direct Air,  !- Name
-    COMPACT HVAC-ALWAYS 1,   !- Availability Schedule Name
-    FrontOfficeFlr1 Zone Equip Inlet,  !- Zone Supply Air Node Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    Zone 6 Inlet Node,       !- Zone Supply Air Node Name
     autosize;                !- Maximum Air Flow Rate {m3/s}
 
 
@@ -21650,49 +21650,49 @@ Sizing:Zone,
   ZoneHVAC:EquipmentConnections,
     FrontLoungeFlr1,         !- Zone Name
     FrontLoungeFlr1 Equipment,  !- Zone Conditioning Equipment List Name
-    FrontLoungeFlr1 Zone Equip Inlet,  !- Zone Air Inlet Node or NodeList Name
+    Zone1Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    FrontLoungeFlr1 Zone Air Node,  !- Zone Air Node Name
+    Zone 1 Node,             !- Zone Air Node Name
     Zone 1 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     RestRoomFlr1,            !- Zone Name
     RestRoomFlr1 Equipment,  !- Zone Conditioning Equipment List Name
-    RestRoomFlr1 Zone Equip Inlet,  !- Zone Air Inlet Node or NodeList Name
+    Zone2Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    RestRoomFlr1 Zone Air Node,  !- Zone Air Node Name
+    Zone 2 Node,             !- Zone Air Node Name
     Zone 2 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     MeetingRoomFlr1,         !- Zone Name
     MeetingRoomFlr1 Equipment,  !- Zone Conditioning Equipment List Name
-    MeetingRoomFlr1 Zone Equip Inlet,  !- Zone Air Inlet Node or NodeList Name
+    Zone3Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    MeetingRoomFlr1 Zone Air Node,  !- Zone Air Node Name
+    Zone 3 Node,             !- Zone Air Node Name
     Zone 3 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     EmployeeLoungeFlr1,      !- Zone Name
     EmployeeLoungeFlr1 Equipment,  !- Zone Conditioning Equipment List Name
-    EmployeeLoungeFlr1 Zone Equip Inlet,  !- Zone Air Inlet Node or NodeList Name
+    Zone4Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    EmployeeLoungeFlr1 Zone Air Node,  !- Zone Air Node Name
+    Zone 4 Node,             !- Zone Air Node Name
     Zone 4 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     ExerciseCenterFlr1,      !- Zone Name
     ExerciseCenterFlr1 Equipment,  !- Zone Conditioning Equipment List Name
-    ExerciseCenterFlr1 Zone Equip Inlet,  !- Zone Air Inlet Node or NodeList Name
+    Zone5Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    ExerciseCenterFlr1 Zone Air Node,  !- Zone Air Node Name
+    Zone 5 Node,             !- Zone Air Node Name
     Zone 5 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
     FrontOfficeFlr1,         !- Zone Name
     FrontOfficeFlr1 Equipment,  !- Zone Conditioning Equipment List Name
-    FrontOfficeFlr1 Zone Equip Inlet,  !- Zone Air Inlet Node or NodeList Name
+    Zone6Inlets,             !- Zone Air Inlet Node or NodeList Name
     ,                        !- Zone Air Exhaust Node or NodeList Name
-    FrontOfficeFlr1 Zone Air Node,  !- Zone Air Node Name
+    Zone 6 Node,             !- Zone Air Node Name
     Zone 6 Outlet Node;  !- Zone Return Air Node or NodeList Name
 
   ZoneHVAC:EquipmentConnections,
