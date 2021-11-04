@@ -6146,7 +6146,7 @@ Output:VariableDictionary,
 !    Output:Meter,Refrigeration:Gas,Hourly;
 !    Output:Meter,WaterSystems:Gas,Hourly;
 Output:Table:SummaryReports,
-    AllSummaryAndMonthly;    !- Report 1 Name
+    EquipmentSummary;        !- Report 3 Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:MONTHLY ===========
