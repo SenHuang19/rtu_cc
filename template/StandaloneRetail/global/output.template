@@ -5699,78 +5699,23 @@ OutputControl:ReportingTolerances,
 
 Output:Variable,
     *,                       !- Key Value
-    Zone Mean Air Temperature,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Cooling Coil Total Cooling Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Cooling Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Heating Coil Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Fan Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System DX Coil Speed Level ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Unitary System Compressor Part Load Ratio ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Electric Power ,     !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Air Mass Flow Rate , !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan2MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Unitary System Total Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan1MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan3MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan4MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan5MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Electric Power ,  !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Gas Rate,   !- Variable Name
-    Hourly;                  !- Reporting Frequency
+    Air System Gas Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
