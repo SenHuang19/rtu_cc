@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\d3x573\Path\kompose.exe convert
+    kompose.version: 1.24.0 (7c629530)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: rtuccep
+  name: rtuccep
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      io.kompose.service: rtuccep
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\Users\d3x573\Path\kompose.exe convert
+        kompose.version: 1.24.0 (7c629530)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: rtuccep
+    spec:
+      containers:
+        - image: devops-registry.pnnl.gov/rtucc/rtucc-ep:latest
+          name: rtucc-ep
+          ports:
+            - containerPort: 81
+          resources: {}
+      restartPolicy: Always
+status: {}
