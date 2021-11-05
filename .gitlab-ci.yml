@@ -67,5 +67,5 @@ deploy-bitnamis:
   image: bitnami/kubectl:1.15.3
   script:
   - kubectl apply -f rtuccep-deployment.yaml
-  - kubectl apply -f rtuccep-deployment.yaml
+  - kubectl apply -f rtuccep-service.yaml
   
