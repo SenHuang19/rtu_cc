@@ -27,7 +27,13 @@ spec:
         - image: devops-registry.pnnl.gov/rtucc/rtucc-ep:latest
           name: rtucc-ep
           ports:
-            - containerPort: 81
-          resources: {}
+            - containerPort: 81        
+          resources:
+            limits:
+              cpu: "200m"
+              memory: 1Gi
+            requests:
+              cpu: 100m
+              memory: 256Mi
       restartPolicy: Always
 status: {}
