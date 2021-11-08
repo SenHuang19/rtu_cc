@@ -53,14 +53,20 @@ class run(Resource):
             load_template('./template/{}/ems'.format(data['BuildingType']),'ems_pr.template','output','ems_pr',data)
             load_template('./template/{}/curve'.format(data['BuildingType']),'FanPowerCurve.template','output','FanPowerCurve',data)
             load_template('./template/{}/curve'.format(data['BuildingType']),'HPACCOOLEIRFT.template','output','HPACCOOLEIRFT',data)
-            load_template(['template/{}/global'.format(data['BuildingType']),'output'],'output.template','output','output1.idf',data)
+            load_template(['template/{}/global'.format(data['BuildingType']),'output'],'output.template','output','output.idf',data)
         except:
             Err = traceback.format_exc()
             return flask.jsonify({'error': Err, 'message': None})        
        
         weatherPath = '/home/developer/idf/wea/{}.epw'.format(data['climate'])
-        os.chdir('/home/developer/idf/output')
-        cmdStr= "energyplus -w \"%s\" -r \"%s\"" % (weatherPath, 'output1.idf')
+        base_dir = '/home/developer/base_{}'.format(data['id'])
+        if not os.path.exists(base_dir):
+                 os.makedirs(base_dir)   
+
+        copyfile('/home/developer/idf/output/output.idf', base_dir+'/output.idf')         
+        
+        os.chdir(base_dir)
+        cmdStr= "energyplus -w \"%s\" -r \"%s\"" % (weatherPath, 'output.idf')
         global number_workers
         global max_number_worker
         if number_workers < max_number_worker:
@@ -69,20 +75,20 @@ class run(Resource):
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
                 pPidFile.write(str(simulation.pid))             
            simulation.wait()
-           simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
+#           simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
            number_workers = number_workers - 1
         else:
             return flask.jsonify({'error': 'no available worker', 'message': None})           
 
-        f=open('/home/developer/idf/output/eplustbl.csv')
-        tab1=f.readlines()
-        f.close()
+#        f=open('/home/developer/idf/output/eplustbl.csv')
+#        tab1=f.readlines()
+#        f.close()
         
         result={}
-        result['tab1'] = tab1
-        if 'output' in inputs: 
-           for i in range(len(inputs['output'])):
-                  result[inputs['output'][i]] = simulation_result[inputs['output'][i]].tolist()
+#        result['tab1'] = tab1
+        # if 'output' in inputs: 
+           # for i in range(len(inputs['output'])):
+                  # result[inputs['output'][i]] = simulation_result[inputs['output'][i]].tolist()
         os.chdir('/home/developer/idf')  
         try:   
            load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil_upgrade.template','output','cooling_coil',data)
@@ -92,12 +98,18 @@ class run(Resource):
            load_template('./template/{}/ems'.format(data['BuildingType']),'ems_pr_upgrade.template','output','ems_pr',data)
            load_template('./template/{}/curve'.format(data['BuildingType']),'FanPowerCurve_upgrade.template','output','FanPowerCurve',data)
            load_template('./template/{}/curve'.format(data['BuildingType']),'HPACCOOLEIRFT_upgrade.template','output','HPACCOOLEIRFT',data)
-           load_template(['template/{}/global'.format(data['BuildingType']),'output'],'output.template','output','output2.idf',data)  
+           load_template(['template/{}/global'.format(data['BuildingType']),'output'],'output.template','output','output.idf',data)  
         except:
             Err = traceback.format_exc()
             return flask.jsonify({'error': Err, 'message': None})
-        os.chdir('/home/developer/idf/output')
-        cmdStr= "energyplus -w \"%s\" -r \"%s\"" % (weatherPath, 'output2.idf')        
+        upgrade_dir = '/home/developer/upgrade_{}'.format(data['id'])
+        if not os.path.exists(upgrade_dir):
+                 os.makedirs(upgrade_dir)   
+
+        copyfile('/home/developer/idf/output/output.idf', upgrade_dir+'/output.idf')          
+        
+        os.chdir(upgrade_dir)
+        cmdStr= "energyplus -w \"%s\" -r \"%s\"" % (weatherPath, 'output.idf')        
 
         if number_workers < max_number_worker:
            number_workers = number_workers + 1
@@ -105,18 +117,18 @@ class run(Resource):
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
                 pPidFile.write(str(simulation.pid))             
            simulation.wait()
-           simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
+#           simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
            number_workers = number_workers - 1
         else:
             return flask.jsonify({'error': 'no available worker', 'message': None})
-        if 'output' in inputs:             
-            for i in range(len(inputs['output'])):
-                  result[inputs['output'][i]+'_upgrade'] = simulation_result[inputs['output'][i]].tolist()       
+        # if 'output' in inputs:             
+            # for i in range(len(inputs['output'])):
+                  # result[inputs['output'][i]+'_upgrade'] = simulation_result[inputs['output'][i]].tolist()       
 
-        f=open('/home/developer/idf/output/eplustbl.csv')
-        tab2=f.readlines()
-        f.close()
-        result['tab2'] = tab2   
+        # f=open('/home/developer/idf/output/eplustbl.csv')
+        # tab2=f.readlines()
+        # f.close()
+        # result['tab2'] = tab2   
         return flask.jsonify({'error': None, 'message': result}) 
         
 
