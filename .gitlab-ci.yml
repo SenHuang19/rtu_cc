@@ -8,7 +8,7 @@ variables:
   # CONTAINER_PREFIX: rtucc-ep
   CONTAINER_TAG: ${$CI_COMMIT_TAG:latest}
   DOCKERFILE: ./Dockerfile
-  SECRET_NAME: gitlab-registry-token
+  SECRET_NAME: gitlab-registry-token-ep
 
 stages:
   - check
