@@ -2,7 +2,7 @@
 
 #Include our standard library
 include:
-  - remote: 'https://raw.githubusercontent.com/pnnl-miscscripts/gitlab-lib/v1/gitlab-lib.yaml'
+  - remote: "https://raw.githubusercontent.com/pnnl-miscscripts/gitlab-lib/v1/gitlab-lib.yaml"
 
 variables:
   # CONTAINER_PREFIX: rtucc-ep
@@ -20,9 +20,9 @@ verify-new-image:
   extends: .pnnllib-gitlab-verify-new-image
   stage: check
   tags:
-  - k8s
-  - rcint
-  - rtucc
+    - k8s
+    - rcint
+    - rtucc
   variables:
     # CONTAINER_PREFIX - extra prefix for the image. Can be used to add a string on the front of an image name or a parent directory in the repository.
     # CONTAINER_TAG - The container tag to use. Defaults to $CI_COMMIT_TAG
@@ -32,9 +32,9 @@ build-image:
   extends: .pnnllib-gitlab-build-container-image
   stage: build
   tags:
-  - k8s
-  - rcint
-  - rtucc
+    - k8s
+    - rcint
+    - rtucc
   variables:
     # CONTAINER_PREFIX - extra prefix for the image. Can be used to add a string on the front of an image name or a parent directory in the repository.
     # CONTAINER_TAG - The container tag to use. Defaults to $CI_COMMIT_TAG
@@ -45,9 +45,9 @@ deploy-token-to-cluster:
   extends: .pnnllib-gitlab-load-deploy-token
   stage: setup
   tags:
-  - k8s
-  - rcint
-  - rtucc
+    - k8s
+    - rcint
+    - rtucc
   variables:
     # You must have created a deploy token with just 'read_registry'
     # permission named 'gitlab-deploy-token' as described here:
@@ -61,11 +61,10 @@ deploy-token-to-cluster:
 deploy-bitnamis:
   stage: deploy
   tags:
-  - k8s
-  - rcint
-  - rtucc
+    - k8s
+    - rcint
+    - rtucc
   image: bitnami/kubectl:1.15.3
   script:
-  - kubectl apply -f rtuccep-deployment.yaml
-  - kubectl apply -f rtuccep-service.yaml
-  
+    - kubectl apply -f rtuccep-deployment.yaml
+    - kubectl apply -f rtuccep-service.yaml
