@@ -35,6 +35,8 @@ spec:
             requests:
               cpu: 100m
               memory: 256Mi
+      strategy:
+        type: Recreate
       restartPolicy: Always
       imagePullSecrets:
         - name: gitlab-registry-token-ep
