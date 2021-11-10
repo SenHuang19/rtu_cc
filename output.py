@@ -38,6 +38,7 @@ def size(config, tab):
     return output   
 
 def cal_payout(input):
+    output = {}
     CoolingCapacity = input['CoolingCapacity']       
     EPlusCoolingSize = input['EPlusCoolingSize'] 
     SizeRatio = CoolingCapacity/EPlusCoolingSize
@@ -47,13 +48,13 @@ def cal_payout(input):
     AnnualNaturalGasCost_Upgrade = input['AnnualNaturalGasCost_Upgrade']*SizeRatio
     AnnualElectricityCost_Upgrade = input['AnnualElectricityCost_Upgrade']*SizeRatio
     AnnualCosts_Baseline = AnnualNaturalGasCost_Baseline + AnnualElectricityCost_Baseline
+    output['AnnualCosts_Baseline'] = AnnualCosts_Baseline
     AnnualCosts_Upgrade = AnnualNaturalGasCost_Upgrade+AnnualElectricityCost_Upgrade
+    output['AnnualCosts_Upgrade'] = AnnualCosts_Upgrade
     RealDiscountRate = input['RealDiscountRate']
     CapitalCost_Baseline = input['CapitalCost_Baseline']
     CapitalCost_Upgrade = input['CapitalCost_Upgrade']
     
-    output = {}
-
     a = (1+RealDiscountRate)**Lifetime
     UPV= (a-1)/(RealDiscountRate*a)
     LCC_baseline=CapitalCost_Baseline+(UPV*AnnualCosts_Baseline)
