@@ -8,8 +8,10 @@ import pandas as pd
 import os
 import flask
 import traceback
+from output import size, energy_consumption, cal_payout
 import psutil
 from os.path import exists
+
 
 
 app = Flask(__name__)
@@ -75,20 +77,11 @@ class run(Resource):
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
                 pPidFile.write(str(simulation.pid))             
            simulation.wait()
-#           simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
+           baseline_df=pd.read_csv('eplusout.csv')
            number_workers = number_workers - 1
         else:
             return flask.jsonify({'error': 'no available worker', 'message': None})           
 
-#        f=open('/home/developer/idf/output/eplustbl.csv')
-#        tab1=f.readlines()
-#        f.close()
-        
-        result={}
-#        result['tab1'] = tab1
-        # if 'output' in inputs: 
-           # for i in range(len(inputs['output'])):
-                  # result[inputs['output'][i]] = simulation_result[inputs['output'][i]].tolist()
         os.chdir('/home/developer/idf')  
         try:   
            load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil_upgrade.template','output','cooling_coil',data)
@@ -117,18 +110,66 @@ class run(Resource):
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
                 pPidFile.write(str(simulation.pid))             
            simulation.wait()
-#           simulation_result=pd.read_csv('/home/developer/idf/output/eplusout.csv')
+           upgrade_df=pd.read_csv('eplusout.csv')           
            number_workers = number_workers - 1
         else:
-            return flask.jsonify({'error': 'no available worker', 'message': None})
-        # if 'output' in inputs:             
-            # for i in range(len(inputs['output'])):
-                  # result[inputs['output'][i]+'_upgrade'] = simulation_result[inputs['output'][i]].tolist()       
+            return flask.jsonify({'error': 'no available worker', 'message': None})   
+            
+        result={} 
 
-        # f=open('/home/developer/idf/output/eplustbl.csv')
-        # tab2=f.readlines()
-        # f.close()
-        # result['tab2'] = tab2   
+        os.chdir('/home/developer/idf')          
+        config_file = 'config/{}'.format(data['BuildingType'])
+        if not os.path.exists(config_file):
+                 return flask.jsonify({'error': 'missing config for {}'.format(data['BuildingType']), 'message': None})  
+        with open(config_file) as f:         
+            temp = f.read()         
+        config = json.loads(temp)
+        
+        if 'Orientation' in data:        
+            zone = data['Orientation']
+        else:
+            return flask.jsonify({'error': 'missing orientation', 'message': None}) 
+
+        if not 'Blended_Electricity_Rate' in data:        
+
+            return flask.jsonify({'error': 'missing blended electricity rate', 'message': None})  
+
+        if not 'Blended_Electricity_Rate' in data:        
+
+            return flask.jsonify({'error': 'missing blended gas rate', 'message': None})            
+        
+        result_baseline = energy_consumption(config['energ_consumption'],baseline_df,data['Blended_Electricity_Rate'],data['Blended_NaturalGas_Rate'])
+
+        result['AnnualElectricityCost_Baseline'] = result_baseline[zone]['ele']
+        
+        data['AnnualElectricityCost_Baseline'] = result['AnnualElectricityCost_Baseline']
+
+        result['AnnualNaturalGasCost_Baseline'] = result_baseline[zone]['gas']
+        
+        data['AnnualNaturalGasCost_Baseline'] = result['AnnualNaturalGasCost_Baseline']        
+
+        result_upgrade = energy_consumption(config['energ_consumption'],baseline_df,data['Blended_Electricity_Rate'],data['Blended_NaturalGas_Rate'])
+
+        result['AnnualElectricityCost_Upgrade'] = result_upgrade[zone]['ele']
+        
+        data['AnnualElectricityCost_Upgrade'] = result['AnnualElectricityCost_Upgrade']         
+
+        result['AnnualNaturalGasCost_Upgrade'] = result_upgrade[zone]['gas']
+        
+        data['AnnualNaturalGasCost_Upgrade'] = result['AnnualNaturalGasCost_Upgrade']           
+
+        tab = '{}/eplustbl.csv'.format(upgrade_dir)
+
+        result_size = size(config['size'], tab)
+
+        result['EPlusCoolingSize'] = result_size[zone]['size'] 
+        
+        data['EPlusCoolingSize'] = result['EPlusCoolingSize']        
+
+        result_lc = cal_payout(data)  
+
+        result.update(result_lc)        
+        
         return flask.jsonify({'error': None, 'message': result}) 
         
 
@@ -136,36 +177,23 @@ class cancel(Resource):
 
     '''Interface to cancel a optimization.''' 
    
-    def put(self):
-    
+    def put(self):   
         inputs = request.get_json()
-
         if not ('id' in inputs):
-
            return {'cancel_status':False}
-
         file_exists = exists('{}.pid'.format(inputs['id']))
-
         if not file_exists:
-
-           return {'cancel_status':False}                   
-        
-        f = open('{}.pid'.format(inputs['id']), "r")
-        
-        pid = int(f.read())
-        
-        if not psutil.pid_exists(pid):
-           
-           return {'cancel_status':False}
-        
-        parent = psutil.Process(pid)
-        
-        for child in parent.children(recursive=True):  # or parent.children() for recursive=False
-        
-                child.kill()
-                
-        parent.kill()
-        
+           return {'cancel_status':False}                           
+        f = open('{}.pid'.format(inputs['id']), "r")       
+        pid = int(f.read())       
+        if not psutil.pid_exists(pid):          
+           return {'cancel_status':False}       
+        parent = psutil.Process(pid)        
+        for child in parent.children(recursive=True):  # or parent.children() for recursive=False       
+                child.kill()               
+        parent.kill()        
+        global number_workers       
+        number_workers = number_workers - 1       
         return {'cancel_status':True} 
 
 api.add_resource(cancel, '/cancel')

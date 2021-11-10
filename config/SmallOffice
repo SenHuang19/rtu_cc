@@ -1,0 +1,50 @@
+{
+"energ_consumption":
+        {
+		   "South":
+		   {"ele":["TYPICAL TERMINAL REHEAT 1:Air System Fan Electric Energy [J](Annual)",
+                   "TYPICAL TERMINAL REHEAT 1:Air System DX Heating Coil Electric Energy [J](Annual)",
+		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 1:Air System Gas Energy [J](Annual)"]
+		   },
+		   "East":{"ele":["TYPICAL TERMINAL REHEAT 2:Air System Fan Electric Energy [J](Annual)",
+           "TYPICAL TERMINAL REHEAT 2:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 2:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 2:Air System Gas Energy [J](Annual)"]
+		   },		   
+		   "North":{"ele":["TYPICAL TERMINAL REHEAT 3:Air System Fan Electric Energy [J](Annual)",
+           "TYPICAL TERMINAL REHEAT 3:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 3:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 3:Air System Gas Energy [J](Annual)"]
+		   },	
+		   "West":{"ele":["TYPICAL TERMINAL REHEAT 4:Air System Fan Electric Energy [J](Annual)",
+           "TYPICAL TERMINAL REHEAT 4:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 4:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 4:Air System Gas Energy [J](Annual)"]
+		   },	
+		   "Core":{"ele":["TYPICAL TERMINAL REHEAT 5:Air System Fan Electric Energy [J](Annual)",
+           "TYPICAL TERMINAL REHEAT 5:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 5:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 5:Air System Gas Energy [J](Annual)"]
+		   }
+		},
+"size":
+        {
+		   "South":
+		   {
+		   "topic":["HEAT PUMP ACDXCOIL 1"]
+		   },
+		   "East":{
+		   "topic":["HEAT PUMP ACDXCOIL 2"]
+		   },		   
+		   "North":{
+		   "topic":["HEAT PUMP ACDXCOIL 3"]
+		   },	
+		   "West":{
+		   "topic":["HEAT PUMP ACDXCOIL 4"]
+		   },	
+		   "Core":{
+		   "topic":["HEAT PUMP ACDXCOIL 5"]
+		   }
+        }				
+}

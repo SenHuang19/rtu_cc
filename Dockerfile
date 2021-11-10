@@ -35,6 +35,10 @@ RUN mkdir /home/developer/idf/output
 
 COPY web.py /home/developer/idf/
 
+COPY config /home/developer/idf/config
+
+COPY output.py /home/developer/idf/
+
 COPY wrapper.py /home/developer/idf/
 
 COPY template /home/developer/idf/template
