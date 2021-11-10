@@ -134,7 +134,7 @@ class run(Resource):
 
             return flask.jsonify({'error': 'missing blended electricity rate', 'message': None})  
 
-        if not 'Blended_Electricity_Rate' in data:        
+        if not 'Blended_NaturalGas_Rate' in data:        
 
             return flask.jsonify({'error': 'missing blended gas rate', 'message': None})            
         
@@ -145,8 +145,10 @@ class run(Resource):
         data['AnnualElectricityCost_Baseline'] = result['AnnualElectricityCost_Baseline']
 
         result['AnnualNaturalGasCost_Baseline'] = result_baseline[zone]['gas']
-        
-        data['AnnualNaturalGasCost_Baseline'] = result['AnnualNaturalGasCost_Baseline']        
+               
+        data['AnnualNaturalGasCost_Baseline'] = result['AnnualNaturalGasCost_Baseline']  
+
+        result['AnnualConsumption_Baseline'] = result_baseline[zone]['tot_kW']         
 
         result_upgrade = energy_consumption(config['energ_consumption'],baseline_df,data['Blended_Electricity_Rate'],data['Blended_NaturalGas_Rate'])
 
@@ -156,7 +158,9 @@ class run(Resource):
 
         result['AnnualNaturalGasCost_Upgrade'] = result_upgrade[zone]['gas']
         
-        data['AnnualNaturalGasCost_Upgrade'] = result['AnnualNaturalGasCost_Upgrade']           
+        data['AnnualNaturalGasCost_Upgrade'] = result['AnnualNaturalGasCost_Upgrade']  
+
+        result['AnnualConsumption_Upgrade'] = result_upgrade[zone]['tot_kW']                 
 
         tab = '{}/eplustbl.csv'.format(upgrade_dir)
 

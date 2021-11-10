@@ -20,11 +20,13 @@ def energy_consumption(config, df,Blended_Electricity_Rate,Blended_NaturalGas_Ra
                   ele_consumption = ele_consumption + df[item].iloc[0]
         output[key] = {}                
         output[key]['ele'] = ele_consumption*0.00000027777*Blended_Electricity_Rate
+        output[key]['tot_kW'] = ele_consumption*0.00000027777
         gas_consumption = 0
         for item in config[key]['gas']:
                if item in df:
                   gas_consumption = gas_consumption + df[item].iloc[0]
         output[key]['gas'] = gas_consumption/105505500*Blended_NaturalGas_Rate
+        output[key]['tot_kW'] = output[key]['tot_kW'] + gas_consumption*0.00000027777
     return output        
         
 def size(config, tab):
