@@ -63,7 +63,10 @@ def cal_payout(input):
     output['LCC_baseline'] = LCC_baseline
     LCC_upgrade=CapitalCost_Upgrade+(UPV*AnnualCosts_Upgrade)
     output['LCC_upgrade'] = LCC_upgrade
-    AC=LCC_baseline/UPV
+    AC_baseline=LCC_baseline/UPV
+    output['AnnualizedCost_Baseline'] = AC_baseline
+    AC_upgrade=LCC_upgrade/UPV
+    output['AnnualizedCost_Upgrade'] = AC_upgrade
     NPV=LCC_upgrade-LCC_baseline
     output['NPV'] = NPV
     AnnualCostSavings=AnnualCosts_Baseline-AnnualCosts_Upgrade
@@ -128,7 +131,12 @@ def cal_payout(input):
            error=0          
     output['RateOfReturn'] = RateOfReturn
     SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)/(CapitalCost_Upgrade-CapitalCost_Baseline)
-    output['SIR'] = SIR        
+    output['SIR'] = SIR
+    for key in output:
+        if output[key] is None:
+           output[key] = "null"
+        if output[key] == float("inf"):
+           output[key] = "inf"           
     return output
     
 
