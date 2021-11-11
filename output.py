@@ -1,6 +1,10 @@
 import pandas as pd
 import json
 
+
+def isNaN(num):
+    return num!= num
+
 def parse_tab(topic, tab):
     with open(tab) as f:
           lines = f.readlines()
@@ -133,10 +137,8 @@ def cal_payout(input):
     SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)/(CapitalCost_Upgrade-CapitalCost_Baseline)
     output['SIR'] = SIR
     for key in output:
-        if output[key] is None:
-           output[key] = "null"
-        if output[key] == float("inf"):
-           output[key] = "inf"           
+        if isNaN(output[key]):
+           output[key] = None        
     return output
     
 
