@@ -54,7 +54,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M SW Apartment,          !- Controlling Zone or Thermostat Location
+    Back_space,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 1,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -80,7 +80,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M SW Apartment,          !- Controlling Zone or Thermostat Location
+    Back_space,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 1,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -248,7 +248,7 @@
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Air Outlet Node Name
-    M SW Apartment,          !- Controlling Zone or Thermostat Location
+    Back_space,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 1,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -368,7 +368,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M NW Apartment,          !- Controlling Zone or Thermostat Location
+    Core_retail,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 2,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -394,7 +394,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M NW Apartment,          !- Controlling Zone or Thermostat Location
+    Core_retail,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 2,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -562,7 +562,7 @@ Coil:Cooling:DX:MultiSpeed,
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Air Outlet Node Name
-    Perimeter_ZN_2,          !- Controlling Zone or Thermostat Location
+    Core_retail,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 2,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -684,7 +684,7 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M SE Apartment,          !- Controlling Zone or Thermostat Location
+   Point_of_sale,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 3,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -710,7 +710,7 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M SE Apartment,          !- Controlling Zone or Thermostat Location
+    Point_of_sale,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 3,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -876,7 +876,7 @@ Coil:Cooling:DX:MultiSpeed,
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 3,        !- Air Inlet Node Name
     Air Loop Outlet Node 3,  !- Air Outlet Node Name
-    M SE Apartment,          !- Controlling Zone or Thermostat Location
+    Point_of_sale,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 3,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -997,7 +997,7 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M NE Apartment,          !- Controlling Zone or Thermostat Location
+    Front_retail,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 4,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -1023,7 +1023,7 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M NE Apartment,          !- Controlling Zone or Thermostat Location
+    Front_retail,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 4,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -1189,7 +1189,7 @@ Coil:Cooling:DX:MultiSpeed,
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Air Outlet Node Name
-    M NE Apartment,          !- Controlling Zone or Thermostat Location
+    Front_retail,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 4,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -1310,7 +1310,7 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M N1 Apartment,          !- Controlling Zone or Thermostat Location
+    Front_Entry,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 5,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -1336,7 +1336,7 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M N1 Apartment,          !- Controlling Zone or Thermostat Location
+    Front_Entry,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 5,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -1503,7 +1503,7 @@ Coil:Cooling:DX:MultiSpeed,
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Air Outlet Node Name
-    M N1 Apartment,                 !- Controlling Zone or Thermostat Location
+    Front_Entry,                 !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 5,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
