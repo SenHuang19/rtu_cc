@@ -7,14 +7,24 @@ from shutil import copyfile
 import pandas as pd
 import os
 import flask
+from flask import jsonify, make_response
 import traceback
 from output import size, energy_consumption, cal_payout
 import psutil
 from os.path import exists
 
+from flask.json import JSONEncoder
+
+ 
+
+class StrictEncoder(JSONEncoder):
+    def __init__(self, *args, allow_nan=False, **kwargs):
+        kwargs["allow_nan"] = allow_nan
+        super().__init__(*args, **kwargs)
 
 
 app = Flask(__name__)
+app.json_encoder = StrictEncoder
 api = Api(app)
 
 
@@ -174,7 +184,7 @@ class run(Resource):
 
         result.update(result_lc)        
         
-        return flask.jsonify({'error': None, 'message': result}) 
+        return make_response(jsonify({'error': None, 'message': result}), 200) 
         
 
 class cancel(Resource):
