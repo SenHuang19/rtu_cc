@@ -1,0 +1,61 @@
+WindowMaterial:SimpleGlazingSystem,
+   Nonres Window Glazing Layer,           !- Name
+{%- if (climate == "1A"  or climate == "2A" or climate = "2B") %} 
+    3.2366,
+    0.25,
+    0.275;
+{% elif (climate == "3A"  or climate == "3B" or climate == "3C") %}
+    2.83913,
+    0.25,
+    0.275;
+{% elif (climate == "7"  or climate == "8") %}
+    2.83913,
+    0.25,
+    0.275;
+{% else %}
+    2.3848,
+    0.4,
+    0.44;
+{%- endif %}
+
+WindowMaterial:SimpleGlazingSystem,
+    Nonres Skylight Glazing Layer,           !- Name
+{%- if (climate == "1A") %} 
+    4.2586,
+    0.35,
+    0.399;
+{% elif (climate == "2A" or climate = "2B") %} 
+    3.6908,
+    0.35,
+    0.399;
+{% elif (climate == "3A"  or climate == "3B" or climate == "3C") %}
+    3.12304,
+    0.35,
+    0.399;
+{% elif (climate == "7"  or climate == "8") %}
+    2.8391,
+    0.55,
+    0.55;
+{% else %}
+    2.8931,
+    0.4,
+    0.4;
+{%- endif %}
+
+WindowMaterial:SimpleGlazingSystem,
+    Semiheated Skylight Glazing Layer,           !- Name
+{%- if (climate == "6A" or climate == "6B" or climate == "7" or climate == "6A" ) %} 
+    4.8265,
+{% elif (climate == "5A"  or climate == "5B" or climate == "5C") %}
+    5.5646,
+{% else %}
+    5.7918,
+{%- endif %}
+    0.55,                     !- Solar Heat Gain Coefficient
+{%- if (climate == "1A" or climate == "2B" or climate == "2A" or climate == "3A" or climate == "3B" or climate == "3C") %} 
+    0.627;
+{% else %}
+    0.55;
+{%- endif %}
+
+ 

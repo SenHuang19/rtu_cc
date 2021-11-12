@@ -1,0 +1,500 @@
+!-   ===========  ALL OBJECTS IN CLASS: CONTROLLER:OUTDOORAIR ===========
+
+Controller:OutdoorAir,
+    OA Controller 1,         !- Name
+    Relief Air Outlet Node 1,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 1,  !- Return Air Node Name
+    Mixed Air Node 1,        !- Mixed Air Node Name
+    Outside Air Inlet Node 1,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Corner"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Corner")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Corner"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Corner") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Corner"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Corner") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Corner")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Corner")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac1;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 1,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 1,  !- Reference Setpoint Node Name
+    Mixed Air Node 1,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 1,  !- Fan Outlet Node Name
+    Mixed Air Node 1;  !- Setpoint Node or NodeList Name
+
+
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 1,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 1;  !- Setpoint Node or NodeList Name
+
+Controller:OutdoorAir,
+    OA Controller 2,         !- Name
+    Relief Air Outlet Node 2,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 2,  !- Return Air Node Name
+    Mixed Air Node 2,        !- Mixed Air Node Name
+    Outside Air Inlet Node 2,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    MinOA_MotorizedDamper_Sched,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac2;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 2,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 2,  !- Reference Setpoint Node Name
+    Mixed Air Node 2,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 2,  !- Fan Outlet Node Name
+    Mixed Air Node 2;  !- Setpoint Node or NodeList Name
+
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 2,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 2;  !- Setpoint Node or NodeList Name
+
+Controller:OutdoorAir,
+    OA Controller 3,         !- Name
+    Relief Air Outlet Node 3,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 3,  !- Return Air Node Name
+    Mixed Air Node 3,        !- Mixed Air Node Name
+    Outside Air Inlet Node 3,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac3;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 3,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 3,  !- Reference Setpoint Node Name
+    Mixed Air Node 3,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 3,  !- Fan Outlet Node Name
+    Mixed Air Node 3;  !- Setpoint Node or NodeList Name
+
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 3,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 3;  !- Setpoint Node or NodeList Name
+
+
+Controller:OutdoorAir,
+    OA Controller 4,         !- Name
+    Relief Air Outlet Node 4,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 4,  !- Return Air Node Name
+    Mixed Air Node 4,        !- Mixed Air Node Name
+    Outside Air Inlet Node 4,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac4;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 4,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 4,  !- Reference Setpoint Node Name
+    Mixed Air Node 4,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 4,  !- Fan Outlet Node Name
+    Mixed Air Node 4;  !- Setpoint Node or NodeList Name
+
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 4,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 4;  !- Setpoint Node or NodeList Name
+
+
+Controller:OutdoorAir,
+    OA Controller 5,         !- Name
+    Relief Air Outlet Node 5,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 5,  !- Return Air Node Name
+    Mixed Air Node 5,        !- Mixed Air Node Name
+    Outside Air Inlet Node 5,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac5;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 5,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 5,  !- Reference Setpoint Node Name
+    Mixed Air Node 5,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 5,  !- Fan Outlet Node Name
+    Mixed Air Node 5;  !- Setpoint Node or NodeList Name
+	
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 5,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 5;  !- Setpoint Node or NodeList Name
+
+
+
+
+Controller:OutdoorAir,
+    OA Controller 6,         !- Name
+    Relief Air Outlet Node 6,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 6,  !- Return Air Node Name
+    Mixed Air Node 6,        !- Mixed Air Node Name
+    Outside Air Inlet Node 6,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac6;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 6,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 6,  !- Reference Setpoint Node Name
+    Mixed Air Node 6,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 6,  !- Fan Outlet Node Name
+    Mixed Air Node 6;  !- Setpoint Node or NodeList Name
+	
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 6,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 6;  !- Setpoint Node or NodeList Name
+
+
+
+
+Controller:OutdoorAir,
+    OA Controller 7,         !- Name
+    Relief Air Outlet Node 7,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 7,  !- Return Air Node Name
+    Mixed Air Node 7,        !- Mixed Air Node Name
+    Outside Air Inlet Node 7,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac7;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 7,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 7,  !- Reference Setpoint Node Name
+    Mixed Air Node 7,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 7,  !- Fan Outlet Node Name
+    Mixed Air Node 7;  !- Setpoint Node or NodeList Name
+	
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 7,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 7;  !- Setpoint Node or NodeList Name
+
+
+
+
+Controller:OutdoorAir,
+    OA Controller 8,         !- Name
+    Relief Air Outlet Node 8,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 8,  !- Return Air Node Name
+    Mixed Air Node 8,        !- Mixed Air Node Name
+    Outside Air Inlet Node 8,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac8;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 8,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 8,  !- Reference Setpoint Node Name
+    Mixed Air Node 8,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 8,  !- Fan Outlet Node Name
+    Mixed Air Node 8;  !- Setpoint Node or NodeList Name
+	
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 8,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 8;  !- Setpoint Node or NodeList Name
+
+
+
+
+Controller:OutdoorAir,
+    OA Controller 9,         !- Name
+    Relief Air Outlet Node 9,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 9,  !- Return Air Node Name
+    Mixed Air Node 9,        !- Mixed Air Node Name
+    Outside Air Inlet Node 9,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Interior"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Interior")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Interior") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Interior"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Interior") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Interior")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Interior")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac9;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 9,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 9,  !- Reference Setpoint Node Name
+    Mixed Air Node 9,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 9,  !- Fan Outlet Node Name
+    Mixed Air Node 9;  !- Setpoint Node or NodeList Name
+	
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 9,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 9;  !- Setpoint Node or NodeList Name
+
+
+
+
+Controller:OutdoorAir,
+    OA Controller 10,         !- Name
+    Relief Air Outlet Node 10,!- Relief Air Outlet Node Name
+    Outdoor Air Mixer Inlet Node 10,  !- Return Air Node Name
+    Mixed Air Node 10,        !- Mixed Air Node Name
+    Outside Air Inlet Node 10,!- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+{%- if (BaselineEconomizer == "No Economizer" and (not (UpgradedEconomizer != "No Economizer" and ZoneType == "Corner"))) or (UpgradedEconomizer == "No Economizer" and ZoneType == "Corner")  %} 
+    NoEconomizer,            !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialDryBulb" and (not (UpgradedEconomizer != "DifferentialDryBulb" and ZoneType == "Corner"))) or (UpgradedEconomizer == "DifferentialDryBulb" and ZoneType == "Corner") %}
+    DifferentialDryBulb,     !- Economizer Control Type
+{% elif (BaselineEconomizer == "DifferentialEnthalpy" and (not (UpgradedEconomizer != "DifferentialEnthalpy" and ZoneType == "Corner"))) or (UpgradedEconomizer == "DifferentialEnthalpy" and ZoneType == "Corner") %}
+    DifferentialEnthalpy,     !- Economizer Control Type
+{% else %}
+    FixedDryBulb,     !- Economizer Control Type
+{%- endif %}
+    ModulateFlow,            !- Economizer Control Action Type
+{%- if BaselineEconomizer == "FixedDryBulb" and (not (UpgradedEconomizer != "FixedDryBulb" and ZoneType == "Corner")) %} 
+    {{MaximumLimitDryBulb_Baseline}},
+{% elif (UpgradedEconomizer == "FixedDryBulb" and ZoneType == "Corner")  %}
+    {{MaximumLimitDryBulb_Upgraded}},
+{% else %}
+    ,
+{%- endif %}
+    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithHeating,      !- Lockout Type
+    ProportionalMinimum,     !- Minimum Limit Type
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
+    minOAFrac10;               !- Minimum Fraction of Outdoor Air Schedule Name
+
+SetpointManager:MixedAir,
+    Mixed Air Temp Manager 10,  !- Name
+    Temperature,             !- Control Variable
+    Heating Coil Air Inlet Node 10,  !- Reference Setpoint Node Name
+    Mixed Air Node 10,  !- Fan Inlet Node Name
+    DX Cooling Coil Air Inlet Node 10,  !- Fan Outlet Node Name
+    Mixed Air Node 10;  !- Setpoint Node or NodeList Name
+	
+SetpointManager:Scheduled,
+    Mixed Air Temp Setpoint Manager 10,  !- Name
+    Temperature,             !- Control Variable
+    Supply-Temp-Schedule,  !- Schedule Name
+    Heating Coil Air Inlet Node 10;  !- Setpoint Node or NodeList Name

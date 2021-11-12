@@ -1,0 +1,83 @@
+Curve:Biquadratic,
+    HPACCOOLEIRFT 1,   !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Office"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Office")  %} 
+    0.4152,            !- Coefficient1 Constant
+    0.0093,           !- Coefficient2 x
+    0.0002,            !- Coefficient3 x**2
+    0.0150,            !- Coefficient4 y
+    0.0008,            !- Coefficient5 y**2
+    -0.0018,           !- Coefficient6 x*y
+{% else %}
+    0.632475E+00,            !- Coefficient1 Constant
+    -0.121321E-01,           !- Coefficient2 x
+    0.507773E-03,            !- Coefficient3 x**2
+    0.155377E-01,            !- Coefficient4 y
+    0.272840E-03,            !- Coefficient5 y**2
+    -0.679201E-03,           !- Coefficient6 x*y
+{% endif %}
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+    
+
+
+Curve:Biquadratic,
+    HPACCOOLEIRFT 2,   !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Storage"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %}
+    0.4152,            !- Coefficient1 Constant
+    0.0093,           !- Coefficient2 x
+    0.0002,            !- Coefficient3 x**2
+    0.0150,            !- Coefficient4 y
+    0.0008,            !- Coefficient5 y**2
+    -0.0018,           !- Coefficient6 x*y
+{% else %}
+    0.632475E+00,            !- Coefficient1 Constant
+    -0.121321E-01,           !- Coefficient2 x
+    0.507773E-03,            !- Coefficient3 x**2
+    0.155377E-01,            !- Coefficient4 y
+    0.272840E-03,            !- Coefficient5 y**2
+    -0.679201E-03,           !- Coefficient6 x*y
+{% endif %}
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+Curve:Biquadratic,
+    HPACCOOLEIRFT 3,   !- Name
+{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Storage"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %}
+    0.4152,            !- Coefficient1 Constant
+    0.0093,           !- Coefficient2 x
+    0.0002,            !- Coefficient3 x**2
+    0.0150,            !- Coefficient4 y
+    0.0008,            !- Coefficient5 y**2
+    -0.0018,           !- Coefficient6 x*y
+{% else %}
+    0.632475E+00,            !- Coefficient1 Constant
+    -0.121321E-01,           !- Coefficient2 x
+    0.507773E-03,            !- Coefficient3 x**2
+    0.155377E-01,            !- Coefficient4 y
+    0.272840E-03,            !- Coefficient5 y**2
+    -0.679201E-03,           !- Coefficient6 x*y
+{% endif %}
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111,                !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
