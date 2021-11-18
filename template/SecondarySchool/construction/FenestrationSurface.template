@@ -1,0 +1,6155 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+
+{%- if Windows == "Medium" %} 
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.512845,  	 
+    0.050000000000,
+0.000000000000,
+0.922073000000,   
+    1.269200000000,
+0.000000000000,
+0.922073000000,   
+    1.269200000000,
+0.000000000000,
+2.512845;  	 
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.512845,   
+    0.050,
+0.0000,
+1.1000,   
+    10.950,
+0.0000,
+1.1000,   
+    10.950,
+0.0000,
+2.512845;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_1_ZN_1_FLR_2_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.50266,   
+    0.050,
+0.0000,
+1.1000,   
+    52.950,
+0.0000,
+1.1000,   
+    52.950,
+0.0000,
+2.50266;   
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_1_ZN_1_FLR_1_Wall_6_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corridor_Pod_1_ZN_1_FLR_1_Wall_6,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+4.9500,
+2.52856,   
+    0.000,
+4.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.52856;   
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_1_ZN_1_FLR_2_Wall_6_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corridor_Pod_1_ZN_1_FLR_2_Wall_6,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+4.9500,
+2.52856,   
+    0.000,
+4.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.52856;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    10.950,
+9.0000,
+2.512845,   
+    10.950,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+2.512845;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_1_ZN_1_FLR_2_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    52.950,
+9.0000,
+2.50266,   
+    52.950,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+2.50266;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.512845,   
+    0.050,
+0.0000,
+1.1000,   
+    10.950,
+0.0000,
+1.1000,   
+    10.950,
+0.0000,
+2.512845;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_2_ZN_1_FLR_2_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.50266,   
+    0.050,
+0.0000,
+1.1000,   
+    52.950,
+0.0000,
+1.1000,   
+    52.950,
+0.0000,
+2.50266;   
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_2_ZN_1_FLR_1_Wall_6_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corridor_Pod_2_ZN_1_FLR_1_Wall_6,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+4.9500,
+2.52856,   
+    0.000,
+4.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.52856;   
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_2_ZN_1_FLR_2_Wall_6_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corridor_Pod_2_ZN_1_FLR_2_Wall_6,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+4.9500,
+2.52856,   
+    0.000,
+4.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.52856;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    10.950,
+9.0000,
+2.512845,   
+    10.950,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+2.512845;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_2_ZN_1_FLR_2_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    52.950,
+9.0000,
+2.50266,   
+    52.950,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+2.50266;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.512845,   
+    0.050,
+0.0000,
+1.1000,   
+    10.950,
+0.0000,
+1.1000,   
+    10.950,
+0.0000,
+2.512845;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_3_ZN_1_FLR_2_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.50266,   
+    0.050,
+0.0000,
+1.1000,   
+    52.950,
+0.0000,
+1.1000,   
+    52.950,
+0.0000,
+2.50266;   
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_3_ZN_1_FLR_1_Wall_6_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corridor_Pod_3_ZN_1_FLR_1_Wall_6,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+4.9500,
+2.52856,   
+    0.000,
+4.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.52856;   
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_3_ZN_1_FLR_2_Wall_6_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corridor_Pod_3_ZN_1_FLR_2_Wall_6,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+4.9500,
+2.52856,   
+    0.000,
+4.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.52856;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    10.950,
+9.0000,
+2.512845,   
+    10.950,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+2.512845;   
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+8.9500,
+2.515715,   
+    0.000,
+8.9500,
+1.1000,   
+    0.000,
+0.0500,
+1.1000,   
+    0.000,
+0.0500,
+2.515715;   
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_3_ZN_1_FLR_2_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    52.950,
+9.0000,
+2.50266,   
+    52.950,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+1.1000,   
+    0.050,
+9.0000,
+2.50266;   
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_2_Wall_7_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Main_Corridor_ZN_1_FLR_2_Wall_7,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+66.9500,
+2.507805,   
+    0.000,
+66.9500,
+1.1000,   
+    0.000
+,49.0500,
+1.1000,   
+    0.000,
+49.0500,
+2.507805;   
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_2_Wall_11_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Main_Corridor_ZN_1_FLR_2_Wall_11,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000,
+25.9500,
+2.508295,   
+    0.000,
+25.9500,
+1.1000,   
+    0.000,
+9.0500,
+1.1000,   
+    0.000,
+9.0500,
+2.508295;   
+
+  FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Lobby_ZN_1_FLR_2_Wall_1, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.50938,   
+    0.050,
+0.0000,
+1.1000,   
+    14.950,
+0.0000,
+1.1000,   
+    14.950,
+0.0000,
+2.50938;   
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_1_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Bathrooms_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    15.000,
+11.0500,
+2.548265,   
+    15.000,
+11.0500,
+1.1000,   
+    15.000,
+13.9500,
+1.1000,   
+    15.000,
+13.9500,
+2.548265;   
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_1_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Bathrooms_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    14.950,
+14.0000,
+2.50938,   
+    14.950,
+14.0000,
+1.1000,   
+    0.050,
+14.0000,
+1.1000,   
+    0.050,
+14.0000,
+2.50938;   
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Bathrooms_ZN_1_FLR_2_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    15.000,
+11.0500,
+2.548265,   
+    15.000,
+11.0500,
+1.1000,   
+    15.000,
+13.9500,
+1.1000,   
+    15.000,
+13.9500,
+2.548265;   
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_2_Wall_4_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Bathrooms_ZN_1_FLR_2_Wall_4,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    14.950,
+14.0000,
+2.50938,   
+    14.950,
+14.0000,
+1.1000,   
+    0.050,
+14.0000,
+1.1000,   
+    0.050,
+14.0000,
+2.50938;   
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_2_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Offices_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    38.000,
+0.0500,
+2.51008,   
+    38.000,
+0.0500,
+1.1000,   
+    38.000,
+13.9500,
+1.1000,   
+    38.000,
+13.9500,
+2.51008;   
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Offices_ZN_1_FLR_2_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050,
+0.0000,
+2.50371,   
+    0.050,
+0.0000,
+1.1000,   
+    37.950,
+0.0000,
+1.1000,   
+    37.950,
+0.0000,
+2.50371;   
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_2_Wall_2_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Offices_ZN_1_FLR_2_Wall_2,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    38.000,
+0.0500,
+2.51008,   
+    38.000,
+0.0500,
+1.1000,   
+    38.000,
+13.9500,
+1.1000,   
+    38.000,
+13.9500,
+2.51008;   
+
+FenestrationSurface:Detailed,
+    Aux_Gym_ZN_1_FLR_2_Wall_1_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Aux_Gym_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+6.505845,  
+    0.050000000000,
+0.000000000000,
+3.694155720000,   
+    23.950000000000,
+0.000000000000,
+3.694155720000,   
+    23.950000000000,
+0.000000000000,
+6.505845;  	 
+
+  FenestrationSurface:Detailed,
+    Aux_Gym_ZN_1_FLR_2_Wall_2_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Aux_Gym_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    24.000000000000,
+0.050000000000,
+6.502695,  	 
+    24.000000000000,
+0.050000000000,
+3.697305320000,   
+    24.000000000000,
+51.950000000000,
+3.697305320000,   
+    24.000000000000,
+51.950000000000,
+6.502695;  	 
+
+FenestrationSurface:Detailed,
+    Auditorium_ZN_1_FLR_2_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Auditorium_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    37.950000000000,
+26.000000000000,
+6.50371,  	 	
+    37.950000000000,
+26.000000000000,
+3.696289320000,   
+    0.050000000000,
+26.000000000000,
+3.696289320000,   
+    0.050000000000,
+26.000000000000,
+6.50371;  	 
+
+  FenestrationSurface:Detailed,
+    Kitchen_ZN_1_FLR_1_Wall_2_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Kitchen_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    24.000,
+0.0500,
+2.515715,  	 
+    24.000,
+0.0500,
+1.1000,   
+    24.000,
+8.9500,
+1.1000,   
+    24.000,
+8.9500,
+2.515715;  	 
+
+  FenestrationSurface:Detailed,
+    LIBRARY_MEDIA_CENTER_Wall_2_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    LIBRARY_MEDIA_CENTER_Wall_2,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    24.000,
+0.0500,
+2.504025,   
+    24.000,
+0.0500,
+1.1000,   
+    24.000,
+34.9500,
+1.1000,   
+    24.000,
+34.9500,
+2.504025;   
+
+  FenestrationSurface:Detailed,
+    LIBRARY_MEDIA_CENTER_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    LIBRARY_MEDIA_CENTER_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    23.950,
+35.0000,
+2.505845,   
+    23.950,
+35.0000,
+1.1000,   
+    0.050,
+35.0000,
+1.1000,   
+    0.050,
+35.0000,
+2.505845;   
+
+  FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_2_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Cafeteria_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    24.000000000000,
+2.488400000000,
+2.50539,  	 
+    24.000000000000,
+2.488400000000,
+1.030581800000,   
+    24.000000000000,
+25.950000000000,
+1.030581800000,   
+    24.000000000000,
+25.950000000000,
+2.50539;  	 
+
+  FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_3_window_1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Cafeteria_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    23.950,
+26.0000,
+2.505845,  	 
+    23.950,
+26.0000,
+1.1000,   
+    0.050,
+26.0000,
+1.1000,   
+    0.050,
+26.0000,
+2.505845;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    52.950000000000,
+9.000000000000,
+2.50266,  	 
+    52.946281052104,
+9.000000000000,
+1.032334921692,   
+    36.129358000000,
+9.000000000000,
+1.032334921692,   
+    36.129358000000,
+9.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    16.870316000000,
+9.000000000000,
+2.50266,  	 
+    16.870316000000,
+9.000000000000,
+1.032334921692,   
+    0.046281052104,
+9.000000000000,
+1.032334921692,   
+    0.050000000000,
+9.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    34.910158000000,
+9.000000000000,
+2.50266,  	 
+    34.910158000000,
+9.000000000000,
+1.032334921692,   
+    18.089516000000,
+9.000000000000,
+1.032334921692,   
+    18.089516000000,
+9.000000000000,
+2.50266;  	 
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    10.950000000000,
+9.000000000000,
+2.512845,  	 
+    10.950000000000,
+9.000000000000,
+0.922073000000,   
+    9.730800000000,
+9.000000000000,
+0.922073000000,   
+    9.730800000000,
+9.000000000000,
+2.512845;  	 
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    8.511600000000,
+9.000000000000,
+2.512845,  	 
+    8.511600000000,
+9.000000000000,
+0.922073000000,   
+    0.050000000000,
+9.000000000000,
+0.922073000000,   
+    0.050000000000,
+9.000000000000,
+2.512845;  	 
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.512845,  	 
+    0.050000000000,
+0.000000000000,
+0.922073000000,   
+    1.269200000000,
+0.000000000000,
+0.922073000000,   
+    1.269200000000,
+0.000000000000,
+2.512845;  	 
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    2.488400000000,
+0.000000000000,
+2.512845,  	 
+    2.488400000000,
+0.000000000000,
+0.922073000000,   
+    10.950000000000,
+0.000000000000,
+0.922073000000,   
+    10.950000000000,
+0.000000000000,
+2.512845;  	 
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.50266,  	 
+    0.050000000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    18.089842000000,
+0.000000000000,
+2.50266,  	 
+    18.089842000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    36.129684000000,
+0.000000000000,
+2.50266,  	 
+    36.129684000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+2.50266;  	 
+
+FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_1_Wall_7_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Main_Corridor_ZN_1_FLR_1_Wall_7,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000000000,
+66.950000000000,
+2.507805,  	 
+    0.000000000000,
+66.950000000000,
+0.997104600000,   
+    0.000000000000,
+65.730800000000,
+0.997104600000,   
+    0.000000000000,
+65.730800000000,
+2.507805;  	 
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_1_Wall_7_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Main_Corridor_ZN_1_FLR_1_Wall_7,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.000000000000,
+64.511600000000,
+2.507805,  	 
+    0.000000000000,
+64.511600000000,
+0.997104600000,   
+    0.000000000000,
+49.050000000000,
+0.997104600000,   
+    0.000000000000,
+49.050000000000,
+2.507805;  	 
+
+FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    52.950000000000,
+9.000000000000,
+2.50266,  	 
+    52.950000000000,
+9.000000000000,
+1.032232800000,   
+    36.129358000000,
+9.000000000000,
+1.032232800000,   
+    36.129358000000,
+9.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    16.870316000000,
+9.000000000000,
+2.50266,  	 
+    16.870316000000,
+9.000000000000,
+1.032232800000,   
+    0.050000000000,
+9.000000000000,
+1.032232800000,   
+    0.050000000000,
+9.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    34.910158000000,
+9.000000000000,
+2.50266,  	 
+    34.910158000000,
+9.000000000000,
+1.032232800000,   
+    18.089516000000,
+9.000000000000,
+1.032232800000,   
+    18.089516000000,
+9.000000000000,
+2.50266;  	 
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    10.950000000000,
+9.000000000000,
+2.512845,  	 
+    10.950000000000,
+9.000000000000,
+0.922073000000,   
+    9.730800000000,
+9.000000000000,
+0.922073000000,   
+    9.730800000000,
+9.000000000000,
+2.512845;  	 
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    8.511600000000,
+9.000000000000,
+2.512845,  	 
+    8.511600000000,
+9.000000000000,
+0.922073000000,   
+    0.050000000000,
+9.000000000000,
+0.922073000000,   
+    0.050000000000,
+9.000000000000,
+2.512845;  	 
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.512845,  	 
+    0.050000000000,
+0.000000000000,
+0.922073000000,   
+    1.269200000000,
+0.000000000000,
+0.922073000000,   
+    1.269200000000,
+0.000000000000,
+2.512845;  	 
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    2.488400000000,
+0.000000000000,
+2.512845,  	 
+    2.488400000000,
+0.000000000000,
+0.922073000000,   
+    10.950000000000,
+0.000000000000,
+0.922073000000,   
+    10.950000000000,
+0.000000000000,
+2.512845;  	 
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.50266,  	 
+    0.050000000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    18.089842000000,
+0.000000000000,
+2.50266,  	 
+    18.089842000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    36.129684000000,
+0.000000000000,
+2.50266,  	 
+    36.129684000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+2.50266;  	 
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.50266,  	 
+    0.050000000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    18.089842000000,
+0.000000000000,
+2.50266,  	 
+    18.089842000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    36.129684000000,
+0.000000000000,
+2.50266,  	 
+    36.129684000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+2.50266;  	 
+
+FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    52.950000000000,
+9.000000000000,
+2.50266,  	 
+    52.950000000000,
+9.000000000000,
+1.032232800000,   
+    36.129358000000,
+9.000000000000,
+1.032232800000,   
+    36.129358000000,
+9.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    34.910158000000,
+9.000000000000,
+2.50266,  	 
+    34.910158000000,
+9.000000000000,
+1.032232800000,   
+    18.089516000000,
+9.000000000000,
+1.032232800000,   
+    18.089516000000,
+9.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    16.870316000000,
+9.000000000000,
+2.50266,  	 
+    16.870316000000,
+9.000000000000,
+1.032232800000,   
+    0.050000000000,
+9.000000000000,
+1.032232800000,   
+    0.050000000000,
+9.000000000000,
+2.50266;  	 
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    10.950000000000,
+9.000000000000,
+2.512845,  	 
+    10.952974650803,
+9.000000000000,
+0.922097867406,   
+    9.730800000000,
+9.000000000000,
+0.922097867406,   
+    9.730800000000,
+9.000000000000,
+2.512845;  	 
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    8.511600000000,
+9.000000000000,
+2.512845,  	 
+    8.511600000000,
+9.000000000000,
+0.922097867406,   
+    0.052974650803,
+9.000000000000,
+0.922097867406,   
+    0.050000000000,
+9.000000000000,
+2.512845;  	 
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    2.488400000000,
+0.000000000000,
+2.512845,  	 
+    2.488400000000,
+0.000000000000,
+0.922073000000,   
+    10.950000000000,
+0.000000000000,
+0.922073000000,   
+    10.950000000000,
+0.000000000000,
+2.512845;  	 
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.50266,  	 
+    0.050000000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+1.032232800000,   
+    16.870642000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    18.089842000000,
+0.000000000000,
+2.50266,  	 
+    18.089842000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+1.032232800000,   
+    34.910484000000,
+0.000000000000,
+2.50266;  	 
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    36.129684000000,
+0.000000000000,
+2.50266,  	 
+    36.129684000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+1.032232800000,   
+    52.950000000000,
+0.000000000000,
+2.50266;  	 
+
+FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Lobby_ZN_1_FLR_1_Wall_1, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.50938,  	 
+    0.050000000000,
+0.000000000000,
+0.974397000000,   
+    1.269200000000,
+0.000000000000,
+0.974397000000,   
+    1.269200000000,
+0.000000000000,
+2.50938;  	 
+
+  FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Lobby_ZN_1_FLR_1_Wall_1, !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    2.488400000000,
+0.000000000000,
+2.50938,  	 
+    2.488400000000,
+0.000000000000,
+0.974397000000,   
+    14.950000000000,
+0.000000000000,
+0.974397000000,   
+    14.950000000000,
+0.000000000000,
+2.50938;  	 
+
+FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Offices_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.050000000000,
+0.000000000000,
+2.50371,  	 
+    0.050000000000,
+0.000000000000,
+1.003480000000,   
+    11.870652000000,
+0.000000000000,
+1.003480000000,   
+    11.870652000000,
+0.000000000000,
+2.50371;  	 
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window2,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Offices_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    13.089852000000,
+0.000000000000,
+2.50371,  	 
+    13.089852000000,
+0.000000000000,
+1.003480000000,   
+    24.910504000000,
+0.000000000000,
+1.003480000000,   
+    24.910504000000,
+0.000000000000,
+2.50371;  	 
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window3,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Offices_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    26.129704000000,
+0.000000000000,
+2.50371,  	 
+    26.129704000000,
+0.000000000000,
+1.003480000000,   
+    37.950000000000,
+0.000000000000,
+1.003480000000,   
+    37.950000000000,
+0.000000000000,
+2.50371;  	 
+
+FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_2_Window1,  !- Name
+    Window,                  !- Surface Type
+    Window,   !- Construction Name!- Field 12
+    Cafeteria_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    24.000000000000,
+0.050000000000,
+2.50539,  	 
+    24.000000000000,
+0.050000000000,
+1.030581800000,   
+    24.000000000000,
+1.269200000000,
+1.030581800000,   
+    24.000000000000,
+1.269200000000,
+2.50539;  	 
+
+ 
+
+{% elif Windows == "Low" %} 
+
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1152,
+0.05,
+0,
+1.3198,
+1.2692,
+0,
+1.3198,
+1.2692,
+0,
+2.1152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1596,
+0.05,
+0,
+1.4532,
+10.95,
+0,
+1.4532,
+10.95,
+0,
+2.1596;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.152,
+0.05,
+0,
+1.4507,
+52.95,
+0,
+1.4507,
+52.95,
+0,
+2.152;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_1_ZN_1_FLR_1_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_1_ZN_1_FLR_1_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.1714,
+0,
+4.95,
+1.4571,
+0,
+0.05,
+1.4571,
+0,
+0.05,
+2.1714;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_1_ZN_1_FLR_2_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_1_ZN_1_FLR_2_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.1714,
+0,
+4.95,
+1.4571,
+0,
+0.05,
+1.4571,
+0,
+0.05,
+2.1714;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.1596,
+10.95,
+9,
+1.4532,
+0.05,
+9,
+1.4532,
+0.05,
+9,
+2.1596;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.152,
+52.95,
+9,
+1.4507,
+0.05,
+9,
+1.4507,
+0.05,
+9,
+2.152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1596,
+0.05,
+0,
+1.4532,
+10.95,
+0,
+1.4532,
+10.95,
+0,
+2.1596;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.152,
+0.05,
+0,
+1.4507,
+52.95,
+0,
+1.4507,
+52.95,
+0,
+2.152;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_2_ZN_1_FLR_1_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_2_ZN_1_FLR_1_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.1714,
+0,
+4.95,
+1.4571,
+0,
+0.05,
+1.4571,
+0,
+0.05,
+2.1714;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_2_ZN_1_FLR_2_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_2_ZN_1_FLR_2_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.1714,
+0,
+4.95,
+1.4571,
+0,
+0.05,
+1.4571,
+0,
+0.05,
+2.1714;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.1596,
+10.95,
+9,
+1.4532,
+0.05,
+9,
+1.4532,
+0.05,
+9,
+2.1596;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.152,
+52.95,
+9,
+1.4507,
+0.05,
+9,
+1.4507,
+0.05,
+9,
+2.152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1596,
+0.05,
+0,
+1.4532,
+10.95,
+0,
+1.4532,
+10.95,
+0,
+2.1596;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.152,
+0.05,
+0,
+1.4507,
+52.95,
+0,
+1.4507,
+52.95,
+0,
+2.152;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_3_ZN_1_FLR_1_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_3_ZN_1_FLR_1_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.1714,
+0,
+4.95,
+1.4571,
+0,
+0.05,
+1.4571,
+0,
+0.05,
+2.1714;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_3_ZN_1_FLR_2_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_3_ZN_1_FLR_2_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.1714,
+0,
+4.95,
+1.4571,
+0,
+0.05,
+1.4571,
+0,
+0.05,
+2.1714;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.1596,
+10.95,
+9,
+1.4532,
+0.05,
+9,
+1.4532,
+0.05,
+9,
+2.1596;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.1618,
+0,
+8.95,
+1.4539,
+0,
+0.05,
+1.4539,
+0,
+0.05,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.152,
+52.95,
+9,
+1.4507,
+0.05,
+9,
+1.4507,
+0.05,
+9,
+2.152;
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_2_Wall_7_window_1,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_2_Wall_7,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+66.95,
+2.1559,
+0,
+66.95,
+1.452,
+0,
+49.05,
+1.452,
+0,
+49.05,
+2.1559;
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_2_Wall_11_window_1,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_2_Wall_11,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+25.95,
+2.1562,
+0,
+25.95,
+1.4521,
+0,
+9.05,
+1.4521,
+0,
+9.05,
+2.1562;
+
+  FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Lobby_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.157,
+0.05,
+0,
+1.4523,
+14.95,
+0,
+1.4523,
+14.95,
+0,
+2.157;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_1_Wall_3_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+15,
+11.05,
+2.1862,
+15,
+11.05,
+1.4621,
+15,
+13.95,
+1.4621,
+15,
+13.95,
+2.1862;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+14.95,
+14,
+2.157,
+14.95,
+14,
+1.4523,
+0.05,
+14,
+1.4523,
+0.05,
+14,
+2.157;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+15,
+11.05,
+2.1862,
+15,
+11.05,
+1.4621,
+15,
+13.95,
+1.4621,
+15,
+13.95,
+2.1862;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+14.95,
+14,
+2.157,
+14.95,
+14,
+1.4523,
+0.05,
+14,
+1.4523,
+0.05,
+14,
+2.157;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_2_window_1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+38,
+0.05,
+2.1576,
+38,
+0.05,
+1.4525,
+38,
+13.95,
+1.4525,
+38,
+13.95,
+2.1576;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1528,
+0.05,
+0,
+1.4509,
+37.95,
+0,
+1.4509,
+37.95,
+0,
+2.1528;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_2_Wall_2_window_1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_2_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+38,
+0.05,
+2.1576,
+38,
+0.05,
+1.4525,
+38,
+13.95,
+1.4525,
+38,
+13.95,
+2.1576;
+
+FenestrationSurface:Detailed,
+    Aux_Gym_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Aux_Gym_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+5.8029,
+0.05,
+0,
+4.3971,
+23.95,
+0,
+4.3971,
+23.95,
+0,
+5.8029;
+
+  FenestrationSurface:Detailed,
+    Aux_Gym_ZN_1_FLR_2_Wall_2_window_1,
+    Window,
+    Window,
+    Aux_Gym_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+5.8013,
+24,
+0.05,
+4.3987,
+24,
+51.95,
+4.3987,
+24,
+51.95,
+5.8013;
+
+FenestrationSurface:Detailed,
+    Auditorium_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Auditorium_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+37.95,
+26,
+5.8019,
+37.95,
+26,
+4.3981,
+0.05,
+26,
+4.3981,
+0.05,
+26,
+5.8019;
+
+  FenestrationSurface:Detailed,
+    Kitchen_ZN_1_FLR_1_Wall_2_window_1,
+    Window,
+    Window,
+    Kitchen_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+2.1618,
+24,
+0.05,
+1.4539,
+24,
+8.95,
+1.4539,
+24,
+8.95,
+2.1618;
+
+  FenestrationSurface:Detailed,
+    LIBRARY_MEDIA_CENTER_Wall_2_window_1,
+    Window,
+    Window,
+    LIBRARY_MEDIA_CENTER_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+2.153,
+24,
+0.05,
+1.451,
+24,
+34.95,
+1.451,
+24,
+34.95,
+2.153;
+
+  FenestrationSurface:Detailed,
+    LIBRARY_MEDIA_CENTER_Wall_3_window_1,
+    Window,
+    Window,
+    LIBRARY_MEDIA_CENTER_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+23.95,
+35,
+2.1544,
+23.95,
+35,
+1.4515,
+0.05,
+35,
+1.4515,
+0.05,
+35,
+2.1544;
+
+  FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_2_Window2,
+    Window,
+    Window,
+    Cafeteria_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+2.4884,
+2.1367,
+24,
+2.4884,
+1.3993,
+24,
+25.95,
+1.3993,
+24,
+25.95,
+2.1367;
+
+  FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_3_window_1,
+    Window,
+    Window,
+    Cafeteria_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+23.95,
+26,
+2.1544,
+23.95,
+26,
+1.4515,
+0.05,
+26,
+1.4515,
+0.05,
+26,
+2.1544;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.1351,
+36.1294,
+9,
+1.3999,
+36.1294,
+9,
+1.3999,
+36.1294,
+9,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window3,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+16.8703,
+9,
+2.1351,
+16.8703,
+9,
+1.3999,
+0.0463,
+9,
+1.3999,
+0.0463,
+9,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+34.9102,
+9,
+2.1351,
+34.9102,
+9,
+1.3999,
+18.0895,
+9,
+1.3999,
+18.0895,
+9,
+2.1351;
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.1152,
+10.95,
+9,
+1.3198,
+9.7308,
+9,
+1.3198,
+9.7308,
+9,
+2.1152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.5116,
+9,
+2.1152,
+8.5116,
+9,
+1.3198,
+0.05,
+9,
+1.3198,
+0.05,
+9,
+2.1152;
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1152,
+0.05,
+0,
+1.3198,
+1.2692,
+0,
+1.3198,
+1.2692,
+0,
+2.1152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.1152,
+2.4884,
+0,
+1.3198,
+10.95,
+0,
+1.3198,
+10.95,
+0,
+2.1152;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1351,
+0.05,
+0,
+1.3998,
+16.8706,
+0,
+1.3998,
+16.8706,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.1351,
+18.0898,
+0,
+1.3998,
+34.9105,
+0,
+1.3998,
+34.9105,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.1351,
+36.1297,
+0,
+1.3998,
+52.95,
+0,
+1.3998,
+52.95,
+0,
+2.1351;
+
+FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_1_Wall_7_Window1,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_1_Wall_7,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+66.95,
+2.1301,
+0,
+66.95,
+1.3748,
+0,
+65.7308,
+1.3748,
+0,
+65.7308,
+2.1301;
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_1_Wall_7_Window2,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_1_Wall_7,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+64.5116,
+2.1301,
+0,
+64.5116,
+1.3748,
+0,
+49.05,
+1.3748,
+0,
+49.05,
+2.1301;
+
+FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.1351,
+52.95,
+9,
+1.3998,
+36.1294,
+9,
+1.3998,
+36.1294,
+9,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window3,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+16.8703,
+9,
+2.1351,
+16.8703,
+9,
+1.3998,
+0.05,
+9,
+1.3998,
+0.05,
+9,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+34.9102,
+9,
+2.1351,
+34.9102,
+9,
+1.3998,
+18.0895,
+9,
+1.3998,
+18.0895,
+9,
+2.1351;
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.1152,
+10.95,
+9,
+1.3198,
+9.7308,
+9,
+1.3198,
+9.7308,
+9,
+2.1152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.5116,
+9,
+2.1152,
+8.5116,
+9,
+1.3198,
+0.05,
+9,
+1.3198,
+0.05,
+9,
+2.1152;
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1152,
+0.05,
+0,
+1.3198,
+1.2692,
+0,
+1.3198,
+1.2692,
+0,
+2.1152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.1152,
+2.4884,
+0,
+1.3198,
+10.95,
+0,
+1.3198,
+10.95,
+0,
+2.1152;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1351,
+0.05,
+0,
+1.3998,
+16.8706,
+0,
+1.3998,
+16.8706,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.1351,
+18.0898,
+0,
+1.3998,
+34.9105,
+0,
+1.3998,
+34.9105,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.1351,
+36.1297,
+0,
+1.3998,
+52.95,
+0,
+1.3998,
+52.95,
+0,
+2.1351;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1351,
+0.05,
+0,
+1.3998,
+16.8706,
+0,
+1.3998,
+16.8706,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.1351,
+18.0898,
+0,
+1.3998,
+34.9105,
+0,
+1.3998,
+34.9105,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.1351,
+36.1297,
+0,
+1.3998,
+52.95,
+0,
+1.3998,
+52.95,
+0,
+2.1351;
+
+FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.1351,
+52.95,
+9,
+1.3998,
+36.1294,
+9,
+1.3998,
+36.1294,
+9,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+34.9102,
+9,
+2.1351,
+34.9102,
+9,
+1.3998,
+18.0895,
+9,
+1.3998,
+18.0895,
+9,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window3,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+16.8703,
+9,
+2.1351,
+16.8703,
+9,
+1.3998,
+0.05,
+9,
+1.3998,
+0.05,
+9,
+2.1351;
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+9.7308,
+9,
+2.1152,
+10.953,
+9,
+1.3198,
+9.7308,
+9,
+1.3198,
+9.7308,
+9,
+2.1152;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.5116,
+9,
+2.1152,
+8.5116,
+9,
+1.3198,
+0.05,
+9,
+1.3198,
+0.05,
+9,
+2.1152;
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.1152,
+2.4884,
+0,
+1.3198,
+10.95,
+0,
+1.3198,
+10.95,
+0,
+2.1152;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1351,
+0.05,
+0,
+1.3998,
+16.8706,
+0,
+1.3998,
+16.8706,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.1351,
+18.0898,
+0,
+1.3998,
+34.9105,
+0,
+1.3998,
+34.9105,
+0,
+2.1351;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.1351,
+36.1297,
+0,
+1.3998,
+52.95,
+0,
+1.3998,
+52.95,
+0,
+2.1351;
+
+FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Lobby_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1256,
+0.05,
+0,
+1.3581,
+1.2692,
+0,
+1.3581,
+1.2692,
+0,
+2.1256;
+
+  FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Lobby_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.1256,
+2.4884,
+0,
+1.3581,
+14.95,
+0,
+1.3581,
+14.95,
+0,
+2.1256;
+
+FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.1287,
+0.05,
+0,
+1.3785,
+11.8707,
+0,
+1.3785,
+11.8707,
+0,
+2.1287;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+13.0899,
+0,
+2.1287,
+13.0899,
+0,
+1.3785,
+24.9105,
+0,
+1.3785,
+24.9105,
+0,
+2.1287;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+26.1297,
+0,
+2.1287,
+26.1297,
+0,
+1.3785,
+37.95,
+0,
+1.3785,
+37.95,
+0,
+2.1287;
+
+FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_2_Window1,
+    Window,
+    Window,
+    Cafeteria_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+2.1367,
+24,
+0.05,
+1.3993,
+24,
+1.2692,
+1.3993,
+24,
+1.2692,
+2.1367;
+
+{% elif Windows == "High" %} 
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.9105,
+0.05,
+0,
+0.5244,
+1.2692,
+0,
+0.5244,
+1.2692,
+0,
+2.9105;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8661,
+0.05,
+0,
+0.7468,
+10.95,
+0,
+0.7468,
+10.95,
+0,
+2.8661;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8533,
+0.05,
+0,
+0.7493,
+52.95,
+0,
+0.7493,
+52.95,
+0,
+2.8533;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_1_ZN_1_FLR_1_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_1_ZN_1_FLR_1_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.8857,
+0,
+4.95,
+0.7429,
+0,
+0.05,
+0.7429,
+0,
+0.05,
+2.8857;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_1_ZN_1_FLR_2_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_1_ZN_1_FLR_2_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.8857,
+0,
+4.95,
+0.7429,
+0,
+0.05,
+0.7429,
+0,
+0.05,
+2.8857;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.8661,
+10.95,
+9,
+0.7468,
+0.05,
+9,
+0.7468,
+0.05,
+9,
+2.8661;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.8533,
+52.95,
+9,
+0.7493,
+0.05,
+9,
+0.7493,
+0.05,
+9,
+2.8533;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8661,
+0.05,
+0,
+0.7468,
+10.95,
+0,
+0.7468,
+10.95,
+0,
+2.8661;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8533,
+0.05,
+0,
+0.7493,
+52.95,
+0,
+0.7493,
+52.95,
+0,
+2.8533;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_2_ZN_1_FLR_1_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_2_ZN_1_FLR_1_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.8857,
+0,
+4.95,
+0.7429,
+0,
+0.05,
+0.7429,
+0,
+0.05,
+2.8857;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_2_ZN_1_FLR_2_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_2_ZN_1_FLR_2_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.8857,
+0,
+4.95,
+0.7429,
+0,
+0.05,
+0.7429,
+0,
+0.05,
+2.8857;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.8661,
+10.95,
+9,
+0.7468,
+0.05,
+9,
+0.7468,
+0.05,
+9,
+2.8661;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.8533,
+52.95,
+9,
+0.7493,
+0.05,
+9,
+0.7493,
+0.05,
+9,
+2.8533;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8661,
+0.05,
+0,
+0.7468,
+10.95,
+0,
+0.7468,
+10.95,
+0,
+2.8661;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8533,
+0.05,
+0,
+0.7493,
+52.95,
+0,
+0.7493,
+52.95,
+0,
+2.8533;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_3_ZN_1_FLR_1_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_3_ZN_1_FLR_1_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.8857,
+0,
+4.95,
+0.7429,
+0,
+0.05,
+0.7429,
+0,
+0.05,
+2.8857;
+
+  FenestrationSurface:Detailed,
+    Corridor_Pod_3_ZN_1_FLR_2_Wall_6_window_1,
+    Window,
+    Window,
+    Corridor_Pod_3_ZN_1_FLR_2_Wall_6,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+4.95,
+2.8857,
+0,
+4.95,
+0.7429,
+0,
+0.05,
+0.7429,
+0,
+0.05,
+2.8857;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.8661,
+10.95,
+9,
+0.7468,
+0.05,
+9,
+0.7468,
+0.05,
+9,
+2.8661;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+8.95,
+2.8696,
+0,
+8.95,
+0.7461,
+0,
+0.05,
+0.7461,
+0,
+0.05,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.8533,
+52.95,
+9,
+0.7493,
+0.05,
+9,
+0.7493,
+0.05,
+9,
+2.8533;
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_2_Wall_7_window_1,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_2_Wall_7,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+66.95,
+2.8598,
+0,
+66.95,
+0.748,
+0,
+49.05,
+0.748,
+0,
+49.05,
+2.8598;
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_2_Wall_11_window_1,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_2_Wall_11,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+25.95,
+2.8604,
+0,
+25.95,
+0.7479,
+0,
+9.05,
+0.7479,
+0,
+9.05,
+2.8604;
+
+  FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Lobby_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8617,
+0.05,
+0,
+0.7477,
+14.95,
+0,
+0.7477,
+14.95,
+0,
+2.8617;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_1_Wall_3_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+15,
+11.05,
+2.9103,
+15,
+11.05,
+0.7379,
+15,
+13.95,
+0.7379,
+15,
+13.95,
+2.9103;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_1_Wall_4_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_1_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+14.95,
+14,
+2.8617,
+14.95,
+14,
+0.7477,
+0.05,
+14,
+0.7477,
+0.05,
+14,
+2.8617;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_2_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+15,
+11.05,
+2.9103,
+15,
+11.05,
+0.7379,
+15,
+13.95,
+0.7379,
+15,
+13.95,
+2.9103;
+
+  FenestrationSurface:Detailed,
+    Bathrooms_ZN_1_FLR_2_Wall_4_window_1,
+    Window,
+    Window,
+    Bathrooms_ZN_1_FLR_2_Wall_4,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+14.95,
+14,
+2.8617,
+14.95,
+14,
+0.7477,
+0.05,
+14,
+0.7477,
+0.05,
+14,
+2.8617;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_2_window_1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+38,
+0.05,
+2.8626,
+38,
+0.05,
+0.7475,
+38,
+13.95,
+0.7475,
+38,
+13.95,
+2.8626;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8546,
+0.05,
+0,
+0.7491,
+37.95,
+0,
+0.7491,
+37.95,
+0,
+2.8546;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_2_Wall_2_window_1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_2_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+38,
+0.05,
+2.8626,
+38,
+0.05,
+0.7475,
+38,
+13.95,
+0.7475,
+38,
+13.95,
+2.8626;
+
+FenestrationSurface:Detailed,
+    Aux_Gym_ZN_1_FLR_2_Wall_1_window_1,
+    Window,
+    Window,
+    Aux_Gym_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+7.2088,
+0.05,
+0,
+2.9912,
+23.95,
+0,
+2.9912,
+23.95,
+0,
+7.2088;
+
+  FenestrationSurface:Detailed,
+    Aux_Gym_ZN_1_FLR_2_Wall_2_window_1,
+    Window,
+    Window,
+    Aux_Gym_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+7.204,
+24,
+0.05,
+2.996,
+24,
+51.95,
+2.996,
+24,
+51.95,
+7.204;
+
+FenestrationSurface:Detailed,
+    Auditorium_ZN_1_FLR_2_Wall_3_window_1,
+    Window,
+    Window,
+    Auditorium_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+37.95,
+26,
+7.2056,
+37.95,
+26,
+2.9944,
+0.05,
+26,
+2.9944,
+0.05,
+26,
+7.2056;
+
+  FenestrationSurface:Detailed,
+    Kitchen_ZN_1_FLR_1_Wall_2_window_1,
+    Window,
+    Window,
+    Kitchen_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+2.8696,
+24,
+0.05,
+0.7461,
+24,
+8.95,
+0.7461,
+24,
+8.95,
+2.8696;
+
+  FenestrationSurface:Detailed,
+    LIBRARY_MEDIA_CENTER_Wall_2_window_1,
+    Window,
+    Window,
+    LIBRARY_MEDIA_CENTER_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+2.855,
+24,
+0.05,
+0.749,
+24,
+34.95,
+0.749,
+24,
+34.95,
+2.855;
+
+  FenestrationSurface:Detailed,
+    LIBRARY_MEDIA_CENTER_Wall_3_window_1,
+    Window,
+    Window,
+    LIBRARY_MEDIA_CENTER_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+23.95,
+35,
+2.8573,
+23.95,
+35,
+0.7485,
+0.05,
+35,
+0.7485,
+0.05,
+35,
+2.8573;
+
+  FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_2_Window2,
+    Window,
+    Window,
+    Cafeteria_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+2.4884,
+2.8741,
+24,
+2.4884,
+0.6619,
+24,
+25.95,
+0.6619,
+24,
+25.95,
+2.8741;
+
+  FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_3_window_1,
+    Window,
+    Window,
+    Cafeteria_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+23.95,
+26,
+2.8573,
+23.95,
+26,
+0.7485,
+0.05,
+26,
+0.7485,
+0.05,
+26,
+2.8573;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.8702,
+36.1294,
+9,
+0.6648,
+36.1294,
+9,
+0.6648,
+36.1294,
+9,
+2.8702;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window3,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+16.8703,
+9,
+2.8702,
+16.8703,
+9,
+0.6648,
+0.0463,
+9,
+0.6648,
+0.0463,
+9,
+2.8702;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+34.9102,
+9,
+2.8702,
+34.9102,
+9,
+0.6648,
+18.0895,
+9,
+0.6648,
+18.0895,
+9,
+2.8702;
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.9105,
+10.95,
+9,
+0.5244,
+9.7308,
+9,
+0.5244,
+9.7308,
+9,
+2.9105;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.5116,
+9,
+2.9105,
+8.5116,
+9,
+0.5244,
+0.05,
+9,
+0.5244,
+0.05,
+9,
+2.9105;
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.9105,
+0.05,
+0,
+0.5244,
+1.2692,
+0,
+0.5244,
+1.2692,
+0,
+2.9105;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.9105,
+2.4884,
+0,
+0.5244,
+10.95,
+0,
+0.5244,
+10.95,
+0,
+2.9105;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8703,
+0.05,
+0,
+0.6646,
+16.8706,
+0,
+0.6646,
+16.8706,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.8703,
+18.0898,
+0,
+0.6646,
+34.9105,
+0,
+0.6646,
+34.9105,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.8703,
+36.1297,
+0,
+0.6646,
+52.95,
+0,
+0.6646,
+52.95,
+0,
+2.8703;
+
+FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_1_Wall_7_Window1,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_1_Wall_7,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+66.95,
+2.8855,
+0,
+66.95,
+0.6194,
+0,
+65.7308,
+0.6194,
+0,
+65.7308,
+2.8855;
+
+  FenestrationSurface:Detailed,
+    Main_Corridor_ZN_1_FLR_1_Wall_7_Window2,
+    Window,
+    Window,
+    Main_Corridor_ZN_1_FLR_1_Wall_7,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+64.5116,
+2.8855,
+0,
+64.5116,
+0.6194,
+0,
+49.05,
+0.6194,
+0,
+49.05,
+2.8855;
+
+FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.8703,
+52.95,
+9,
+0.6646,
+36.1294,
+9,
+0.6646,
+36.1294,
+9,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window3,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+16.8703,
+9,
+2.8703,
+16.8703,
+9,
+0.6646,
+0.05,
+9,
+0.6646,
+0.05,
+9,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+34.9102,
+9,
+2.8703,
+34.9102,
+9,
+0.6646,
+18.0895,
+9,
+0.6646,
+18.0895,
+9,
+2.8703;
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+10.95,
+9,
+2.9105,
+10.95,
+9,
+0.5244,
+9.7308,
+9,
+0.5244,
+9.7308,
+9,
+2.9105;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.5116,
+9,
+2.9105,
+8.5116,
+9,
+0.5244,
+0.05,
+9,
+0.5244,
+0.05,
+9,
+2.9105;
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.9105,
+0.05,
+0,
+0.5244,
+1.2692,
+0,
+0.5244,
+1.2692,
+0,
+2.9105;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.9105,
+2.4884,
+0,
+0.5244,
+10.95,
+0,
+0.5244,
+10.95,
+0,
+2.9105;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8703,
+0.05,
+0,
+0.6646,
+16.8706,
+0,
+0.6646,
+16.8706,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.8703,
+18.0898,
+0,
+0.6646,
+34.9105,
+0,
+0.6646,
+34.9105,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.8703,
+36.1297,
+0,
+0.6646,
+52.95,
+0,
+0.6646,
+52.95,
+0,
+2.8703;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8703,
+0.05,
+0,
+0.6646,
+16.8706,
+0,
+0.6646,
+16.8706,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.8703,
+18.0898,
+0,
+0.6646,
+34.9105,
+0,
+0.6646,
+34.9105,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.8703,
+36.1297,
+0,
+0.6646,
+52.95,
+0,
+0.6646,
+52.95,
+0,
+2.8703;
+
+FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+52.95,
+9,
+2.8703,
+52.95,
+9,
+0.6646,
+36.1294,
+9,
+0.6646,
+36.1294,
+9,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+34.9102,
+9,
+2.8703,
+34.9102,
+9,
+0.6646,
+18.0895,
+9,
+0.6646,
+18.0895,
+9,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window3,
+    Window,
+    Window,
+    Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+16.8703,
+9,
+2.8703,
+16.8703,
+9,
+0.6646,
+0.05,
+9,
+0.6646,
+0.05,
+9,
+2.8703;
+
+FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+9.7308,
+9,
+2.9105,
+10.953,
+9,
+0.5244,
+9.7308,
+9,
+0.5244,
+9.7308,
+9,
+2.9105;
+
+  FenestrationSurface:Detailed,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
+    Window,
+    Window,
+    Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.5116,
+9,
+2.9105,
+8.5116,
+9,
+0.5244,
+0.05,
+9,
+0.5244,
+0.05,
+9,
+2.9105;
+
+FenestrationSurface:Detailed,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.9105,
+2.4884,
+0,
+0.5244,
+10.95,
+0,
+0.5244,
+10.95,
+0,
+2.9105;
+
+FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8703,
+0.05,
+0,
+0.6646,
+16.8706,
+0,
+0.6646,
+16.8706,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+18.0898,
+0,
+2.8703,
+18.0898,
+0,
+0.6646,
+34.9105,
+0,
+0.6646,
+34.9105,
+0,
+2.8703;
+
+  FenestrationSurface:Detailed,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+36.1297,
+0,
+2.8703,
+36.1297,
+0,
+0.6646,
+52.95,
+0,
+0.6646,
+52.95,
+0,
+2.8703;
+
+FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Lobby_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8931,
+0.05,
+0,
+0.5907,
+1.2692,
+0,
+0.5907,
+1.2692,
+0,
+2.8931;
+
+  FenestrationSurface:Detailed,
+    Lobby_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Lobby_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+2.4884,
+0,
+2.8931,
+2.4884,
+0,
+0.5907,
+14.95,
+0,
+0.5907,
+14.95,
+0,
+2.8931;
+
+FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window1,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.05,
+0,
+2.8788,
+0.05,
+0,
+0.6284,
+11.8707,
+0,
+0.6284,
+11.8707,
+0,
+2.8788;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window2,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+13.0899,
+0,
+2.8788,
+13.0899,
+0,
+0.6284,
+24.9105,
+0,
+0.6284,
+24.9105,
+0,
+2.8788;
+
+  FenestrationSurface:Detailed,
+    Offices_ZN_1_FLR_1_Wall_1_Window3,
+    Window,
+    Window,
+    Offices_ZN_1_FLR_1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+26.1297,
+0,
+2.8788,
+26.1297,
+0,
+0.6284,
+37.95,
+0,
+0.6284,
+37.95,
+0,
+2.8788;
+
+FenestrationSurface:Detailed,
+    Cafeteria_ZN_1_FLR_1_Wall_2_Window1,
+    Window,
+    Window,
+    Cafeteria_ZN_1_FLR_1_Wall_2,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+24,
+0.05,
+2.8741,
+24,
+0.05,
+0.6619,
+24,
+1.2692,
+0.6619,
+24,
+1.2692,
+2.8741;
+
+
+{%- endif %}

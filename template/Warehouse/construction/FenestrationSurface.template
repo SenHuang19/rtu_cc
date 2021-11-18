@@ -1,0 +1,979 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+
+{%- if Windows == "Medium" %} 
+
+FenestrationSurface:Detailed,
+    Office Front Wall Window 1,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Front Wall,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    3.65742163051717,        !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    3.65742163051717,        !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    7.31484326103434,        !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    7.31484326103434,        !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Front Wall Window2,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Front Wall,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    18.5918932884623,        !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    18.5918932884623,        !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    22.2493149189795,        !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    22.2493149189795,        !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Left Wall Window1,!- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Left Wall,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    7.51904930207155,        !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    7.51904930207155,        !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    5.38555335093654,        !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    5.38555335093654,        !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Left Wall Window2,!- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Left Wall,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    3.75800072535639,        !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    3.75800072535639,        !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    1.62450477422138,        !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    1.62450477422138,        !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C1,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    34.136114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    34.136114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    32.916914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    32.916914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C2,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    40.232114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    40.232114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    39.012914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    39.012914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C3,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    46.328114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    46.328114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    45.108914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    45.108914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C4,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    52.424114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    52.424114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    51.204914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    51.204914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C5,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    58.520114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    58.520114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    57.300914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    57.300914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C1,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    34.136114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    34.136114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    32.916914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    32.916914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C2,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    40.232114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    40.232114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    39.012914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    39.012914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C3,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    46.328114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    46.328114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    45.108914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    45.108914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C4,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    52.424114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    52.424114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    51.204914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    51.204914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C5,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    58.520114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    58.520114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    57.300914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    57.300914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+ 
+
+{% elif Windows == "Low" %} 
+
+
+FenestrationSurface:Detailed,
+    Office Front Wall Window 1,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Front Wall,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    3.65742163051717,        !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    3.65742163051717,        !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    7.31484326103434,        !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    7.31484326103434,        !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Front Wall Window2,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Front Wall,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    18.5918932884623,        !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    18.5918932884623,        !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    22.2493149189795,        !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    22.2493149189795,        !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Left Wall Window1,!- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Left Wall,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    7.51904930207155,        !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    7.51904930207155,        !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    5.38555335093654,        !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    5.38555335093654,        !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Left Wall Window2,!- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Left Wall,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    3.75800072535639,        !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    3.75800072535639,        !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    1.62450477422138,        !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    1.62450477422138,        !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C1,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    34.136114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    34.136114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    32.916914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    32.916914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C2,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    40.232114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    40.232114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    39.012914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    39.012914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C3,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    46.328114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    46.328114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    45.108914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    45.108914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C4,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    52.424114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    52.424114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    51.204914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    51.204914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C5,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    58.520114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    58.520114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    57.300914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    57.300914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C1,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    34.136114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    34.136114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    32.916914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    32.916914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C2,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    40.232114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    40.232114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    39.012914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    39.012914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C3,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    46.328114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    46.328114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    45.108914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    45.108914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C4,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    52.424114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    52.424114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    51.204914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    51.204914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C5,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    58.520114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    58.520114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    57.300914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    57.300914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+{% elif Windows == "High" %} 
+
+
+FenestrationSurface:Detailed,
+    Office Front Wall Window 1,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Front Wall,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    3.65742163051717,        !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    3.65742163051717,        !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    7.31484326103434,        !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    7.31484326103434,        !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Front Wall Window2,  !- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Front Wall,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    18.5918932884623,        !- Vertex 1 X-coordinate {m}
+    0,                       !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    18.5918932884623,        !- Vertex 2 X-coordinate {m}
+    0,                       !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    22.2493149189795,        !- Vertex 3 X-coordinate {m}
+    0,                       !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    22.2493149189795,        !- Vertex 4 X-coordinate {m}
+    0,                       !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Left Wall Window1,!- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Left Wall,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    7.51904930207155,        !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    7.51904930207155,        !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    5.38555335093654,        !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    5.38555335093654,        !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Office Left Wall Window2,!- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Office Left Wall,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    autocalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1,                       !- Multiplier
+    4,                       !- Number of Vertices
+    0,                       !- Vertex 1 X-coordinate {m}
+    3.75800072535639,        !- Vertex 1 Y-coordinate {m}
+    2.43929602151392,        !- Vertex 1 Z-coordinate {m}
+    0,                       !- Vertex 2 X-coordinate {m}
+    3.75800072535639,        !- Vertex 2 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 2 Z-coordinate {m}
+    0,                       !- Vertex 3 X-coordinate {m}
+    1.62450477422138,        !- Vertex 3 Y-coordinate {m}
+    0.914355407629293,       !- Vertex 3 Z-coordinate {m}
+    0,                       !- Vertex 4 X-coordinate {m}
+    1.62450477422138,        !- Vertex 4 Y-coordinate {m}
+    2.43929602151392;        !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C1,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    34.136114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    34.136114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    32.916914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    32.916914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C2,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    40.232114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    40.232114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    39.012914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    39.012914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C3,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    46.328114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    46.328114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    45.108914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    45.108914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C4,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    52.424114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    52.424114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    51.204914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    51.204914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R1C5,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.657600,                !- Vertex 1 X-coordinate {m}
+    58.520114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    2.438400,                !- Vertex 2 X-coordinate {m}
+    58.520114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    2.438400,                !- Vertex 3 X-coordinate {m}
+    57.300914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    3.657600,                !- Vertex 4 X-coordinate {m}
+    57.300914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C1,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    34.136114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    34.136114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    32.916914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    32.916914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C2,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    40.232114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    40.232114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    39.012914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    39.012914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C3,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    46.328114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    46.328114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    45.108914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    45.108914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C4,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    52.424114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    52.424114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    51.204914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    51.204914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Skylight_R2C5,           !- Name
+    Window,                  !- Surface Type
+    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Construction Name
+    Bulk Storage Roof,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    Skylight_Frame_Semiheated,  !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    9.753600,                !- Vertex 1 X-coordinate {m}
+    58.520114,               !- Vertex 1 Y-coordinate {m}
+    8.533984,                !- Vertex 1 Z-coordinate {m}
+    8.534400,                !- Vertex 2 X-coordinate {m}
+    58.520114,               !- Vertex 2 Y-coordinate {m}
+    8.533984,                !- Vertex 2 Z-coordinate {m}
+    8.534400,                !- Vertex 3 X-coordinate {m}
+    57.300914,               !- Vertex 3 Y-coordinate {m}
+    8.533984,                !- Vertex 3 Z-coordinate {m}
+    9.753600,                !- Vertex 4 X-coordinate {m}
+    57.300914,               !- Vertex 4 Y-coordinate {m}
+    8.533984;                !- Vertex 4 Z-coordinate {m}
+{%- endif %}

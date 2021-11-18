@@ -1,0 +1,111 @@
+
+
+  Material:NoMass,
+    Opaque Door panel_con,   !- Name
+    MediumRough,             !- Roughness
+{%- if (climate == "1A" or climate == "2B" or climate == "2A" or climate == "3A" or climate == "3B" or climate == "3C") %} 
+    0.25142,
+{% else %}
+    0.352,
+{%- endif %}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Overhead Door_semi Panel,!- Name
+    MediumRough,             !- Roughness
+{%- if (climate == "6A" or climate == "6B" or climate == "7" or climate == "6A" ) %} 
+    0.12137931,  !- Thermal Resistance {m2-K/W}
+{% else %}
+    0.352,
+{%- endif %}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Overhead Door_con Panel, !- Name
+    MediumRough,             !- Roughness
+{%- if (climate == "1A" ) %} 
+    0.12137931,  !- Thermal Resistance {m2-K/W}
+{% else %}
+    0.352,
+{%- endif %}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Nonres_Roof_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+{%- if (climate == "1A") %} 
+    4.1579,
+{% elif (climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
+    4.3782,
+{% elif (climate == "4A"  or climate == "4B" or climate == "4C" or climate == "5A"  or climate == "5B" or climate == "5C") %}
+    4.6223,
+{% elif (climate == "6A"  or climate == "6B") %}
+    5.54359,
+{% elif (climate == "7") %}
+    5.93538,
+{% else %}
+    6.636,
+{%- endif %}
+    0.9,                     !- Absorptance:Thermal
+    0.7,                     !- Absorptance:Solar
+    0.7;                     !- Absorptance:Visible
+
+  Material:NoMass,
+    Semiheated_Roof_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+{%- if (climate == "1A") %} 
+    1.394,
+{% elif (climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
+    1.69709,
+{% elif (climate == "4A"  or climate == "4B" or climate == "4C" or climate == "5A"  or climate == "5B" or climate == "5C") %}
+    2.0103,
+{% elif (climate == "6A"  or climate == "6B") %}
+    2.79778,
+{% else %}
+    4.62235,
+{%- endif %}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Nonres_Exterior_Wall_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+{%- if (climate == "1A" or climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
+    1.64444,
+{% elif (climate == "4A"  or climate == "4B" or climate == "4C") %}
+    2.7061,
+{% elif (climate == "5A"  or climate == "5B" or climate == "5C" or climate == "6A"  or climate == "6B") %}
+    3.293135,
+{% elif (climate == "7") %}
+    3.77343,
+{% else %}
+    4.2865,
+{%- endif %}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    Semiheated_Exterior_Wall_Insulation,  !- Name
+    MediumSmooth,            !- Roughness
+{%- if (climate == "1A") %} 
+    0.271244,
+{% elif (climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C" or climate == "4A"  or climate == "4B" or climate == "4C") %} 
+    0.85803,
+{% elif (climate == "5A"  or climate == "5B" or climate == "5C" or climate == "6A"  or climate == "6B") %}
+    1.6444,
+{% elif (climate == "7") %}
+    2.2169,
+{% else %}
+    2.7061,
+{%- endif %}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance

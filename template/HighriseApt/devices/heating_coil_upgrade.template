@@ -1080,7 +1080,7 @@ Coil:Heating:Fuel,
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
 	
 {%- endif %}
-{%- endif %}
+
 
 
 
@@ -1299,7 +1299,7 @@ Coil:Heating:Fuel,
     Air Loop Outlet Node 6;  !- Air Outlet Node Name
 	
 {%- endif %}
-{%- endif %}
+
 
 
 
@@ -1518,7 +1518,6 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 7,  !- Air Inlet Node Name
     Air Loop Outlet Node 7;  !- Air Outlet Node Name
 	
-{%- endif %}
 {%- endif %}
 
 
@@ -1740,7 +1739,7 @@ Coil:Heating:Fuel,
     Air Loop Outlet Node 8;  !- Air Outlet Node Name
 	
 {%- endif %}
-{%- endif %}
+
 
 
 

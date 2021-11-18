@@ -1,0 +1,99 @@
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:CONSTANT ===========
+
+Schedule:Constant,
+    Fan2Max,                 !- Name
+    Any Number,              !- Schedule Type Limits Name
+    0;                       !- Hourly Value
+
+Schedule:Constant,
+    minOAFrac1,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Corner")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+Schedule:Constant,
+    minOAFrac2,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+Schedule:Constant,
+    minOAFrac3,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+Schedule:Constant,
+    minOAFrac4,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+Schedule:Constant,
+    minOAFrac5,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+
+Schedule:Constant,
+    minOAFrac6,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+
+Schedule:Constant,
+    minOAFrac7,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+Schedule:Constant,
+    minOAFrac8,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+Schedule:Constant,
+    minOAFrac9,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Interior")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+
+Schedule:Constant,
+    minOAFrac10,               !- Name
+    Fraction,                !- Schedule Type Limits Name
+  {% if (Zonetype == "Corner")  %} 
+    {{MinOAFraction_Upgraded}};
+{% else %}
+    {{MinOAFraction_Baseline}};
+{% endif %}
+

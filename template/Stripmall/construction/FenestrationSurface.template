@@ -1,0 +1,1670 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+
+{%- if Windows == "Medium" %} 
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore1_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.610,                   !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    0.610,                   !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    2.740,                   !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    2.740,                   !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore1_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    4.880,                   !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    4.880,                   !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    7.010,                   !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    7.010,                   !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_3,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore1_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    8.230,                   !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    8.230,                   !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    10.360,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    10.360,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_4,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore1_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    12.500,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    12.500,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    14.630,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    14.630,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore1_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore1_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    15.850,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    15.850,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    17.980,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    17.980,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore1_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore1_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    20.120,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    20.120,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    22.250,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    22.250,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore2_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore2_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    23.470,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    23.470,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    25.600,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    25.600,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore2_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore2_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    27.740,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    27.740,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    29.870,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    29.870,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore3_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore3_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    31.090,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    31.090,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    33.220,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    33.220,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore3_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore3_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    35.360,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    35.360,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    37.490,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    37.490,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore4_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore4_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    38.710,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    38.710,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    40.840,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    40.840,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore4_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore4_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    42.980,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    42.980,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    45.110,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    45.110,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore2_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    46.330,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    46.330,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    48.460,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    48.460,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore2_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    50.600,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    50.600,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    52.730,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    52.730,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_3,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore2_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    53.950,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    53.950,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    56.080,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    56.080,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_4,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    LGstore2_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    58.220,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    58.220,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    60.350,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    60.350,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore5_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore5_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    61.570,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    61.570,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    63.700,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    63.700,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore5_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore5_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    65.840,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    65.840,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    67.970,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    67.970,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore6_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore6_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    69.190,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    69.190,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    71.320,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    71.320,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore6_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore6_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    73.460,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    73.460,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    75.590,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    75.590,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore7_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore7_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    76.810,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    76.810,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    78.940,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    78.940,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore7_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore7_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    81.080,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    81.080,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    83.210,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    83.210,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore8_Wall_1_Window_1,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore8_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    84.430,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    84.430,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    86.560,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    86.560,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    SMstore8_Wall_1_Window_2,!- Name
+    Window,                  !- Surface Type
+   Window,  !- Construction Name
+    SMstore8_Wall_1,         !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    88.700,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    2.4300,                  !- Vertex 1 Z-coordinate {m}
+    88.700,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    0.9100,                  !- Vertex 2 Z-coordinate {m}
+    90.830,                  !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    0.9100,                  !- Vertex 3 Z-coordinate {m}
+    90.830,                  !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    2.4300;                  !- Vertex 4 Z-coordinate {m}
+
+
+{% elif Windows == "Low" %} 
+
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_1,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.61,
+0,
+2.05,
+0.61,
+0,
+1.29,
+2.74,
+0,
+1.29,
+2.74,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_2,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+4.88,
+0,
+2.05,
+4.88,
+0,
+1.29,
+7.01,
+0,
+1.29,
+7.01,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_3,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.23,
+0,
+2.05,
+8.23,
+0,
+1.29,
+10.36,
+0,
+1.29,
+10.36,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_4,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+12.5,
+0,
+2.05,
+12.5,
+0,
+1.29,
+14.63,
+0,
+1.29,
+14.63,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore1_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+15.85,
+0,
+2.05,
+15.85,
+0,
+1.29,
+17.98,
+0,
+1.29,
+17.98,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore1_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+20.12,
+0,
+2.05,
+20.12,
+0,
+1.29,
+22.25,
+0,
+1.29,
+22.25,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore2_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+23.47,
+0,
+2.05,
+23.47,
+0,
+1.29,
+25.6,
+0,
+1.29,
+25.6,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore2_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+27.74,
+0,
+2.05,
+27.74,
+0,
+1.29,
+29.87,
+0,
+1.29,
+29.87,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore3_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore3_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+31.09,
+0,
+2.05,
+31.09,
+0,
+1.29,
+33.22,
+0,
+1.29,
+33.22,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore3_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore3_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+35.36,
+0,
+2.05,
+35.36,
+0,
+1.29,
+37.49,
+0,
+1.29,
+37.49,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore4_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore4_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+38.71,
+0,
+2.05,
+38.71,
+0,
+1.29,
+40.84,
+0,
+1.29,
+40.84,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore4_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore4_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+42.98,
+0,
+2.05,
+42.98,
+0,
+1.29,
+45.11,
+0,
+1.29,
+45.11,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_1,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+46.33,
+0,
+2.05,
+46.33,
+0,
+1.29,
+48.46,
+0,
+1.29,
+48.46,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_2,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+50.6,
+0,
+2.05,
+50.6,
+0,
+1.29,
+52.73,
+0,
+1.29,
+52.73,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_3,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+53.95,
+0,
+2.05,
+53.95,
+0,
+1.29,
+56.08,
+0,
+1.29,
+56.08,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_4,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+58.22,
+0,
+2.05,
+58.22,
+0,
+1.29,
+60.35,
+0,
+1.29,
+60.35,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore5_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore5_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+61.57,
+0,
+2.05,
+61.57,
+0,
+1.29,
+63.7,
+0,
+1.29,
+63.7,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore5_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore5_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+65.84,
+0,
+2.05,
+65.84,
+0,
+1.29,
+67.97,
+0,
+1.29,
+67.97,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore6_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore6_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+69.19,
+0,
+2.05,
+69.19,
+0,
+1.29,
+71.32,
+0,
+1.29,
+71.32,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore6_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore6_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+73.46,
+0,
+2.05,
+73.46,
+0,
+1.29,
+75.59,
+0,
+1.29,
+75.59,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore7_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore7_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+76.81,
+0,
+2.05,
+76.81,
+0,
+1.29,
+78.94,
+0,
+1.29,
+78.94,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore7_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore7_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+81.08,
+0,
+2.05,
+81.08,
+0,
+1.29,
+83.21,
+0,
+1.29,
+83.21,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore8_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore8_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+84.43,
+0,
+2.05,
+84.43,
+0,
+1.29,
+86.56,
+0,
+1.29,
+86.56,
+0,
+2.05;
+
+FenestrationSurface:Detailed,
+    SMstore8_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore8_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+88.7,
+0,
+2.05,
+88.7,
+0,
+1.29,
+90.83,
+0,
+1.29,
+90.83,
+0,
+2.05;
+
+
+{% elif Windows == "High" %} 
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_1,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.61,
+0,
+2.81,
+0.61,
+0,
+0.53,
+2.74,
+0,
+0.53,
+2.74,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_2,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+4.88,
+0,
+2.81,
+4.88,
+0,
+0.53,
+7.01,
+0,
+0.53,
+7.01,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_3,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+8.23,
+0,
+2.81,
+8.23,
+0,
+0.53,
+10.36,
+0,
+0.53,
+10.36,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    LGstore1_Wall_1_Window_4,
+    Window,
+   Window,
+    LGstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+12.5,
+0,
+2.81,
+12.5,
+0,
+0.53,
+14.63,
+0,
+0.53,
+14.63,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore1_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+15.85,
+0,
+2.81,
+15.85,
+0,
+0.53,
+17.98,
+0,
+0.53,
+17.98,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore1_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore1_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+20.12,
+0,
+2.81,
+20.12,
+0,
+0.53,
+22.25,
+0,
+0.53,
+22.25,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore2_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+23.47,
+0,
+2.81,
+23.47,
+0,
+0.53,
+25.6,
+0,
+0.53,
+25.6,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore2_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+27.74,
+0,
+2.81,
+27.74,
+0,
+0.53,
+29.87,
+0,
+0.53,
+29.87,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore3_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore3_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+31.09,
+0,
+2.81,
+31.09,
+0,
+0.53,
+33.22,
+0,
+0.53,
+33.22,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore3_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore3_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+35.36,
+0,
+2.81,
+35.36,
+0,
+0.53,
+37.49,
+0,
+0.53,
+37.49,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore4_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore4_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+38.71,
+0,
+2.81,
+38.71,
+0,
+0.53,
+40.84,
+0,
+0.53,
+40.84,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore4_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore4_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+42.98,
+0,
+2.81,
+42.98,
+0,
+0.53,
+45.11,
+0,
+0.53,
+45.11,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_1,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+46.33,
+0,
+2.81,
+46.33,
+0,
+0.53,
+48.46,
+0,
+0.53,
+48.46,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_2,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+50.6,
+0,
+2.81,
+50.6,
+0,
+0.53,
+52.73,
+0,
+0.53,
+52.73,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_3,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+53.95,
+0,
+2.81,
+53.95,
+0,
+0.53,
+56.08,
+0,
+0.53,
+56.08,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    LGstore2_Wall_1_Window_4,
+    Window,
+   Window,
+    LGstore2_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+58.22,
+0,
+2.81,
+58.22,
+0,
+0.53,
+60.35,
+0,
+0.53,
+60.35,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore5_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore5_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+61.57,
+0,
+2.81,
+61.57,
+0,
+0.53,
+63.7,
+0,
+0.53,
+63.7,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore5_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore5_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+65.84,
+0,
+2.81,
+65.84,
+0,
+0.53,
+67.97,
+0,
+0.53,
+67.97,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore6_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore6_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+69.19,
+0,
+2.81,
+69.19,
+0,
+0.53,
+71.32,
+0,
+0.53,
+71.32,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore6_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore6_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+73.46,
+0,
+2.81,
+73.46,
+0,
+0.53,
+75.59,
+0,
+0.53,
+75.59,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore7_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore7_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+76.81,
+0,
+2.81,
+76.81,
+0,
+0.53,
+78.94,
+0,
+0.53,
+78.94,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore7_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore7_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+81.08,
+0,
+2.81,
+81.08,
+0,
+0.53,
+83.21,
+0,
+0.53,
+83.21,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore8_Wall_1_Window_1,
+    Window,
+   Window,
+    SMstore8_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+84.43,
+0,
+2.81,
+84.43,
+0,
+0.53,
+86.56,
+0,
+0.53,
+86.56,
+0,
+2.81;
+
+FenestrationSurface:Detailed,
+    SMstore8_Wall_1_Window_2,
+    Window,
+   Window,
+    SMstore8_Wall_1,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+88.7,
+0,
+2.81,
+88.7,
+0,
+0.53,
+90.83,
+0,
+0.53,
+90.83,
+0,
+2.81;
+
+
+{%- endif %}

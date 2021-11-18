@@ -1,0 +1,218 @@
+
+!-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
+
+{%- if Windows == "Medium" %} 
+
+FenestrationSurface:Detailed,
+    Dining_Wall_East_Window, !- Name
+    Window,                  !- Surface Type
+    Window,  !- Construction Name
+    Dining_Wall_East,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    22.6087,                 !- Vertex 1 X-coordinate {m}
+    0.6029,                  !- Vertex 1 Y-coordinate {m}
+    1.9817,                  !- Vertex 1 Z-coordinate {m}
+    22.6087,                 !- Vertex 2 X-coordinate {m}
+    0.6029,                  !- Vertex 2 Y-coordinate {m}
+    1.0671,                  !- Vertex 2 Z-coordinate {m}
+    22.6087,                 !- Vertex 3 X-coordinate {m}
+    15.8398,                 !- Vertex 3 Y-coordinate {m}
+    1.0671,                  !- Vertex 3 Z-coordinate {m}
+    22.6087,                 !- Vertex 4 X-coordinate {m}
+    15.8398,                 !- Vertex 4 Y-coordinate {m}
+    1.9817;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Dining_Wall_South_Window,!- Name
+    Window,                  !- Surface Type
+    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Dining_Wall_South,       !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.7540,                  !- Vertex 1 X-coordinate {m}
+    0.0000,                  !- Vertex 1 Y-coordinate {m}
+    1.9817,                  !- Vertex 1 Z-coordinate {m}
+    0.7540,                  !- Vertex 2 X-coordinate {m}
+    0.0000,                  !- Vertex 2 Y-coordinate {m}
+    1.0671,                  !- Vertex 2 Z-coordinate {m}
+    21.8550,                 !- Vertex 3 X-coordinate {m}
+    0.0000,                  !- Vertex 3 Y-coordinate {m}
+    1.0671,                  !- Vertex 3 Z-coordinate {m}
+    21.8550,                 !- Vertex 4 X-coordinate {m}
+    0.0000,                  !- Vertex 4 Y-coordinate {m}
+    1.9817;                  !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    Dining_Wall_West_Window, !- Name
+    Window,                  !- Surface Type
+    Window,  !- Construction Name
+    Dining_Wall_West,        !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    AutoCalculate,           !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    1.0000,                  !- Multiplier
+    4,                       !- Number of Vertices
+    0.0000,                  !- Vertex 1 X-coordinate {m}
+    15.8398,                 !- Vertex 1 Y-coordinate {m}
+    1.9817,                  !- Vertex 1 Z-coordinate {m}
+    0.0000,                  !- Vertex 2 X-coordinate {m}
+    15.8398,                 !- Vertex 2 Y-coordinate {m}
+    1.0671,                  !- Vertex 2 Z-coordinate {m}
+    0.0000,                  !- Vertex 3 X-coordinate {m}
+    0.6029,                  !- Vertex 3 Y-coordinate {m}
+    1.0671,                  !- Vertex 3 Z-coordinate {m}
+    0.0000,                  !- Vertex 4 X-coordinate {m}
+    0.6029,                  !- Vertex 4 Y-coordinate {m}
+    1.9817;                  !- Vertex 4 Z-coordinate {m}
+ 
+
+{% elif Windows == "Low" %} 
+
+FenestrationSurface:Detailed,
+    Dining_Wall_East_Window,
+    Window,
+    Window,
+    Dining_Wall_East,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+22.6087,
+0.6029,
+1.7531,
+22.6087,
+0.6029,
+1.2958,
+22.6087,
+15.8398,
+1.2958,
+22.6087,
+15.8398,
+1.7531;
+
+FenestrationSurface:Detailed,
+    Dining_Wall_South_Window,
+    Window,
+    NonresWindow_U_0.57_SHGC_0.39,
+    Dining_Wall_South,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.754,
+0,
+1.7531,
+0.754,
+0,
+1.2958,
+21.855,
+0,
+1.2958,
+21.855,
+0,
+1.7531;
+
+FenestrationSurface:Detailed,
+    Dining_Wall_West_Window,
+    Window,
+    Window,
+    Dining_Wall_West,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+15.8398,
+1.7531,
+0,
+15.8398,
+1.2958,
+0,
+0.6029,
+1.2958,
+0,
+0.6029,
+1.7531;
+
+{% elif Windows == "High" %} 
+
+FenestrationSurface:Detailed,
+    Dining_Wall_East_Window,
+    Window,
+    Window,
+    Dining_Wall_East,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+22.6087,
+0.6029,
+2.2104,
+22.6087,
+0.6029,
+0.8385,
+22.6087,
+15.8398,
+0.8385,
+22.6087,
+15.8398,
+2.2104;
+
+FenestrationSurface:Detailed,
+    Dining_Wall_South_Window,
+    Window,
+    NonresWindow_U_0.57_SHGC_0.39,
+    Dining_Wall_South,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0.754,
+0,
+2.2104,
+0.754,
+0,
+0.8385,
+21.855,
+0,
+0.8385,
+21.855,
+0,
+2.2104;
+
+FenestrationSurface:Detailed,
+    Dining_Wall_West_Window,
+    Window,
+    Window,
+    Dining_Wall_West,
+    ,
+    AutoCalculate,
+    ,
+1,
+4,
+0,
+15.8398,
+2.2104,
+0,
+15.8398,
+0.8385,
+0,
+0.6029,
+0.8385,
+0,
+0.6029,
+2.2104;
+
+{%- endif %}

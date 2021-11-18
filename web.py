@@ -51,9 +51,13 @@ class run(Resource):
             copyfile(src, dst)
         except:
             return flask.jsonify({'error': 'no such climate: {}'.format(data['climate']), 'message': None})
-        try:     
-            load_template('./template/construction','wall_roof.template','output','wall_roof',data)                     
-            load_template('./template/construction','window.template','output','window',data)           
+        try:
+            if data['BuildingType'] == 'Warehouse':
+                 load_template('./template/{}/construction'.format(data['BuildingType']),'wall_roof.template','output','wall_roof',data)                     
+                 load_template('./template/{}/construction'.format(data['BuildingType']),'window.template','output','window',data)                
+            else:
+                 load_template('./template/construction','wall_roof.template','output','wall_roof',data)                     
+                 load_template('./template/construction','window.template','output','window',data)           
             load_template('./template/{}/construction'.format(data['BuildingType']),'FenestrationSurface.template','output','FenestrationSurface',data)         
             load_template('./template/schedule','HVACOperationSchd.template','output','HVACOperationSchd',data)                   
             load_template('./template/schedule','CLGSETP_SCH_NO_OPTIMUM.template','output','CLGSETP_SCH_NO_OPTIMUM',data)
