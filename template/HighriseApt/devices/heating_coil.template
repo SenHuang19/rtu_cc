@@ -340,6 +340,207 @@ Coil:Heating:Fuel,
 {%- endif %}
 
 
+{%- if BaselineCompressor =="SingleSpeed" %}
+{%- if BaselineHeatingType =="HeatPump"  %}  
+Coil:Heating:DX:SingleSpeed,
+    Heat Pump DX Heating Coil 6,  !- Name
+    ALWAYS_ON,     !- Availability Schedule Name
+    autosize,                !- Gross Rated Heating Capacity {W}
+    {{ COP }},
+    autosize,                !- Rated Air Flow Rate {m3/s}
+    773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
+    Heating Coil Air Inlet Node 6,  !- Air Inlet Node Name
+    SuppHeating Coil Air Inlet Node 6,  !- Air Outlet Node Name
+    HPACHeatCapFT Speed 2,   !- Heating Capacity Function of Temperature Curve Name
+    HPACHeatCapFF Speed 2,   !- Heating Capacity Function of Flow Fraction Curve Name
+    HPACHeatEIRFT Speed 2,   !- Energy Input Ratio Function of Temperature Curve Name
+    HPACHeatEIRFF Speed 2,   !- Energy Input Ratio Function of Flow Fraction Curve Name
+    HPACHeatPLFFPLR Speed 2, !- Part Load Fraction Correlation Curve Name
+    HPACDefrostCAPFT,        !- Defrost Energy Input Ratio Function of Temperature Curve Name
+    -8,                      !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
+    -5,                      !- Outdoor Dry-Bulb Temperature to Turn On Compressor {C}
+    7.22,                    !- Maximum Outdoor Dry-Bulb Temperature for Defrost Operation {C}
+    200,                     !- Crankcase Heater Capacity {W}
+    10,                      !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
+    ReverseCycle,            !- Defrost Strategy
+    Timed,                   !- Defrost Control
+    0.058333,                !- Defrost Time Period Fraction
+    autosize,                !- Resistive Defrost Heater Capacity {W}
+    4,                       !- Region number for calculating HSPF
+    ,                        !- Evaporator Air Inlet Node Name
+    ,                        !- Zone Name for Evaporator Placement
+    ,                        !- Secondary Coil Air Flow Rate {m3/s}
+    1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
+    
+
+{%- endif %}
+
+{%- if BaselineHeatingType =="Electric"  %} 
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 6, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 6,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 6;  !- Air Outlet Node Name
+	
+{%- elif BaselineHeatingType =="Gas"   %} 
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 6, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 6,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 6;  !- Air Outlet Node Name
+
+{% else %}	
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 6, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 6,  !- Air Inlet Node Name
+    Air Loop Outlet Node 6;  !- Air Outlet Node Name
+	
+{%- endif %}
+{%- endif %}
+
+{%- if BaselineCompressor =="SingleSpeed" %}
+{%- if BaselineHeatingType =="HeatPump"  %}  
+Coil:Heating:DX:SingleSpeed,
+    Heat Pump DX Heating Coil 7,  !- Name
+    ALWAYS_ON,     !- Availability Schedule Name
+    autosize,                !- Gross Rated Heating Capacity {W}
+    {{ COP }},
+    autosize,                !- Rated Air Flow Rate {m3/s}
+    773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
+    Heating Coil Air Inlet Node 7,  !- Air Inlet Node Name
+    SuppHeating Coil Air Inlet Node 7,  !- Air Outlet Node Name
+    HPACHeatCapFT Speed 2,   !- Heating Capacity Function of Temperature Curve Name
+    HPACHeatCapFF Speed 2,   !- Heating Capacity Function of Flow Fraction Curve Name
+    HPACHeatEIRFT Speed 2,   !- Energy Input Ratio Function of Temperature Curve Name
+    HPACHeatEIRFF Speed 2,   !- Energy Input Ratio Function of Flow Fraction Curve Name
+    HPACHeatPLFFPLR Speed 2, !- Part Load Fraction Correlation Curve Name
+    HPACDefrostCAPFT,        !- Defrost Energy Input Ratio Function of Temperature Curve Name
+    -8,                      !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
+    -5,                      !- Outdoor Dry-Bulb Temperature to Turn On Compressor {C}
+    7.22,                    !- Maximum Outdoor Dry-Bulb Temperature for Defrost Operation {C}
+    200,                     !- Crankcase Heater Capacity {W}
+    10,                      !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
+    ReverseCycle,            !- Defrost Strategy
+    Timed,                   !- Defrost Control
+    0.058333,                !- Defrost Time Period Fraction
+    autosize,                !- Resistive Defrost Heater Capacity {W}
+    4,                       !- Region number for calculating HSPF
+    ,                        !- Evaporator Air Inlet Node Name
+    ,                        !- Zone Name for Evaporator Placement
+    ,                        !- Secondary Coil Air Flow Rate {m3/s}
+    1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
+    
+
+{%- endif %}
+
+{%- if BaselineHeatingType =="Electric"  %}  
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 7, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 7,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 7;  !- Air Outlet Node Name
+{%- elif BaselineHeatingType =="Gas"   %} 
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 7, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 7,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 7;  !- Air Outlet Node Name
+
+{% else %}
+
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 7, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 7,  !- Air Inlet Node Name
+    Air Loop Outlet Node 7;  !- Air Outlet Node Name	
+	
+{%- endif %}
+{%- endif %}
+
+{%- if BaselineCompressor =="SingleSpeed" %}
+{%- if BaselineHeatingType =="HeatPump"  %}  
+Coil:Heating:DX:SingleSpeed,
+    Heat Pump DX Heating Coil 8,  !- Name
+    ALWAYS_ON,     !- Availability Schedule Name
+    autosize,                !- Gross Rated Heating Capacity {W}
+    {{ COP }},
+    autosize,                !- Rated Air Flow Rate {m3/s}
+    773.3,                   !- Rated Supply Fan Power Per Volume Flow Rate {W/(m3/s)}
+    Heating Coil Air Inlet Node 8,  !- Air Inlet Node Name
+    SuppHeating Coil Air Inlet Node 8,  !- Air Outlet Node Name
+    HPACHeatCapFT Speed 2,   !- Heating Capacity Function of Temperature Curve Name
+    HPACHeatCapFF Speed 2,   !- Heating Capacity Function of Flow Fraction Curve Name
+    HPACHeatEIRFT Speed 2,   !- Energy Input Ratio Function of Temperature Curve Name
+    HPACHeatEIRFF Speed 2,   !- Energy Input Ratio Function of Flow Fraction Curve Name
+    HPACHeatPLFFPLR Speed 2, !- Part Load Fraction Correlation Curve Name
+    HPACDefrostCAPFT,        !- Defrost Energy Input Ratio Function of Temperature Curve Name
+    -8,                      !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
+    -5,                      !- Outdoor Dry-Bulb Temperature to Turn On Compressor {C}
+    7.22,                    !- Maximum Outdoor Dry-Bulb Temperature for Defrost Operation {C}
+    200,                     !- Crankcase Heater Capacity {W}
+    10,                      !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
+    ReverseCycle,            !- Defrost Strategy
+    Timed,                   !- Defrost Control
+    0.058333,                !- Defrost Time Period Fraction
+    autosize,                !- Resistive Defrost Heater Capacity {W}
+    4,                       !- Region number for calculating HSPF
+    ,                        !- Evaporator Air Inlet Node Name
+    ,                        !- Zone Name for Evaporator Placement
+    ,                        !- Secondary Coil Air Flow Rate {m3/s}
+    1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
+    
+{%- endif %}
+
+
+{%- if BaselineHeatingType =="Electric"  %} 
+    Coil:Heating:Electric,
+    Supp Gas Heating Coil 8, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    1,                       !- Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 8,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 8;  !- Air Outlet Node Name
+{%- elif BaselineHeatingType =="Gas"   %} 
+    Coil:Heating:Fuel,
+    Supp Gas Heating Coil 8, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Heating Coil Air Inlet Node 8,  !- Air Inlet Node Name
+    AIR LOOP OUTLET NODE 8;  !- Air Outlet Node Name
+	
+{% else %}
+
+Coil:Heating:Fuel,
+    Supp Gas Heating Coil 8, !- Name
+    ALWAYS_ON,               !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.8,                     !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SuppHeating Coil Air Inlet Node 8,  !- Air Inlet Node Name
+    Air Loop Outlet Node 8;  !- Air Outlet Node Name
+	
+{%- endif %}
+{%- endif %}
+
 
 {% set COP = HeatingCOP_Baseline %}
 {% set NumberOfSpeeds = NumberofSpeeds_Baseline %}
