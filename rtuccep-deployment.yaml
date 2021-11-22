@@ -35,7 +35,8 @@ spec:
             requests:
               cpu: 100m
               memory: 256Mi
-      restartPolicy: Always
       imagePullSecrets:
         - name: gitlab-registry-token-ep
+      imagePullPolicy: Always
+      restartPolicy: Always
 status: {}
