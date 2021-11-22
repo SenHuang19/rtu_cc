@@ -31,6 +31,7 @@ verify-new-image:
 build-image:
   extends: .pnnllib-gitlab-build-container-image
   stage: build
+  only: develop
   tags:
     - k8s
     - rcint
@@ -44,6 +45,7 @@ build-image:
 deploy-token-to-cluster:
   extends: .pnnllib-gitlab-load-deploy-token
   stage: setup
+  only: develop
   tags:
     - k8s
     - rcint
@@ -60,6 +62,7 @@ deploy-token-to-cluster:
 #Utilize your container
 deploy-bitnamis:
   stage: deploy
+  only: develop
   tags:
     - k8s
     - rcint
