@@ -25,6 +25,7 @@ spec:
     spec:
       containers:
         - image: devops-registry.pnnl.gov/rtucc/rtucc-ep:latest
+          imagePullPolicy: Always
           name: rtucc-ep
           ports:
             - containerPort: 81
@@ -37,6 +38,5 @@ spec:
               memory: 256Mi
       imagePullSecrets:
         - name: gitlab-registry-token-ep
-      imagePullPolicy: Always
       restartPolicy: Always
 status: {}
