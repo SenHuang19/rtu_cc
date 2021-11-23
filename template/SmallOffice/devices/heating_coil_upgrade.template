@@ -1026,7 +1026,7 @@ Coil:Heating:DX:MultiSpeed,
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
-{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas")" and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "Core")) %}                         
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas") and Orientation == "Core")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and Orientation == "Core")) %}                         
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 5,  !- Name
     ALWAYS_ON,     !- Availability Schedule Name
