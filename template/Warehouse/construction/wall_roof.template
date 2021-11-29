@@ -41,7 +41,7 @@
     MediumSmooth,            !- Roughness
 {%- if (climate == "1A") %} 
     4.1579,
-{% elif (climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
+{% elif (climate == "2A" or climate == "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
     4.3782,
 {% elif (climate == "4A"  or climate == "4B" or climate == "4C" or climate == "5A"  or climate == "5B" or climate == "5C") %}
     4.6223,
@@ -61,7 +61,7 @@
     MediumSmooth,            !- Roughness
 {%- if (climate == "1A") %} 
     1.394,
-{% elif (climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
+{% elif (climate == "2A" or climate == "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
     1.69709,
 {% elif (climate == "4A"  or climate == "4B" or climate == "4C" or climate == "5A"  or climate == "5B" or climate == "5C") %}
     2.0103,
@@ -77,7 +77,7 @@
   Material:NoMass,
     Nonres_Exterior_Wall_Insulation,  !- Name
     MediumSmooth,            !- Roughness
-{%- if (climate == "1A" or climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
+{%- if (climate == "1A" or climate == "2A" or climate == "2B" or climate == "3A"  or climate == "3B" or climate == "3C") %} 
     1.64444,
 {% elif (climate == "4A"  or climate == "4B" or climate == "4C") %}
     2.7061,
@@ -97,7 +97,7 @@
     MediumSmooth,            !- Roughness
 {%- if (climate == "1A") %} 
     0.271244,
-{% elif (climate == "2A" or climate = "2B" or climate == "3A"  or climate == "3B" or climate == "3C" or climate == "4A"  or climate == "4B" or climate == "4C") %} 
+{% elif (climate == "2A" or climate == "2B" or climate == "3A"  or climate == "3B" or climate == "3C" or climate == "4A"  or climate == "4B" or climate == "4C") %} 
     0.85803,
 {% elif (climate == "5A"  or climate == "5B" or climate == "5C" or climate == "6A"  or climate == "6B") %}
     1.6444,

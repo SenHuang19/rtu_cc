@@ -20,7 +20,7 @@ Version,9.0;
     90.00,
 {% else %}
     0.00,
-{%- endif}
+{%- endif %}
     City,                    !- Terrain
     0.0400,                  !- Loads Convergence Tolerance Value
     0.2000,                  !- Temperature Convergence Tolerance Value {deltaC}

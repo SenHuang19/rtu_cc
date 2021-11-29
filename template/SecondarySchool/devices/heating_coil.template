@@ -345,7 +345,7 @@ Coil:Heating:Fuel,
 {% set COP = HeatingCOP_Baseline %}
 {% set NumberOfSpeeds = NumberofSpeeds_Baseline %}
 
-{%- if (BaselineCompressor =="MultiSpeed" %}
+{%- if BaselineCompressor =="MultiSpeed" %}
 {%- if BaselineHeatingType =="HeatPump"  %}
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 1,  !- Name
@@ -479,7 +479,7 @@ Coil:Heating:Fuel,
 {%- endif %}
 
 
-{%- if (BaselineCompressor =="MultiSpeed" %}
+{%- if BaselineCompressor =="MultiSpeed" %}
 {%- if BaselineHeatingType =="HeatPump"  %}
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 2,  !- Name
@@ -612,7 +612,7 @@ Coil:Heating:Fuel,
 {%- endif %}	
 {%- endif %}
 
-{%- if (BaselineCompressor =="MultiSpeed" %}
+{%- if BaselineCompressor =="MultiSpeed" %}
 {%- if BaselineHeatingType =="HeatPump"  %}
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 3,  !- Name
@@ -745,7 +745,7 @@ Coil:Heating:Fuel,
 {%- endif %}	
 {%- endif %}
 
-{%- if (BaselineCompressor =="MultiSpeed" %}
+{%- if BaselineCompressor =="MultiSpeed" %}
 {%- if BaselineHeatingType =="HeatPump"  %}
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 4,  !- Name
@@ -878,7 +878,7 @@ Coil:Heating:Fuel,
 {%- endif %}	
 {%- endif %}
 
-{%- if (BaselineCompressor =="MultiSpeed" %}
+{%- if BaselineCompressor =="MultiSpeed" %}
 {%- if BaselineHeatingType =="HeatPump"  %}
 Coil:Heating:DX:MultiSpeed,
     Heat Pump DX Heating Coil 5,  !- Name

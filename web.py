@@ -141,8 +141,10 @@ class run(Resource):
         
         if 'Orientation' in data:        
             zone = data['Orientation']
+        elif 'ZoneType' in data:
+            zone = data['ZoneType']        
         else:
-            return flask.jsonify({'error': 'missing orientation', 'message': None}) 
+            return flask.jsonify({'error': 'missing orientation or zone type', 'message': None}) 
 
         if not 'Blended_Electricity_Rate' in data:        
 
