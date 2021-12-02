@@ -138,22 +138,10 @@ Version,9.0;
 
 {% include "climates" %}
 
-!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR-R ===========
-
-  Material:NoMass,
-    Opaque Door panel_con,   !- Name
-    MediumRough,             !- Roughness
-    0.251572327,  !- Thermal Resistance {m2-K/W}
-    0.9,                     !- Thermal Absorptance
-    0.7,                     !- Solar Absorptance
-    0.7;                     !- Visible Absorptance
 
 
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
-  Construction,
-    Swinging Door_con,       !- Name
-    Opaque Door panel_con;   !- Outside Layer
 
 WindowMaterial:SimpleGlazingSystem,
     Nonres Skylight Glazing Layer,           !- Name
@@ -203,19 +191,6 @@ Construction,
   ScheduleTypeLimits,
     Number;                  !- Name
 
-Site:GroundTemperature:FCfactorMethod,
-14.0,                   !- January Ground Temperature {C}
-7.3,                   !- February Ground Temperature {C}
-3.3,                   !- March Ground Temperature {C}
-1.2,                   !- April Ground Temperature {C}
--0.2,                   !- May Ground Temperature {C}
-5.6,                   !- June Ground Temperature {C}
-10.9,                   !- July Ground Temperature {C}
-16.1,                   !- August Ground Temperature {C}
-21.7,                   !- September Ground Temperature {C}
-25.0,                   !- October Ground Temperature {C}
-24.8,                   !- November Ground Temperature {C}
-19.9;                   !- December Ground Temperature {C}
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
 
