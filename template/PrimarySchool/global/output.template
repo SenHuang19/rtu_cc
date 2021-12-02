@@ -2590,11 +2590,7 @@ Construction,
     Swinging Door_semi,      !- Name
     Opaque Door panel_semi;  !- Outside Layer
 
-Construction,
-    Skylight Double Clear,   !- Name
-    CLEAR 2.5MM,             !- Outside Layer
-    AIR 3MM,                 !- Layer 2
-    CLEAR 2.5MM;             !- Layer 3
+
 
 Construction,
     Overhead Door_semi,      !- Name
@@ -2604,9 +2600,6 @@ Construction,
     Overhead Door_con,       !- Name
     Overhead Door_con Panel; !- Outside Layer
 
-Construction,
-    Bulk Storage Products,   !- Name
-    Bulk Storage Products Material;  !- Outside Layer
 
 
   Construction,
