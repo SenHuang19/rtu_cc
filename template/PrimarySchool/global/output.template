@@ -148,6 +148,12 @@ WindowMaterial:SimpleGlazingSystem,
     5.7918252,              !- U-Factor {W/m2-K}
     0.49,                     !- Solar Heat Gain Coefficient
     0.49;  
+    
+WindowMaterial:SimpleGlazingSystem,
+    Nonres Window Glazing Layer,           !- Name
+    3.2933908,              !- U-Factor {W/m2-K}
+    0.39,                     !- Solar Heat Gain Coefficient
+    0.39;                     !- Visible Transmittance
 
 Construction,
     NonresSkylight_U_1.02_SHGC_0.49,  !- Name
@@ -2570,9 +2576,6 @@ Construction,
     Skylight_U_1.02_SHGC_0.49,  !- Name
     Nonres Skylight Glazing Layer;  !- Outside Layer
 
-Construction,
-    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Name
-    Semiheated Skylight Glazing Layer;  !- Outside Layer
 
   Construction,
     res_roof,                   !- Name
@@ -14680,7 +14683,7 @@ EnergyManagementSystem:Sensor,
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
-    TC2,                     !- Name
+    TC3,                     !- Name
     Cafeteria,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
