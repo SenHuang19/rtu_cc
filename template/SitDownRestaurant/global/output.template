@@ -2301,17 +2301,7 @@ Material:NoMass,
         Nonres_Roof_Insulation,   !- Outside Layer
         G01 16mm gypsum board;  !- Layer #2
 
-Construction,
-    NonresWindow_U_0.57_SHGC_0.39,  !- Name
-    Nonres Window Glazing Layer;  !- Outside Layer
 
-Construction,
-    Skylight_U_1.02_SHGC_0.49,  !- Name
-    Nonres Skylight Glazing Layer;  !- Outside Layer
-
-Construction,
-    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Name
-    Semiheated Skylight Glazing Layer;  !- Outside Layer
 
   Construction,
     res_roof,                   !- Name
@@ -2326,11 +2316,6 @@ Construction,
     Swinging Door_semi,      !- Name
     Opaque Door panel_semi;  !- Outside Layer
 
-Construction,
-    Skylight Double Clear,   !- Name
-    CLEAR 2.5MM,             !- Outside Layer
-    AIR 3MM,                 !- Layer 2
-    CLEAR 2.5MM;             !- Layer 3
 
 Construction,
     Overhead Door_semi,      !- Name
@@ -2340,9 +2325,6 @@ Construction,
     Overhead Door_con,       !- Name
     Overhead Door_con Panel; !- Outside Layer
 
-Construction,
-    Bulk Storage Products,   !- Name
-    Bulk Storage Products Material;  !- Outside Layer
 
 
   Construction,
@@ -3445,7 +3427,7 @@ ZoneHVAC:EquipmentList,
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    Dining Direct Air,       !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+    Zone1DirectAir,       !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
     2,                       !- Zone Equipment 2 Object Type
     2;                       !- Zone Equipment 2 Name
 
@@ -3457,7 +3439,7 @@ ZoneHVAC:EquipmentList,
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    Kitchen Direct Air,      !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+    Zone2DirectAir,      !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
     2,                       !- Zone Equipment 2 Object Type
     2;                       !- Zone Equipment 2 Name
 
