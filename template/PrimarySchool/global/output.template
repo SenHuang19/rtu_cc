@@ -12544,7 +12544,11 @@ AirLoopHVAC:ReturnPath,
     AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
     Zone Return Air Mixer 2; !- Component 1 Name
 
-
+AirLoopHVAC:ReturnPath,
+    HeatPumpReturnPath 3,    !- Name
+    Return Air Mixer Outlet 3,  !- Return Air Path Outlet Node Name
+    AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
+    Zone Return Air Mixer 3; !- Component 1 Name
 
 BranchList,
     Air Loop Branches 1,     !- Name
@@ -13253,17 +13257,6 @@ OutdoorAir:Node,
     Outdoor Condenser Air Node 2,  !- Name
     1.0;                     !- Height Above Ground {m}
 
-
-  Pump:ConstantSpeed,
-    SHWSys1 Pump,            !- Name
-    SHWSys1 Supply Inlet Node,  !- Inlet Node Name
-    SHWSys1 Pump-SHWSys1 Water HeaterNodeviaConnector,  !- Outlet Node Name
-    autosize,                !- Design Flow Rate {m3/s}
-    29891,  !- Design Pump Head {Pa}
-    AUTOSIZE,                !- Design Power Consumption {W}
-    0.30,                    !- Motor Efficiency
-    0.0,                     !- Fraction of Motor Inefficiencies to Fluid Stream
-    Intermittent;            !- Pump Control Type
 
 
 
@@ -14657,6 +14650,10 @@ OutdoorAir:NodeList,
 
 OutdoorAir:NodeList,
     OutsideAirInletNodes 2;  !- Node or NodeList Name 1
+    
+    
+OutdoorAir:NodeList,
+    OutsideAirInletNodes 3;  !- Node or NodeList Name 1
 
 
 EnergyManagementSystem:Sensor,
@@ -14682,47 +14679,47 @@ EnergyManagementSystem:Sensor,
 
 EnergyManagementSystem:Sensor,
     TZ1,                     !- Name
-    Gym,          !- Output:Variable or Output:Meter Index Key Name
+    Gym_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TZ2,                     !- Name
-    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TZ3,                     !- Name
-    Cafeteria,          !- Output:Variable or Output:Meter Index Key Name
+    Cafeteria_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TC1,                     !- Name
-    Gym,          !- Output:Variable or Output:Meter Index Key Name
+    Gym_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TC2,                     !- Name
-    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TC3,                     !- Name
-    Cafeteria,          !- Output:Variable or Output:Meter Index Key Name
+    Cafeteria_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH1,                     !- Name
-    Gym,          !- Output:Variable or Output:Meter Index Key Name
+    Gym_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH2,                     !- Name
-    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH3,                     !- Name
-    Cafeteria,          !- Output:Variable or Output:Meter Index Key Name
+    Cafeteria_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 
