@@ -140,20 +140,6 @@ Building,
 
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR-R ===========
 
-  Material:NoMass,
-    Opaque Door panel_con,   !- Name
-    MediumRough,             !- Roughness
-    0.251572327,  !- Thermal Resistance {m2-K/W}
-    0.9,                     !- Thermal Absorptance
-    0.7,                     !- Solar Absorptance
-    0.7;                     !- Visible Absorptance
-
-
-!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
-
-  Construction,
-    Swinging Door_con,       !- Name
-    Opaque Door panel_con;   !- Outside Layer
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
 
@@ -3007,7 +2993,7 @@ BuildingSurface:Detailed,
 
 !-   ===========  ALL OBJECTS IN CLASS: WINDOWPROPERTY:FRAMEANDDIVIDER ===========
 
-eople,
+People,
     Dining People,           !- Name
     Dining,                  !- Zone or ZoneList or Space or SpaceList Name
     BLDG_OCC_SCH,            !- Number of People Schedule Name
