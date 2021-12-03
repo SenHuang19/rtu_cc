@@ -45,7 +45,7 @@ def size(config, tab):
 
 def cal_payout(input):
     output = {}
-    CoolingCapacity = input['CoolingCapacity']       
+    CoolingCapacity = input['CoolingCapacity']*0.293       
     EPlusCoolingSize = input['EPlusCoolingSize'] 
     SizeRatio = CoolingCapacity/EPlusCoolingSize
     Lifetime = int(input['Lifetime'])   

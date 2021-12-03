@@ -91,7 +91,7 @@ class run(Resource):
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
                 pPidFile.write(str(simulation.pid))             
            simulation.wait()
-           baseline_df=pd.read_csv('eplusout.csv')
+           baseline_df=pd.read_csv(base_dir+'/eplusout.csv')
            number_workers = number_workers - 1
         else:
             return flask.jsonify({'error': 'no available worker', 'message': None})           
@@ -124,7 +124,7 @@ class run(Resource):
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
                 pPidFile.write(str(simulation.pid))             
            simulation.wait()
-           upgrade_df=pd.read_csv('eplusout.csv')           
+           upgrade_df=pd.read_csv(upgrade_dir+'/eplusout.csv')           
            number_workers = number_workers - 1
         else:
             return flask.jsonify({'error': 'no available worker', 'message': None})   
@@ -166,7 +166,7 @@ class run(Resource):
 
         result['AnnualConsumption_Baseline'] = result_baseline[zone]['tot_kW']         
 
-        result_upgrade = energy_consumption(config['energ_consumption'],baseline_df,data['Blended_Electricity_Rate'],data['Blended_NaturalGas_Rate'])
+        result_upgrade = energy_consumption(config['energ_consumption'],upgrade_df,data['Blended_Electricity_Rate'],data['Blended_NaturalGas_Rate'])
 
         result['AnnualElectricityCost_Upgrade'] = result_upgrade[zone]['ele']
         
