@@ -14269,27 +14269,7 @@ SetpointManager:Scheduled,
     Pod_Zones_Air_Distribution;  !- Design Specification Zone Air Distribution Object Name
 
 
- ElectricLoadCenter:Transformer,
-    Transformer 1,           !- Name
-    Always_On,               !- Availability Schedule Name
-    PowerInFromGrid,         !- Transformer Usage
-    ,                        !- Zone Name
-    ,                        !- Radiative Fraction
-    112500,  !- Rated Capacity {VA}
-    3,                       !- Phase
-    Aluminum,                !- Conductor Material
-    150,                     !- Full Load Temperature Rise {C}
-    0.1,                     !- Fraction of Eddy Current Losses
-    NominalEfficiency,       !- Performance Input Method
-    ,                        !- Rated No Load Loss {W}
-    ,                        !- Rated Load Loss {W}
-    0.969,  !- Nameplate Efficiency
-    0.35,                    !- Per Unit Load for Nameplate Efficiency
-    75,                      !- Reference Temperature for Nameplate Efficiency {C}
-    ,                        !- Per Unit Load for Maximum Efficiency
-    Yes,                     !- Consider Transformer Loss for Utility Cost
-    Wired_LTG_Electricity,   !- Meter 1 Name
-    InteriorEquipment:Electricity;  !- Meter 2 Name
+
 
 EnergyManagementSystem:Sensor,
     CLGSETP_SCH_YES_OPTIMUM_ORIGINAL_SENSOR,  !- Name
@@ -14429,10 +14409,6 @@ EnergyManagementSystem:Actuator,
 
 
 
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_POD_1_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_POD_1_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
 
 
 
@@ -14461,14 +14437,6 @@ EnergyManagementSystem:Program,
 
 
 
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_POD_2_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_POD_2_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
-
-
-
-
 
 
 
@@ -14490,13 +14458,6 @@ EnergyManagementSystem:Program,
 
 
 
-
-
-
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_POD_3_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_POD_3_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
 
 
 
@@ -14524,12 +14485,6 @@ EnergyManagementSystem:Program,
 
 
 
-
-
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_OTHER_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_OTHER_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
 
 
 
