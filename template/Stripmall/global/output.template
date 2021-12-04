@@ -7221,27 +7221,27 @@ EnergyManagementSystem:ProgramCallingManager,
 EnergyManagementSystem:ProgramCallingManager,
     Initialize6,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan6MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize7,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan7MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize8,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan8MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize9,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan9MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize10,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan10MaxGlobal; !- Program Name 1
 
 
 
