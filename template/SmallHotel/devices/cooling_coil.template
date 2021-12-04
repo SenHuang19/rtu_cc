@@ -49,7 +49,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    FrontLounteFlr1,          !- Controlling Zone or Thermostat Location
+    FrontLoungeFlr1,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 1,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -75,7 +75,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    FrontLounteFlr1,          !- Controlling Zone or Thermostat Location
+    FrontLoungeFlr1,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 1,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -164,7 +164,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M NW Apartment,          !- Controlling Zone or Thermostat Location
+    RestroomFlr1,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 2,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -190,7 +190,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    M NW Apartment,          !- Controlling Zone or Thermostat Location
+    RestroomFlr1,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 2,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
