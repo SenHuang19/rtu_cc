@@ -1966,7 +1966,11 @@ Schedule:Constant,
 
 {% include "MinOAFraction" %}
 
+{% include "HVACOperationSchd" %}
 
+{% include "HTGSETP_SCH_NO_OPTIMUM" %}
+
+{% include "CLGSETP_SCH_NO_OPTIMUM" %}
 !
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
  
