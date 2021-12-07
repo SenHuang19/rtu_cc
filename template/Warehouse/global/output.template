@@ -6177,3 +6177,17 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
+    
+    Coil:Heating:Fuel,
+    Zone3UnitHeaterHeatingCoil,  !- Name
+    Zone3HeatingCoilAvailability,  !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.7925,                  !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Zone3UnitHeaterFanOutletNode,  !- Air Inlet Node Name
+    Zone3UnitHeaterAirOutletNode,  !- Air Outlet Node Name
+    ,                        !- Temperature Setpoint Node Name
+    0.0,                     !- Parasitic Electric Load {W}
+    ,                        !- Part Load Fraction Correlation Curve Name
+    5000;                    !- Parasitic Fuel Load {W}
+
