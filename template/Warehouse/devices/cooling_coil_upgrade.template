@@ -54,7 +54,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Office,          !- Controlling Zone or Thermostat Location
+    Zone1 Office,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 1,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -80,7 +80,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Office,          !- Controlling Zone or Thermostat Location
+    Zone1 Office,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 1,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -248,7 +248,7 @@
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Air Outlet Node Name
-    Office,          !- Controlling Zone or Thermostat Location
+    Zone1 Office,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 1,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -368,7 +368,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Fine_storage,          !- Controlling Zone or Thermostat Location
+    Zone2 Fine Storage,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 2,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
@@ -394,7 +394,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Fine_storage,          !- Controlling Zone or Thermostat Location
+    Zone2 Fine Storage,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 2,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -561,7 +561,7 @@ Coil:Cooling:DX:MultiSpeed,
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Air Outlet Node Name
-    Fine_storage,          !- Controlling Zone or Thermostat Location
+    Zone2 Fine Storage,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 2,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
