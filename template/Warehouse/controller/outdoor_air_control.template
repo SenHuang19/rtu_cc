@@ -94,51 +94,6 @@ SetpointManager:Scheduled,
     Supply-Temp-Schedule,  !- Schedule Name
     Heating Coil Air Inlet Node 2;  !- Setpoint Node or NodeList Name
 
-Controller:OutdoorAir,
-    OA Controller 3,         !- Name
-    Relief Air Outlet Node 3,!- Relief Air Outlet Node Name
-    Outdoor Air Mixer Inlet Node 3,  !- Return Air Node Name
-    Mixed Air Node 3,        !- Mixed Air Node Name
-    Outside Air Inlet Node 3,!- Actuator Node Name
-    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
-    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
-{%- if BaselineEconomizer == "No Economizer"  %} 
-    NoEconomizer,            !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialDryBulb"%}
-    DifferentialDryBulb,     !- Economizer Control Type
-{% elif BaselineEconomizer == "DifferentialEnthalpy"%}
-    DifferentialEnthalpy,     !- Economizer Control Type
-{% else %}
-    FixedDryBulb,     !- Economizer Control Type
-{%- endif %}
-    ModulateFlow,            !- Economizer Control Action Type
-{%- if BaselineEconomizer == "FixedDryBulb"  %} 
-    {{MaximumLimitDryBulb_Baseline}},
-{% else %}
-    ,
-{%- endif %}
-    64000,                   !- Economizer Maximum Limit Enthalpy {J/kg}
-    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
-    ,                        !- Electronic Enthalpy Limit Curve Name
-    0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
-    LockoutWithHeating,      !- Lockout Type
-    ProportionalMinimum,     !- Minimum Limit Type
-    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
-    minOAFrac3;               !- Minimum Fraction of Outdoor Air Schedule Name
-
-SetpointManager:MixedAir,
-    Mixed Air Temp Manager 3,  !- Name
-    Temperature,             !- Control Variable
-    Heating Coil Air Inlet Node 3,  !- Reference Setpoint Node Name
-    Mixed Air Node 3,  !- Fan Inlet Node Name
-    DX Cooling Coil Air Inlet Node 3,  !- Fan Outlet Node Name
-    Mixed Air Node 3;  !- Setpoint Node or NodeList Name
-
-SetpointManager:Scheduled,
-    Mixed Air Temp Setpoint Manager 3,  !- Name
-    Temperature,             !- Control Variable
-    Supply-Temp-Schedule,  !- Schedule Name
-    Heating Coil Air Inlet Node 3;  !- Setpoint Node or NodeList Name
 
 
 
