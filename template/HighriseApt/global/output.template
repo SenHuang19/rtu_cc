@@ -4857,11 +4857,7 @@ EnergyManagementSystem:Program,
     SET Fan8MaxGlobal=FanFlow8,  !- Program Line 2
     ENDIF;                   !- A4
 
-EnergyManagementSystem:Program,
-    SETFanMaxFlow9,          !- Name
-    If FanFlow9>Fan9MaxGlobal,  !- Program Line 1
-    SET Fan9MaxGlobal=FanFlow9,  !- Program Line 2
-    ENDIF;                   !- A4
+
 
 {% include "ems_pr" %}
 
