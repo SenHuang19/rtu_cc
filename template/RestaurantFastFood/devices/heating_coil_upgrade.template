@@ -1,8 +1,8 @@
 !-   ======== ALL OBJECTS IN CLASS: COIL:HEATING:DX:SINGLESPEED ========
 
-{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Kitchen")  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Dining"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Dining")  %} 
 
-{% if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Kitchen")  %} 
+{% if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Dining")  %} 
 {% set COP_1 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_1 = HeatingCOP_Baseline %}
@@ -51,7 +51,7 @@ Coil:Heating:Fuel,
     
 {%- endif %}
 
-{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "Electric" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Kitchen")  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "Electric" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Dining"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Dining")  %} 
 
     Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
@@ -61,7 +61,7 @@ Coil:Heating:Fuel,
     Heating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name
 
-{%- elif (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "Gas" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Kitchen")  %} 
+{%- elif (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "Gas" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Dining"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Dining")  %} 
 
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 1, !- Name
@@ -76,8 +76,8 @@ Coil:Heating:Fuel,
 {%- endif %}
 
 
-{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Dining"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Dining")  %} 
-{%- if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Dining")  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Kitchen")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Kitchen")  %} 
 {% set COP_2 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_2 = HeatingCOP_Baseline %}
@@ -125,7 +125,7 @@ Coil:Heating:DX:SingleSpeed,
 
 {%- endif %}
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Dining"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Dining")  %} 
+{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Kitchen")  %} 
     Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -134,7 +134,7 @@ Coil:Heating:DX:SingleSpeed,
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
 	
-{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Dining"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Dining")  %} 
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Kitchen")  %} 
  
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 2, !- Name
@@ -147,8 +147,8 @@ Coil:Heating:DX:SingleSpeed,
 
 {%- endif %}
 
-{%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Kitchen")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Kitchen")  %} 
-{% if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (ZoneType == "Kitchen"))  %} 
+{%- if ((BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump") and not((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Dining")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Dining")  %} 
+{% if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (ZoneType == "Dining"))  %} 
 		{% set COP_1 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_1 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_1 = UpgradedHeatingType %}	
@@ -242,7 +242,7 @@ Coil:Heating:DX:MultiSpeed,
   {%- endif %}
 
 
-{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Kitchen"))  %}    
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Dining"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Dining"))  %}    
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
     ALWAYS_ON,     !- Availability Schedule Name
@@ -262,7 +262,7 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
 
-{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Kitchen")) %}      
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Dining"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Dining")) %}      
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 1,  !- Name
     ALWAYS_ON,     !- Availability Schedule Name
@@ -287,8 +287,8 @@ Coil:Heating:Fuel,
 
 {%- endif %}
 
-{%- if (BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Dining"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Dining")  %} 
-{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (ZoneType == "Dining"))  %} 
+{%- if (BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Kitchen")  %} 
+{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (ZoneType == "Kitchen"))  %} 
 		{% set COP_2 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_2 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_2 = UpgradedHeatingType %}	
@@ -380,7 +380,7 @@ Coil:Heating:DX:MultiSpeed,
 
 {%- endif %}
 
-{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Dining"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Dining"))  %}      
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Kitchen"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Kitchen"))  %}      
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     ALWAYS_ON,     !- Availability Schedule Name
@@ -400,7 +400,7 @@ Coil:Heating:Fuel,
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
 
-{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Dining")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Dining")) %}            
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Kitchen")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Kitchen")) %}            
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     ALWAYS_ON,     !- Availability Schedule Name
