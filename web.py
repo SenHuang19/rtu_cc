@@ -37,6 +37,8 @@ number_workers = 0
 class run(Resource):
     '''Interface to cancel a optimization.'''    
     def post(self):   
+
+        result={} 
         inputs = request.get_json()       
         data = inputs['input']
         os.chdir('/home/developer/idf')
@@ -93,6 +95,15 @@ class run(Resource):
            simulation.wait()
            baseline_df=pd.read_csv(base_dir+'/eplusout.csv')
            number_workers = number_workers - 1
+           
+           f=open(base_dir+'/output.idf')
+           tab=f.readlines()
+           f.close()
+           result['base_idf'] = tab
+           f=open(base_dir+'/eplusout.err')
+           tab=f.readlines()
+           f.close()
+           result['base_err'] = tab
         else:
             return flask.jsonify({'error': 'no available worker', 'message': None})           
 
@@ -126,10 +137,18 @@ class run(Resource):
            simulation.wait()
            upgrade_df=pd.read_csv(upgrade_dir+'/eplusout.csv')           
            number_workers = number_workers - 1
+           f=open(upgrade_dir+'/output.idf')
+           tab=f.readlines()
+           f.close()
+           result['upgrade_idf'] = tab
+           f=open(upgrade_dir+'/eplusout.err')
+           tab=f.readlines()
+           f.close()
+           result['upgrade_err'] = tab
         else:
             return flask.jsonify({'error': 'no available worker', 'message': None})   
             
-        result={} 
+
 
         os.chdir('/home/developer/idf')          
         config_file = 'config/{}'.format(data['BuildingType'])
