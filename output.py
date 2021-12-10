@@ -75,7 +75,10 @@ def cal_payout(input):
     output['NPV'] = NPV
     AnnualCostSavings=AnnualCosts_Baseline-AnnualCosts_Upgrade
     CapitalCostSavings=CapitalCost_Baseline-CapitalCost_Upgrade
-    SimplePayback=-CapitalCostSavings/AnnualCostSavings
+    if AnnualCostSavings>0:
+         SimplePayback=-CapitalCostSavings/AnnualCostSavings
+    else:
+         SimplePayback=0    
     output['SimplePayback'] = SimplePayback
     DiscountedCosts_baseline=[0]*(Lifetime+1)
     DiscountedCosts_upgrade=[0]*(Lifetime+1)

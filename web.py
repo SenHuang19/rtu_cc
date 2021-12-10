@@ -3,7 +3,7 @@ from flask_restful import Resource, Api, reqparse
 import subprocess
 import os
 from wrapper import load_template
-from shutil import copyfile
+from shutil import copyfile,rmtree
 import pandas as pd
 import os
 import flask
@@ -91,11 +91,19 @@ class run(Resource):
            number_workers = number_workers + 1
            simulation = subprocess.Popen(cmdStr, shell=True)
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
-                pPidFile.write(str(simulation.pid))             
-           simulation.wait()
-           baseline_df=pd.read_csv(base_dir+'/eplusout.csv')
-           number_workers = number_workers - 1
-           
+                     pPidFile.write(str(simulation.pid))             
+           simulation.wait()             
+           try: 
+                number_workers = number_workers - 1           
+                baseline_df=pd.read_csv(base_dir+'/eplusout.csv')
+           except:
+                f=open(base_dir+'/output.idf')
+                tab1=f.readlines()
+                f.close()
+                f=open(base_dir+'/eplusout.err')
+                tab2=f.readlines()
+                f.close()         
+                return flask.jsonify({'error': 'base simulation fails to run', 'message': None, 'base_idf':tab1,'base_err':tab2})             
            f=open(base_dir+'/output.idf')
            tab=f.readlines()
            f.close()
@@ -104,8 +112,9 @@ class run(Resource):
            tab=f.readlines()
            f.close()
            result['base_err'] = tab
+           
         else:
-            return flask.jsonify({'error': 'no available worker', 'message': None})           
+           return flask.jsonify({'error': 'no available worker', 'message': None})           
 
         os.chdir('/home/developer/idf')  
         try:   
@@ -131,12 +140,23 @@ class run(Resource):
 
         if number_workers < max_number_worker:
            number_workers = number_workers + 1
+
            simulation = subprocess.Popen(cmdStr, shell=True)
            with open('{}.pid'.format(data['id']),'w', encoding='utf-8') as pPidFile:        
-                pPidFile.write(str(simulation.pid))             
-           simulation.wait()
-           upgrade_df=pd.read_csv(upgrade_dir+'/eplusout.csv')           
-           number_workers = number_workers - 1
+                  pPidFile.write(str(simulation.pid))             
+           simulation.wait()          
+           try:   
+                number_workers = number_workers - 1           
+                upgrade_df=pd.read_csv(upgrade_dir+'/eplusout.csv')           
+           except:
+                f=open(base_dir+'/output.idf')
+                tab1=f.readlines()
+                f.close()
+                f=open(base_dir+'/eplusout.err')
+                tab2=f.readlines()
+                f.close()         
+                return flask.jsonify({'error': 'upgrade simulation fails to run', 'message': None, 'upgrade_idf':tab1,'upgrade_err':tab2})               
+           
            f=open(upgrade_dir+'/output.idf')
            tab=f.readlines()
            f.close()
@@ -145,8 +165,9 @@ class run(Resource):
            tab=f.readlines()
            f.close()
            result['upgrade_err'] = tab
+           
         else:
-            return flask.jsonify({'error': 'no available worker', 'message': None})   
+           return flask.jsonify({'error': 'no available worker', 'message': None})   
             
 
 
@@ -207,7 +228,11 @@ class run(Resource):
 
         result_lc = cal_payout(data)  
 
-        result.update(result_lc)        
+        result.update(result_lc) 
+
+        rmtree(upgrade_dir) 
+
+        rmtree(base_dir)        
         
         return make_response(jsonify({'error': None, 'message': result}), 200) 
         
