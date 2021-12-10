@@ -98,12 +98,16 @@ class run(Resource):
                 baseline_df=pd.read_csv(base_dir+'/eplusout.csv')
            except:
                 f=open(base_dir+'/output.idf')
-                tab1=f.readlines()
+                tab=f.readlines()
                 f.close()
+                result['base_idf'] = tab
                 f=open(base_dir+'/eplusout.err')
-                tab2=f.readlines()
-                f.close()         
-                return flask.jsonify({'error': 'base simulation fails to run', 'message': None, 'base_idf':tab1,'base_err':tab2})             
+                tab=f.readlines()
+                f.close()
+                result['base_err'] = tab 
+                result['upgrade_idf'] = ''
+                result['upgrade_err'] = ''                
+                return flask.jsonify({'error': 'base simulation fails to run', 'message': result})             
            f=open(base_dir+'/output.idf')
            tab=f.readlines()
            f.close()
@@ -150,12 +154,14 @@ class run(Resource):
                 upgrade_df=pd.read_csv(upgrade_dir+'/eplusout.csv')           
            except:
                 f=open(base_dir+'/output.idf')
-                tab1=f.readlines()
+                tab=f.readlines()
                 f.close()
+                result['upgrade_idf'] = tab
                 f=open(base_dir+'/eplusout.err')
-                tab2=f.readlines()
-                f.close()         
-                return flask.jsonify({'error': 'upgrade simulation fails to run', 'message': None, 'upgrade_idf':tab1,'upgrade_err':tab2})               
+                tab=f.readlines()
+                f.close()    
+                result['upgrade_err'] = tab                
+                return flask.jsonify({'error': 'upgrade simulation fails to run', 'message': result})               
            
            f=open(upgrade_dir+'/output.idf')
            tab=f.readlines()
