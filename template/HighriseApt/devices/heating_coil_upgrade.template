@@ -46,7 +46,7 @@ Coil:Heating:Fuel,
     ALWAYS_ON,               !- Availability Schedule Name
     NaturalGas,              !- Fuel Type
     0.8,                     !- Burner Efficiency
-st    autosize,                !- Nominal Capacity {W}
+    autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
     
