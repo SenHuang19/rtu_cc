@@ -56,7 +56,7 @@
     Heat Pump DX Heating Coil 1,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -171,7 +171,7 @@
     Heat Pump DX Heating Coil 2,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -285,7 +285,7 @@
     Heat Pump DX Heating Coil 3,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -398,7 +398,7 @@
     Heat Pump DX Heating Coil 4,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 4, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -510,7 +510,7 @@
     Heat Pump DX Heating Coil 5,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 5,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 5, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -626,7 +626,7 @@
     Heat Pump DX Heating Coil 6,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 6,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 6, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -739,7 +739,7 @@
     Heat Pump DX Heating Coil 7,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 7,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 7, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -853,7 +853,7 @@
     Heat Pump DX Heating Coil 8,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 8,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 8, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1047,7 +1047,7 @@
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1221,7 +1221,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1395,7 +1395,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1568,7 +1568,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 4, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1743,7 +1743,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 5,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 5, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1918,7 +1918,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 6,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 6, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -2092,7 +2092,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 7,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 7, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -2266,7 +2266,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 8,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 8, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
