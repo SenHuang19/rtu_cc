@@ -244,7 +244,35 @@ EnergyManagementSystem:Program,
     SET Fan6Speed=NULL,      !- A9
     ENDIF;                   !- A10
 {%- endif  %}
+EnergyManagementSystem:InternalVariable,
+    Fan1_DesignFlow,         !- Name
+    Supply Fan 1,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
 
+EnergyManagementSystem:InternalVariable,
+    Fan2_DesignFlow,         !- Name
+    Supply Fan 2,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan3_DesignFlow,         !- Name
+    Supply Fan 3,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan4_DesignFlow,         !- Name
+    Supply Fan 4,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan5_DesignFlow,         !- Name
+    Supply Fan 5,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+	
+EnergyManagementSystem:InternalVariable,
+    Fan6_DesignFlow,         !- Name
+    Supply Fan 6,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
 
 
 
