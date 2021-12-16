@@ -40,11 +40,10 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
-Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -114,11 +113,10 @@ Coil:Heating:DX:SingleSpeed,
     ,                        !- Secondary Coil Air Flow Rate {m3/s}
     1.25;                    !- Secondary Coil Fan Flow Scaling Factor {m3/s}
     
-    Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
@@ -235,11 +233,10 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 
-	Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -258,11 +255,10 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -281,11 +277,10 @@ Coil:Heating:Fuel,
     autosize;                !- Stage 1 Nominal Capacity {W}
 
     
-Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -374,11 +369,10 @@ Coil:Heating:DX:MultiSpeed,
     {%- endif %}
     {%- endif %}
 	
-    Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
@@ -396,11 +390,10 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
@@ -418,14 +411,12 @@ Coil:Heating:Fuel,
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-Coil:Heating:Fuel,
+Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    NaturalGas,              !- Fuel Type
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
-
 {%- endif %}
 
