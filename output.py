@@ -40,7 +40,7 @@ def size(config, tab):
         for item in config[key]['topic']:
                   size = size + parse_tab(item, tab)
         output[key] = {}                   
-        output[key]['size'] = size*3.412/12000
+        output[key]['size'] = size
     return output   
 
 def cal_payout(input):
