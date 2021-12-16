@@ -30,58 +30,75 @@ api = Api(app)
 
 import json
 
-max_number_worker = 2
+max_number_worker = 10
 
 number_workers = 0
 
 class run(Resource):
     '''Interface to cancel a optimization.'''    
-    def post(self):   
-
+    def post(self):  
         result={} 
         inputs = request.get_json()       
-        data = inputs['input']
+        data = inputs['input']    
+        if not 'id' in data:        
+            return flask.jsonify({'error': 'missing id', 'message': None})    
+        base_dir = '/home/developer/base_{}'.format(data['id'])    
+        upgrade_dir = '/home/developer/upgrade_{}'.format(data['id'])        
+        if not os.path.exists(base_dir):
+                 os.makedirs(base_dir)  
+        if not os.path.exists(upgrade_dir):
+                 os.makedirs(upgrade_dir)                    
+
         os.chdir('/home/developer/idf')
+        
         if 'climate' in data:        
             src = './template/climate/{}'.format(data['climate'])
-            dst = 'output/climates'
+            dst1 = '{}/climates'.format(base_dir)
+            dst2 = '{}/climates'.format(upgrade_dir)            
         else:
             return flask.jsonify({'error': 'missing climate', 'message': None})
-        if not 'id' in data:        
-            return flask.jsonify({'error': 'missing id', 'message': None})
+
         try:
-            copyfile(src, dst)
+            copyfile(src, dst1)
+            copyfile(src, dst2)            
         except:
             return flask.jsonify({'error': 'no such climate: {}'.format(data['climate']), 'message': None})
+        weatherPath = '/home/developer/idf/wea/{}.epw'.format(data['climate'])
+
+             
         try:
             if data['BuildingType'] == 'Warehouse':
-                 load_template('./template/{}/construction'.format(data['BuildingType']),'wall_roof.template','output','wall_roof',data)                     
-                 load_template('./template/{}/construction'.format(data['BuildingType']),'window.template','output','window',data)                
+                 load_template('./template/{}/construction'.format(data['BuildingType']),'wall_roof.template',base_dir,'wall_roof',data)                     
+                 load_template('./template/{}/construction'.format(data['BuildingType']),'window.template',base_dir,'window',data)
+                 load_template('./template/{}/construction'.format(data['BuildingType']),'wall_roof.template',upgrade_dir,'wall_roof',data)                     
+                 load_template('./template/{}/construction'.format(data['BuildingType']),'window.template',upgrade_dir,'window',data)                  
             else:
-                 load_template('./template/construction','wall_roof.template','output','wall_roof',data)                     
-                 load_template('./template/construction','window.template','output','window',data)           
-            load_template('./template/{}/construction'.format(data['BuildingType']),'FenestrationSurface.template','output','FenestrationSurface',data)         
-            load_template('./template/schedule','HVACOperationSchd.template','output','HVACOperationSchd',data)                   
-            load_template('./template/schedule','CLGSETP_SCH_NO_OPTIMUM.template','output','CLGSETP_SCH_NO_OPTIMUM',data)
-            load_template('./template/schedule','HTGSETP_SCH_NO_OPTIMUM.template','output','HTGSETP_SCH_NO_OPTIMUM',data)
-            load_template('./template/{}/devices'.format(data['BuildingType']),'MinOAFraction.template','output','MinOAFraction',data)
-            load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil.template','output','cooling_coil',data)
-            load_template('./template/{}/devices'.format(data['BuildingType']),'heating_coil.template','output','heating_coil',data)
-            load_template('./template/{}/controller'.format(data['BuildingType']),'outdoor_air_control.template','output','outdoor_air_control',data)
-            load_template('./template/{}/ems'.format(data['BuildingType']),'ems_pr.template','output','ems_pr',data)
-            load_template('./template/{}/curve'.format(data['BuildingType']),'FanPowerCurve.template','output','FanPowerCurve',data)
-            load_template('./template/{}/curve'.format(data['BuildingType']),'HPACCOOLEIRFT.template','output','HPACCOOLEIRFT',data)
-            load_template(['template/{}/global'.format(data['BuildingType']),'output'],'output.template','output','output.idf',data)
+                 load_template('./template/construction','wall_roof.template',base_dir,'wall_roof',data)                     
+                 load_template('./template/construction','window.template',base_dir,'window',data)
+                 load_template('./template/construction','wall_roof.template',upgrade_dir,'wall_roof',data)                     
+                 load_template('./template/construction','window.template',upgrade_dir,'window',data)                    
+            load_template('./template/{}/construction'.format(data['BuildingType']),'FenestrationSurface.template',base_dir,'FenestrationSurface',data)         
+            load_template('./template/schedule','HVACOperationSchd.template',base_dir,'HVACOperationSchd',data)                   
+            load_template('./template/schedule','CLGSETP_SCH_NO_OPTIMUM.template',base_dir,'CLGSETP_SCH_NO_OPTIMUM',data)
+            load_template('./template/schedule','HTGSETP_SCH_NO_OPTIMUM.template',base_dir,'HTGSETP_SCH_NO_OPTIMUM',data)
+
+            load_template('./template/{}/construction'.format(data['BuildingType']),'FenestrationSurface.template',upgrade_dir,'FenestrationSurface',data)         
+            load_template('./template/schedule','HVACOperationSchd.template',upgrade_dir,'HVACOperationSchd',data)                   
+            load_template('./template/schedule','CLGSETP_SCH_NO_OPTIMUM.template',upgrade_dir,'CLGSETP_SCH_NO_OPTIMUM',data)
+            load_template('./template/schedule','HTGSETP_SCH_NO_OPTIMUM.template',upgrade_dir,'HTGSETP_SCH_NO_OPTIMUM',data)
+            
+            load_template('./template/{}/devices'.format(data['BuildingType']),'MinOAFraction.template',base_dir,'MinOAFraction',data)
+            load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil.template',base_dir,'cooling_coil',data)
+            load_template('./template/{}/devices'.format(data['BuildingType']),'heating_coil.template',base_dir,'heating_coil',data)
+            load_template('./template/{}/controller'.format(data['BuildingType']),'outdoor_air_control.template',base_dir,'outdoor_air_control',data)
+            load_template('./template/{}/ems'.format(data['BuildingType']),'ems_pr.template',base_dir,'ems_pr',data)
+            load_template('./template/{}/curve'.format(data['BuildingType']),'FanPowerCurve.template',base_dir,'FanPowerCurve',data)
+            load_template('./template/{}/curve'.format(data['BuildingType']),'HPACCOOLEIRFT.template',base_dir,'HPACCOOLEIRFT',data)
+            load_template(['template/{}/global'.format(data['BuildingType']),base_dir],'output.template',base_dir,'output.idf',data)
         except:
             Err = traceback.format_exc()
             return flask.jsonify({'error': Err, 'message': None})        
        
-        weatherPath = '/home/developer/idf/wea/{}.epw'.format(data['climate'])
-        base_dir = '/home/developer/base_{}'.format(data['id'])
-        if not os.path.exists(base_dir):
-                 os.makedirs(base_dir)   
-
-        copyfile('/home/developer/idf/output/output.idf', base_dir+'/output.idf')         
         
         os.chdir(base_dir)
         cmdStr= "energyplus -w \"%s\" -r \"%s\"" % (weatherPath, 'output.idf')
@@ -122,23 +139,19 @@ class run(Resource):
 
         os.chdir('/home/developer/idf')  
         try:   
-           load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil_upgrade.template','output','cooling_coil',data)
-           load_template('./template/{}/devices'.format(data['BuildingType']),'heating_coil_upgrade.template','output','heating_coil',data)
-           load_template('./template/{}/devices'.format(data['BuildingType']),'MinOAFraction_upgrade.template','output','MinOAFraction',data)
-           load_template('./template/{}/controller'.format(data['BuildingType']),'outdoor_air_control_upgrade.template','output','outdoor_air_control',data)
-           load_template('./template/{}/ems'.format(data['BuildingType']),'ems_pr_upgrade.template','output','ems_pr',data)
-           load_template('./template/{}/curve'.format(data['BuildingType']),'FanPowerCurve_upgrade.template','output','FanPowerCurve',data)
-           load_template('./template/{}/curve'.format(data['BuildingType']),'HPACCOOLEIRFT_upgrade.template','output','HPACCOOLEIRFT',data)
-           load_template(['template/{}/global'.format(data['BuildingType']),'output'],'output.template','output','output.idf',data)  
+           load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil_upgrade.template',upgrade_dir,'cooling_coil',data)
+           load_template('./template/{}/devices'.format(data['BuildingType']),'heating_coil_upgrade.template',upgrade_dir,'heating_coil',data)
+           load_template('./template/{}/devices'.format(data['BuildingType']),'MinOAFraction_upgrade.template',upgrade_dir,'MinOAFraction',data)
+           load_template('./template/{}/controller'.format(data['BuildingType']),'outdoor_air_control_upgrade.template',upgrade_dir,'outdoor_air_control',data)
+           load_template('./template/{}/ems'.format(data['BuildingType']),'ems_pr_upgrade.template',upgrade_dir,'ems_pr',data)
+           load_template('./template/{}/curve'.format(data['BuildingType']),'FanPowerCurve_upgrade.template',upgrade_dir,'FanPowerCurve',data)
+           load_template('./template/{}/curve'.format(data['BuildingType']),'HPACCOOLEIRFT_upgrade.template',upgrade_dir,'HPACCOOLEIRFT',data)
+           load_template(['template/{}/global'.format(data['BuildingType']),upgrade_dir],'output.template',upgrade_dir,'output.idf',data)  
         except:
             Err = traceback.format_exc()
             return flask.jsonify({'error': Err, 'message': None})
-        upgrade_dir = '/home/developer/upgrade_{}'.format(data['id'])
-        if not os.path.exists(upgrade_dir):
-                 os.makedirs(upgrade_dir)   
 
-        copyfile('/home/developer/idf/output/output.idf', upgrade_dir+'/output.idf')          
-        
+
         os.chdir(upgrade_dir)
         cmdStr= "energyplus -w \"%s\" -r \"%s\"" % (weatherPath, 'output.idf')        
 
