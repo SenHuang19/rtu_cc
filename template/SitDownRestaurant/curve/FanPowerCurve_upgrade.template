@@ -1,7 +1,7 @@
 
 Curve:Cubic,
     FanPowerCurve1,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Dining"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Dining")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Dining") or (UpgradedFanType == "Constant Speed" and ZoneType == "Dining")  %}  
     1,
     0,
     0,
@@ -21,7 +21,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve2,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Kitchen"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Kitchen")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Kitchen") or (UpgradedFanType == "Constant Speed" and ZoneType == "Kitchen")  %}  
     1,
     0,
     0,
