@@ -1,7 +1,7 @@
 
 Curve:Cubic,
     FanPowerCurve1,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "West"))) or (UpgradedFanType == "Constant Speed" and Orientation == "West")  %} 
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "West") or (UpgradedFanType == "Constant Speed" and Orientation == "West")  %} 
     1,
     0,
     0,
@@ -21,7 +21,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve2,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "West"))) or (UpgradedFanType == "Constant Speed" and Orientation == "West")  %} 
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "West") or (UpgradedFanType == "Constant Speed" and Orientation == "West")  %} 
     1,
     0,
     0,
@@ -41,7 +41,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve3,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "East"))) or (UpgradedFanType == "Constant Speed" and Orientation == "East")  %} 
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "East") or (UpgradedFanType == "Constant Speed" and Orientation == "East")  %} 
     1,
     0,
     0,
@@ -61,7 +61,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve4,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "East"))) or (UpgradedFanType == "Constant Speed" and Orientation == "East")  %}
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "East") or (UpgradedFanType == "Constant Speed" and Orientation == "East")  %} 
     1,
     0,
     0,
@@ -81,7 +81,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve5,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "North"))) or (UpgradedFanType == "Constant Speed" and Orientation == "North")  %}
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "North") or (UpgradedFanType == "Constant Speed" and Orientation == "North")  %} 
     1,
     0,
     0,
@@ -101,7 +101,7 @@ Curve:Cubic,
 
 Curve:Cubic,
     FanPowerCurve6,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "North"))) or (UpgradedFanType == "Constant Speed" and Orientation == "North")  %}
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "North") or (UpgradedFanType == "Constant Speed" and Orientation == "North")  %} 
     1,
     0,
     0,
@@ -121,7 +121,7 @@ Curve:Cubic,
 
 Curve:Cubic,
     FanPowerCurve7,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "South"))) or (UpgradedFanType == "Constant Speed" and Orientation == "South")  %}
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "South") or (UpgradedFanType == "Constant Speed" and Orientation == "South")  %} 
     1,
     0,
     0,
@@ -141,7 +141,7 @@ Curve:Cubic,
 
 Curve:Cubic,
     FanPowerCurve8,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and Orientation == "South"))) or (UpgradedFanType == "Constant Speed" and Orientation == "South")  %}
+{%- if (BaselineFanType == "Constant Speed" and Orientation != "South") or (UpgradedFanType == "Constant Speed" and Orientation == "South")  %} 
     1,
     0,
     0,
