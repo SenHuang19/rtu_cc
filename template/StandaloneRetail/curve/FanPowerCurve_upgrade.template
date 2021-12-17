@@ -1,7 +1,7 @@
 
 Curve:Cubic,
     FanPowerCurve1,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Storage"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Storage") or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %} 
     1,
     0,
     0,
@@ -21,7 +21,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve2,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Core Retail"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Core Retail")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Core Retail") or (UpgradedFanType == "Constant Speed" and ZoneType == "Core Retail")  %} 
     1,
     0,
     0,
@@ -41,7 +41,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve3,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Front"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Front")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Front") or (UpgradedFanType == "Constant Speed" and ZoneType == "Front")  %} 
     1,
     0,
     0,
@@ -61,7 +61,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve4,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Front"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Front")  %}
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Front") or (UpgradedFanType == "Constant Speed" and ZoneType == "Front")  %} 
     1,
     0,
     0,
@@ -81,7 +81,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve5,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Front"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Front")  %}
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Front") or (UpgradedFanType == "Constant Speed" and ZoneType == "Front")  %} 
     1,
     0,
     0,
