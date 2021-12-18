@@ -137,7 +137,10 @@ def cal_payout(input):
        if n>100:
            error=0          
     output['RateOfReturn'] = RateOfReturn
-    SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)/(CapitalCost_Upgrade-CapitalCost_Baseline)
+    if CapitalCost_Upgrade>CapitalCost_Baseline:
+         SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)/(CapitalCost_Upgrade-CapitalCost_Baseline)
+    else:
+         SIR= 0    
     output['SIR'] = SIR
     for key in output:
         if isNaN(output[key]):
