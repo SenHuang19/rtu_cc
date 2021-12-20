@@ -1,4 +1,3 @@
-
 !-   ===========  ALL OBJECTS IN CLASS: FENESTRATIONSURFACE:DETAILED ===========
 
 {%- if Windows == "Medium" %} 
@@ -6,7 +5,7 @@
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -29,7 +28,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_1_ZN_1_FLR_1_Wall_6_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corridor_Pod_1_ZN_1_FLR_1_Wall_6,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -52,7 +51,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -75,7 +74,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -98,7 +97,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_2_ZN_1_FLR_1_Wall_6_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corridor_Pod_2_ZN_1_FLR_1_Wall_6,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -121,7 +120,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -144,7 +143,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -167,7 +166,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_3_ZN_1_FLR_1_Wall_7_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corridor_Pod_3_ZN_1_FLR_1_Wall_7,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -190,7 +189,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -213,7 +212,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -236,7 +235,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Bath_ZN_1_FLR_1_Wall_5_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Bath_ZN_1_FLR_1_Wall_5,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -259,7 +258,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_2_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Offices_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -282,7 +281,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Kitchen_ZN_1_FLR_1_Wall_2_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Kitchen_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -305,7 +304,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_3_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Cafeteria_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -328,7 +327,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_3_window_1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Library_Media_Center_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -351,7 +350,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Computer_Class_ZN_1_FLR_1_Wall_3_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Computer_Class_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -374,7 +373,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Computer_Class_ZN_1_FLR_1_Wall_3_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Computer_Class_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -397,7 +396,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -420,7 +419,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -443,7 +442,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window3,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -466,7 +465,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -489,7 +488,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -512,7 +511,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -535,7 +534,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -558,7 +557,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -581,7 +580,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window3,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -604,7 +603,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -627,7 +626,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -650,7 +649,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window3,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -673,7 +672,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -696,7 +695,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -719,7 +718,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -742,7 +741,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -765,7 +764,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -788,7 +787,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -811,7 +810,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -834,7 +833,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Main_Corridor_ZN_1_FLR_1_Wall_7_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Main_Corridor_ZN_1_FLR_1_Wall_7,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -857,7 +856,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Main_Corridor_ZN_1_FLR_1_Wall_7_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Main_Corridor_ZN_1_FLR_1_Wall_7,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -880,7 +879,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -903,7 +902,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -926,7 +925,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window3,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -949,7 +948,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -972,7 +971,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -995,7 +994,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1018,7 +1017,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1041,7 +1040,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1064,7 +1063,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1087,7 +1086,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window3,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1110,7 +1109,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Lobby_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Lobby_ZN_1_FLR_1_Wall_1, !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1133,7 +1132,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Lobby_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Lobby_ZN_1_FLR_1_Wall_1, !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1156,7 +1155,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_1_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Offices_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1179,7 +1178,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_1_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Offices_ZN_1_FLR_1_Wall_1,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1202,7 +1201,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Gym_ZN_1_FLR_1_Wall_2_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Gym_ZN_1_FLR_1_Wall_2,   !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1225,7 +1224,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Gym_ZN_1_FLR_1_Wall_2_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Gym_ZN_1_FLR_1_Wall_2,   !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1248,7 +1247,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_2_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Cafeteria_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1271,7 +1270,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_2_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Cafeteria_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1294,7 +1293,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_2_Window1,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Library_Media_Center_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1317,7 +1316,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_2_Window2,  !- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.58_SHGC_0.39, !- Construction Name
+    Window, !- Construction Name
     Library_Media_Center_ZN_1_FLR_1_Wall_2,  !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -1344,7 +1343,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -1367,7 +1366,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_1_ZN_1_FLR_1_Wall_6_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corridor_Pod_1_ZN_1_FLR_1_Wall_6,
     ,
     AutoCalculate,
@@ -1390,7 +1389,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -1413,7 +1412,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -1436,7 +1435,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_2_ZN_1_FLR_1_Wall_6_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corridor_Pod_2_ZN_1_FLR_1_Wall_6,
     ,
     AutoCalculate,
@@ -1459,7 +1458,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -1482,7 +1481,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -1505,7 +1504,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_3_ZN_1_FLR_1_Wall_7_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corridor_Pod_3_ZN_1_FLR_1_Wall_7,
     ,
     AutoCalculate,
@@ -1528,7 +1527,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1551,7 +1550,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -1574,7 +1573,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Bath_ZN_1_FLR_1_Wall_5_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Bath_ZN_1_FLR_1_Wall_5,
     ,
     AutoCalculate,
@@ -1597,7 +1596,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_2_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Offices_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -1620,7 +1619,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Kitchen_ZN_1_FLR_1_Wall_2_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Kitchen_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -1643,7 +1642,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_3_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Cafeteria_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1666,7 +1665,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_3_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Library_Media_Center_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1689,7 +1688,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Computer_Class_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Computer_Class_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1712,7 +1711,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Computer_Class_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Computer_Class_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1735,7 +1734,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1758,7 +1757,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1781,7 +1780,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1804,7 +1803,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1827,7 +1826,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -1850,7 +1849,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -1873,7 +1872,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -1896,7 +1895,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -1919,7 +1918,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -1942,7 +1941,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1965,7 +1964,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -1988,7 +1987,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2011,7 +2010,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2034,7 +2033,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2057,7 +2056,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2080,7 +2079,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2103,7 +2102,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2126,7 +2125,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2149,7 +2148,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2172,7 +2171,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Main_Corridor_ZN_1_FLR_1_Wall_7_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Main_Corridor_ZN_1_FLR_1_Wall_7,
     ,
     AutoCalculate,
@@ -2195,7 +2194,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Main_Corridor_ZN_1_FLR_1_Wall_7_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Main_Corridor_ZN_1_FLR_1_Wall_7,
     ,
     AutoCalculate,
@@ -2218,7 +2217,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2241,7 +2240,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2264,7 +2263,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2287,7 +2286,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2310,7 +2309,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2333,7 +2332,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2356,7 +2355,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2379,7 +2378,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2402,7 +2401,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2425,7 +2424,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2448,7 +2447,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Lobby_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Lobby_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2471,7 +2470,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Lobby_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Lobby_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2494,7 +2493,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Offices_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2517,7 +2516,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Offices_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -2540,7 +2539,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Gym_ZN_1_FLR_1_Wall_2_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Gym_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2563,7 +2562,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Gym_ZN_1_FLR_1_Wall_2_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Gym_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2586,7 +2585,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_2_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Cafeteria_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2609,7 +2608,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_2_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Cafeteria_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2632,7 +2631,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_2_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Library_Media_Center_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2655,7 +2654,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_2_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Library_Media_Center_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2681,7 +2680,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -2704,7 +2703,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_1_ZN_1_FLR_1_Wall_6_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corridor_Pod_1_ZN_1_FLR_1_Wall_6,
     ,
     AutoCalculate,
@@ -2727,7 +2726,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -2750,7 +2749,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -2773,7 +2772,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_2_ZN_1_FLR_1_Wall_6_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corridor_Pod_2_ZN_1_FLR_1_Wall_6,
     ,
     AutoCalculate,
@@ -2796,7 +2795,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -2819,7 +2818,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -2842,7 +2841,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corridor_Pod_3_ZN_1_FLR_1_Wall_7_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corridor_Pod_3_ZN_1_FLR_1_Wall_7,
     ,
     AutoCalculate,
@@ -2865,7 +2864,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -2888,7 +2887,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_4,
     ,
     AutoCalculate,
@@ -2911,7 +2910,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Bath_ZN_1_FLR_1_Wall_5_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Bath_ZN_1_FLR_1_Wall_5,
     ,
     AutoCalculate,
@@ -2934,7 +2933,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_2_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Offices_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2957,7 +2956,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Kitchen_ZN_1_FLR_1_Wall_2_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Kitchen_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -2980,7 +2979,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_3_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Cafeteria_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3003,7 +3002,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_3_window_1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Library_Media_Center_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3026,7 +3025,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Computer_Class_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Computer_Class_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3049,7 +3048,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Computer_Class_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Computer_Class_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3072,7 +3071,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3095,7 +3094,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3118,7 +3117,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3141,7 +3140,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3_window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_3_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3164,7 +3163,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3187,7 +3186,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3210,7 +3209,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3233,7 +3232,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3256,7 +3255,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_3_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3279,7 +3278,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3302,7 +3301,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3325,7 +3324,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3348,7 +3347,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3371,7 +3370,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_2_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3394,7 +3393,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3417,7 +3416,7 @@ FenestrationSurface:Detailed,
   FenestrationSurface:Detailed,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3440,7 +3439,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3463,7 +3462,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3486,7 +3485,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_2_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3509,7 +3508,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Main_Corridor_ZN_1_FLR_1_Wall_7_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Main_Corridor_ZN_1_FLR_1_Wall_7,
     ,
     AutoCalculate,
@@ -3532,7 +3531,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Main_Corridor_ZN_1_FLR_1_Wall_7_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Main_Corridor_ZN_1_FLR_1_Wall_7,
     ,
     AutoCalculate,
@@ -3555,7 +3554,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3578,7 +3577,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3601,7 +3600,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3624,7 +3623,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3647,7 +3646,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_2_Pod_1_ZN_1_FLR_1_Wall_3,
     ,
     AutoCalculate,
@@ -3670,7 +3669,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3693,7 +3692,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Corner_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3716,7 +3715,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3739,7 +3738,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3762,7 +3761,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1_Window3,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Mult_Class_1_Pod_1_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3785,7 +3784,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Lobby_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Lobby_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3808,7 +3807,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Lobby_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Lobby_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3831,7 +3830,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_1_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Offices_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3854,7 +3853,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Offices_ZN_1_FLR_1_Wall_1_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Offices_ZN_1_FLR_1_Wall_1,
     ,
     AutoCalculate,
@@ -3877,7 +3876,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Gym_ZN_1_FLR_1_Wall_2_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Gym_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -3900,7 +3899,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Gym_ZN_1_FLR_1_Wall_2_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Gym_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -3923,7 +3922,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_2_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Cafeteria_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -3946,7 +3945,7 @@ FenestrationSurface:Detailed,
  FenestrationSurface:Detailed,
     Cafeteria_ZN_1_FLR_1_Wall_2_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Cafeteria_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -3969,7 +3968,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_2_Window1,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Library_Media_Center_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
@@ -3992,7 +3991,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Library_Media_Center_ZN_1_FLR_1_Wall_2_Window2,
     Window,
-    NonresWindow_U_0.58_SHGC_0.39,
+    Window,
     Library_Media_Center_ZN_1_FLR_1_Wall_2,
     ,
     AutoCalculate,
