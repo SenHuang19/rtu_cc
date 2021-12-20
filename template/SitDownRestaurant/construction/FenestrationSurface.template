@@ -29,7 +29,7 @@ FenestrationSurface:Detailed,
 FenestrationSurface:Detailed,
     Dining_Wall_South_Window,!- Name
     Window,                  !- Surface Type
-    NonresWindow_U_0.57_SHGC_0.39,  !- Construction Name
+    Window,  !- Construction Name
     Dining_Wall_South,       !- Building Surface Name
     ,                        !- Outside Boundary Condition Object
     AutoCalculate,           !- View Factor to Ground
@@ -100,8 +100,8 @@ FenestrationSurface:Detailed,
 
 FenestrationSurface:Detailed,
     Dining_Wall_South_Window,
-    Window,
-    NonresWindow_U_0.57_SHGC_0.39,
+    Window,                  !- Surface Type
+    Window,  !- Construction Name
     Dining_Wall_South,
     ,
     AutoCalculate,
@@ -171,8 +171,8 @@ FenestrationSurface:Detailed,
 
 FenestrationSurface:Detailed,
     Dining_Wall_South_Window,
-    Window,
-    NonresWindow_U_0.57_SHGC_0.39,
+    Window,                  !- Surface Type
+    Window,  !- Construction Name
     Dining_Wall_South,
     ,
     AutoCalculate,
