@@ -636,7 +636,7 @@ Coil:Cooling:DX:SingleSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
+	{%- if NumberOfSpeeds == 2  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -658,7 +658,7 @@ Coil:Cooling:DX:SingleSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
+	{%- if NumberOfSpeeds == 3  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}	
@@ -811,7 +811,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
+	{%- if NumberOfSpeeds == 2  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -833,7 +833,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
+	{%- if NumberOfSpeeds == 3  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -985,7 +985,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
+	{%- if NumberOfSpeeds == 2  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1007,7 +1007,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
+	{%- if NumberOfSpeeds == 3  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1158,7 +1158,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
+	{%- if NumberOfSpeeds == 2  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1180,7 +1180,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
+	{%- if NumberOfSpeeds == 3  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1331,7 +1331,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
+	{%- if NumberOfSpeeds == 2  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1353,7 +1353,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
+	{%- if NumberOfSpeeds == 3  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
