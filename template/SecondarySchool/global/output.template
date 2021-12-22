@@ -1239,8 +1239,40 @@ Version,9.0;
     Until: 24:00,0.0,        !- Field 13
     For: Saturday Sunday Holidays AllOtherDays, !- Field 15
     Until: 24:00,0.0;        !- Field 16
+	
+	Schedule:Compact,
+    OutdoorAirAvailSched,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 3/31,           !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0,                     !- Field 4
+    Through: 9/30,           !- Field 5
+    For: WeekDays,           !- Field 6
+    Until: 7:00,             !- Field 7
+    0.0,                     !- Field 8
+    Until: 17:00,            !- Field 9
+    1.0,                     !- Field 10
+    Until: 24:00,            !- Field 11
+    0.0,                     !- Field 12
+    For: SummerDesignDay WinterDesignDay,  !- Field 13
+    Until: 24:00,            !- Field 14
+    0.0,                     !- Field 15
+    For: AllOtherDays,       !- Field 16
+    Until: 24:00,            !- Field 17
+    0.0,                     !- Field 18
+    Through: 12/31,          !- Field 19
+    For: AllDays,            !- Field 20
+    Until: 24:00,            !- Field 21
+    1.0;                     !- Field 22
 
-
+Schedule:Compact,
+    Supply-Temp-Schedule,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    12.8;                      !- Field 4
 
   Schedule:Compact,
     Booster Water Inlet Temp Schedule,  !- Name
@@ -2109,7 +2141,14 @@ Schedule:Compact,
     Until: 16:00,80.0,       !- Field 19
     Until: 24:00,0.0;        !- Field 21
 
-
+  Schedule:Compact,
+    MinOA_Sched,             !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays SummerDesignDay, !- Field 2
+    Until: 24:00,1,          !- Field 3
+    For: WeekEnds WinterDesignDay Holidays AllOtherDays, !- Field 5
+    Until: 24:00,1;          !- Field 6
 
   Schedule:Compact,
     SHWSys1-Loop-Temp-Schedule,  !- Name
@@ -2357,6 +2396,11 @@ Schedule:Compact,
     
 
 
+{% include "HVACOperationSchd" %}
+
+{% include "HTGSETP_SCH_NO_OPTIMUM" %}
+
+{% include "CLGSETP_SCH_NO_OPTIMUM" %}
 
 {% include "MinOAFraction" %}
 
@@ -16903,7 +16947,11 @@ ZoneHVAC:EquipmentList,
     AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Object Type
     Zone1DirectAir,          !- Zone Equipment 1 Name
     1,                       !- Zone Equipment 1 Cooling Sequence
-    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    Fan:ZoneExhaust,
+    GYM_ZN_1_FLR_1 DUMMY EXHAUST FAN,
+    2,
+    2;
 
 ZoneHVAC:EquipmentList,
     Zone2Equipment,          !- Name
@@ -16911,7 +16959,11 @@ ZoneHVAC:EquipmentList,
     AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Object Type
     Zone2DirectAir,          !- Zone Equipment 1 Name
     1,                       !- Zone Equipment 1 Cooling Sequence
-    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    Fan:ZoneExhaust,
+    KITCHEN_ZN_1_FLR_1 EXHAUST FAN,
+    2,
+    2;
 
 ZoneHVAC:EquipmentList,
     Zone3Equipment,          !- Name
@@ -16939,6 +16991,7 @@ ZoneHVAC:EquipmentList,
 
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:EQUIPMENTCONNECTIONS ===========
+
 
 
   ZoneHVAC:EquipmentConnections,
@@ -17245,6 +17298,32 @@ ZoneHVAC:EquipmentList,
     Offices_ZN_1_FLR_2 Air Node,  !- Zone Air Node Name
     Offices_ZN_1_FLR_2 Return Air Node Name;  !- Zone Return Air Node or NodeList Name
 
+  ZoneHVAC:EquipmentConnections,
+    LIBRARY_MEDIA_CENTER_ZN_1_FLR_2,  !- Zone Name
+    LIBRARY_MEDIA_CENTER_ZN_1_FLR_2 Equipment,  !- Zone Conditioning Equipment List Name
+    LIBRARY_MEDIA_CENTER_ZN_1_FLR_2 Inlet Nodes,  !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    LIBRARY_MEDIA_CENTER_ZN_1_FLR_2 Air Node,  !- Zone Air Node Name
+    LIBRARY_MEDIA_CENTER_ZN_1_FLR_2 Return Air Node Name;  !- Zone Return Air Node or NodeList Name
+
+
+  ZoneHVAC:EquipmentConnections,
+    Mech_ZN_1_FLR_1,         !- Zone Name
+    Mech_ZN_1_FLR_1 Equipment,  !- Zone Conditioning Equipment List Name
+    Mech_ZN_1_FLR_1 Inlet Nodes,  !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Mech_ZN_1_FLR_1 Air Node,!- Zone Air Node Name
+    Mech_ZN_1_FLR_1 Return Air Node Name;  !- Zone Return Air Node or NodeList Name
+
+  ZoneHVAC:EquipmentConnections,
+    Mech_ZN_1_FLR_2,         !- Zone Name
+    Mech_ZN_1_FLR_2 Equipment,  !- Zone Conditioning Equipment List Name
+    Mech_ZN_1_FLR_2 Inlet Nodes,  !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    Mech_ZN_1_FLR_2 Air Node,!- Zone Air Node Name
+    Mech_ZN_1_FLR_2 Return Air Node Name;  !- Zone Return Air Node or NodeList Name
+
+
 ZoneHVAC:EquipmentConnections,
     Gym_ZN_1_FLR_1,          !- Zone Name
     Zone1Equipment,          !- Zone Conditioning Equipment List Name
@@ -17284,6 +17363,90 @@ ZoneHVAC:EquipmentConnections,
     ,                        !- Zone Air Exhaust Node or NodeList Name
     Zone 5 Node,             !- Zone Air Node Name
     Zone 5 Outlet Node;      !- Zone Return Air Node or NodeList Name
+
+
+
+
+  Fan:VariableVolume,
+    VAV_POD_1 Fan,           !- Name
+    HVACOperationSchd,       !- Availability Schedule Name
+0.6006, !- Fan Total Efficiency
+1573.68, !- Pressure Rise {Pa}
+    AUTOSIZE,                !- Maximum Flow Rate {m3/s}
+    Fraction,                !- Fan Power Minimum Flow Rate Input Method
+    0.25,                    !- Fan Power Minimum Flow Fraction
+    ,                        !- Fan Power Minimum Air Flow Rate {m3/s}
+0.924, !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+0.0408, !- Fan Power Coefficient 1
+0.088, !- Fan Power Coefficient 2
+-0.0729, !- Fan Power Coefficient 3
+0.9437, !- Fan Power Coefficient 4
+0, !- Fan Power Coefficient 5
+    VAV_POD_1_HeatC-VAV_POD_1 FanNode,  !- Air Inlet Node Name
+    VAV_POD_1 Supply Equipment Outlet Node,  !- Air Outlet Node Name
+    General;              !- End-Use Subcategory
+
+  Fan:VariableVolume,
+    VAV_POD_2 Fan,           !- Name
+    HVACOperationSchd,       !- Availability Schedule Name
+0.6006, !- Fan Total Efficiency
+1573.68, !- Pressure Rise {Pa}
+    AUTOSIZE,                !- Maximum Flow Rate {m3/s}
+    Fraction,                !- Fan Power Minimum Flow Rate Input Method
+    0.25,                    !- Fan Power Minimum Flow Fraction
+    ,                        !- Fan Power Minimum Air Flow Rate {m3/s}
+0.924, !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+0.0408, !- Fan Power Coefficient 1
+0.088, !- Fan Power Coefficient 2
+-0.0729, !- Fan Power Coefficient 3
+0.9437, !- Fan Power Coefficient 4
+0, !- Fan Power Coefficient 5
+    VAV_POD_2_HeatC-VAV_POD_2 FanNode,  !- Air Inlet Node Name
+    VAV_POD_2 Supply Equipment Outlet Node,  !- Air Outlet Node Name
+    General;              !- End-Use Subcategory
+
+  Fan:VariableVolume,
+    VAV_POD_3 Fan,           !- Name
+    HVACOperationSchd,       !- Availability Schedule Name
+0.6045, !- Fan Total Efficiency
+1573.68, !- Pressure Rise {Pa}
+    AUTOSIZE,                !- Maximum Flow Rate {m3/s}
+    Fraction,                !- Fan Power Minimum Flow Rate Input Method
+    0.25,                    !- Fan Power Minimum Flow Fraction
+    ,                        !- Fan Power Minimum Air Flow Rate {m3/s}
+0.93, !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+0.0408, !- Fan Power Coefficient 1
+0.088, !- Fan Power Coefficient 2
+-0.0729, !- Fan Power Coefficient 3
+0.9437, !- Fan Power Coefficient 4
+0, !- Fan Power Coefficient 5
+    VAV_POD_3_HeatC-VAV_POD_3 FanNode,  !- Air Inlet Node Name
+    VAV_POD_3 Supply Equipment Outlet Node,  !- Air Outlet Node Name
+    General;              !- End-Use Subcategory
+
+  Fan:VariableVolume,
+    VAV_OTHER Fan,           !- Name
+    HVACOperationSchd,       !- Availability Schedule Name
+0.6045, !- Fan Total Efficiency
+1389.42, !- Pressure Rise {Pa}
+    AUTOSIZE,                !- Maximum Flow Rate {m3/s}
+    Fraction,                !- Fan Power Minimum Flow Rate Input Method
+    0.25,                    !- Fan Power Minimum Flow Fraction
+    ,                        !- Fan Power Minimum Air Flow Rate {m3/s}
+0.93, !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+0.0408, !- Fan Power Coefficient 1
+0.088, !- Fan Power Coefficient 2
+-0.0729, !- Fan Power Coefficient 3
+0.9437, !- Fan Power Coefficient 4
+0, !- Fan Power Coefficient 5
+    VAV_OTHER_HeatC-VAV_OTHER FanNode,  !- Air Inlet Node Name
+    VAV_OTHER Supply Equipment Outlet Node,  !- Air Outlet Node Name
+    General;              !- End-Use Subcategory
+
 
 
 !-   ===========  ALL OBJECTS IN CLASS: FAN:ONOFF ===========
@@ -17726,6 +17889,29 @@ AirLoopHVAC:SupplyPath,
     AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
     Zone Supply Air Splitter 5;  !- Component 1 Name
 
+  AirLoopHVAC:SupplyPath,
+    VAV_POD_1,               !- Name
+    VAV_POD_1 Zone Equipment Inlet Node,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    VAV_POD_1 Supply Air Splitter;  !- Component 1 Name
+
+  AirLoopHVAC:SupplyPath,
+    VAV_POD_2,               !- Name
+    VAV_POD_2 Zone Equipment Inlet Node,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    VAV_POD_2 Supply Air Splitter;  !- Component 1 Name
+
+  AirLoopHVAC:SupplyPath,
+    VAV_POD_3,               !- Name
+    VAV_POD_3 Zone Equipment Inlet Node,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    VAV_POD_3 Supply Air Splitter;  !- Component 1 Name
+
+  AirLoopHVAC:SupplyPath,
+    VAV_OTHER,               !- Name
+    VAV_OTHER Zone Equipment Inlet Node,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    VAV_OTHER Supply Air Splitter;  !- Component 1 Name
 
 !-   ===========  ALL OBJECTS IN CLASS: AIRLOOPHVAC:ZONEMIXER ===========
 
@@ -22672,7 +22858,7 @@ SetpointManager:Scheduled,
     RACK2CaseList,           !- Name
     Kitchen_ZN_1_FLR_1_Case:2_SELFCONTAINEDDISPLAYCASE;  !- Case or WalkIn 1 Name
 
--   ===========  ALL OBJECTS IN CLASS: CURVE:QUADRATIC ===========
+!-   ===========  ALL OBJECTS IN CLASS: CURVE:QUADRATIC ===========
 
   Curve:Quadratic,
     RACK1_RackCOPfTCurve,    !- Name
@@ -22946,24 +23132,4 @@ Curve:Quadratic,
     0.00000001,              !- Outdoor Air Flow per Person {m3/s-person}
     0.000761952;  !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
 
-  ElectricLoadCenter:Transformer,
-    Transformer 1,           !- Name
-    Always_On,               !- Availability Schedule Name
-    PowerInFromGrid,         !- Transformer Usage
-    ,                        !- Zone Name
-    ,                        !- Radiative Fraction
-    225000,  !- Rated Capacity {VA}
-    3,                       !- Phase
-    Aluminum,                !- Conductor Material
-    150,                     !- Full Load Temperature Rise {C}
-    0.1,                     !- Fraction of Eddy Current Losses
-    NominalEfficiency,       !- Performance Input Method
-    ,                        !- Rated No Load Loss {W}
-    ,                        !- Rated Load Loss {W}
-    0.974,  !- Nameplate Efficiency
-    0.35,                    !- Per Unit Load for Nameplate Efficiency
-    75,                      !- Reference Temperature for Nameplate Efficiency {C}
-    ,                        !- Per Unit Load for Maximum Efficiency
-    Yes,                     !- Consider Transformer Loss for Utility Cost
-    Wired_LTG_Electricity,   !- Meter 1 Name
-    Wired_INT_EQUIP;         !- Meter 2 Name
+ 
