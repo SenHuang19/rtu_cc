@@ -713,7 +713,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -727,7 +727,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -844,7 +844,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -858,7 +858,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -974,7 +974,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -988,7 +988,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -1104,7 +1104,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -1118,7 +1118,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -1234,7 +1234,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -1248,7 +1248,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -1365,7 +1365,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -1379,7 +1379,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -1495,7 +1495,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -1509,7 +1509,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -1625,7 +1625,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -1639,7 +1639,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -1755,7 +1755,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -1769,7 +1769,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
@@ -1885,7 +1885,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 2, !- Speed 2 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-	{%- if NumberOfSpeeds =="2"  %}
+	{%- if NumberOfSpeeds ==2  %}
     HAPCHeatWHFT Speed 2;    !- Speed 2 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
@@ -1899,7 +1899,7 @@ Coil:Heating:DX:MultiSpeed,
     HPACHeatEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
     HPACHeatPLFFPLR Speed 3, !- Speed 3 Part Load Fraction Correlation Curve Name
     0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    {%- if NumberOfSpeeds =="3"  %}
+    {%- if NumberOfSpeeds ==3  %}
     HAPCHeatWHFT Speed 3;    !- Speed 3 Waste Heat Function of Temperature Curve Name
     {% else %}
     HAPCHeatWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
