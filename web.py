@@ -238,14 +238,23 @@ class run(Resource):
         result['AnnualConsumption_Upgrade'] = result_upgrade[zone]['tot_kW']                 
 
         tab = '{}/eplustbl.csv'.format(upgrade_dir)
-
-        result_size = size(config['size'], tab)
-
-        result['EPlusCoolingSize'] = result_size[zone]['size'] 
         
-        data['EPlusCoolingSize'] = result['EPlusCoolingSize']        
+        try:   
 
-        result_lc = cal_payout(data)  
+             result_size = size(config['size'], tab)
+
+             result['EPlusCoolingSize'] = result_size[zone]['size'] 
+             
+        except:           
+                return flask.jsonify({'error': traceback.format_exc(), 'message': result})                
+        
+        data['EPlusCoolingSize'] = result['EPlusCoolingSize']  
+
+        try:   
+                result_lc = cal_payout(data)                 
+        except:           
+                return flask.jsonify({'error': traceback.format_exc(), 'message': result})            
+     
 
         result.update(result_lc) 
 
