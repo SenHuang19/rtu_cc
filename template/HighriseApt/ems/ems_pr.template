@@ -2,7 +2,7 @@
 EnergyManagementSystem:Program,
     SETFanSpeed1,            !- Name
     IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
-    SET Fan1Speed=0,         !- Program Line 2
+    SET Fan1Speed=NULL,         !- Program Line 2
     ELSEIf TZ1<=TC1-0.5 && TZ1>=TH1+0.5 && Fan1_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan1Speed=Fan1_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ1>TC1-0.5 && Fan1_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -18,7 +18,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed2,            !- Name
     IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
-    SET Fan2Speed=0,         !- Program Line 2
+    SET Fan2Speed=NULL,         !- Program Line 2
     ELSEIf TZ2<=TC2-0.5 && TZ2>=TH2+0.5 && Fan2_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan2Speed=Fan2_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ2>TC2-0.5 && Fan2_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -34,7 +34,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed3,            !- Name
     IF HVACSch==0 && TZ3>TH3 && TZ3< TC3,  !- Program Line 1
-    SET Fan3Speed=0,         !- Program Line 2
+    SET Fan3Speed=NULL,         !- Program Line 2
     ELSEIf TZ3<=TC3-0.5 && TZ3>=TH3+0.5 && Fan3_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan3Speed=Fan3_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ3>TC3-0.5 && Fan3_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -66,7 +66,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed5,            !- Name
     IF HVACSch==0 && TZ5>TH5 && TZ5< TC5,  !- Program Line 1
-    SET Fan5Speed=0,         !- Program Line 2
+    SET Fan5Speed=NULL,         !- Program Line 2
     ELSEIf TZ5<=TC5-0.5 && TZ5>=TH5+0.5 && Fan5_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan5Speed=Fan5_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ5>TC5-0.5 && Fan5_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -82,7 +82,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed6,            !- Name
     IF HVACSch==0 && TZ6>TH6 && TZ6< TC6,  !- Program Line 1
-    SET Fan6Speed=0,         !- Program Line 2
+    SET Fan6Speed=NULL,         !- Program Line 2
     ELSEIf TZ6<=TC6-0.5 && TZ6>=TH6+0.5 && Fan6_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan6Speed=Fan6_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ6>TC6-0.5 && Fan6_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -98,7 +98,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed7,            !- Name
     IF HVACSch==0 && TZ7>TH7 && TZ7< TC7,  !- Program Line 1
-    SET Fan7Speed=0,         !- Program Line 2
+    SET Fan7Speed=NULL,         !- Program Line 2
     ELSEIf TZ7<=TC7-0.5 && TZ7>=TH7+0.5 && Fan7_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan7Speed=Fan7_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ7>TC7-0.5 && Fan7_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -114,7 +114,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed8,            !- Name
     IF HVACSch==0 && TZ8>TH8 && TZ8< TC8,  !- Program Line 1
-    SET Fan8Speed=0,         !- Program Line 2
+    SET Fan8Speed=NULL,         !- Program Line 2
     ELSEIf TZ8<=TC8-0.5 && TZ8>=TH8+0.5 && Fan8_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan8Speed=Fan8_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ8>TC8-0.5 && Fan8_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -132,7 +132,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed1,            !- Name
     IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
-    SET Fan1Speed=0,         !- Program Line 2
+    SET Fan1Speed=NULL,         !- Program Line 2
     ELSEIf CC1==0 && HC1==0 && Fan1_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
     SET Fan1Speed=Fan1_DesignFlow*0.4,  !- Program Line 2
@@ -154,7 +154,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed2,            !- Name
     IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
-    SET Fan2Speed=0,         !- Program Line 2
+    SET Fan2Speed=NULL,         !- Program Line 2
     ELSEIf CC2==0 && HC2==0 && Fan2_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
     SET Fan2Speed=Fan2_DesignFlow*0.4,  !- Program Line 2
@@ -177,7 +177,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed3,            !- Name
     IF HVACSch==0 && TZ3>TH3 && TZ3< TC3,  !- Program Line 1
-    SET Fan3Speed=0,         !- Program Line 2
+    SET Fan3Speed=NULL,         !- Program Line 2
     ELSEIf CC3==0 && HC3==0 && Fan3_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
     SET Fan3Speed=Fan3_DesignFlow*0.4,  !- Program Line 2
@@ -199,7 +199,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed4,            !- Name
     IF HVACSch==0 && TZ4>TH4 && TZ4< TC4,  !- Program Line 1
-    SET Fan4Speed=0,         !- Program Line 2
+    SET Fan4Speed=NULL,         !- Program Line 2
     ELSEIf CC4==0 && HC4==0 && Fan4_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %}
     SET Fan4Speed=Fan4_DesignFlow*0.4,  !- Program Line 2
@@ -221,7 +221,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed5,            !- Name
     IF HVACSch==0 && TZ5>TH5 && TZ5< TC5,  !- Program Line 1
-    SET Fan5Speed=0,         !- Program Line 2
+    SET Fan5Speed=NULL,         !- Program Line 2
     ELSEIf CC5==0 && HC5==0 && Fan5_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %}
     SET Fan5Speed=Fan5_DesignFlow*0.4,  !- Program Line 2
@@ -245,7 +245,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed6,            !- Name
     IF HVACSch==0 && TZ6>TH6 && TZ6< TC6,  !- Program Line 1
-    SET Fan6Speed=0,         !- Program Line 2
+    SET Fan6Speed=NULL,         !- Program Line 2
     ELSEIf CC6==0 && HC6==0 && Fan6_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
     SET Fan6Speed=Fan6_DesignFlow*0.4,  !- Program Line 2
@@ -269,7 +269,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed7,            !- Name
     IF HVACSch==0 && TZ7>TH7 && TZ7< TC7,  !- Program Line 1
-    SET Fan7Speed=0,         !- Program Line 2
+    SET Fan7Speed=NULL,         !- Program Line 2
     ELSEIf CC7==0 && HC7==0 && Fan7_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
     SET Fan7Speed=Fan7_DesignFlow*0.4,  !- Program Line 2
@@ -293,7 +293,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed8,            !- Name
     IF HVACSch==0 && TZ8>TH8 && TZ8< TC8,  !- Program Line 1
-    SET Fan8Speed=0,         !- Program Line 2
+    SET Fan8Speed=NULL,         !- Program Line 2
     ELSEIf CC8==0 && HC8==0 && Fan8_DesignFlow>0,  !- Program Line 1
 	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
     SET Fan8Speed=Fan8_DesignFlow*0.4,  !- Program Line 2
