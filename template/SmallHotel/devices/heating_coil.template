@@ -57,7 +57,7 @@ Coil:Heating:DX:SingleSpeed,
     AIR LOOP OUTLET NODE 1;  !- Air Outlet Node Name
 
 {% else %}	
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -125,7 +125,7 @@ Coil:Heating:DX:SingleSpeed,
 
 {% else %}	
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -192,7 +192,7 @@ Coil:Heating:DX:SingleSpeed,
     AIR LOOP OUTLET NODE 3;  !- Air Outlet Node Name
 
 {% else %}	
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -258,7 +258,7 @@ Coil:Heating:DX:SingleSpeed,
 
 {% else %}
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -324,7 +324,7 @@ Coil:Heating:DX:SingleSpeed,
 	
 {% else %}
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -391,7 +391,7 @@ Coil:Heating:DX:SingleSpeed,
     AIR LOOP OUTLET NODE 6;  !- Air Outlet Node Name
 
 {% else %}	
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 6, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -496,7 +496,7 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -517,7 +517,7 @@ Coil:Heating:DX:MultiSpeed,
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -527,7 +527,7 @@ Coil:Heating:DX:MultiSpeed,
 
 {% else %}	
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -627,7 +627,7 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -648,7 +648,7 @@ Coil:Heating:DX:MultiSpeed,
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -658,7 +658,7 @@ Coil:Heating:DX:MultiSpeed,
 
 {% else %}	
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -757,7 +757,7 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -778,7 +778,7 @@ Coil:Heating:DX:MultiSpeed,
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -788,7 +788,7 @@ Coil:Heating:DX:MultiSpeed,
 
 {% else %}	
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -887,7 +887,7 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -908,7 +908,7 @@ Coil:Heating:DX:MultiSpeed,
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -918,7 +918,7 @@ Coil:Heating:DX:MultiSpeed,
 
 {% else %}	
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -1017,7 +1017,7 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -1038,7 +1038,7 @@ Coil:Heating:DX:MultiSpeed,
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -1048,7 +1048,7 @@ Coil:Heating:DX:MultiSpeed,
 
 {% else %}	
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -1148,7 +1148,7 @@ Coil:Heating:DX:MultiSpeed,
     1,                       !- Stage 1 Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 6, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -1169,7 +1169,7 @@ Coil:Heating:DX:MultiSpeed,
     0.8,                     !- Stage 1 Gas Burner Efficiency {W/W}
     autosize;                !- Stage 1 Nominal Capacity {W}
     
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 6, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
@@ -1179,7 +1179,7 @@ Coil:Heating:DX:MultiSpeed,
 
 {% else %}	
 
-    Coil:Heating:Fuel,
+    Coil:Heating:Elecric,
     Supp Gas Heating Coil 6, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
     1,                     !- Burner Efficiency
