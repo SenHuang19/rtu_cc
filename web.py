@@ -166,11 +166,11 @@ class run(Resource):
                 number_workers = number_workers - 1           
                 upgrade_df=pd.read_csv(upgrade_dir+'/eplusout.csv')           
            except:
-                f=open(base_dir+'/output.idf')
+                f=open(upgrade_dir+'/output.idf')
                 tab=f.readlines()
                 f.close()
                 result['upgrade_idf'] = tab
-                f=open(base_dir+'/eplusout.err')
+                f=open(upgrade_dir+'/eplusout.err')
                 tab=f.readlines()
                 f.close()    
                 result['upgrade_err'] = tab                
