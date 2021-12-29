@@ -2,7 +2,7 @@
 EnergyManagementSystem:Program,
     SETFanSpeed1,            !- Name
     IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
-    SET Fan1Speed=0,         !- Program Line 2
+    SET Fan1Speed=NULL,         !- Program Line 2
     ELSEIf TZ1<=TC1-0.5 && TZ1>=TH1+0.5 && Fan1_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan1Speed=Fan1_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ1>TC1-0.5 && Fan1_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -18,7 +18,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed1,            !- Name
     IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
-    SET Fan1Speed=0,         !- Program Line 2
+    SET Fan1Speed=NULL,         !- Program Line 2
     ELSEIf CC1==0 && HC1==0 && Fan1_DesignFlow>0,  !- Program Line 1
 	{%- if (BaselineFanType == "Variable Retrofit Controller" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Dining"))) or (UpgradedFanType == "Variable Retrofit Controller" and ZoneType == "Dining")  %} 
     SET Fan1Speed=Fan1_DesignFlow*0.4,  !- Program Line 2
@@ -42,7 +42,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed2,            !- Name
     IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
-    SET Fan2Speed=0,         !- Program Line 2
+    SET Fan2Speed=NULL,         !- Program Line 2
     ELSEIf TZ2<=TC2-0.5 && TZ2>=TH2+0.5 && Fan2_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
     SET Fan2Speed=Fan2_DesignFlow*0.4,  !- Program Line 2
     ELSEIF TZ2>TC2-0.5 && Fan2_DesignFlow>0  && CurrentEnvironment>2,  !- A4
@@ -60,7 +60,7 @@ EnergyManagementSystem:Program,
 EnergyManagementSystem:Program,
     SETFanSpeed2,            !- Name
     IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
-    SET Fan2Speed=0,         !- Program Line 2
+    SET Fan2Speed=NULL,         !- Program Line 2
     ELSEIf CC2==0 && HC2==0 && Fan2_DesignFlow>0,  !- Program Line 1
 	{%- if (BaselineFanType == "Variable Retrofit Controller" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Kitchen"))) or (UpgradedFanType == "Variable Retrofit Controller" and ZoneType == "Kitchen")  %} 
     SET Fan2Speed=Fan2_DesignFlow*0.4,  !- Program Line 2
