@@ -1027,7 +1027,6 @@ Coil:Cooling:DX:MultiSpeed,
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 4,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
-    BlowThrough,             !- Fan Placement
 		{% if HeatingType_4 == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
         {% else %}
