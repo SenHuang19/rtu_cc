@@ -1370,12 +1370,12 @@ Coil:Cooling:DX:MultiSpeed,
     Mixed Air Node 5,        !- Component 2 Inlet Node Name
     Air Loop Outlet Node 5;  !- Component 2 Outlet Node Name
     
-    EnergyManagememtSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     HC5,                     !- Name
     Typical Terminal Reheat 5,  !- Output:Variable or Output:Meter Index Key Name
     Air System Total Heating Energy;  !- Output:Variable or Output:Meter Name
 
-    EnergyManagememtSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     CC5,                     !- Name
     Typical Terminal Reheat 5,  !- Output:Variable or Output:Meter Index Key Name
     Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name
@@ -1560,12 +1560,12 @@ Coil:Cooling:DX:MultiSpeed,
     Mixed Air Node 5,        !- Component 2 Inlet Node Name
     Air Loop Outlet Node 5;  !- Component 2 Outlet Node Name
     
-    EnerAuditoriumanagementSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     HC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
     Unitary System Total Heating Rate ;  !- Output:Variable or Output:Meter Name
 
-    EnerAuditoriumanagementSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     CC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
     Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
