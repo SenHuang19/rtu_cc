@@ -48,6 +48,7 @@ def cal_payout(input):
     CoolingCapacity = input['CoolingCapacity']*0.293       
     EPlusCoolingSize = input['EPlusCoolingSize'] 
     SizeRatio = CoolingCapacity/EPlusCoolingSize
+    output['SizeRatio'] = SizeRatio
     Lifetime = int(input['Lifetime'])   
     AnnualNaturalGasCost_Baseline = input['AnnualNaturalGasCost_Baseline']*SizeRatio
     AnnualElectricityCost_Baseline = input['AnnualElectricityCost_Baseline']*SizeRatio
@@ -58,6 +59,8 @@ def cal_payout(input):
     AnnualCosts_Upgrade = AnnualNaturalGasCost_Upgrade+AnnualElectricityCost_Upgrade
     output['AnnualCosts_Upgrade'] = AnnualCosts_Upgrade
     RealDiscountRate = input['RealDiscountRate']
+    if RealDiscountRate>1:
+       RealDiscountRate = RealDiscountRate/100
     CapitalCost_Baseline = input['CapitalCost_Baseline']
     CapitalCost_Upgrade = input['CapitalCost_Upgrade']
     
