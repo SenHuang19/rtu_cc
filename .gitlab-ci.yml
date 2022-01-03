@@ -16,6 +16,11 @@ stages:
   - setup
   - deploy
 
+#############################
+# Internal Testing instance #
+#############################
+
+#Verify that there are resources available
 verify-new-image:
   extends: .pnnllib-gitlab-verify-new-image
   stage: check
@@ -71,6 +76,72 @@ deploy-bitnamis:
   tags:
     - k8s
     - rcint
+    - rtucc
+  image: bitnami/kubectl:1.15.3
+  script:
+    - kubectl apply -f rtuccep-deployment.yaml
+    - kubectl apply -f rtuccep-service.yaml
+
+################################
+# External Production instance #
+################################
+
+#Verify that there are resources available
+verify-new-image-ext:
+  extends: .pnnllib-gitlab-verify-new-image
+  stage: check
+  only: 
+    - tags
+  tags:
+    - k8s
+    - rcext
+    - rtucc
+  variables:
+    # CONTAINER_PREFIX - extra prefix for the image. Can be used to add a string on the front of an image name or a parent directory in the repository.
+    # CONTAINER_TAG - The container tag to use. Defaults to $CI_COMMIT_TAG
+
+#Build and push the container.
+build-image-ext:
+  extends: .pnnllib-gitlab-build-container-image
+  stage: build
+  only: 
+    - tags
+  tags:
+    - k8s
+    - rcext
+    - rtucc
+  variables:
+    # CONTAINER_PREFIX - extra prefix for the image. Can be used to add a string on the front of an image name or a parent directory in the repository.
+    # CONTAINER_TAG - The container tag to use. Defaults to $CI_COMMIT_TAG
+    # DOCKERFILE - The name of the dockerfile to use. Defaults to Dockerfile.
+
+#Load a secret into the Kubernetes cluster. Note, please follow the steps below to create a deploy token in gitlab before this step will work.
+deploy-token-to-cluster-ext:
+  extends: .pnnllib-gitlab-load-deploy-token
+  stage: setup
+  only: 
+    - tags
+  tags:
+    - k8s
+    - rcext
+    - rtucc
+  variables:
+    # You must have created a deploy token with just 'read_registry'
+    # permission named 'gitlab-deploy-token' as described here:
+    # https://docs.gitlab.com/ee/user/project/deploy_tokens/#creating-a-deploy-token
+    #
+    # Arguments are passed in environment variables
+    #
+    # SECRET_NAME - Which secret to load the deploy token into. Defaults to gitlab-registry-token
+
+#Utilize your container
+deploy-bitnamis-ext:
+  stage: deploy
+  only: 
+    - tags
+  tags:
+    - k8s
+    - rcext
     - rtucc
   image: bitnami/kubectl:1.15.3
   script:
