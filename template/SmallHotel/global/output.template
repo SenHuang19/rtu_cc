@@ -22638,11 +22638,6 @@ EnergyManagementSystem:ProgramCallingManager,
     SETFanSpeed3;            !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed4,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed4;            !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
     SETFanSpeed5,            !- Name
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
     SETFanSpeed5;            !- Program Name 1

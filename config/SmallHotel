@@ -4,13 +4,9 @@
 		   "LobbyLounge":
 		   {"ele":["TYPICAL TERMINAL REHEAT 1:Air System Fan Electric Energy [J](Annual)",
                    "TYPICAL TERMINAL REHEAT 1:Air System DX Heating Coil Electric Energy [J](Annual)",
-		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)",
-                   "TYPICAL TERMINAL REHEAT 4:Air System Fan Electric Energy [J](Annual)",
-                   "TYPICAL TERMINAL REHEAT 4:Air System DX Heating Coil Electric Energy [J](Annual)",
-		           "TYPICAL TERMINAL REHEAT 4:Air System DX Cooling Coil Electric Energy [J](Annual)"				   
+		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)"				   
 				   ],
-		   "gas":["TYPICAL TERMINAL REHEAT 1:Air System Gas Energy [J](Annual)",
-		          "TYPICAL TERMINAL REHEAT 4:Air System Gas Energy [J](Annual)"
+		   "gas":["TYPICAL TERMINAL REHEAT 1:Air System Gas Energy [J](Annual)"
 		   ]
 		   },
 		   "Restroom":{"ele":["TYPICAL TERMINAL REHEAT 2:Air System Fan Electric Energy [J](Annual)",
@@ -38,7 +34,7 @@
         {
 		   "LobbyLounge":
 		   {
-		   "topic":["HEAT PUMP ACDXCOIL 1","HEAT PUMP ACDXCOIL 4"]
+		   "topic":["HEAT PUMP ACDXCOIL 1"]
 		   },
 		   "Restroom":{
 		   "topic":["HEAT PUMP ACDXCOIL 2"]
