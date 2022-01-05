@@ -51,12 +51,12 @@ class run(Resource):
 
         os.chdir('/home/developer/idf')
         
-        if 'climate' in data:        
-            src = './template/climate/{}'.format(data['climate'])
+        if 'Climate' in data:        
+            src = './template/Climate/{}'.format(data['Climate'])
             dst1 = '{}/climates'.format(base_dir)
             dst2 = '{}/climates'.format(upgrade_dir)            
         else:
-            return flask.jsonify({'error': 'missing climate', 'message': None})
+            return flask.jsonify({'error': 'missing Climate', 'message': None})
 
         try:
             copyfile(src, dst1)
