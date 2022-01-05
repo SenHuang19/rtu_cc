@@ -12,21 +12,16 @@ import traceback
 from output import size, energy_consumption, cal_payout
 import psutil
 from os.path import exists
-
 from flask.json import JSONEncoder
-
- 
 
 class StrictEncoder(JSONEncoder):
     def __init__(self, *args, allow_nan=False, **kwargs):
         kwargs["allow_nan"] = allow_nan
         super().__init__(*args, **kwargs)
 
-
 app = Flask(__name__)
 app.json_encoder = StrictEncoder
 api = Api(app)
-
 
 import json
 
@@ -51,12 +46,12 @@ class run(Resource):
 
         os.chdir('/home/developer/idf')
         
-        if 'Climate' in data:        
-            src = './template/Climate/{}'.format(data['Climate'])
+        if 'climate' in data:        
+            src = './template/climate/{}'.format(data['climate'])
             dst1 = '{}/climates'.format(base_dir)
             dst2 = '{}/climates'.format(upgrade_dir)            
         else:
-            return flask.jsonify({'error': 'missing Climate', 'message': None})
+            return flask.jsonify({'error': 'missing climate', 'message': None})
 
         try:
             copyfile(src, dst1)
@@ -64,8 +59,7 @@ class run(Resource):
         except:
             return flask.jsonify({'error': 'no such climate: {}'.format(data['climate']), 'message': None})
         weatherPath = '/home/developer/idf/wea/{}.epw'.format(data['climate'])
-
-             
+            
         try:
             if data['BuildingType'] == 'Warehouse':
                  load_template('./template/{}/construction'.format(data['BuildingType']),'wall_roof.template',base_dir,'wall_roof',data)                     
@@ -198,10 +192,10 @@ class run(Resource):
             temp = f.read()         
         config = json.loads(temp)
         
-        if 'Orientation' in data:        
-            zone = data['Orientation']
+        if 'ZoneType' in data:        
+            zone = data['ZoneType']
         elif 'ZoneType' in data:
-            zone = data['ZoneType']        
+            zone = data['Orientation']        
         else:
             return flask.jsonify({'error': 'missing orientation or zone type', 'message': None}) 
 
@@ -263,12 +257,9 @@ class run(Resource):
         rmtree(base_dir)        
         
         return make_response(jsonify({'error': None, 'message': result}), 200) 
-        
 
 class cancel(Resource):
-
     '''Interface to cancel a optimization.''' 
-   
     def put(self):   
         inputs = request.get_json()
         if not ('id' in inputs):
@@ -291,7 +282,6 @@ class cancel(Resource):
 api.add_resource(cancel, '/cancel')
 
 api.add_resource(run, '/run')
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=81,debug=True)
