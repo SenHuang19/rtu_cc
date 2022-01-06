@@ -194,7 +194,7 @@ class run(Resource):
         
         if 'ZoneType' in data:        
             zone = data['ZoneType']
-        elif 'ZoneType' in data:
+        elif 'Orientation' in data:
             zone = data['Orientation']        
         else:
             return flask.jsonify({'error': 'missing orientation or zone type', 'message': None}) 
