@@ -43,7 +43,7 @@ Coil:Heating:DX:SingleSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -116,7 +116,7 @@ Coil:Heating:DX:SingleSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
@@ -187,7 +187,7 @@ Coil:Heating:DX:SingleSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name
@@ -257,7 +257,7 @@ Coil:Heating:DX:SingleSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Air Loop Outlet Node 4;  !- Air Outlet Node Name
@@ -324,7 +324,7 @@ Coil:Heating:DX:SingleSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
@@ -440,7 +440,7 @@ Coil:Heating:DX:MultiSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -462,7 +462,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -484,7 +484,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 1, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Air Loop Outlet Node 1;  !- Air Outlet Node Name
@@ -576,7 +576,7 @@ Coil:Heating:DX:MultiSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
@@ -597,7 +597,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
@@ -618,7 +618,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
@@ -713,7 +713,7 @@ Coil:Heating:DX:MultiSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name	
@@ -734,7 +734,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name	
@@ -755,7 +755,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 3, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Air Loop Outlet Node 3;  !- Air Outlet Node Name	
@@ -847,7 +847,7 @@ Coil:Heating:DX:MultiSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Air Loop Outlet Node 4;  !- Air Outlet Node Name		
@@ -868,7 +868,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Air Loop Outlet Node 4;  !- Air Outlet Node Name
@@ -889,7 +889,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 4, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Air Loop Outlet Node 4;  !- Air Outlet Node Name
@@ -982,7 +982,7 @@ Coil:Heating:DX:MultiSpeed,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
@@ -1003,7 +1003,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
@@ -1023,7 +1023,7 @@ Coil:Heating:Electric,
 Coil:Heating:Electric,
     Supp Gas Heating Coil 5, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
-    0.8,                     !- Burner Efficiency
+    1,                     !- Burner Efficiency
     autosize,                !- Nominal Capacity {W}
     SuppHeating Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Air Loop Outlet Node 5;  !- Air Outlet Node Name
