@@ -6643,6 +6643,15 @@ Output:Variable,
     Air System Gas Energy ,  !- Variable Name
     Annual;                  !- Reporting Frequency
 
+Output:Variable,
+    *,                       !- Key Value
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
+
+Output:Variable,
+    *,                       !- Key Value
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 

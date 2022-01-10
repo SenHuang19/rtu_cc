@@ -4,29 +4,34 @@
 		   "LobbyLounge":
 		   {"ele":["TYPICAL TERMINAL REHEAT 1:Air System Fan Electric Energy [J](Annual)",
                    "TYPICAL TERMINAL REHEAT 1:Air System DX Heating Coil Electric Energy [J](Annual)",
-		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)"				   
+		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)",
+                   "TYPICAL TERMINAL REHEAT 1:Air System Heating Coil Electric Energy [J](Hourly)"				   
 				   ],
 		   "gas":["TYPICAL TERMINAL REHEAT 1:Air System Gas Energy [J](Annual)"
 		   ]
 		   },
 		   "Restroom":{"ele":["TYPICAL TERMINAL REHEAT 2:Air System Fan Electric Energy [J](Annual)",
            "TYPICAL TERMINAL REHEAT 2:Air System DX Heating Coil Electric Energy [J](Annual)",
-		   "TYPICAL TERMINAL REHEAT 2:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "TYPICAL TERMINAL REHEAT 2:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 2:Air System Heating Coil Electric Energy [J](Hourly)"],
 		   "gas":["TYPICAL TERMINAL REHEAT 2:Air System Gas Energy [J](Annual)"]
 		   },		   
 		   "Meeting":{"ele":["TYPICAL TERMINAL REHEAT 3:Air System Fan Electric Energy [J](Annual)",
            "TYPICAL TERMINAL REHEAT 3:Air System DX Heating Coil Electric Energy [J](Annual)",
-		   "TYPICAL TERMINAL REHEAT 3:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "TYPICAL TERMINAL REHEAT 3:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 3:Air System Heating Coil Electric Energy [J](Hourly)"],
 		   "gas":["TYPICAL TERMINAL REHEAT 3:Air System Gas Energy [J](Annual)"]
 		   },	
 		   "ExerciseCenter":{"ele":["TYPICAL TERMINAL REHEAT 5:Air System Fan Electric Energy [J](Annual)",
            "TYPICAL TERMINAL REHEAT 5:Air System DX Heating Coil Electric Energy [J](Annual)",
-		   "TYPICAL TERMINAL REHEAT 5:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "TYPICAL TERMINAL REHEAT 5:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 5:Air System Heating Coil Electric Energy [J](Hourly)"],
 		   "gas":["TYPICAL TERMINAL REHEAT 5:Air System Gas Energy [J](Annual)"]
 		   },	
 		   "Office":{"ele":["TYPICAL TERMINAL REHEAT 6:Air System Fan Electric Energy [J](Annual)",
            "TYPICAL TERMINAL REHEAT 6:Air System DX Heating Coil Electric Energy [J](Annual)",
-		   "TYPICAL TERMINAL REHEAT 6:Air System DX Cooling Coil Electric Energy [J](Annual)"],
+		   "TYPICAL TERMINAL REHEAT 6:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 6:Air System Heating Coil Electric Energy [J](Hourly)"],
 		   "gas":["TYPICAL TERMINAL REHEAT 6:Air System Gas Energy [J](Annual)"]
 		   }
 		},
