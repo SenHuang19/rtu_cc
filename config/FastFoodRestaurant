@@ -5,14 +5,14 @@
 		   {"ele":["TYPICAL TERMINAL REHEAT 1:Air System Fan Electric Energy [J](Annual)",
                    "TYPICAL TERMINAL REHEAT 1:Air System DX Heating Coil Electric Energy [J](Annual)",
 		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)",
-                   "TYPICAL TERMINAL REHEAT 1:Air System Heating Coil Electric Energy [J](Hourly)"				   
+                   "TYPICAL TERMINAL REHEAT 1:Air System Heating Coil Electric Energy [J](Annual)"				   
 				   ],
 		   "gas":["TYPICAL TERMINAL REHEAT 1:Air System Gas Energy [J](Annual)"]
 		   },
 		   "Dining":{"ele":["TYPICAL TERMINAL REHEAT 2:Air System Fan Electric Energy [J](Annual)",
            "TYPICAL TERMINAL REHEAT 2:Air System DX Heating Coil Electric Energy [J](Annual)",
 		   "TYPICAL TERMINAL REHEAT 2:Air System DX Cooling Coil Electric Energy [J](Annual)",
-		   "TYPICAL TERMINAL REHEAT 2:Air System Heating Coil Electric Energy [J](Hourly)"],
+		   "TYPICAL TERMINAL REHEAT 2:Air System Heating Coil Electric Energy [J](Annual)"],
 		   "gas":["TYPICAL TERMINAL REHEAT 2:Air System Gas Energy [J](Annual)"]
 		   }
 		},
