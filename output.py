@@ -24,12 +24,14 @@ def energy_consumption(config, df,Blended_Electricity_Rate,Blended_NaturalGas_Ra
                   ele_consumption = ele_consumption + df[item].iloc[0]
         output[key] = {}                
         output[key]['ele'] = ele_consumption*0.00000027777*Blended_Electricity_Rate
+        output[key]['ele_kW'] = ele_consumption*0.00000027777        
         output[key]['tot_kW'] = ele_consumption*0.00000027777
         gas_consumption = 0
         for item in config[key]['gas']:
                if item in df:
                   gas_consumption = gas_consumption + df[item].iloc[0]
         output[key]['gas'] = gas_consumption/105505500*Blended_NaturalGas_Rate
+        output[key]['gas_kW'] = gas_consumption*0.00000027777         
         output[key]['tot_kW'] = output[key]['tot_kW'] + gas_consumption*0.00000027777
     return output        
         
@@ -55,8 +57,18 @@ def cal_payout(input):
     AnnualNaturalGasCost_Upgrade = input['AnnualNaturalGasCost_Upgrade']*SizeRatio
     AnnualElectricityCost_Upgrade = input['AnnualElectricityCost_Upgrade']*SizeRatio
     AnnualCosts_Baseline = AnnualNaturalGasCost_Baseline + AnnualElectricityCost_Baseline
+    output['AnnualElectricityConsumption_Baseline'] = input['AnnualElectricityConsumption_Baseline']*SizeRatio
+    output['AnnualGasConsumption_Baseline'] = input['AnnualGasConsumption_Baseline']*SizeRatio     
+    output['AnnualNaturalGasCost_Baseline'] = AnnualNaturalGasCost_Baseline
+    output['AnnualElectricityCost_Baseline'] = AnnualElectricityCost_Baseline 
+    output['AnnualConsumption_Baseline'] = input['AnnualConsumption_Baseline']*SizeRatio     
     output['AnnualCosts_Baseline'] = AnnualCosts_Baseline
     AnnualCosts_Upgrade = AnnualNaturalGasCost_Upgrade+AnnualElectricityCost_Upgrade
+    output['AnnualElectricityConsumption_Upgrade'] = input['AnnualElectricityConsumption_Upgrade']*SizeRatio
+    output['AnnualGasConsumption_Upgrade'] = input['AnnualGasConsumption_Upgrade']*SizeRatio     
+    output['AnnualNaturalGasCost_Upgrade'] = AnnualNaturalGasCost_Upgrade
+    output['AnnualElectricityCost_Upgrade'] = AnnualElectricityCost_Upgrade 
+    output['AnnualConsumption_Upgrade'] = input['AnnualConsumption_Upgrade']*SizeRatio  
     output['AnnualCosts_Upgrade'] = AnnualCosts_Upgrade
     RealDiscountRate = input['RealDiscountRate']
     if RealDiscountRate>1:
@@ -100,31 +112,27 @@ def cal_payout(input):
     output['DiscountedCostsCumulative_baseline'] = DiscountedCostsCumulative_baseline
     output['DiscountedCostsCumulative_upgrade'] = DiscountedCostsCumulative_upgrade    
     
-    NPV_min=100000
-    x_min=None
-    error = 1000
-    x=10
-    n=0
-    while abs(error)>0.05:
-        n=n+1
-        a= (1+RealDiscountRate)**x
-        UPV= (a-1)/(RealDiscountRate*a)
-        LCC_baseline=CapitalCost_Baseline+(UPV*AnnualCosts_Baseline)
-        LCC_upgrade=CapitalCost_Upgrade+(UPV*AnnualCosts_Upgrade)
-        NPV=LCC_upgrade-LCC_baseline
-        error=NPV
-        x=x+error/100
-        if abs(NPV)<abs(NPV_min):
-            NPV_min=NPV
-            x_min=x
-        if n>100:
-            error=0 
-    Payback=x_min
-    output['Payback'] = Payback  
+    baseline_check = CapitalCost_Baseline
+
+    upgrade_check = CapitalCost_Upgrade
+
+    diff = 1000000000000000
+
+    ss = 0
+    for i in range(1, (Lifetime+1)*10,1):
+          i = i/10.
+          baseline_check= baseline_check+AnnualCosts_Baseline*(1/(1+RealDiscountRate)**i)
+          upgrade_check= upgrade_check+AnnualCosts_Upgrade*(1/(1+RealDiscountRate)**i)
+          if abs(baseline_check-upgrade_check)<diff:
+               diff = abs(baseline_check-upgrade_check)
+               index_record = i
+          ss = ss + 1
+    output['Payback'] = index_record  
     n=0
     NPV_min=10000
     error = 1000
     RateOfReturn=None
+    x=10
     while abs(error)>0.05:
        n=n+1
        a= (1+x/1000)**Lifetime

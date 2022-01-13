@@ -211,25 +211,33 @@ class run(Resource):
 
         result['AnnualElectricityCost_Baseline'] = result_baseline[zone]['ele']
         
+        data['AnnualElectricityConsumption_Baseline'] = result_baseline[zone]['ele_kW']        
+        
         data['AnnualElectricityCost_Baseline'] = result['AnnualElectricityCost_Baseline']
+        
+        data['AnnualGasConsumption_Baseline'] = result_baseline[zone]['gas_kW']            
 
         result['AnnualNaturalGasCost_Baseline'] = result_baseline[zone]['gas']
                
         data['AnnualNaturalGasCost_Baseline'] = result['AnnualNaturalGasCost_Baseline']  
 
-        result['AnnualConsumption_Baseline'] = result_baseline[zone]['tot_kW']         
+        data['AnnualConsumption_Baseline'] = result_baseline[zone]['tot_kW']        
 
         result_upgrade = energy_consumption(config['energ_consumption'],upgrade_df,data['Blended_Electricity_Rate'],data['Blended_NaturalGas_Rate'])
 
         result['AnnualElectricityCost_Upgrade'] = result_upgrade[zone]['ele']
         
-        data['AnnualElectricityCost_Upgrade'] = result['AnnualElectricityCost_Upgrade']         
+        data['AnnualElectricityConsumption_Upgrade'] = result_upgrade[zone]['ele_kW']           
+        
+        data['AnnualElectricityCost_Upgrade'] = result['AnnualElectricityCost_Upgrade']
+
+        data['AnnualGasConsumption_Upgrade'] = result_upgrade[zone]['gas_kW']          
 
         result['AnnualNaturalGasCost_Upgrade'] = result_upgrade[zone]['gas']
         
         data['AnnualNaturalGasCost_Upgrade'] = result['AnnualNaturalGasCost_Upgrade']  
 
-        result['AnnualConsumption_Upgrade'] = result_upgrade[zone]['tot_kW']                 
+        data['AnnualConsumption_Upgrade'] = result_upgrade[zone]['tot_kW']                 
 
         tab = '{}/eplustbl.csv'.format(upgrade_dir)
         
