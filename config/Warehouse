@@ -26,7 +26,7 @@
 		   {
 		   "topic":["HEAT PUMP ACDXCOIL 1"]
 		   },	   
-		   "Storage ":{
+		   "Storage":{
 		   "topic":["HEAT PUMP ACDXCOIL 2"]
 		   }
         }				

@@ -36,7 +36,7 @@
 		   "TYPICAL TERMINAL REHEAT 7:Air System Fan Electric Energy [J](Annual)",
 		   "TYPICAL TERMINAL REHEAT 7:Air System DX Heating Coil Electric Energy [J](Annual)",
 		   "TYPICAL TERMINAL REHEAT 7:Air System DX Cooling Coil Electric Energy [J](Annual)",
-		   "TYPICAL TERMINAL REHEAT 7:Air System Heating Coil Electric Energy [J](Annual)";	
+		   "TYPICAL TERMINAL REHEAT 7:Air System Heating Coil Electric Energy [J](Annual)",	
 		   "TYPICAL TERMINAL REHEAT 8:Air System Fan Electric Energy [J](Annual)",
 		   "TYPICAL TERMINAL REHEAT 8:Air System DX Heating Coil Electric Energy [J](Annual)",
 		   "TYPICAL TERMINAL REHEAT 8:Air System DX Cooling Coil Electric Energy [J](Annual)",
