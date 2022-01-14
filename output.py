@@ -118,9 +118,10 @@ def cal_payout(input):
 
     diff = 1000000000000000
 
+    diff = 1000000000000000
+
     ss = 0
-    for i in range(1, (Lifetime+1)*10,1):
-          i = i/10.
+    for i in range(1, Lifetime+1):
           baseline_check= baseline_check+AnnualCosts_Baseline*(1/(1+RealDiscountRate)**i)
           upgrade_check= upgrade_check+AnnualCosts_Upgrade*(1/(1+RealDiscountRate)**i)
           if abs(baseline_check-upgrade_check)<diff:
