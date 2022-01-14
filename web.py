@@ -215,7 +215,7 @@ class run(Resource):
         
         data['AnnualElectricityCost_Baseline'] = result['AnnualElectricityCost_Baseline']
         
-        data['AnnualGasConsumption_Baseline'] = result_baseline[zone]['gas_kW']            
+        data['AnnualGasConsumption_Baseline'] = result_baseline[zone]['gas_ccf']            
 
         result['AnnualNaturalGasCost_Baseline'] = result_baseline[zone]['gas']
                
@@ -231,7 +231,7 @@ class run(Resource):
         
         data['AnnualElectricityCost_Upgrade'] = result['AnnualElectricityCost_Upgrade']
 
-        data['AnnualGasConsumption_Upgrade'] = result_upgrade[zone]['gas_kW']          
+        data['AnnualGasConsumption_Upgrade'] = result_upgrade[zone]['gas_ccf']          
 
         result['AnnualNaturalGasCost_Upgrade'] = result_upgrade[zone]['gas']
         

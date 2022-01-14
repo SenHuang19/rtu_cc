@@ -31,7 +31,7 @@ def energy_consumption(config, df,Blended_Electricity_Rate,Blended_NaturalGas_Ra
                if item in df:
                   gas_consumption = gas_consumption + df[item].iloc[0]
         output[key]['gas'] = gas_consumption/105505500*Blended_NaturalGas_Rate
-        output[key]['gas_kW'] = gas_consumption*0.00000027777         
+        output[key]['gas_ccf'] = gas_consumption/105505500         
         output[key]['tot_kW'] = output[key]['tot_kW'] + gas_consumption*0.00000027777
     return output        
         
@@ -115,8 +115,6 @@ def cal_payout(input):
     baseline_check = CapitalCost_Baseline
 
     upgrade_check = CapitalCost_Upgrade
-
-    diff = 1000000000000000
 
     diff = 1000000000000000
 
