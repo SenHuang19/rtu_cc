@@ -79,22 +79,27 @@ def cal_payout(input):
     a = (1+RealDiscountRate)**Lifetime
     UPV= (a-1)/(RealDiscountRate*a)
     LCC_baseline=CapitalCost_Baseline+(UPV*AnnualCosts_Baseline)
-    output['LCC_baseline'] = LCC_baseline
+    output['LCC_baseline'] = round(LCC_baseline,0)
     LCC_upgrade=CapitalCost_Upgrade+(UPV*AnnualCosts_Upgrade)
-    output['LCC_upgrade'] = LCC_upgrade
+    output['LCC_upgrade'] = round(LCC_upgrade,0)
     AC_baseline=LCC_baseline/UPV
-    output['AnnualizedCost_Baseline'] = AC_baseline
+    output['AnnualizedCost_Baseline'] = round(AC_baseline,0)
     AC_upgrade=LCC_upgrade/UPV
-    output['AnnualizedCost_Upgrade'] = AC_upgrade
+    output['AnnualizedCost_Upgrade'] = round(AC_upgrade,0)
     NPV=LCC_upgrade-LCC_baseline
-    output['NPV'] = NPV
+    output['NPV'] = round(NPV,0)
+    if CapitalCost_Upgrade>CapitalCost_Baseline:
+         SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)*UPV/(CapitalCost_Upgrade-CapitalCost_Baseline)
+    else:
+         SIR= 0    
+    output['SIR'] = round(SIR,2)
     AnnualCostSavings=AnnualCosts_Baseline-AnnualCosts_Upgrade
     CapitalCostSavings=CapitalCost_Baseline-CapitalCost_Upgrade
     if AnnualCostSavings>0:
          SimplePayback=-CapitalCostSavings/AnnualCostSavings
     else:
          SimplePayback=0    
-    output['SimplePayback'] = SimplePayback
+    output['SimplePayback'] = round(SimplePayback,2)
     DiscountedCosts_baseline=[0]*(Lifetime+1)
     DiscountedCosts_upgrade=[0]*(Lifetime+1)
     DiscountedCosts_baseline[0]=CapitalCost_Baseline
@@ -111,47 +116,51 @@ def cal_payout(input):
           DiscountedCostsCumulative_upgrade[i]=DiscountedCostsCumulative_upgrade[i-1]+DiscountedCosts_upgrade[i]
     output['DiscountedCostsCumulative_baseline'] = DiscountedCostsCumulative_baseline
     output['DiscountedCostsCumulative_upgrade'] = DiscountedCostsCumulative_upgrade    
+
     
     baseline_check = CapitalCost_Baseline
-
     upgrade_check = CapitalCost_Upgrade
-
     diff = 1000000000000000
-
+    abs_diff = diff
     ss = 0
     for i in range(1, Lifetime+1):
           baseline_check= baseline_check+AnnualCosts_Baseline*(1/(1+RealDiscountRate)**i)
           upgrade_check= upgrade_check+AnnualCosts_Upgrade*(1/(1+RealDiscountRate)**i)
           if abs(baseline_check-upgrade_check)<diff:
                diff = abs(baseline_check-upgrade_check)
+               abs_diff = baseline_check-upgrade_check
                index_record = i
           ss = ss + 1
-    output['Payback'] = index_record  
+    if abs_diff>CapitalCost_Baseline*0.1:
+           index_record = 0
+    elif abs_diff<-CapitalCost_Baseline*0.1:
+           index_record = None
+    if index_record is not None:           
+         output['Payback'] = round(index_record,1)
+    else:
+         output['Payback'] = None   
+    
     n=0
     NPV_min=10000
     error = 1000
-    RateOfReturn=None
-    x=10
-    while abs(error)>0.05:
-       n=n+1
-       a= (1+x/1000)**Lifetime
-       UPV= (a-1)/(RealDiscountRate*a)
+    
+    for i in range(1,20):
+       x = i/100.
+       a = (1+x)**Lifetime
+       UPV= (a-1)/(x*a)
        LCC_baseline=CapitalCost_Baseline+(UPV*AnnualCosts_Baseline)
        LCC_upgrade=CapitalCost_Upgrade+(UPV*AnnualCosts_Upgrade)
        NPV=LCC_upgrade-LCC_baseline
-       error=NPV
-       x=x+error/50
        if abs(NPV)<abs(NPV_min):
-           NPV_min2=NPV
-           RateOfReturn=x/1000
-       if n>100:
-           error=0          
-    output['RateOfReturn'] = RateOfReturn
-    if CapitalCost_Upgrade>CapitalCost_Baseline:
-         SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)/(CapitalCost_Upgrade-CapitalCost_Baseline)
+           NPV_min=NPV
+           RateOfReturn=x      
+    if abs(NPV_min)>CapitalCost_Baseline*0.1:
+           RateOfReturn = None
+    if RateOfReturn is not None:           
+         output['RateOfReturn'] = round(index_record,1)
     else:
-         SIR= 0    
-    output['SIR'] = SIR
+         output['RateOfReturn'] = None            
+
     for key in output:
         if isNaN(output[key]):
            output[key] = None        
