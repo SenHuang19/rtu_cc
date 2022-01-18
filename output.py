@@ -1,7 +1,6 @@
 import pandas as pd
 import json
 
-
 def isNaN(num):
     return num!= num
 
@@ -86,7 +85,7 @@ def cal_payout(input):
     output['AnnualizedCost_Baseline'] = round(AC_baseline,0)
     AC_upgrade=LCC_upgrade/UPV
     output['AnnualizedCost_Upgrade'] = round(AC_upgrade,0)
-    NPV=LCC_upgrade-LCC_baseline
+    NPV=LCC_baseline-LCC_upgrade
     output['NPV'] = round(NPV,0)
     if CapitalCost_Upgrade>CapitalCost_Baseline:
          SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)*UPV/(CapitalCost_Upgrade-CapitalCost_Baseline)
@@ -116,13 +115,11 @@ def cal_payout(input):
           DiscountedCostsCumulative_upgrade[i]=DiscountedCostsCumulative_upgrade[i-1]+DiscountedCosts_upgrade[i]
     output['DiscountedCostsCumulative_baseline'] = DiscountedCostsCumulative_baseline
     output['DiscountedCostsCumulative_upgrade'] = DiscountedCostsCumulative_upgrade    
-
-    
+   
     baseline_check = CapitalCost_Baseline
     upgrade_check = CapitalCost_Upgrade
     diff = 1000000000000000
     abs_diff = diff
-    ss = 0
     for i in range(1, Lifetime+1):
           baseline_check= baseline_check+AnnualCosts_Baseline*(1/(1+RealDiscountRate)**i)
           upgrade_check= upgrade_check+AnnualCosts_Upgrade*(1/(1+RealDiscountRate)**i)
@@ -130,7 +127,6 @@ def cal_payout(input):
                diff = abs(baseline_check-upgrade_check)
                abs_diff = baseline_check-upgrade_check
                index_record = i
-          ss = ss + 1
     if abs_diff>CapitalCost_Baseline*0.1:
            index_record = 0
     elif abs_diff<-CapitalCost_Baseline*0.1:
@@ -140,10 +136,7 @@ def cal_payout(input):
     else:
          output['Payback'] = None   
     
-    n=0
-    NPV_min=10000
-    error = 1000
-    
+    NPV_min=10000 
     for i in range(1,20):
        x = i/100.
        a = (1+x)**Lifetime
@@ -166,8 +159,6 @@ def cal_payout(input):
            output[key] = None        
     return output
     
-
-
 if __name__ == "__main__":  
   
    with open('./input2') as f: 
