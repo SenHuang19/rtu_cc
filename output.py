@@ -134,7 +134,7 @@ def cal_payout(input):
     if index_record is not None:           
          output['Payback'] = round(index_record,1)
     else:
-         output['Payback'] = None   
+         output['Payback'] = 'Infinity'   
     
     NPV_min=10000 
     for i in range(1,20):
