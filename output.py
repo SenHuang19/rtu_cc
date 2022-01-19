@@ -149,14 +149,16 @@ def cal_payout(input):
        LCC_baseline=CapitalCost_Baseline+(UPV*AnnualCosts_Baseline)
        LCC_upgrade=CapitalCost_Upgrade+(UPV*AnnualCosts_Upgrade)
        NPV=LCC_upgrade-LCC_baseline
-       print(NPV)
+#       print(NPV)
        if abs(NPV)<abs(NPV_min):
            NPV_min=NPV
            RateOfReturn=x*100
                
-    if output['Payback'] is None or output['Payback']==0:
+    if output['Payback'] is None:
            RateOfReturn = None
-    if RateOfReturn is not None:           
+    elif output['Payback']==0:
+           RateOfReturn = 'Infinity'    
+    if RateOfReturn is not None or RateOfReturn != 'Infinity':           
          output['RateOfReturn'] = round(RateOfReturn,1)
     else:
          output['RateOfReturn'] = None            
