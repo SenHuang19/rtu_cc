@@ -152,7 +152,7 @@ def cal_payout(input):
        print(NPV)
        if abs(NPV)<abs(NPV_min):
            NPV_min=NPV
-           RateOfReturn=x
+           RateOfReturn=x*100
                
     if output['Payback'] is None or output['Payback']==0:
            RateOfReturn = None
