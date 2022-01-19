@@ -61,7 +61,7 @@ def cal_payout(input):
     output['AnnualNaturalGasCost_Baseline'] = round(AnnualNaturalGasCost_Baseline,0)
     output['AnnualElectricityCost_Baseline'] = round(AnnualElectricityCost_Baseline,0) 
     output['AnnualConsumption_Baseline'] = round(input['AnnualConsumption_Baseline']*SizeRatio,0)     
-    output['AnnualCosts_Baseline'] = round(AnnualCosts_Baseline,2)
+    output['AnnualCosts_Baseline'] = round(AnnualCosts_Baseline,0)
     AnnualCosts_Upgrade = AnnualNaturalGasCost_Upgrade+AnnualElectricityCost_Upgrade
     output['AnnualElectricityConsumption_Upgrade'] = round(input['AnnualElectricityConsumption_Upgrade']*SizeRatio,0)
     output['AnnualGasConsumption_Upgrade'] = round(input['AnnualGasConsumption_Upgrade']*SizeRatio,0)     
@@ -119,17 +119,22 @@ def cal_payout(input):
     baseline_check = CapitalCost_Baseline
     upgrade_check = CapitalCost_Upgrade
     diff = 1000000000000000
-    abs_diff = diff
+    abs_diff_min = diff
+    abs_diff_max = diff
     for i in range(1, Lifetime+1):
           baseline_check= baseline_check+AnnualCosts_Baseline*(1/(1+RealDiscountRate)**i)
           upgrade_check= upgrade_check+AnnualCosts_Upgrade*(1/(1+RealDiscountRate)**i)
+          abs_diff = baseline_check-upgrade_check
           if abs(baseline_check-upgrade_check)<diff:
                diff = abs(baseline_check-upgrade_check)
-               abs_diff = baseline_check-upgrade_check
                index_record = i
-    if abs_diff>CapitalCost_Baseline*0.1:
+          if abs_diff_min>abs_diff:
+               abs_diff_min = abs_diff
+          if abs_diff_max<abs_diff:
+               abs_diff_max = abs_diff          
+    if abs_diff_min>0:
            index_record = 0
-    elif abs_diff<-CapitalCost_Baseline*0.1:
+    elif abs_diff_max<0:
            index_record = None
     if index_record is not None:           
          output['Payback'] = round(index_record,1)
@@ -137,20 +142,22 @@ def cal_payout(input):
          output['Payback'] = 'Infinity'   
     
     NPV_min=10000 
-    for i in range(1,20):
+    for i in range(1,100):
        x = i/100.
        a = (1+x)**Lifetime
        UPV= (a-1)/(x*a)
        LCC_baseline=CapitalCost_Baseline+(UPV*AnnualCosts_Baseline)
        LCC_upgrade=CapitalCost_Upgrade+(UPV*AnnualCosts_Upgrade)
        NPV=LCC_upgrade-LCC_baseline
+       print(NPV)
        if abs(NPV)<abs(NPV_min):
            NPV_min=NPV
-           RateOfReturn=x      
-    if abs(NPV_min)>CapitalCost_Baseline*0.1:
+           RateOfReturn=x
+               
+    if output['Payback'] is None or output['Payback']==0:
            RateOfReturn = None
     if RateOfReturn is not None:           
-         output['RateOfReturn'] = round(index_record,1)
+         output['RateOfReturn'] = round(RateOfReturn,1)
     else:
          output['RateOfReturn'] = None            
 
