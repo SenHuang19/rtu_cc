@@ -4291,6 +4291,10 @@ Output:Variable,
     Air System Gas Energy ,  !- Variable Name
     Annual;                  !- Reporting Frequency
 
+Output:Variable,
+    *,                       !- Key Value
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 
@@ -4361,5 +4365,16 @@ LifeCycleCost:Parameters,
 
 
 !-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:NONRECURRINGCOST ===========
+
+EnergyManagementSystem:InternalVariable,
+    Fan1_DesignFlow,         !- Name
+    Supply Fan 1,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan2_DesignFlow,         !- Name
+    Supply Fan 2,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
 
 

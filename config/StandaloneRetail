@@ -1,0 +1,47 @@
+{
+"energ_consumption":
+        {
+		   "Storage":
+		   {"ele":["TYPICAL TERMINAL REHEAT 1:Air System Fan Electric Energy [J](Annual)",
+                   "TYPICAL TERMINAL REHEAT 1:Air System DX Heating Coil Electric Energy [J](Annual)",
+		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)",
+				   "TYPICAL TERMINAL REHEAT 1:Air System Heating Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 1:Air System Gas Energy [J](Annual)"]
+		   },
+		   "Core Retail":{"ele":["TYPICAL TERMINAL REHEAT 2:Air System Fan Electric Energy [J](Annual)",
+           "TYPICAL TERMINAL REHEAT 2:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 2:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 2:Air System Heating Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 2:Air System Gas Energy [J](Annual)"]
+		   },		   	
+		   "Front":{"ele":["TYPICAL TERMINAL REHEAT 3:Air System Fan Electric Energy [J](Annual)",
+           "TYPICAL TERMINAL REHEAT 3:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 3:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 3:Air System Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 4:Air System Fan Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 4:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 4:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 4:Air System Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 5:Air System Fan Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 5:Air System DX Heating Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 5:Air System DX Cooling Coil Electric Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 5:Air System Heating Coil Electric Energy [J](Annual)"],
+		   "gas":["TYPICAL TERMINAL REHEAT 3:Air System Gas Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 4:Air System Gas Energy [J](Annual)",
+		   "TYPICAL TERMINAL REHEAT 5:Air System Gas Energy [J](Annual)"]
+		   }
+		},
+"size":
+        {
+		   "Storage":
+		   {
+		   "topic":["HEAT PUMP ACDXCOIL 1"]
+		   },
+		   "Core Retail":{
+		   "topic":["HEAT PUMP ACDXCOIL 2"]
+		   },		   
+		   "Front":{
+		   "topic":["HEAT PUMP ACDXCOIL 3","HEAT PUMP ACDXCOIL 4","HEAT PUMP ACDXCOIL 5"]
+		   }
+        }				
+}

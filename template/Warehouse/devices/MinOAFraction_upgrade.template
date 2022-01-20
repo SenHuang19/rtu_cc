@@ -23,16 +23,6 @@ Schedule:Constant,
     {{MinOAFraction_Baseline}};
 {% endif %}
 
-Schedule:Constant,
-    minOAFrac3,               !- Name
-    Fraction,                !- Schedule Type Limits Name
-  {% if (ZoneType == "Storage")  %} 
-    {{MinOAFraction_Upgraded}};
-{% else %}
-    {{MinOAFraction_Baseline}};
-{% endif %}
-
-
 
 
 

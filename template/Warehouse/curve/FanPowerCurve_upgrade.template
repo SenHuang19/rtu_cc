@@ -1,7 +1,7 @@
 
 Curve:Cubic,
     FanPowerCurve1,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Office"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Office")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Office") or (UpgradedFanType == "Constant Speed" and ZoneType == "Office")  %} 
     1,
     0,
     0,
@@ -21,7 +21,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve2,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Storage"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Storage") or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %} 
     1,
     0,
     0,
@@ -41,7 +41,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve3,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Storage"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Storage") or (UpgradedFanType == "Constant Speed" and ZoneType == "Storage")  %} 
     1,
     0,
     0,

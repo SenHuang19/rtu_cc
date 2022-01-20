@@ -140,20 +140,6 @@ Building,
 
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR-R ===========
 
-  Material:NoMass,
-    Opaque Door panel_con,   !- Name
-    MediumRough,             !- Roughness
-    0.251572327,  !- Thermal Resistance {m2-K/W}
-    0.9,                     !- Thermal Absorptance
-    0.7,                     !- Solar Absorptance
-    0.7;                     !- Visible Absorptance
-
-
-!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
-
-  Construction,
-    Swinging Door_con,       !- Name
-    Opaque Door panel_con;   !- Outside Layer
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
 
@@ -1455,6 +1441,40 @@ Schedule:Compact,
     For: AllDays,            !- Field 2
     Until: 24:00,            !- Field 3
     60;                      !- Field 4
+    
+    Schedule:Compact,
+    Supply-Temp-Schedule,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    12.8;                      !- Field 4
+
+Schedule:Compact,
+    OutdoorAirAvailSched,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 3/31,           !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0,                     !- Field 4
+    Through: 9/30,           !- Field 5
+    For: WeekDays,           !- Field 6
+    Until: 7:00,             !- Field 7
+    0.0,                     !- Field 8
+    Until: 17:00,            !- Field 9
+    1.0,                     !- Field 10
+    Until: 24:00,            !- Field 11
+    0.0,                     !- Field 12
+    For: SummerDesignDay WinterDesignDay,  !- Field 13
+    Until: 24:00,            !- Field 14
+    0.0,                     !- Field 15
+    For: AllOtherDays,       !- Field 16
+    Until: 24:00,            !- Field 17
+    0.0,                     !- Field 18
+    Through: 12/31,          !- Field 19
+    For: AllDays,            !- Field 20
+    Until: 24:00,            !- Field 21
+    1.0;                     !- Field 22
 
 Schedule:Compact,
     MinOA_MotorizedDamper_Sched,  !- Name
@@ -1940,7 +1960,11 @@ Schedule:Constant,
 
 {% include "MinOAFraction" %}
 
+{% include "HVACOperationSchd" %}
 
+{% include "HTGSETP_SCH_NO_OPTIMUM" %}
+
+{% include "CLGSETP_SCH_NO_OPTIMUM" %}
 !
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
  
@@ -2315,17 +2339,7 @@ Material:NoMass,
         Nonres_Roof_Insulation,   !- Outside Layer
         G01 16mm gypsum board;  !- Layer #2
 
-Construction,
-    NonresWindow_U_0.57_SHGC_0.39,  !- Name
-    Nonres Window Glazing Layer;  !- Outside Layer
 
-Construction,
-    Skylight_U_1.02_SHGC_0.49,  !- Name
-    Nonres Skylight Glazing Layer;  !- Outside Layer
-
-Construction,
-    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Name
-    Semiheated Skylight Glazing Layer;  !- Outside Layer
 
   Construction,
     res_roof,                   !- Name
@@ -2340,11 +2354,6 @@ Construction,
     Swinging Door_semi,      !- Name
     Opaque Door panel_semi;  !- Outside Layer
 
-Construction,
-    Skylight Double Clear,   !- Name
-    CLEAR 2.5MM,             !- Outside Layer
-    AIR 3MM,                 !- Layer 2
-    CLEAR 2.5MM;             !- Layer 3
 
 Construction,
     Overhead Door_semi,      !- Name
@@ -2354,9 +2363,6 @@ Construction,
     Overhead Door_con,       !- Name
     Overhead Door_con Panel; !- Outside Layer
 
-Construction,
-    Bulk Storage Products,   !- Name
-    Bulk Storage Products Material;  !- Outside Layer
 
 
   Construction,
@@ -3007,7 +3013,7 @@ BuildingSurface:Detailed,
 
 !-   ===========  ALL OBJECTS IN CLASS: WINDOWPROPERTY:FRAMEANDDIVIDER ===========
 
-eople,
+People,
     Dining People,           !- Name
     Dining,                  !- Zone or ZoneList or Space or SpaceList Name
     BLDG_OCC_SCH,            !- Number of People Schedule Name
@@ -3459,7 +3465,7 @@ ZoneHVAC:EquipmentList,
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    Dining Direct Air,       !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+    Zone1DirectAir,       !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
     2,                       !- Zone Equipment 2 Object Type
     2;                       !- Zone Equipment 2 Name
 
@@ -3471,7 +3477,7 @@ ZoneHVAC:EquipmentList,
     1,                       !- Zone Equipment 1 Cooling Sequence
     1,                       !- Zone Equipment 1 Heating or No-Load Sequence
     AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
-    Kitchen Direct Air,      !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+    Zone2DirectAir,      !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
     2,                       !- Zone Equipment 2 Object Type
     2;                       !- Zone Equipment 2 Name
 
@@ -3771,32 +3777,32 @@ EnergyManagementSystem:Sensor,
 
 EnergyManagementSystem:Sensor,
     TZ1,                     !- Name
-    Zone1 Office,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TZ2,                     !- Name
-    Zone2 Fine Storage,          !- Output:Variable or Output:Meter Index Key Name
+    Dining,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TC1,                     !- Name
-    Zone1 Office,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TC2,                     !- Name
-    Zone2 Fine Storage,          !- Output:Variable or Output:Meter Index Key Name
+    Dining,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH1,                     !- Name
-    Zone1 Office,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH2,                     !- Name
-    Zone2 Fine Storage,          !- Output:Variable or Output:Meter Index Key Name
+    Dining,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 
@@ -4946,7 +4952,7 @@ Output:VariableDictionary,
 !    Output:Meter,Refrigeration:Gas,Hourly;
 !    Output:Meter,WaterSystems:Gas,Hourly;
 Output:Table:SummaryReports,
-    AllSummaryAndMonthly;    !- Report 1 Name
+    EquipmentSummary;        !- Report 3 Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:MONTHLY ===========
@@ -5041,79 +5047,28 @@ OutputControl:ReportingTolerances,
 
 Output:Variable,
     *,                       !- Key Value
-    Zone Mean Air Temperature,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Cooling Coil Total Cooling Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Cooling Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Heating Coil Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Fan Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System DX Coil Speed Level ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Gas Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System Compressor Part Load Ratio ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Electric Power ,     !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Air Mass Flow Rate , !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan2MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Unitary System Total Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan1MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan3MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan4MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan5MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Electric Power ,  !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Gas Rate,   !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 
@@ -5128,3 +5083,13 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
+    
+ EnergyManagementSystem:InternalVariable,
+    Fan1_DesignFlow,         !- Name
+    Supply Fan 1,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan2_DesignFlow,         !- Name
+    Supply Fan 2,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type

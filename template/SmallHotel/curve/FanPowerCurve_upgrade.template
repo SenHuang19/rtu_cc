@@ -1,7 +1,7 @@
 
 Curve:Cubic,
     FanPowerCurve1,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "LobbyLounge"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "LobbyLounge")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "LobbyLounge") or (UpgradedFanType == "Constant Speed" and ZoneType == "LobbyLounge")  %} 
     1,
     0,
     0,
@@ -21,7 +21,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve2,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Restroom"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Restroom")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Restroom") or (UpgradedFanType == "Constant Speed" and ZoneType == "Restroom")  %} 
     1,
     0,
     0,
@@ -41,7 +41,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve3,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Meeting"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Meeting")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Meeting") or (UpgradedFanType == "Constant Speed" and ZoneType == "Meeting")  %} 
     1,
     0,
     0,
@@ -61,7 +61,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve4,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "LobbyLounge"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "LobbyLounge")  %}
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "LobbyLounge") or (UpgradedFanType == "Constant Speed" and ZoneType == "LobbyLounge")  %}
     1,
     0,
     0,
@@ -81,7 +81,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve5,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "ExerciseCenter"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "ExerciseCenter")  %}
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "ExerciseCenter") or (UpgradedFanType == "Constant Speed" and ZoneType == "ExerciseCenter")  %}
     1,
     0,
     0,
@@ -101,7 +101,7 @@ Curve:Cubic,
 
 Curve:Cubic,
     FanPowerCurve6,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Office"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Office")  %}
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Office") or (UpgradedFanType == "Constant Speed" and ZoneType == "Office")  %}
     1,
     0,
     0,

@@ -4857,11 +4857,7 @@ EnergyManagementSystem:Program,
     SET Fan8MaxGlobal=FanFlow8,  !- Program Line 2
     ENDIF;                   !- A4
 
-EnergyManagementSystem:Program,
-    SETFanMaxFlow9,          !- Name
-    If FanFlow9>Fan9MaxGlobal,  !- Program Line 1
-    SET Fan9MaxGlobal=FanFlow9,  !- Program Line 2
-    ENDIF;                   !- A4
+
 
 {% include "ems_pr" %}
 
@@ -6259,6 +6255,11 @@ Output:Variable,
     Air System Gas Energy ,  !- Variable Name
     Annual;                  !- Reporting Frequency
 
+Output:Variable,
+    *,                       !- Key Value
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
+
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 
@@ -7002,4 +7003,44 @@ LifeCycleCost:Parameters,
 
 
 !-   ===========  ALL OBJECTS IN CLASS: LIFECYCLECOST:NONRECURRINGCOST ===========
+
+EnergyManagementSystem:InternalVariable,
+    Fan1_DesignFlow,         !- Name
+    Supply Fan 1,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan2_DesignFlow,         !- Name
+    Supply Fan 2,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan3_DesignFlow,         !- Name
+    Supply Fan 3,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan4_DesignFlow,         !- Name
+    Supply Fan 4,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan5_DesignFlow,         !- Name
+    Supply Fan 5,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+	
+EnergyManagementSystem:InternalVariable,
+    Fan6_DesignFlow,         !- Name
+    Supply Fan 6,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan7_DesignFlow,         !- Name
+    Supply Fan 7,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan8_DesignFlow,         !- Name
+    Supply Fan 8,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
 

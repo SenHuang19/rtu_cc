@@ -1,6 +1,6 @@
 WindowMaterial:SimpleGlazingSystem,
    Nonres Window Glazing Layer,           !- Name
-{%- if (climate == "1A"  or climate == "2A" or climate = "2B") %} 
+{%- if (climate == "1A"  or climate == "2A" or climate == "2B") %} 
     3.2366,
     0.25,
     0.275;
@@ -24,7 +24,7 @@ WindowMaterial:SimpleGlazingSystem,
     4.2586,
     0.35,
     0.399;
-{% elif (climate == "2A" or climate = "2B") %} 
+{% elif (climate == "2A" or climate == "2B") %} 
     3.6908,
     0.35,
     0.399;

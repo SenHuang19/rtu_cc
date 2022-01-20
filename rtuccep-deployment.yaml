@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\d3x573\Path\kompose.exe convert
+    kompose.version: 1.24.0 (7c629530)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: rtuccep
+  name: rtuccep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: rtuccep
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\Users\d3x573\Path\kompose.exe convert
+        kompose.version: 1.24.0 (7c629530)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: rtuccep
+    spec:
+      containers:
+        - image: devops-registry.pnnl.gov/rtucc/rtucc-ep:0.9.0
+          imagePullPolicy: Always
+          name: rtucc-ep
+          ports:
+            - containerPort: 81
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 2Gi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+      imagePullSecrets:
+        - name: gitlab-registry-token-ep
+      restartPolicy: Always
+status: {}

@@ -49,14 +49,14 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Office,          !- Controlling Zone or Thermostat Location
+    Zone1 Office,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 1,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
     Heat Pump DX Heating Coil 1,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -75,7 +75,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Office,          !- Controlling Zone or Thermostat Location
+    Zone1 Office,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 1,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -164,14 +164,14 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Fine_storage,          !- Controlling Zone or Thermostat Location
+    Zone2 Fine Storage,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 2,            !- Supply Air Fan Name
     Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
     Heat Pump DX Heating Coil 2,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -190,7 +190,7 @@
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
     autosize,                !- Heating Supply Air Flow Rate {m3/s}
     autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Fine_storage,          !- Controlling Zone or Thermostat Location
+    Zone2 Fine Storage,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 2,            !- Supply Fan Name
     BlowThrough,             !- Fan Placement
@@ -231,120 +231,7 @@
     Typical Terminal Reheat 2,  !- Output:Variable or Output:Meter Index Key Name
     Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name    
     
-    Coil:Cooling:DX:SingleSpeed,
-    Heat Pump ACDXCoil 3,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
-    autosize,                !- Gross Rated Total Cooling Capacity {W}
-    autosize,                !- Gross Rated Sensible Heat Ratio
-    {{ EER/3.412 }},
-    autosize,                !- Rated Air Flow Rate {m3/s}
-    773.3,                   !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
-    DX Cooling Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    Heating Coil Air Inlet Node 3,  !- Air Outlet Node Name
-    HPACCoolCapFT,   !- Total Cooling Capacity Function of Temperature Curve Name
-    HPACCoolCapFF,   !- Total Cooling Capacity Function of Flow Fraction Curve Name
-    HPACCOOLEIRFT,   !- Energy Input Ratio Function of Temperature Curve Name
-    HPACCOOLEIRFF,   !- Energy Input Ratio Function of Flow Fraction Curve Name
-    HPACCOOLPLFFPLR, !- Part Load Fraction Correlation Curve Name
-    -25,                     !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
-    ,                        !- Nominal Time for Condensate Removal to Begin {s}
-    ,                        !- Ratio of Initial Moisture Evaporation Rate and Steady State Latent Capacity {dimensionless}
-    ,                        !- Maximum Cycling Rate {cycles/hr}
-    ,                        !- Latent Capacity Time Constant {s}
-    ,                        !- Condenser Air Inlet Node Name
-    AirCooled,               !- Condenser Type
-    0.9,                     !- Evaporative Condenser Effectiveness {dimensionless}
-    ,                        !- Evaporative Condenser Air Flow Rate {m3/s}
-    ,                        !- Evaporative Condenser Pump Rated Power Consumption {W}
-    ,                        !- Crankcase Heater Capacity {W}
-    10,                      !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
-    ,                        !- Supply Water Storage Tank Name
-    ,                        !- Condensate Collection Water Storage Tank Name
-    ,                        !- Basin Heater Capacity {W/K}
-    2,                       !- Basin Heater Setpoint Temperature {C}
-    ,                        !- Basin Heater Operating Schedule Name
-    ,                        !- Sensible Heat Ratio Function of Temperature Curve Name
-    ,                        !- Sensible Heat Ratio Function of Flow Fraction Curve Name
-    No;                      !- Report ASHRAE Standard 127 Performance Ratings
-    
-    
-    
-	{% if BaselineHeatingType == "HeatPump" %}
-    AirLoopHVAC:UnitaryHeatPump:AirToAir,
-    DXAC Heat Pump 3,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
-    Mixed Air Node 3,        !- Air Inlet Node Name
-    Air Loop Outlet Node 3,  !- Air Outlet Node Name
-    autosize,                !- Cooling Supply Air Flow Rate {m3/s}
-    autosize,                !- Heating Supply Air Flow Rate {m3/s}
-    autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Bulk_storage,          !- Controlling Zone or Thermostat Location
-    Fan:OnOff,               !- Supply Air Fan Object Type
-    Supply Fan 3,            !- Supply Air Fan Name
-    Coil:Heating:DX:SingleSpeed,  !- Heating Coil Object Type
-    Heat Pump DX Heating Coil 3,  !- Heating Coil Name
-    Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
-    Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
-    Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
-    50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
-    21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
-    BlowThrough,             !- Fan Placement
-    HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-    None;                    !- Dehumidification Control Type
-    
-    {% else %}
-    AirLoopHVAC:UnitaryHeatCool,
-    DXAC Heat Pump 3,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
-    Mixed Air Node 3,        !- Unitary System Air Inlet Node Name
-    Air Loop Outlet Node 3,  !- Unitary System Air Outlet Node Name
-    HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-    80,                      !- Maximum Supply Air Temperature {C}
-    autosize,                !- Cooling Supply Air Flow Rate {m3/s}
-    autosize,                !- Heating Supply Air Flow Rate {m3/s}
-    autosize,                !- No Load Supply Air Flow Rate {m3/s}
-    Bulk_storage,          !- Controlling Zone or Thermostat Location
-    Fan:OnOff,               !- Supply Fan Object Type
-    Supply Fan 3,            !- Supply Fan Name
-    BlowThrough,             !- Fan Placement
-	{%- if BaselineHeatingType == "Electric" %}
-            Coil:Heating:Electric,   !- Heating Coil Object Type
-    {% else  %} 
-            Coil:Heating:Fuel,   !- Heating Coil Object Type
-    {%- endif  %} 
-    Supp Gas Heating Coil 3, !- Heating Coil Name
-    Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
-    Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-	None;
-    {% endif  %} 
 
-    Branch,
-    Air Loop Main Branch 3,  !- Name
-    ,                        !- Pressure Drop Curve Name
-    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
-    OA Sys 3,                !- Component 1 Name
-    Outdoor Air Mixer Inlet Node 3,  !- Component 1 Inlet Node Name
-    Mixed Air Node 3,        !- Component 1 Outlet Node Name
-	{%- if BaselineHeatingType == "HeatPump" %}	
-        AirLoopHVAC:UnitaryHeatPump:AirToAir,  !- Component 3 Object Type
-    {% else  %} 
-        AirLoopHVAC:UnitaryHeatCool,  !- Component 3 Object Type
-    {%- endif  %} 
-    DXAC Heat Pump 3,        !- Component 3 Name
-    Mixed Air Node 3,        !- Component 3 Inlet Node Name
-    Air Loop Outlet Node 3;  !- Component 3 Outlet Node Name
-    
-    EnergyManagementSystem:Sensor,
-    HC3,                     !- Name
-    Typical Terminal Reheat 3,  !- Output:Variable or Output:Meter Index Key Name
-    Air System Total Heating Energy;  !- Output:Variable or Output:Meter Name
-
-    EnergyManagementSystem:Sensor,
-    CC3,                     !- Name
-    Typical Terminal Reheat 3,  !- Output:Variable or Output:Meter Index Key Name
-    Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name    
- 
 {%- endif  %} 
 
 
@@ -408,7 +295,7 @@
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
+	{%- if NumberOfSpeeds == 2  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -430,7 +317,7 @@
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
+	{%- if NumberOfSpeeds == 3  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}	
@@ -462,7 +349,7 @@
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Air Outlet Node Name
-    Office,          !- Controlling Zone or Thermostat Location
+    Zone1 Office,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 1,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -478,7 +365,7 @@
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -583,7 +470,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
+	{%- if NumberOfSpeeds == 2  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -605,7 +492,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
+	{%- if NumberOfSpeeds == 3  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -636,7 +523,7 @@ Coil:Cooling:DX:MultiSpeed,
     ALWAYS_ON,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Air Outlet Node Name
-    Fine_storage,          !- Controlling Zone or Thermostat Location
+    Zone2 Fine Storage,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 2,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -652,7 +539,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -701,178 +588,7 @@ Coil:Cooling:DX:MultiSpeed,
     Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
     
     
-Coil:Cooling:DX:MultiSpeed,
-    Heat Pump ACDXCoil 3,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
-    DX Cooling Coil Air Inlet Node 3,  !- Air Inlet Node Name
-    Heating Coil Air Inlet Node 3,  !- Air Outlet Node Name
-    Outdoor Condenser Air Node 3,  !- Condenser Air Inlet Node Name
-    AirCooled,               !- Condenser Type
-    ,                        !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
-    ,                        !- Supply Water Storage Tank Name
-    ,                        !- Condensate Collection Water Storage Tank Name
-    No,                      !- Apply Part Load Fraction to Speeds Greater than 1
-    No,                      !- Apply Latent Degradation to Speeds Greater than 1
-    200.0,                   !- Crankcase Heater Capacity {W}
-    10.0,                    !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation {C}
-    ,                        !- Basin Heater Capacity {W/K}
-    ,                        !- Basin Heater Setpoint Temperature {C}
-    ,                        !- Basin Heater Operating Schedule Name
-    Electricity,             !- Fuel Type
-	{{ NumberOfSpeeds }},	
-    autosize,                !- Speed 1 Gross Rated Total Cooling Capacity {W}
-    0.75,                    !- Speed 1 Gross Rated Sensible Heat Ratio
-	{{ EER/3.412 }},	
-    autosize,                !- Speed 1 Rated Air Flow Rate {m3/s}
-    453.3,                   !- Speed 1 Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
-    HPACCoolCapFT Speed 1,   !- Speed 1 Total Cooling Capacity Function of Temperature Curve Name
-    HPACCoolCapFF Speed 1,   !- Speed 1 Total Cooling Capacity Function of Flow Fraction Curve Name
-    HPACCOOLEIRFT 3,   !- Speed 1 Energy Input Ratio Function of Temperature Curve Name
-    HPACCOOLEIRFF Speed 1,   !- Speed 1 Energy Input Ratio Function of Flow Fraction Curve Name
-    HPACCOOLPLFFPLR Speed 1, !- Speed 1 Part Load Fraction Correlation Curve Name
-    1000.0,                  !- Speed 1 Nominal Time for Condensate Removal to Begin {s}
-    1.5,                     !- Speed 1 Ratio of Initial Moisture Evaporation Rate and Steady State Latent Capacity {dimensionless}
-    3.0,                     !- Speed 1 Maximum Cycling Rate {cycles/hr}
-    45.0,                    !- Speed 1 Latent Capacity Time Constant {s}
-    0.2,                     !- Speed 1 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCCoolWHFT Speed 1,    !- Speed 1 Waste Heat Function of Temperature Curve Name
-    0.9,                     !- Speed 1 Evaporative Condenser Effectiveness {dimensionless}
-    0.05,                    !- Speed 1 Evaporative Condenser Air Flow Rate {m3/s}
-    50,                      !- Speed 1 Rated Evaporative Condenser Pump Power Consumption {W}
-    autosize,                !- Speed 2 Gross Rated Total Cooling Capacity {W}
-    0.75,                    !- Speed 2 Gross Rated Sensible Heat Ratio
-	{{ EER/3.412 }},
-    autosize,                !- Speed 2 Rated Air Flow Rate {m3/s}
-    523.3,                   !- Speed 2 Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
-    HPACCoolCapFT Speed 2,   !- Speed 2 Total Cooling Capacity Function of Temperature Curve Name
-    HPACCoolCapFF Speed 2,   !- Speed 2 Total Cooling Capacity Function of Flow Fraction Curve Name
-    HPACCOOLEIRFT 3,   !- Speed 2 Energy Input Ratio Function of Temperature Curve Name
-    HPACCOOLEIRFF Speed 2,   !- Speed 2 Energy Input Ratio Function of Flow Fraction Curve Name
-    HPACCOOLPLFFPLR Speed 1, !- Speed 2 Part Load Fraction Correlation Curve Name
-    1000.0,                  !- Speed 2 Nominal Time for Condensate Removal to Begin {s}
-    1.5,                     !- Speed 2 Ratio of Initial Moisture Evaporation Rate and steady state Latent Capacity {dimensionless}
-    3.0,                     !- Speed 2 Maximum Cycling Rate {cycles/hr}
-    45.0,                    !- Speed 2 Latent Capacity Time Constant {s}
-    0.2,                     !- Speed 2 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
-    0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
-    0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "2"  %} 
-    60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
-    {% else %}
-    60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
-    autosize,                !- Speed 3 Gross Rated Total Cooling Capacity {W}
-    0.75,                    !- Speed 3 Gross Rated Sensible Heat Ratio
-	{{ EER/3.412 }},
-    autosize,                !- Speed 3 Rated Air Flow Rate {m3/s}
-    573.3,                   !- Speed 3 Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
-    HPACCoolCapFT Speed 3,   !- Speed 3 Total Cooling Capacity Function of Temperature Curve Name
-    HPACCoolCapFF Speed 3,   !- Speed 3 Total Cooling Capacity Function of Flow Fraction Curve Name
-    HPACCOOLEIRFT 3,   !- Speed 3 Energy Input Ratio Function of Temperature Curve Name
-    HPACCOOLEIRFF Speed 3,   !- Speed 3 Energy Input Ratio Function of Flow Fraction Curve Name
-    HPACCOOLPLFFPLR Speed 1, !- Speed 3 Part Load Fraction Correlation Curve Name
-    1000.0,                  !- Speed 3 Nominal Time for Condensate Removal to Begin {s}
-    1.5,                     !- Speed 3 Ratio of Initial Moisture Evaporation Rate and steady state Latent Capacity {dimensionless}
-    3.0,                     !- Speed 3 Maximum Cycling Rate {cycles/hr}
-    45.0,                    !- Speed 3 Latent Capacity Time Constant {s}
-    0.2,                     !- Speed 3 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
-    0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
-    0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == "3"  %} 
-    80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
-    {% else %}	
-    80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
-    autosize,                !- Speed 4 Gross Rated Total Cooling Capacity {W}
-    0.75,                    !- Speed 4 Gross Rated Sensible Heat Ratio
-	{{ EER/3.412 }},
-    autosize,                !- Speed 4 Rated Air Flow Rate {m3/s}
-    673.3,                   !- Speed 4 Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
-    HPACCoolCapFT Speed 4,   !- Speed 4 Total Cooling Capacity Function of Temperature Curve Name
-    HPACCoolCapFF Speed 4,   !- Speed 4 Total Cooling Capacity Function of Flow Fraction Curve Name
-    HPACCOOLEIRFT 3,   !- Speed 4 Energy Input Ratio Function of Temperature Curve Name
-    HPACCOOLEIRFF Speed 4,   !- Speed 4 Energy Input Ratio Function of Flow Fraction Curve Name
-    HPACCOOLPLFFPLR Speed 1, !- Speed 4 Part Load Fraction Correlation Curve Name
-    1000.0,                  !- Speed 4 Nominal Time for Condensate Removal to Begin {s}
-    1.5,                     !- Speed 4 Ratio of Initial Moisture Evaporation Rate and steady state Latent Capacity {dimensionless}
-    3.0,                     !- Speed 4 Maximum Cycling Rate {cycles/hr}
-    45.0,                    !- Speed 4 Latent Capacity Time Constant {s}
-    0.2,                     !- Speed 4 Rated Waste Heat Fraction of Power Input {dimensionless}
-    HAPCCoolWHFT Speed 4,    !- Speed 4 Waste Heat Function of Temperature Curve Name
-    0.9,                     !- Speed 4 Evaporative Condenser Effectiveness {dimensionless}
-    0.3,                     !- Speed 4 Evaporative Condenser Air Flow Rate {m3/s}
-    100;                     !- Speed 4 Rated Evaporative Condenser Pump Power Consumption {W}
-    {%- endif %}
-    {%- endif %}
-    
-    AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
-    DXAC Heat Pump 3,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
-    Mixed Air Node 3,        !- Air Inlet Node Name
-    Air Loop Outlet Node 3,  !- Air Outlet Node Name
-    Bulk_storage,          !- Controlling Zone or Thermostat Location
-    Fan:OnOff,               !- Supply Air Fan Object Type
-    Supply Fan 3,            !- Supply Air Fan Name
-    BlowThrough,             !- Supply Air Fan Placement
-    HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
-	{% if BaselineHeatingType == "HeatPump" %}
-        Coil:Heating:DX:MultiSpeed,  !- Heating Coil Object Type
-    {% elif BaselineHeatingType == "Electric" %}
-	    Coil:Heating:Electric:Multistage,
-    {% else  %} 
-        Coil:Heating:Gas:Multistage,
-    {% endif  %} 
-    Heat Pump DX Heating Coil 3,  !- Heating Coil Name
-    -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
-    Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
-    Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
-    Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
-    50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
-    21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
-    0,                       !- Auxiliary On-Cycle Electric Power {W}
-    0,                       !- Auxiliary Off-Cycle Electric Power {W}
-    0.00,                    !- Design Heat Recovery Water Flow Rate {m3/s}
-    80.0,                    !- Maximum Temperature for Heat Recovery {C}
-    ,                        !- Heat Recovery Water Inlet Node Name
-    ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
-	{% if BaselineHeatingType == "HeatPump" %}
-        {{ NumberOfSpeeds }},
-    {% else %}
-        1,
-    {% endif %}
-    {{ NumberOfSpeeds }},
-    autosize,                !- Heating Speed 1 Supply Air Flow Rate {m3/s}
-    autosize,                !- Heating Speed 2 Supply Air Flow Rate {m3/s}
-    autosize,                !- Heating Speed 3 Supply Air Flow Rate {m3/s}
-    autosize,                !- Heating Speed 4 Supply Air Flow Rate {m3/s}
-    autosize,                !- Cooling Speed 1 Supply Air Flow Rate {m3/s}
-    autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
-    autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
-    autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
 
-    Branch,
-    Air Loop Main Branch 3,  !- Name
-    ,                        !- Pressure Drop Curve Name
-    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
-    OA Sys 3,                !- Component 1 Name
-    Outdoor Air Mixer Inlet Node 3,  !- Component 1 Inlet Node Name
-    Mixed Air Node 3,        !- Component 1 Outlet Node Name
-    AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,  !- Component 2 Object Type	
-    DXAC Heat Pump 3,        !- Component 2 Name
-    Mixed Air Node 3,        !- Component 2 Inlet Node Name
-    Air Loop Outlet Node 3;  !- Component 2 Outlet Node Name
-    
-    EnergyManagementSystem:Sensor,
-    HC3,                     !- Name
-    DXAC Heat Pump 3,        !- Output:Variable or Output:Meter Index Key Name
-    Unitary System Total Heating Rate ;  !- Output:Variable or Output:Meter Name
-
-    EnergyManagementSystem:Sensor,
-    CC3,                     !- Name
-    DXAC Heat Pump 3,        !- Output:Variable or Output:Meter Index Key Name
-    Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
 
 
 {%- endif  %}

@@ -140,20 +140,7 @@ Version,9.0;
 
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR-R ===========
 
-  Material:NoMass,
-    Opaque Door panel_con,   !- Name
-    MediumRough,             !- Roughness
-    0.251572327,  !- Thermal Resistance {m2-K/W}
-    0.9,                     !- Thermal Absorptance
-    0.7,                     !- Solar Absorptance
-    0.7;                     !- Visible Absorptance
 
-
-!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
-
-  Construction,
-    Swinging Door_con,       !- Name
-    Opaque Door panel_con;   !- Outside Layer
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
 
@@ -1966,7 +1953,11 @@ Schedule:Constant,
 
 {% include "MinOAFraction" %}
 
+{% include "HVACOperationSchd" %}
 
+{% include "HTGSETP_SCH_NO_OPTIMUM" %}
+
+{% include "CLGSETP_SCH_NO_OPTIMUM" %}
 !
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
  
@@ -2328,11 +2319,6 @@ Construction,
     Swinging Door_semi,      !- Name
     Opaque Door panel_semi;  !- Outside Layer
 
-Construction,
-    Skylight Double Clear,   !- Name
-    CLEAR 2.5MM,             !- Outside Layer
-    AIR 3MM,                 !- Layer 2
-    CLEAR 2.5MM;             !- Layer 3
 
 Construction,
     Overhead Door_semi,      !- Name
@@ -5991,7 +5977,7 @@ Output:VariableDictionary,
 !    Output:Meter,Refrigeration:Gas,Hourly;
 !    Output:Meter,WaterSystems:Gas,Hourly;
 Output:Table:SummaryReports,
-    AllSummaryAndMonthly;    !- Report 1 Name
+    EquipmentSummary;        !- Report 3 Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:MONTHLY ===========
@@ -6086,79 +6072,28 @@ OutputControl:ReportingTolerances,
 
 Output:Variable,
     *,                       !- Key Value
-    Zone Mean Air Temperature,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Cooling Coil Total Cooling Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Cooling Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Heating Coil Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Fan Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System DX Coil Speed Level ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Gas Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System Compressor Part Load Ratio ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Electric Power ,     !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Air Mass Flow Rate , !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan2MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Unitary System Total Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan1MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan3MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan4MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan5MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Electric Power ,  !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Gas Rate,   !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 
@@ -6173,3 +6108,108 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
+    Coil:Heating:Fuel,
+    Zone3UnitHeaterHeatingCoil,  !- Name
+    Zone3HeatingCoilAvailability,  !- Availability Schedule Name
+    NaturalGas,              !- Fuel Type
+    0.7925,                  !- Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    Zone3UnitHeaterFanOutletNode,  !- Air Inlet Node Name
+    Zone3UnitHeaterAirOutletNode,  !- Air Outlet Node Name
+    ,                        !- Temperature Setpoint Node Name
+    0.0,                     !- Parasitic Electric Load {W}
+    ,                        !- Part Load Fraction Correlation Curve Name
+    5000;                    !- Parasitic Fuel Load {W}
+    
+    Material,
+    Bulk Storage Products Material,  !- Name
+    Rough,                   !- Roughness
+    2.43840494296412,        !- Thickness {m}
+    1.44200004455643,        !- Conductivity {W/m-K}
+    200.230661511125,        !- Density {kg/m3}
+    836.800006332062,        !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+    
+    Material,
+    Interior Wall Addi Insul,!- Name
+    MediumRough,             !- Roughness
+    2.54000514892096E-08,    !- Thickness {m}
+    4.32600013366928E-02,    !- Conductivity {W/m-K}
+    22.425834089246,         !- Density {kg/m3}
+    836.800006332062,        !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+    
+    Construction,
+    Interior Wall,           !- Name
+    F07 25mm stucco,         !- Outside Layer
+    G01 16mm gypsum board,   !- Layer 2
+    Interior Wall Addi Insul,!- Layer 3
+    Steel Frame/Cavity,      !- Layer 4
+    G01 16mm gypsum board;   !- Layer 5
+
+Construction,
+    InsulatedCeiling,        !- Name
+    Interior Wall Addi Insul,!- Outside Layer
+    G01 16mm gypsum board;   !- Layer 2
+    
+    Material,
+    Steel Frame/Cavity,      !- Name
+    MediumRough,             !- Roughness
+    8.89001802122336E-02,    !- Thickness {m}
+    8.41161885991101E-02,    !- Conductivity {W/m-K}
+    641.378854952435,        !- Density {kg/m3}
+    502.080003799237,        !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+    
+    Schedule:Compact,
+    Supply-Temp-Schedule,    !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    12.8;                    !- Field 4
+    
+    
+         
+       Schedule:Compact,
+    OutdoorAirAvailSched,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 3/31,           !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0,                     !- Field 4
+    Through: 9/30,           !- Field 5
+    For: WeekDays,           !- Field 6
+    Until: 7:00,             !- Field 7
+    0.0,                     !- Field 8
+    Until: 17:00,            !- Field 9
+    1.0,                     !- Field 10
+    Until: 24:00,            !- Field 11
+    0.0,                     !- Field 12
+    For: SummerDesignDay WinterDesignDay,  !- Field 13
+    Until: 24:00,            !- Field 14
+    0.0,                     !- Field 15
+    For: AllOtherDays,       !- Field 16
+    Until: 24:00,            !- Field 17
+    0.0,                     !- Field 18
+    Through: 12/31,          !- Field 19
+    For: AllDays,            !- Field 20
+    Until: 24:00,            !- Field 21
+    1.0;                     !- Field 22
+   
+EnergyManagementSystem:InternalVariable,
+    Fan1_DesignFlow,         !- Name
+    Supply Fan 1,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan2_DesignFlow,         !- Name
+    Supply Fan 2,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+

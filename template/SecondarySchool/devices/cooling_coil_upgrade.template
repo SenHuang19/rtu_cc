@@ -61,7 +61,7 @@
     Heat Pump DX Heating Coil 1,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -194,7 +194,7 @@
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_1 == "2" %}
+	{% if NumberOfSpeeds_1 == 2 %}
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -216,7 +216,7 @@
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_1 == "3" %}
+	{% if NumberOfSpeeds_1 == 3 %}
     80;                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -264,7 +264,7 @@
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -375,7 +375,7 @@
     Heat Pump DX Heating Coil 2,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -508,7 +508,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_2 == "2" %}
+	{% if NumberOfSpeeds_2 == 2 %}
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -530,7 +530,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_2 == "3" %}
+	{% if NumberOfSpeeds_2 == 3 %}
     80;                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -577,7 +577,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -690,7 +690,7 @@ Coil:Cooling:DX:MultiSpeed,
     Heat Pump DX Heating Coil 3,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -822,7 +822,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_3 == "2" %}
+	{% if NumberOfSpeeds_3 == 2 %}
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,  
@@ -844,7 +844,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_2 == "3" %}
+	{% if NumberOfSpeeds_2 == 3 %}
     80;                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}                    !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -891,7 +891,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1004,7 +1004,7 @@ Coil:Cooling:DX:MultiSpeed,
     Heat Pump DX Heating Coil 4,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 4, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1026,7 +1026,6 @@ Coil:Cooling:DX:MultiSpeed,
     Aux_Gym_ZN_1_FLR_1,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 4,            !- Supply Fan Name
-    BlowThrough,             !- Fan Placement
     BlowThrough,             !- Fan Placement
 		{% if HeatingType_4 == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
@@ -1138,7 +1137,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_4 == "2" %}
+	{% if NumberOfSpeeds_4 == 2 %}
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1160,7 +1159,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_4 == "3" %}
+	{% if NumberOfSpeeds_4 == 3 %}
     80;                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1207,7 +1206,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 4, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1320,7 +1319,7 @@ Coil:Cooling:DX:MultiSpeed,
     Heat Pump DX Heating Coil 5,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 5,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 5, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1342,7 +1341,6 @@ Coil:Cooling:DX:MultiSpeed,
     Auditorium_ZN_1_FLR_1,          !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Fan Object Type
     Supply Fan 5,            !- Supply Fan Name
-    BlowThrough,             !- Fan Placement
     BlowThrough,             !- Fan Placement
 		{% if HeatingType_5 == "Electric" %}
             Coil:Heating:Electric,   !- Heating Coil Object Type
@@ -1372,12 +1370,12 @@ Coil:Cooling:DX:MultiSpeed,
     Mixed Air Node 5,        !- Component 2 Inlet Node Name
     Air Loop Outlet Node 5;  !- Component 2 Outlet Node Name
     
-    EnerAuditoriumanagementSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     HC5,                     !- Name
     Typical Terminal Reheat 5,  !- Output:Variable or Output:Meter Index Key Name
     Air System Total Heating Energy;  !- Output:Variable or Output:Meter Name
 
-    EnerAuditoriumanagementSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     CC5,                     !- Name
     Typical Terminal Reheat 5,  !- Output:Variable or Output:Meter Index Key Name
     Air System Total Cooling Energy;  !- Output:Variable or Output:Meter Name
@@ -1454,7 +1452,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_5 == "2" %}
+	{% if NumberOfSpeeds_5 == 2 %}
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1476,7 +1474,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{% if NumberOfSpeeds_5 == "3" %}
+	{% if NumberOfSpeeds_5 == 3 %}
     80;                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1523,7 +1521,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 5,    !- Cooling Coil Name
-    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
+    coil:heating:electric,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 5, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1562,17 +1560,19 @@ Coil:Cooling:DX:MultiSpeed,
     Mixed Air Node 5,        !- Component 2 Inlet Node Name
     Air Loop Outlet Node 5;  !- Component 2 Outlet Node Name
     
-    EnerAuditoriumanagementSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     HC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
     Unitary System Total Heating Rate ;  !- Output:Variable or Output:Meter Name
 
-    EnerAuditoriumanagementSystem:Sensor,
+    EnergyManagementSystem:Sensor,
     CC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
     Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
 	
 {%- endif  %}
+
+
 
 
 

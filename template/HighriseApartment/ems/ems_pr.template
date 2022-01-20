@@ -1,0 +1,316 @@
+{%- if BaselineFanType == "Full Variable"  %} 
+EnergyManagementSystem:Program,
+    SETFanSpeed1,            !- Name
+    IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
+    SET Fan1Speed=NULL,         !- Program Line 2
+    ELSEIf TZ1<=TC1-0.5 && TZ1>=TH1+0.5 && Fan1_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan1Speed=Fan1_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ1>TC1-0.5 && Fan1_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ1-(TC1-0.5))+0.4,  !- A5
+    SET Fan1Speed= Fan1_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ1<TH1+0.5 && Fan1_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH1+0.5)-TZ1)+0.4,  !- A8
+    SET Fan1Speed= Fan1_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan1Speed= NULL,     !- A11
+    ENDIF;                   !- A12
+	
+EnergyManagementSystem:Program,
+    SETFanSpeed2,            !- Name
+    IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
+    SET Fan2Speed=NULL,         !- Program Line 2
+    ELSEIf TZ2<=TC2-0.5 && TZ2>=TH2+0.5 && Fan2_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan2Speed=Fan2_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ2>TC2-0.5 && Fan2_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ2-(TC2-0.5))+0.4,  !- A5
+    SET Fan2Speed= Fan2_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ2<TH2+0.5 && Fan2_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH2+0.5)-TZ2)+0.4,  !- A8
+    SET Fan2Speed= Fan2_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan2Speed= NULL,     !- A11
+    ENDIF;                   !- A12
+
+EnergyManagementSystem:Program,
+    SETFanSpeed3,            !- Name
+    IF HVACSch==0 && TZ3>TH3 && TZ3< TC3,  !- Program Line 1
+    SET Fan3Speed=NULL,         !- Program Line 2
+    ELSEIf TZ3<=TC3-0.5 && TZ3>=TH3+0.5 && Fan3_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan3Speed=Fan3_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ3>TC3-0.5 && Fan3_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ3-(TC3-0.5))+0.4,  !- A5
+    SET Fan3Speed= Fan3_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ3<TH3+0.5 && Fan3_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH3+0.5)-TZ3)+0.4,  !- A8
+    SET Fan3Speed= Fan3_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan3Speed= NULL,     !- A11
+    ENDIF;                   !- A12
+
+EnergyManagementSystem:Program,
+    SETFanSpeed4,            !- Name
+    IF HVACSch==0 && TZ4>TH4 && TZ4< TC4,  !- Program Line 1
+    SET Fan4Speed=0,         !- Program Line 2
+    ELSEIf TZ4<=TC4-0.5 && TZ4>=TH4+0.5 && Fan4_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan4Speed=Fan4_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ4>TC4-0.5 && Fan4_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ4-(TC4-0.5))+0.4,  !- A5
+    SET Fan4Speed= Fan4_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ4<TH4+0.5 && Fan4_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH4+0.5)-TZ4)+0.4,  !- A8
+    SET Fan4Speed= Fan4_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan4Speed= NULL,     !- A11
+    ENDIF;                   !- A12	
+
+EnergyManagementSystem:Program,
+    SETFanSpeed5,            !- Name
+    IF HVACSch==0 && TZ5>TH5 && TZ5< TC5,  !- Program Line 1
+    SET Fan5Speed=NULL,         !- Program Line 2
+    ELSEIf TZ5<=TC5-0.5 && TZ5>=TH5+0.5 && Fan5_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan5Speed=Fan5_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ5>TC5-0.5 && Fan5_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ5-(TC5-0.5))+0.4,  !- A5
+    SET Fan5Speed= Fan5_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ5<TH5+0.5 && Fan5_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH5+0.5)-TZ5)+0.4,  !- A8
+    SET Fan5Speed= Fan5_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan5Speed= NULL,     !- A11
+    ENDIF;                   !- A12
+
+EnergyManagementSystem:Program,
+    SETFanSpeed6,            !- Name
+    IF HVACSch==0 && TZ6>TH6 && TZ6< TC6,  !- Program Line 1
+    SET Fan6Speed=NULL,         !- Program Line 2
+    ELSEIf TZ6<=TC6-0.5 && TZ6>=TH6+0.5 && Fan6_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan6Speed=Fan6_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ6>TC6-0.5 && Fan6_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ6-(TC6-0.5))+0.4,  !- A5
+    SET Fan6Speed= Fan6_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ6<TH6+0.5 && Fan6_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH6+0.5)-TZ6)+0.4,  !- A8
+    SET Fan6Speed= Fan6_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan6Speed= NULL,     !- A11
+    ENDIF;                   !- A12
+
+EnergyManagementSystem:Program,
+    SETFanSpeed7,            !- Name
+    IF HVACSch==0 && TZ7>TH7 && TZ7< TC7,  !- Program Line 1
+    SET Fan7Speed=NULL,         !- Program Line 2
+    ELSEIf TZ7<=TC7-0.5 && TZ7>=TH7+0.5 && Fan7_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan7Speed=Fan7_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ7>TC7-0.5 && Fan7_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ7-(TC7-0.5))+0.4,  !- A5
+    SET Fan7Speed= Fan7_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ7<TH7+0.5 && Fan7_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH7+0.5)-TZ7)+0.4,  !- A8
+    SET Fan7Speed= Fan7_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan7Speed= NULL,     !- A11
+    ENDIF;                   !- A12
+
+EnergyManagementSystem:Program,
+    SETFanSpeed8,            !- Name
+    IF HVACSch==0 && TZ8>TH8 && TZ8< TC8,  !- Program Line 1
+    SET Fan8Speed=NULL,         !- Program Line 2
+    ELSEIf TZ8<=TC8-0.5 && TZ8>=TH8+0.5 && Fan8_DesignFlow>0 && CurrentEnvironment>2,  !- Program Line 1
+    SET Fan8Speed=Fan8_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF TZ8>TC8-0.5 && Fan8_DesignFlow>0  && CurrentEnvironment>2,  !- A4
+    SET Multiplier= 0.6*(TZ8-(TC8-0.5))+0.4,  !- A5
+    SET Fan8Speed= Fan8_DesignFlow*Multiplier,  !- A6
+    ELSEIF TZ8<TH8+0.5 && Fan8_DesignFlow>0  && CurrentEnvironment>2,  !- A7
+    SET Multiplier = 0.6*((TH8+0.5)-TZ8)+0.4,  !- A8
+    SET Fan8Speed= Fan8_DesignFlow*Multiplier,  !- A9
+    ELSE,                    !- A10
+    SET Fan8Speed= NULL,     !- A11
+    ENDIF;                   !- A12
+
+
+{% else  %} 
+EnergyManagementSystem:Program,
+    SETFanSpeed1,            !- Name
+    IF HVACSch==0 && TZ1>TH1 && TZ1< TC1,  !- Program Line 1
+    SET Fan1Speed=NULL,         !- Program Line 2
+    ELSEIf CC1==0 && HC1==0 && Fan1_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
+    SET Fan1Speed=Fan1_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC1>0 && Fan1_DesignFlow>0,  !- A4
+    SET Fan1Speed= Fan1_DesignFlow*0.75,  !- A5
+    ELSEIF Fan1_DesignFlow>0,  !- A6
+    SET Fan1Speed= Fan1_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan1Speed=Fan1_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC1>0 && Fan1_DesignFlow>0,  !- A4
+    SET Fan1Speed= Fan1_DesignFlow*1,  !- A5
+    ELSEIF Fan1_DesignFlow>0,  !- A6
+    SET Fan1Speed= Fan1_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan1Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+
+EnergyManagementSystem:Program,
+    SETFanSpeed2,            !- Name
+    IF HVACSch==0 && TZ2>TH2 && TZ2< TC2,  !- Program Line 1
+    SET Fan2Speed=NULL,         !- Program Line 2
+    ELSEIf CC2==0 && HC2==0 && Fan2_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
+    SET Fan2Speed=Fan2_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC2>0 && Fan2_DesignFlow>0,  !- A4
+    SET Fan2Speed= Fan2_DesignFlow*0.75,  !- A5
+    ELSEIF Fan2_DesignFlow>0,  !- A6
+    SET Fan2Speed= Fan2_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan2Speed=Fan2_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC2>0 && Fan2_DesignFlow>0,  !- A4
+    SET Fan2Speed= Fan2_DesignFlow*1,  !- A5
+    ELSEIF Fan2_DesignFlow>0,  !- A6
+    SET Fan2Speed= Fan2_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan2Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+
+
+EnergyManagementSystem:Program,
+    SETFanSpeed3,            !- Name
+    IF HVACSch==0 && TZ3>TH3 && TZ3< TC3,  !- Program Line 1
+    SET Fan3Speed=NULL,         !- Program Line 2
+    ELSEIf CC3==0 && HC3==0 && Fan3_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
+    SET Fan3Speed=Fan3_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC3>0 && Fan3_DesignFlow>0,  !- A4
+    SET Fan3Speed= Fan3_DesignFlow*0.75,  !- A5
+    ELSEIF Fan3_DesignFlow>0,  !- A6
+    SET Fan3Speed= Fan3_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan3Speed=Fan3_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC3>0 && Fan3_DesignFlow>0,  !- A4
+    SET Fan3Speed= Fan3_DesignFlow*1,  !- A5
+    ELSEIF Fan3_DesignFlow>0,  !- A6
+    SET Fan3Speed= Fan3_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan3Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+
+EnergyManagementSystem:Program,
+    SETFanSpeed4,            !- Name
+    IF HVACSch==0 && TZ4>TH4 && TZ4< TC4,  !- Program Line 1
+    SET Fan4Speed=NULL,         !- Program Line 2
+    ELSEIf CC4==0 && HC4==0 && Fan4_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %}
+    SET Fan4Speed=Fan4_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC4>0 && Fan4_DesignFlow>0,  !- A4
+    SET Fan4Speed= Fan4_DesignFlow*0.75,  !- A5
+    ELSEIF Fan4_DesignFlow>0,  !- A6
+    SET Fan4Speed= Fan4_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan4Speed=Fan4_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC4>0 && Fan4_DesignFlow>0,  !- A4
+    SET Fan4Speed= Fan4_DesignFlow*1,  !- A5
+    ELSEIF Fan4_DesignFlow>0,  !- A6
+    SET Fan4Speed= Fan4_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan4Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+
+EnergyManagementSystem:Program,
+    SETFanSpeed5,            !- Name
+    IF HVACSch==0 && TZ5>TH5 && TZ5< TC5,  !- Program Line 1
+    SET Fan5Speed=NULL,         !- Program Line 2
+    ELSEIf CC5==0 && HC5==0 && Fan5_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %}
+    SET Fan5Speed=Fan5_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC5>0 && Fan5_DesignFlow>0,  !- A4
+    SET Fan5Speed= Fan5_DesignFlow*0.75,  !- A5
+    ELSEIF Fan5_DesignFlow>0,  !- A6
+    SET Fan5Speed= Fan5_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan5Speed=Fan5_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC5>0 && Fan5_DesignFlow>0,  !- A4
+    SET Fan5Speed= Fan5_DesignFlow*1,  !- A5
+    ELSEIF Fan5_DesignFlow>0,  !- A6
+    SET Fan5Speed= Fan5_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan5Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+
+
+
+EnergyManagementSystem:Program,
+    SETFanSpeed6,            !- Name
+    IF HVACSch==0 && TZ6>TH6 && TZ6< TC6,  !- Program Line 1
+    SET Fan6Speed=NULL,         !- Program Line 2
+    ELSEIf CC6==0 && HC6==0 && Fan6_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
+    SET Fan6Speed=Fan6_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC6>0 && Fan6_DesignFlow>0,  !- A4
+    SET Fan6Speed= Fan6_DesignFlow*0.75,  !- A5
+    ELSEIF Fan6_DesignFlow>0,  !- A6
+    SET Fan6Speed= Fan6_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan6Speed=Fan6_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC6>0 && Fan6_DesignFlow>0,  !- A4
+    SET Fan6Speed= Fan6_DesignFlow*1,  !- A5
+    ELSEIF Fan6_DesignFlow>0,  !- A6
+    SET Fan6Speed= Fan6_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan6Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+
+
+
+EnergyManagementSystem:Program,
+    SETFanSpeed7,            !- Name
+    IF HVACSch==0 && TZ7>TH7 && TZ7< TC7,  !- Program Line 1
+    SET Fan7Speed=NULL,         !- Program Line 2
+    ELSEIf CC7==0 && HC7==0 && Fan7_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
+    SET Fan7Speed=Fan7_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC7>0 && Fan7_DesignFlow>0,  !- A4
+    SET Fan7Speed= Fan7_DesignFlow*0.75,  !- A5
+    ELSEIF Fan7_DesignFlow>0,  !- A6
+    SET Fan7Speed= Fan7_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan7Speed=Fan7_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC7>0 && Fan7_DesignFlow>0,  !- A4
+    SET Fan7Speed= Fan7_DesignFlow*1,  !- A5
+    ELSEIF Fan7_DesignFlow>0,  !- A6
+    SET Fan7Speed= Fan7_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan7Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+
+
+
+EnergyManagementSystem:Program,
+    SETFanSpeed8,            !- Name
+    IF HVACSch==0 && TZ8>TH8 && TZ8< TC8,  !- Program Line 1
+    SET Fan8Speed=NULL,         !- Program Line 2
+    ELSEIf CC8==0 && HC8==0 && Fan8_DesignFlow>0,  !- Program Line 1
+	{%- if BaselineFanType == "Variable Retrofit Controller"  %} 
+    SET Fan8Speed=Fan8_DesignFlow*0.4,  !- Program Line 2
+    ELSEIF HC8>0 && Fan8_DesignFlow>0,  !- A4
+    SET Fan8Speed= Fan8_DesignFlow*0.75,  !- A5
+    ELSEIF Fan8_DesignFlow>0,  !- A6
+    SET Fan8Speed= Fan8_DesignFlow*0.9,  !- A7
+    {% else %}
+    SET Fan8Speed=Fan8_DesignFlow*1,  !- Program Line 2
+    ELSEIF HC8>0 && Fan8_DesignFlow>0,  !- A4
+    SET Fan8Speed= Fan8_DesignFlow*1,  !- A5
+    ELSEIF Fan8_DesignFlow>0,  !- A6
+    SET Fan8Speed= Fan8_DesignFlow*1,  !- A7
+    {%- endif %}
+    ELSE,                    !- A8
+    SET Fan8Speed=NULL,      !- A9
+    ENDIF;                   !- A10
+	
+	
+{%- endif  %}

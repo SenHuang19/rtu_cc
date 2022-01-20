@@ -1,7 +1,7 @@
 
 Curve:Cubic,
     FanPowerCurve1,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Gym"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Gym")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Gym") or (UpgradedFanType == "Constant Speed" and ZoneType == "Gym")  %} 
     1,
     0,
     0,
@@ -21,7 +21,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve2,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Kitchen"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Kitchen")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Kitchen") or (UpgradedFanType == "Constant Speed" and ZoneType == "Kitchen")  %} 
     1,
     0,
     0,
@@ -41,7 +41,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve3,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Cafeteria"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Cafeteria")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Cafeteria") or (UpgradedFanType == "Constant Speed" and ZoneType == "Cafeteria")  %}  
     1,
     0,
     0,
@@ -61,7 +61,7 @@ Curve:Cubic,
     
 Curve:Cubic,
     FanPowerCurve4,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Gym"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Gym")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Gym") or (UpgradedFanType == "Constant Speed" and ZoneType == "Gym")  %} 
     1,
     0,
     0,
@@ -81,7 +81,7 @@ Curve:Cubic,
 
 Curve:Cubic,
     FanPowerCurve5,           !- Name
-{%- if (BaselineFanType == "Constant Speed" and (not (UpgradedFanType != "Variable Retrofit Controller" and ZoneType == "Auditorium"))) or (UpgradedFanType == "Constant Speed" and ZoneType == "Auditorium")  %} 
+{%- if (BaselineFanType == "Constant Speed" and ZoneType != "Auditorium") or (UpgradedFanType == "Constant Speed" and ZoneType == "Auditorium")  %} 
     1,
     0,
     0,

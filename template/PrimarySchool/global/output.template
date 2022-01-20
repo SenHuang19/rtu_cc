@@ -138,28 +138,22 @@ Version,9.0;
 
 {% include "climates" %}
 
-!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR-R ===========
-
-  Material:NoMass,
-    Opaque Door panel_con,   !- Name
-    MediumRough,             !- Roughness
-    0.251572327,  !- Thermal Resistance {m2-K/W}
-    0.9,                     !- Thermal Absorptance
-    0.7,                     !- Solar Absorptance
-    0.7;                     !- Visible Absorptance
 
 
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
-  Construction,
-    Swinging Door_con,       !- Name
-    Opaque Door panel_con;   !- Outside Layer
 
 WindowMaterial:SimpleGlazingSystem,
     Nonres Skylight Glazing Layer,           !- Name
     5.7918252,              !- U-Factor {W/m2-K}
     0.49,                     !- Solar Heat Gain Coefficient
     0.49;  
+    
+WindowMaterial:SimpleGlazingSystem,
+    Nonres Window Glazing Layer,           !- Name
+    3.2933908,              !- U-Factor {W/m2-K}
+    0.39,                     !- Solar Heat Gain Coefficient
+    0.39;                     !- Visible Transmittance
 
 Construction,
     NonresSkylight_U_1.02_SHGC_0.49,  !- Name
@@ -203,19 +197,6 @@ Construction,
   ScheduleTypeLimits,
     Number;                  !- Name
 
-Site:GroundTemperature:FCfactorMethod,
-14.0,                   !- January Ground Temperature {C}
-7.3,                   !- February Ground Temperature {C}
-3.3,                   !- March Ground Temperature {C}
-1.2,                   !- April Ground Temperature {C}
--0.2,                   !- May Ground Temperature {C}
-5.6,                   !- June Ground Temperature {C}
-10.9,                   !- July Ground Temperature {C}
-16.1,                   !- August Ground Temperature {C}
-21.7,                   !- September Ground Temperature {C}
-25.0,                   !- October Ground Temperature {C}
-24.8,                   !- November Ground Temperature {C}
-19.9;                   !- December Ground Temperature {C}
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
 
@@ -478,6 +459,15 @@ Site:GroundTemperature:FCfactorMethod,
         Until: 24:00, 0,
         For: WeekEnds Holidays AllOtherDays,               !- Field 20
         Until: 24:00,0.1773;               !- Field 21
+        
+        
+Schedule:Compact,
+    Supply-Temp-Schedule,    !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    12.8;                    !- Field 4
 
   Schedule:Compact,
     BLDG_LIGHT_SCH,          !- Name
@@ -2207,12 +2197,42 @@ Site:GroundTemperature:FCfactorMethod,
     For: AllOtherDays,
     Until: 24:00,
        0.3 ;
+       
+       Schedule:Compact,
+    OutdoorAirAvailSched,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 3/31,           !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0,                     !- Field 4
+    Through: 9/30,           !- Field 5
+    For: WeekDays,           !- Field 6
+    Until: 7:00,             !- Field 7
+    0.0,                     !- Field 8
+    Until: 17:00,            !- Field 9
+    1.0,                     !- Field 10
+    Until: 24:00,            !- Field 11
+    0.0,                     !- Field 12
+    For: SummerDesignDay WinterDesignDay,  !- Field 13
+    Until: 24:00,            !- Field 14
+    0.0,                     !- Field 15
+    For: AllOtherDays,       !- Field 16
+    Until: 24:00,            !- Field 17
+    0.0,                     !- Field 18
+    Through: 12/31,          !- Field 19
+    For: AllDays,            !- Field 20
+    Until: 24:00,            !- Field 21
+    1.0;                     !- Field 22
    
 
 
 {% include "MinOAFraction" %}
 
+{% include "HVACOperationSchd" %}
 
+{% include "HTGSETP_SCH_NO_OPTIMUM" %}
+
+{% include "CLGSETP_SCH_NO_OPTIMUM" %}
 !
 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
  
@@ -2595,9 +2615,6 @@ Construction,
     Skylight_U_1.02_SHGC_0.49,  !- Name
     Nonres Skylight Glazing Layer;  !- Outside Layer
 
-Construction,
-    SemiHtdSkylight_U_1.02_SHGC_0.55,  !- Name
-    Semiheated Skylight Glazing Layer;  !- Outside Layer
 
   Construction,
     res_roof,                   !- Name
@@ -2612,11 +2629,7 @@ Construction,
     Swinging Door_semi,      !- Name
     Opaque Door panel_semi;  !- Outside Layer
 
-Construction,
-    Skylight Double Clear,   !- Name
-    CLEAR 2.5MM,             !- Outside Layer
-    AIR 3MM,                 !- Layer 2
-    CLEAR 2.5MM;             !- Layer 3
+
 
 Construction,
     Overhead Door_semi,      !- Name
@@ -2626,9 +2639,6 @@ Construction,
     Overhead Door_con,       !- Name
     Overhead Door_con Panel; !- Outside Layer
 
-Construction,
-    Bulk Storage Products,   !- Name
-    Bulk Storage Products Material;  !- Outside Layer
 
 
   Construction,
@@ -12543,7 +12553,11 @@ AirLoopHVAC:ReturnPath,
     AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
     Zone Return Air Mixer 2; !- Component 1 Name
 
-
+AirLoopHVAC:ReturnPath,
+    HeatPumpReturnPath 3,    !- Name
+    Return Air Mixer Outlet 3,  !- Return Air Path Outlet Node Name
+    AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
+    Zone Return Air Mixer 3; !- Component 1 Name
 
 BranchList,
     Air Loop Branches 1,     !- Name
@@ -13252,17 +13266,6 @@ OutdoorAir:Node,
     Outdoor Condenser Air Node 2,  !- Name
     1.0;                     !- Height Above Ground {m}
 
-
-  Pump:ConstantSpeed,
-    SHWSys1 Pump,            !- Name
-    SHWSys1 Supply Inlet Node,  !- Inlet Node Name
-    SHWSys1 Pump-SHWSys1 Water HeaterNodeviaConnector,  !- Outlet Node Name
-    autosize,                !- Design Flow Rate {m3/s}
-    29891,  !- Design Pump Head {Pa}
-    AUTOSIZE,                !- Design Power Consumption {W}
-    0.30,                    !- Motor Efficiency
-    0.0,                     !- Fraction of Motor Inefficiencies to Fluid Stream
-    Intermittent;            !- Pump Control Type
 
 
 
@@ -14275,27 +14278,7 @@ SetpointManager:Scheduled,
     Pod_Zones_Air_Distribution;  !- Design Specification Zone Air Distribution Object Name
 
 
- ElectricLoadCenter:Transformer,
-    Transformer 1,           !- Name
-    Always_On,               !- Availability Schedule Name
-    PowerInFromGrid,         !- Transformer Usage
-    ,                        !- Zone Name
-    ,                        !- Radiative Fraction
-    112500,  !- Rated Capacity {VA}
-    3,                       !- Phase
-    Aluminum,                !- Conductor Material
-    150,                     !- Full Load Temperature Rise {C}
-    0.1,                     !- Fraction of Eddy Current Losses
-    NominalEfficiency,       !- Performance Input Method
-    ,                        !- Rated No Load Loss {W}
-    ,                        !- Rated Load Loss {W}
-    0.969,  !- Nameplate Efficiency
-    0.35,                    !- Per Unit Load for Nameplate Efficiency
-    75,                      !- Reference Temperature for Nameplate Efficiency {C}
-    ,                        !- Per Unit Load for Maximum Efficiency
-    Yes,                     !- Consider Transformer Loss for Utility Cost
-    Wired_LTG_Electricity,   !- Meter 1 Name
-    InteriorEquipment:Electricity;  !- Meter 2 Name
+
 
 EnergyManagementSystem:Sensor,
     CLGSETP_SCH_YES_OPTIMUM_ORIGINAL_SENSOR,  !- Name
@@ -14435,10 +14418,6 @@ EnergyManagementSystem:Actuator,
 
 
 
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_POD_1_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_POD_1_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
 
 
 
@@ -14467,14 +14446,6 @@ EnergyManagementSystem:Program,
 
 
 
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_POD_2_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_POD_2_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
-
-
-
-
 
 
 
@@ -14496,13 +14467,6 @@ EnergyManagementSystem:Program,
 
 
 
-
-
-
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_POD_3_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_POD_3_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
 
 
 
@@ -14530,12 +14494,6 @@ EnergyManagementSystem:Program,
 
 
 
-
-
-EnergyManagementSystem:ProgramCallingManager,
-    VAV_OTHER_OPTIMUM_START_DETERMINATION_EMS_Program Manager,  !- Name
-    BeginTimestepBeforePredictor,  !- EnergyPlus Model Calling Point
-    VAV_OTHER_OPTIMUM_START_DETERMINATION_EMS_Program;  !- Program Name 1
 
 
 
@@ -14656,6 +14614,10 @@ OutdoorAir:NodeList,
 
 OutdoorAir:NodeList,
     OutsideAirInletNodes 2;  !- Node or NodeList Name 1
+    
+    
+OutdoorAir:NodeList,
+    OutsideAirInletNodes 3;  !- Node or NodeList Name 1
 
 
 EnergyManagementSystem:Sensor,
@@ -14681,47 +14643,47 @@ EnergyManagementSystem:Sensor,
 
 EnergyManagementSystem:Sensor,
     TZ1,                     !- Name
-    Gym,          !- Output:Variable or Output:Meter Index Key Name
+    Gym_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TZ2,                     !- Name
-    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TZ3,                     !- Name
-    Cafeteria,          !- Output:Variable or Output:Meter Index Key Name
+    Cafeteria_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Mean Air Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TC1,                     !- Name
-    Gym,          !- Output:Variable or Output:Meter Index Key Name
+    Gym_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TC2,                     !- Name
-    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
-    TC2,                     !- Name
-    Cafeteria,          !- Output:Variable or Output:Meter Index Key Name
+    TC3,                     !- Name
+    Cafeteria_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Cooling Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH1,                     !- Name
-    Gym,          !- Output:Variable or Output:Meter Index Key Name
+    Gym_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH2,                     !- Name
-    Kitchen,          !- Output:Variable or Output:Meter Index Key Name
+    Kitchen_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 EnergyManagementSystem:Sensor,
     TH3,                     !- Name
-    Cafeteria,          !- Output:Variable or Output:Meter Index Key Name
+    Cafeteria_ZN_1_FLR_1,          !- Output:Variable or Output:Meter Index Key Name
     Zone Thermostat Heating Setpoint Temperature ;  !- Output:Variable or Output:Meter Name
 
 
@@ -15926,7 +15888,7 @@ Output:VariableDictionary,
 !    Output:Meter,Refrigeration:Gas,Hourly;
 !    Output:Meter,WaterSystems:Gas,Hourly;
 Output:Table:SummaryReports,
-    AllSummaryAndMonthly;    !- Report 1 Name
+    EquipmentSummary;        !- Report 3 Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:MONTHLY ===========
@@ -16021,79 +15983,28 @@ OutputControl:ReportingTolerances,
 
 Output:Variable,
     *,                       !- Key Value
-    Zone Mean Air Temperature,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Cooling Coil Total Cooling Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Cooling Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Heating Coil Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Fan Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System DX Coil Speed Level ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Gas Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System Compressor Part Load Ratio ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Electric Power ,     !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Air Mass Flow Rate , !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan2MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Unitary System Total Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan1MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan3MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan4MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan5MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Electric Power ,  !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Gas Rate,   !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 
@@ -16108,3 +16019,18 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
+    
+    EnergyManagementSystem:InternalVariable,
+    Fan1_DesignFlow,         !- Name
+    Supply Fan 1,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan2_DesignFlow,         !- Name
+    Supply Fan 2,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan3_DesignFlow,         !- Name
+    Supply Fan 3,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type

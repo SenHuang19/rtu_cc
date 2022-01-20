@@ -77,7 +77,7 @@ Controller:OutdoorAir,
     0,                       !- Economizer Minimum Limit Dry-Bulb Temperature {C}
     LockoutWithHeating,      !- Lockout Type
     ProportionalMinimum,     !- Minimum Limit Type
-    MinOA_MotorizedDamper_Sched,  !- Minimum Outdoor Air Schedule Name
+    HVACOperationSchd,  !- Minimum Outdoor Air Schedule Name
     minOAFrac2;               !- Minimum Fraction of Outdoor Air Schedule Name
 
 SetpointManager:MixedAir,

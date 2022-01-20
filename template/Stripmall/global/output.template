@@ -20,7 +20,7 @@ Version,9.0;
     90.00,
 {% else %}
     0.00,
-{%- endif}
+{%- endif %}
     City,                    !- Terrain
     0.0400,                  !- Loads Convergence Tolerance Value
     0.2000,                  !- Temperature Convergence Tolerance Value {deltaC}
@@ -7221,27 +7221,27 @@ EnergyManagementSystem:ProgramCallingManager,
 EnergyManagementSystem:ProgramCallingManager,
     Initialize6,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan6MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize7,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan7MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize8,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan8MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize9,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan9MaxGlobal; !- Program Name 1
 
 EnergyManagementSystem:ProgramCallingManager,
     Initialize10,             !- Name
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
-    InitializeFan5MaxGlobal; !- Program Name 1
+    InitializeFan10MaxGlobal; !- Program Name 1
 
 
 
@@ -8716,7 +8716,7 @@ Output:VariableDictionary,
 !    Output:Meter,Refrigeration:Gas,Hourly;
 !    Output:Meter,WaterSystems:Gas,Hourly;
 Output:Table:SummaryReports,
-    AllSummaryAndMonthly;    !- Report 1 Name
+    EquipmentSummary;        !- Report 3 Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:MONTHLY ===========
@@ -8811,79 +8811,28 @@ OutputControl:ReportingTolerances,
 
 Output:Variable,
     *,                       !- Key Value
-    Zone Mean Air Temperature,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Cooling Coil Total Cooling Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System DX Cooling Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Heating Coil Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Fan Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System DX Coil Speed Level ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
+    Air System Gas Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 Output:Variable,
     *,                       !- Key Value
-    Unitary System Compressor Part Load Ratio ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Electric Power ,     !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan Air Mass Flow Rate , !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan2MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Unitary System Total Heating Rate ,  !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan1MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan3MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan4MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Fan5MaxGlobal,           !- Variable Name
-    Timestep;                !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Electric Power ,  !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
-Output:Variable,
-    *,                       !- Key Value
-    Heating Coil Gas Rate,   !- Variable Name
-    Hourly;                  !- Reporting Frequency
-
+    Air System Heating Coil Electric Energy ,  !- Variable Name
+    Annual;                  !- Reporting Frequency
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:METER:METERFILEONLY ===========
 
@@ -8898,7 +8847,6 @@ Output:Meter:MeterFileOnly,
 Output:Meter:MeterFileOnly,
     Gas:Facility,            !- Key Name
     Hourly;                  !- Reporting Frequency
-
 
 !-   ===========  ALL OBJECTS IN CLASS: UTILITYCOST:CHARGE:SIMPLE ===========
 
@@ -8949,3 +8897,87 @@ LifeCycleCost:NonrecurringCost,
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
+
+		Schedule:Compact,
+    OutdoorAirAvailSched,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 3/31,           !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1.0,                     !- Field 4
+    Through: 9/30,           !- Field 5
+    For: WeekDays,           !- Field 6
+    Until: 7:00,             !- Field 7
+    0.0,                     !- Field 8
+    Until: 17:00,            !- Field 9
+    1.0,                     !- Field 10
+    Until: 24:00,            !- Field 11
+    0.0,                     !- Field 12
+    For: SummerDesignDay WinterDesignDay,  !- Field 13
+    Until: 24:00,            !- Field 14
+    0.0,                     !- Field 15
+    For: AllOtherDays,       !- Field 16
+    Until: 24:00,            !- Field 17
+    0.0,                     !- Field 18
+    Through: 12/31,          !- Field 19
+    For: AllDays,            !- Field 20
+    Until: 24:00,            !- Field 21
+    1.0;                     !- Field 22
+
+Schedule:Compact,
+    Supply-Temp-Schedule,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    12.8;                      !- Field 4
+    
+EnergyManagementSystem:InternalVariable,
+    Fan1_DesignFlow,         !- Name
+    Supply Fan 1,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan2_DesignFlow,         !- Name
+    Supply Fan 2,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan3_DesignFlow,         !- Name
+    Supply Fan 3,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan4_DesignFlow,         !- Name
+    Supply Fan 4,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan5_DesignFlow,         !- Name
+    Supply Fan 5,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+	
+EnergyManagementSystem:InternalVariable,
+    Fan6_DesignFlow,         !- Name
+    Supply Fan 6,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan7_DesignFlow,         !- Name
+    Supply Fan 7,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan8_DesignFlow,         !- Name
+    Supply Fan 8,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan9_DesignFlow,         !- Name
+    Supply Fan 9,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type
+
+EnergyManagementSystem:InternalVariable,
+    Fan10_DesignFlow,         !- Name
+    Supply Fan 10,            !- Internal Data Index Key Name
+    Fan Maximum Mass Flow Rate;  !- Internal Data Type

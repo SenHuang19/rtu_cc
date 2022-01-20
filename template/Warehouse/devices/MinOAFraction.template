@@ -11,10 +11,7 @@ Schedule:Constant,
     Fraction,                !- Schedule Type Limits Name
     {{MinOAFraction_Baseline}};
 
-Schedule:Constant,
-    minOAFrac3,               !- Name
-    Fraction,                !- Schedule Type Limits Name
-    {{MinOAFraction_Baseline}};
+
 
 
 Schedule:Constant,
