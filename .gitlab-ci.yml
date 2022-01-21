@@ -108,7 +108,7 @@ build-image-ext:
     - tags
   tags:
     - k8s
-    - rcext
+    - rcint
     - rtucc
   variables:
     # CONTAINER_PREFIX - extra prefix for the image. Can be used to add a string on the front of an image name or a parent directory in the repository.
