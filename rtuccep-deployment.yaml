@@ -24,7 +24,7 @@ spec:
         io.kompose.service: rtuccep
     spec:
       containers:
-        - image: devops-registry.pnnl.gov/rtucc/rtucc-ep:latest
+        - image: devops-registry.pnnl.gov/rtucc/rtucc-ep:0.9.4
           imagePullPolicy: Always
           name: rtucc-ep
           ports:
