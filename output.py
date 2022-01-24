@@ -156,8 +156,9 @@ def cal_payout(input):
     if output['Payback'] is None:
            RateOfReturn = None
     elif output['Payback']==0:
-           RateOfReturn = 'Infinity'    
-    if RateOfReturn is not None or RateOfReturn != 'Infinity':           
+           RateOfReturn = 'Infinity'  
+    print(RateOfReturn)           
+    if RateOfReturn is not None and RateOfReturn != 'Infinity':           
          output['RateOfReturn'] = round(RateOfReturn,1)
     else:
          output['RateOfReturn'] = None            
