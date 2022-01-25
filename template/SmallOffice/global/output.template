@@ -5181,30 +5181,7 @@ EnergyManagementSystem:ProgramCallingManager,
     BeginNewEnvironment,     !- EnergyPlus Model Calling Point
     InitializeFan5MaxGlobal; !- Program Name 1
 
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed1,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed1;            !- Program Name 1
 
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed2,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed2;            !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed3,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed3;            !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed4,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed4;            !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed5,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed5;            !- Program Name 1
 
 
 
