@@ -86,11 +86,9 @@ def cal_payout(input):
     output['AnnualizedCost_Upgrade'] = round(AC_upgrade,0)
     NPV=LCC_baseline-LCC_upgrade
     output['NPV'] = round(NPV,0)
-    if CapitalCost_Upgrade>CapitalCost_Baseline:
-         SIR= (AnnualCosts_Baseline-AnnualCosts_Upgrade)*UPV/(CapitalCost_Upgrade-CapitalCost_Baseline)
-    else:
-         SIR= 0    
-    output['SIR'] = round(SIR,1)
+    SIR= max((AnnualCosts_Baseline-AnnualCosts_Upgrade)*UPV/(CapitalCost_Upgrade-CapitalCost_Baseline),0.0)
+    print(SIR)         
+    output['SIR'] = round(SIR,2)
     AnnualCostSavings=AnnualCosts_Baseline-AnnualCosts_Upgrade
     CapitalCostSavings=CapitalCost_Baseline-CapitalCost_Upgrade
     if AnnualCostSavings>0:
@@ -106,9 +104,11 @@ def cal_payout(input):
     DiscountedCostsCumulative_upgrade=[0]*(Lifetime+1)*10
     DiscountedCostsCumulative_baseline[0]=CapitalCost_Baseline
     DiscountedCostsCumulative_upgrade[0]=CapitalCost_Upgrade
+    years = []
     s=1
     for i in range (10, (Lifetime+1)*10+9, 1):
           i=i/10.
+          years.append(i)
           DiscountedCosts_baseline[s]=AnnualCosts_Baseline*(1/(1+RealDiscountRate)**i)*0.1
           DiscountedCosts_upgrade[s]=AnnualCosts_Upgrade*(1/(1+RealDiscountRate)**i)*0.1
           DiscountedCostsCumulative_baseline[s]=DiscountedCostsCumulative_baseline[s-1]+DiscountedCosts_baseline[s]
@@ -116,23 +116,27 @@ def cal_payout(input):
           s=s+1
     output['DiscountedCostsCumulative_baseline']=DiscountedCostsCumulative_baseline
     output['DiscountedCostsCumulative_upgrade']=DiscountedCostsCumulative_upgrade 
+    output['DiscountedCostsCumulative_year']=years
     baseline_check = CapitalCost_Baseline
     upgrade_check = CapitalCost_Upgrade
     diff = 1000000000000000
     abs_diff_min = diff
-    abs_diff_max = diff
+    abs_diff_max = -10000000000
     for i in range(10, (Lifetime+1)*10,1):
           i = i/10.
           baseline_check= baseline_check+AnnualCosts_Baseline*(1/(1+RealDiscountRate)**i)*0.1
           upgrade_check= upgrade_check+AnnualCosts_Upgrade*(1/(1+RealDiscountRate)**i)*0.1
           abs_diff = baseline_check-upgrade_check
+#          print(diff)
           if abs(baseline_check-upgrade_check)<diff:
                diff = abs(baseline_check-upgrade_check)
                index_record = i
           if abs_diff_min>abs_diff:
                abs_diff_min = abs_diff
           if abs_diff_max<abs_diff:
-               abs_diff_max = abs_diff               
+               abs_diff_max = abs_diff 
+#    print(abs_diff_min)  
+#    print(abs_diff_max)    
     if abs_diff_min>0:
            index_record = 0
     elif abs_diff_max<0:
@@ -141,7 +145,7 @@ def cal_payout(input):
          output['Payback'] = round(index_record,1)
     else:
          output['Payback'] = 'Infinity'  
-    NPV_min=10000 
+    NPV_min=100000000 
     for i in range(1,100):
        x = i/100.
        a = (1+x)**Lifetime
@@ -157,7 +161,9 @@ def cal_payout(input):
            RateOfReturn = None
     elif output['Payback']==0:
            RateOfReturn = 'Infinity'  
-    print(RateOfReturn)           
+    elif output['Payback']=='Infinity':
+           RateOfReturn = 0.0
+         
     if RateOfReturn is not None and RateOfReturn != 'Infinity':           
          output['RateOfReturn'] = round(RateOfReturn,1)
     else:
