@@ -3855,18 +3855,6 @@ EnergyManagementSystem:ProgramCallingManager,
     InitializeFan2MaxGlobal; !- Program Name 1
 
 
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed1,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed1;            !- Program Name 1
-
-EnergyManagementSystem:ProgramCallingManager,
-    SETFanSpeed2,            !- Name
-    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
-    SETFanSpeed2;            !- Program Name 1
-
-
-
 EnergyManagementSystem:Program,
     SETFanMaxFlow1,          !- Name
     If FanFlow1>Fan1MaxGlobal,  !- Program Line 1
