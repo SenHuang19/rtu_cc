@@ -326,3 +326,61 @@ EnergyManagementSystem:Program,
     SET Fan8Speed=NULL,      !- A9
     ENDIF;                   !- A10
 {%- endif  %}
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "West"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "West")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed1,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed1;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "West"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "West")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed2,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed2;            !- Program Name 1   
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "East"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "East")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed3,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed3;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "East"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "East")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed4,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed4;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "North"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "North")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed5,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed5;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "North"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "North")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed6,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed6;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "South"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "South")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed7,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed7;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "South"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "South")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed8,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed8;            !- Program Name 1
+{%- endif  %} 
+
+
