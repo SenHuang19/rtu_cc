@@ -204,27 +204,36 @@ EnergyManagementSystem:Program,
     ENDIF;                   !- A10
 {%- endif  %}
 
-{%- if BaselineCompressor == "SingleSpeed"  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "South"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "South")%} 
 EnergyManagementSystem:ProgramCallingManager,
     SETFanSpeed1,            !- Name
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
     SETFanSpeed1;            !- Program Name 1
+{%- endif  %} 
 
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "East"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "East")%} 
 EnergyManagementSystem:ProgramCallingManager,
     SETFanSpeed2,            !- Name
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
     SETFanSpeed2;            !- Program Name 1   
+{%- endif  %} 
 
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "North"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "North")%} 
 EnergyManagementSystem:ProgramCallingManager,
     SETFanSpeed3,            !- Name
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
     SETFanSpeed3;            !- Program Name 1
+{%- endif  %} 
 
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "West"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "West")%} 
 EnergyManagementSystem:ProgramCallingManager,
     SETFanSpeed4,            !- Name
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
     SETFanSpeed4;            !- Program Name 1
+{%- endif  %} 
 
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and Orientation == "Core"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and Orientation == "Core")%} 
 EnergyManagementSystem:ProgramCallingManager,
     SETFanSpeed5,            !- Name
     InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
