@@ -123,3 +123,25 @@ EnergyManagementSystem:Program,
     ENDIF;                   !- A10
 	
 {%- endif %}
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "Gym"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "Gym")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed1,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed1;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "Kitchen"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "Kitchen")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed2,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed2;            !- Program Name 1   
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "Cafeteria"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "Cafeteria")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed3,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed3;            !- Program Name 1
+{%- endif  %} 
+
