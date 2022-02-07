@@ -1400,7 +1400,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Basin Heater Setpoint Temperature {C}
     ,                        !- Basin Heater Operating Schedule Name
     Electricity,             !- Fuel Type
-    {{ EER_5/3.412 }},
+   {{ NumberOfSpeeds_5 }},
     autosize,                !- Speed 1 Gross Rated Total Cooling Capacity {W}
     0.75,                    !- Speed 1 Gross Rated Sensible Heat Ratio
     {{ EER_5/3.412 }},
