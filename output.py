@@ -104,7 +104,7 @@ def cal_payout(input):
     DiscountedCostsCumulative_upgrade=[0]*(Lifetime+1)*10
     DiscountedCostsCumulative_baseline[0]=CapitalCost_Baseline
     DiscountedCostsCumulative_upgrade[0]=CapitalCost_Upgrade
-    years = []
+    years = [0]
     s=1
     for i in range (10, (Lifetime+1)*10+9, 1):
           i=i/10.
@@ -117,6 +117,7 @@ def cal_payout(input):
     output['DiscountedCostsCumulative_baseline']=DiscountedCostsCumulative_baseline
     output['DiscountedCostsCumulative_upgrade']=DiscountedCostsCumulative_upgrade 
     output['DiscountedCostsCumulative_year']=years
+    output['DiscountedCostsCumulative_interval']=0.1
     baseline_check = CapitalCost_Baseline
     upgrade_check = CapitalCost_Upgrade
     diff = 1000000000000000
