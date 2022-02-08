@@ -75,8 +75,8 @@ Coil:Heating:Electric,
 {%- endif %}
 
 
-{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Front Retail"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Front Retail")  %} 
-{%- if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Front Retail")  %} 
+{%- if (BaselineCompressor == "SingleSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Core Retail"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Core Retail")  %} 
+{%- if (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Core Retail")  %} 
 {% set COP_2 = HeatingCOP_Upgraded %}
 {% else %}
 {% set COP_2 = HeatingCOP_Baseline %}
@@ -491,8 +491,8 @@ Coil:Heating:Electric,
 
 {%- endif %}
 
-{%- if (BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Front Retail"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Front Retail")  %} 
-{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (ZoneType == "Front Retail"))  %} 
+{%- if (BaselineCompressor == "MultiSpeed" and BaselineHeatingType == "HeatPump" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "HeatPump") and ZoneType == "Core Retail"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump" and ZoneType == "Core Retail")  %} 
+{%- if ((UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "HeatPump") and (ZoneType == "Core Retail"))  %} 
 		{% set COP_2 = HeatingCOP_Upgraded %}
 		{% set NumberOfSpeeds_2 = NumberofSpeeds_Upgraded %}
 		{% set HeatingType_2 = UpgradedHeatingType %}	
@@ -583,7 +583,7 @@ Coil:Heating:Electric,
 
 {%- endif %}
 
-{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Front Retail"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Front Retail"))  %}      
+{%- if ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Core Retail"))) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Core Retail"))  %}      
     Coil:Heating:Electric:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     ALWAYS_ON,     !- Availability Schedule Name
@@ -602,7 +602,7 @@ Coil:Heating:Electric,
     SuppHeating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Air Loop Outlet Node 2;  !- Air Outlet Node Name
 
-{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Front Retail")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Front Retail")) %}            
+{%- elif ((BaselineCompressor =="MultiSpeed" and BaselineHeatingType =="Gas" and not ((UpgradedCompressor != "MultiSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Core Retail")) or (UpgradedCompressor == "MultiSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Core Retail")) %}            
     Coil:Heating:Gas:MultiStage,
     Heat Pump DX Heating Coil 2,  !- Name
     ALWAYS_ON,     !- Availability Schedule Name
