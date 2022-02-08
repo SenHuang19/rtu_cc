@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import math
 
 def isNaN(num):
     return num!= num
@@ -87,8 +88,12 @@ def cal_payout(input):
     NPV=LCC_baseline-LCC_upgrade
     output['NPV'] = round(NPV,0)
     SIR= max((AnnualCosts_Baseline-AnnualCosts_Upgrade)*UPV/(CapitalCost_Upgrade-CapitalCost_Baseline),0.0)
-    print(SIR)         
-    output['SIR'] = round(SIR,2)
+    if math.isinf(SIR):
+        output['SIR'] = 'Infinity'
+    elif isNaN(SIR):
+        output['SIR'] = None
+    else:       
+        output['SIR'] = round(SIR,2)
     AnnualCostSavings=AnnualCosts_Baseline-AnnualCosts_Upgrade
     CapitalCostSavings=CapitalCost_Baseline-CapitalCost_Upgrade
     if AnnualCostSavings>0:
