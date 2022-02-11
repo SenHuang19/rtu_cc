@@ -1,7 +1,7 @@
 {
 "energ_consumption":
         {
-		   "Kitchen":
+		   "Dining":
 		   {"ele":["TYPICAL TERMINAL REHEAT 1:Air System Fan Electric Energy [J](Annual)",
                    "TYPICAL TERMINAL REHEAT 1:Air System DX Heating Coil Electric Energy [J](Annual)",
 		           "TYPICAL TERMINAL REHEAT 1:Air System DX Cooling Coil Electric Energy [J](Annual)",
@@ -9,7 +9,7 @@
 				   ],
 		   "gas":["TYPICAL TERMINAL REHEAT 1:Air System Gas Energy [J](Annual)"]
 		   },
-		   "Dining":{"ele":["TYPICAL TERMINAL REHEAT 2:Air System Fan Electric Energy [J](Annual)",
+		   "Kitchen":{"ele":["TYPICAL TERMINAL REHEAT 2:Air System Fan Electric Energy [J](Annual)",
            "TYPICAL TERMINAL REHEAT 2:Air System DX Heating Coil Electric Energy [J](Annual)",
 		   "TYPICAL TERMINAL REHEAT 2:Air System DX Cooling Coil Electric Energy [J](Annual)",
 		   "TYPICAL TERMINAL REHEAT 2:Air System Heating Coil Electric Energy [J](Annual)"],
@@ -18,11 +18,11 @@
 		},
 "size":
         {
-		   "Kitchen":
+		   "Dining":
 		   {
 		   "topic":["HEAT PUMP ACDXCOIL 1"]
 		   },	
-		   "Dining":{
+		   "Kitchen":{
 		   "topic":["HEAT PUMP ACDXCOIL 2"]
 		   }
         }				
