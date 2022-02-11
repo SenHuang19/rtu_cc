@@ -19,8 +19,10 @@ def energy_consumption(config, df,Blended_Electricity_Rate,Blended_NaturalGas_Ra
     for key in config:
         ele_consumption = 0
         for item in config[key]['ele']:
-               if item in df:
+               if item in df :
                   ele_consumption = ele_consumption + df[item].iloc[0]
+               elif item+' ' in df:
+                  ele_consumption = ele_consumption + df[item+' '].iloc[0]               
         output[key] = {}                
         output[key]['ele'] = ele_consumption*0.00000027777*Blended_Electricity_Rate
         output[key]['ele_kW'] = ele_consumption*0.00000027777        
@@ -29,6 +31,8 @@ def energy_consumption(config, df,Blended_Electricity_Rate,Blended_NaturalGas_Ra
         for item in config[key]['gas']:
                if item in df:
                   gas_consumption = gas_consumption + df[item].iloc[0]
+               elif item+' ' in df:
+                  gas_consumption = gas_consumption + df[item+' '].iloc[0]                              
         output[key]['gas'] = gas_consumption/105505500*Blended_NaturalGas_Rate
         output[key]['gas_ccf'] = gas_consumption/105505500         
         output[key]['tot_kW'] = output[key]['tot_kW'] + gas_consumption*0.00000027777
