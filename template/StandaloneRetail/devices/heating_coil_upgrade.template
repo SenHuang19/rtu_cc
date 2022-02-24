@@ -123,7 +123,7 @@ Coil:Heating:Electric,
 
 {%- endif %}
 
-{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Front Retail"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Front Retail")  %} 
+{%- if (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Electric" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Electric") and ZoneType == "Core Retail"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Electric" and ZoneType == "Core Retail")  %} 
     Coil:Heating:Electric,
     Supp Gas Heating Coil 2, !- Name
     ALWAYS_ON,               !- Availability Schedule Name
@@ -132,7 +132,7 @@ Coil:Heating:Electric,
     Heating Coil Air Inlet Node 2,  !- Air Inlet Node Name
     AIR LOOP OUTLET NODE 2;  !- Air Outlet Node Name
 	
-{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Front Retail"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Front Retail")  %} 
+{%- elif (BaselineCompressor =="SingleSpeed" and BaselineHeatingType =="Gas" and (not ((UpgradedCompressor != "SingleSpeed" or UpgradedHeatingType != "Gas") and ZoneType == "Core Retail"))) or (UpgradedCompressor == "SingleSpeed" and UpgradedHeatingType == "Gas" and ZoneType == "Core Retail")  %} 
  
     Coil:Heating:Fuel,
     Supp Gas Heating Coil 2, !- Name
