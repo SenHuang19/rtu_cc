@@ -274,7 +274,7 @@
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
     {% if HeatingType_1 == "HeatPump" %}
         {{ NumberOfSpeeds_1 }},
     {% else %}
@@ -587,7 +587,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
     {% if HeatingType_2 == "HeatPump" %}
         {{ NumberOfSpeeds_2 }},
     {% else %}

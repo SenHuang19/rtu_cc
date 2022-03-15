@@ -770,7 +770,7 @@
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
     {% if HeatingType_1 == "HeatPump" %}
         {{ NumberOfSpeeds_1 }},
     {% else %}
@@ -956,7 +956,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
     {% if HeatingType_2 == "HeatPump" %}
         {{ NumberOfSpeeds_2 }},
     {% else %}
@@ -1144,7 +1144,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
     {% if HeatingType_3 == "HeatPump" %}
         {{ NumberOfSpeeds_3 }},
     {% else %}
@@ -1330,7 +1330,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
     {% if HeatingType_4 == "HeatPump" %}
         {{ NumberOfSpeeds_4 }},
     {% else %}
@@ -1400,7 +1400,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Basin Heater Setpoint Temperature {C}
     ,                        !- Basin Heater Operating Schedule Name
     Electricity,             !- Fuel Type
-    {{ EER_5/3.412 }},
+   {{ NumberOfSpeeds_5 }},
     autosize,                !- Speed 1 Gross Rated Total Cooling Capacity {W}
     0.75,                    !- Speed 1 Gross Rated Sensible Heat Ratio
     {{ EER_5/3.412 }},
@@ -1517,7 +1517,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
     {% if HeatingType_5 == "HeatPump" %}
         {{ NumberOfSpeeds_5 }},
     {% else %}

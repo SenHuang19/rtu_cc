@@ -275,4 +275,45 @@ EnergyManagementSystem:InternalVariable,
     Fan Maximum Mass Flow Rate;  !- Internal Data Type
 
 
+    
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "LobbyLounge"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "LobbyLounge")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed1,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed1;            !- Program Name 1
+{%- endif  %} 
 
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "Restroom"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "Restroom")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed2,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed2;            !- Program Name 1   
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "Meeting"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "Meeting")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed3,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed3;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "LobbyLounge"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "LobbyLounge")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed4,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed4;            !- Program Name 1   
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "ExerciseCenter"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "ExerciseCenter")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed5,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed5;            !- Program Name 1
+{%- endif  %} 
+
+{%- if (BaselineCompressor == "SingleSpeed" and (not ( UpgradedCompressor == "MultiSpeed" and ZoneType == "Office"))) or (BaselineCompressor == "MultiSpeed" and UpgradedCompressor == "SingleSpeed" and ZoneType == "Office")%} 
+EnergyManagementSystem:ProgramCallingManager,
+    SETFanSpeed6,            !- Name
+    InsideHVACSystemIterationLoop,  !- EnergyPlus Model Calling Point
+    SETFanSpeed6;            !- Program Name 1
+{%- endif  %} 
