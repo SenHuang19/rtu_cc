@@ -84,6 +84,11 @@ class run(Resource):
             load_template('./template/{}/devices'.format(data['BuildingType']),'MinOAFraction.template',base_dir,'MinOAFraction',data)
             load_template('./template/{}/devices'.format(data['BuildingType']),'cooling_coil.template',base_dir,'cooling_coil',data)
             load_template('./template/{}/devices'.format(data['BuildingType']),'heating_coil.template',base_dir,'heating_coil',data)
+            
+            if 'MaximumLimitDryBulb_Baseline' in data:          
+                 data['MaximumLimitDryBulb_Baseline'] = (data['MaximumLimitDryBulb_Baseline']-32)/9.*5
+            if 'MaximumLimitDryBulb_Upgraded' in data:          
+                 data['MaximumLimitDryBulb_Upgraded'] = (data['MaximumLimitDryBulb_Upgraded']-32)/9.*5            
             load_template('./template/{}/controller'.format(data['BuildingType']),'outdoor_air_control.template',base_dir,'outdoor_air_control',data)
             load_template('./template/{}/ems'.format(data['BuildingType']),'ems_pr.template',base_dir,'ems_pr',data)
             load_template('./template/{}/curve'.format(data['BuildingType']),'FanPowerCurve.template',base_dir,'FanPowerCurve',data)
