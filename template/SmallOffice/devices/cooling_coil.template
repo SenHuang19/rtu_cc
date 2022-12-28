@@ -6,7 +6,7 @@
 {%- if BaselineCompressor == "SingleSpeed"  %} 
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 1,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }} ,
@@ -43,7 +43,7 @@
 	{% if BaselineHeatingType == "HeatPump"  %} 
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 1,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -56,7 +56,7 @@
     Heat Pump DX Heating Coil 1,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -67,7 +67,7 @@
 	{% else  %} 
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 1,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -120,7 +120,7 @@
 
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 2,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -158,7 +158,7 @@
 	{% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 2,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -171,7 +171,7 @@
     Heat Pump DX Heating Coil 2,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -182,7 +182,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 2,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -233,7 +233,7 @@
     
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 3,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -272,7 +272,7 @@
 	{% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 3,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 3,        !- Air Inlet Node Name
     Air Loop Outlet Node 3,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -285,7 +285,7 @@
     Heat Pump DX Heating Coil 3,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -296,7 +296,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 3,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 3,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 3,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -347,7 +347,7 @@
   
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 4,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -385,7 +385,7 @@
     {% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 4,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -398,7 +398,7 @@
     Heat Pump DX Heating Coil 4,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 4, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -409,7 +409,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 4,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -460,7 +460,7 @@
         
     Coil:Cooling:DX:SingleSpeed,
     Heat Pump ACDXCoil 5,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     autosize,                !- Gross Rated Total Cooling Capacity {W}
     autosize,                !- Gross Rated Sensible Heat Ratio
     {{ EER/3.412 }},
@@ -497,7 +497,7 @@
     {% if BaselineHeatingType == "HeatPump" %}
     AirLoopHVAC:UnitaryHeatPump:AirToAir,
     DXAC Heat Pump 5,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Air Outlet Node Name
     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
@@ -510,7 +510,7 @@
     Heat Pump DX Heating Coil 5,  !- Heating Coil Name
     Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 5,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 5, !- Supplemental Heating Coil Name
     50,                      !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -521,7 +521,7 @@
     {% else %}
     AirLoopHVAC:UnitaryHeatCool,
     DXAC Heat Pump 5,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Unitary System Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Unitary System Air Outlet Node Name
     HVACOperationSchd,     !- Supply Air Fan Operating Mode Schedule Name
@@ -579,7 +579,7 @@
     
     Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 1,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 1,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 1,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 1,  !- Condenser Air Inlet Node Name
@@ -633,7 +633,7 @@
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 2  %} 
+	{%- if NumberOfSpeeds == "2"  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -655,7 +655,7 @@
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 3  %} 
+	{%- if NumberOfSpeeds == "3"  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}	
@@ -684,7 +684,7 @@
  
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 1,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 1,        !- Air Inlet Node Name
     Air Loop Outlet Node 1,  !- Air Outlet Node Name
     Perimeter_ZN_1,          !- Controlling Zone or Thermostat Location
@@ -703,7 +703,7 @@
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 1,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 1, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -713,7 +713,7 @@
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
 	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
@@ -754,7 +754,7 @@
     
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 2,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 2,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 2,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 2,  !- Condenser Air Inlet Node Name
@@ -808,7 +808,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 2  %} 
+	{%- if NumberOfSpeeds == "2"  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -830,7 +830,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 3  %} 
+	{%- if NumberOfSpeeds == "3"  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -858,7 +858,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 2,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 2,        !- Air Inlet Node Name
     Air Loop Outlet Node 2,  !- Air Outlet Node Name
     Perimeter_ZN_2,          !- Controlling Zone or Thermostat Location
@@ -877,7 +877,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 2,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 2, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -887,7 +887,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
 	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
@@ -928,7 +928,7 @@ Coil:Cooling:DX:MultiSpeed,
     
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 3,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 3,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 3,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 3,  !- Condenser Air Inlet Node Name
@@ -982,7 +982,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 2  %} 
+	{%- if NumberOfSpeeds == "2"  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1004,7 +1004,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 3  %} 
+	{%- if NumberOfSpeeds == "3"  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1032,7 +1032,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 3,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 3,        !- Air Inlet Node Name
     Air Loop Outlet Node 3,  !- Air Outlet Node Name
     Perimeter_ZN_3,          !- Controlling Zone or Thermostat Location
@@ -1051,7 +1051,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 3,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 3, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1061,7 +1061,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
 	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
@@ -1101,7 +1101,7 @@ Coil:Cooling:DX:MultiSpeed,
     
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 4,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 4,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 4,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 4,  !- Condenser Air Inlet Node Name
@@ -1155,7 +1155,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 2  %} 
+	{%- if NumberOfSpeeds == "2"  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1177,7 +1177,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 3  %} 
+	{%- if NumberOfSpeeds == "3"  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1205,7 +1205,7 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 4,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 4,        !- Air Inlet Node Name
     Air Loop Outlet Node 4,  !- Air Outlet Node Name
     Perimeter_ZN_4,          !- Controlling Zone or Thermostat Location
@@ -1224,7 +1224,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 4,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 4, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1234,7 +1234,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
 	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
@@ -1276,7 +1276,7 @@ Coil:Cooling:DX:MultiSpeed,
 
 Coil:Cooling:DX:MultiSpeed,
     Heat Pump ACDXCoil 5,    !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     DX Cooling Coil Air Inlet Node 5,  !- Air Inlet Node Name
     Heating Coil Air Inlet Node 5,  !- Air Outlet Node Name
     Outdoor Condenser Air Node 5,  !- Condenser Air Inlet Node Name
@@ -1292,7 +1292,7 @@ Coil:Cooling:DX:MultiSpeed,
     ,                        !- Basin Heater Setpoint Temperature {C}
     ,                        !- Basin Heater Operating Schedule Name
     Electricity,             !- Fuel Type
-	{{ NumberOfSpeeds }},	
+	{{ NumberOfSpeeds }},
     autosize,                !- Speed 1 Gross Rated Total Cooling Capacity {W}
     0.75,                    !- Speed 1 Gross Rated Sensible Heat Ratio
 	{{ EER/3.412 }},
@@ -1330,7 +1330,7 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 2,    !- Speed 2 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 2 Evaporative Condenser Effectiveness {dimensionless}
     0.1,                     !- Speed 2 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 2  %} 
+	{%- if NumberOfSpeeds == "2"  %} 
     60;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}
     60,                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
@@ -1352,13 +1352,13 @@ Coil:Cooling:DX:MultiSpeed,
     HAPCCoolWHFT Speed 3,    !- Speed 3 Waste Heat Function of Temperature Curve Name
     0.9,                     !- Speed 3 Evaporative Condenser Effectiveness {dimensionless}
     0.2,                     !- Speed 3 Evaporative Condenser Air Flow Rate {m3/s}
-	{%- if NumberOfSpeeds == 3  %} 
+	{%- if NumberOfSpeeds == "3"  %} 
     80;                      !- Speed 2 Rated Evaporative Condenser Pump Power Consumption {W}
     {% else %}	
     80,                      !- Speed 3 Rated Evaporative Condenser Pump Power Consumption {W}
     autosize,                !- Speed 4 Gross Rated Total Cooling Capacity {W}
     0.75,                    !- Speed 4 Gross Rated Sensible Heat Ratio
-	{{ EER/3.412 }},
+    {{ EER/3.412 }},
     autosize,                !- Speed 4 Rated Air Flow Rate {m3/s}
     673.3,                   !- Speed 4 Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
     HPACCoolCapFT Speed 4,   !- Speed 4 Total Cooling Capacity Function of Temperature Curve Name
@@ -1380,10 +1380,10 @@ Coil:Cooling:DX:MultiSpeed,
     
     AirLoopHVAC:UnitaryHeatPump:AirToAir:MultiSpeed,
     DXAC Heat Pump 5,        !- Name
-    ALWAYS_ON,     !- Availability Schedule Name
+    HVACOperationSchd,     !- Availability Schedule Name
     Mixed Air Node 5,        !- Air Inlet Node Name
     Air Loop Outlet Node 5,  !- Air Outlet Node Name
-    Core_Zn,          !- Controlling Zone or Thermostat Location
+    Core_ZN,                 !- Controlling Zone or Thermostat Location
     Fan:OnOff,               !- Supply Air Fan Object Type
     Supply Fan 5,            !- Supply Air Fan Name
     BlowThrough,             !- Supply Air Fan Placement
@@ -1399,7 +1399,7 @@ Coil:Cooling:DX:MultiSpeed,
     -8.0,                    !- Minimum Outdoor Dry-Bulb Temperature for Compressor Operation {C}
     Coil:Cooling:DX:MultiSpeed,  !- Cooling Coil Object Type
     Heat Pump ACDXCoil 5,    !- Cooling Coil Name
-    Coil:Heating:Electric,       !- Supplemental Heating Coil Object Type
+    Coil:Heating:Fuel,       !- Supplemental Heating Coil Object Type
     Supp Gas Heating Coil 5, !- Supplemental Heating Coil Name
     50.0,                    !- Maximum Supply Air Temperature from Supplemental Heater {C}
     21,                      !- Maximum Outdoor Dry-Bulb Temperature for Supplemental Heater Operation {C}
@@ -1409,7 +1409,7 @@ Coil:Cooling:DX:MultiSpeed,
     80.0,                    !- Maximum Temperature for Heat Recovery {C}
     ,                        !- Heat Recovery Water Inlet Node Name
     ,                        !- Heat Recovery Water Outlet Node Name
-    0.2,                     !- No Load Supply Air Flow Rate {m3/s}
+    autosize,                     !- No Load Supply Air Flow Rate {m3/s}
 	{% if BaselineHeatingType == "HeatPump" %}
         {{ NumberOfSpeeds }},
     {% else %}
@@ -1424,10 +1424,9 @@ Coil:Cooling:DX:MultiSpeed,
     autosize,                !- Cooling Speed 2 Supply Air Flow Rate {m3/s}
     autosize,                !- Cooling Speed 3 Supply Air Flow Rate {m3/s}
     autosize;                !- Cooling Speed 4 Supply Air Flow Rate {m3/s}
-
-
+ 
     Branch,
-    Air Loop Main Branch 5,  !- Name
+    Air Loop Main Branch 5  !- Name
     ,                        !- Pressure Drop Curve Name
     AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
     OA Sys 5,                !- Component 1 Name
@@ -1437,7 +1436,7 @@ Coil:Cooling:DX:MultiSpeed,
     DXAC Heat Pump 5,        !- Component 2 Name
     Mixed Air Node 5,        !- Component 2 Inlet Node Name
     Air Loop Outlet Node 5;  !- Component 2 Outlet Node Name
-    
+ 
     EnergyManagementSystem:Sensor,
     HC5,                     !- Name
     DXAC Heat Pump 5,        !- Output:Variable or Output:Meter Index Key Name
@@ -1449,7 +1448,3 @@ Coil:Cooling:DX:MultiSpeed,
     Unitary System Total Cooling Rate ;  !- Output:Variable or Output:Meter Name
     
 {%- endif  %}
-
-    
-
-    
